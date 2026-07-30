@@ -1,11 +1,11 @@
-import Hero from "@/components/sections/Hero";
-import WhyWereHere from "@/components/sections/WhyWereHere";
-import ProgramsGrid from "@/components/sections/ProgramsGrid";
-import ImpactStats from "@/components/sections/ImpactStats";
-import GetInvolved from "@/components/sections/GetInvolved";
-import NewsGrid from "@/components/sections/NewsGrid";
-import PressGrid from "@/components/sections/PressGrid";
-import NewsletterSignup from "@/components/sections/NewsletterSignup";
+import Hero from "@/components/sections/homepage/Hero";
+import WhyWereHere from "@/components/sections/homepage/WhyWereHere";
+import ProgramsWheel from "@/components/sections/homepage/ProgramsWheel";
+import ImpactStats from "@/components/sections/homepage/ImpactStats";
+import GetInvolved from "@/components/sections/homepage/GetInvolved";
+import NewsGrid from "@/components/sections/homepage/NewsGrid";
+import PressGrid from "@/components/sections/homepage/PressGrid";
+import NewsletterSignup from "@/components/sections/homepage/NewsletterSignup";
 
 /**
  * Homepage
@@ -13,14 +13,14 @@ import NewsletterSignup from "@/components/sections/NewsletterSignup";
  * This page is intentionally just a list of sections. All the actual
  * markup/logic lives in components/sections/* — to reorder the homepage,
  * reorder these lines. To add a new section, build a component in
- * components/sections/ and drop it in here.
+ * components/sections/homepage and drop it in here.
  */
 export default function HomePage() {
   return (
     <>
       <Hero />
       <WhyWereHere />
-      <ProgramsGrid />
+      <ProgramsWheel />
       <ImpactStats />
       <GetInvolved />
       <NewsGrid />

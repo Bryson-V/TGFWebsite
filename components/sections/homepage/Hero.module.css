@@ -16,8 +16,11 @@
   gap: 20px;
 }
 
-.badge {
+.heroLogo {
   border-radius: 12px;
+  height: 90px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .headline {

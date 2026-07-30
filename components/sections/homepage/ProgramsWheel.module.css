@@ -1,0 +1,49 @@
+.wheelWrapper {
+  width: 100%;
+  padding: 2rem 0 4rem;
+  overflow: hidden;
+}
+
+.swiperContainer {
+  width: 100%;
+  padding-bottom: 3rem !important; 
+}
+
+/* Individual Slide Dimensions */
+.slide {
+  width: 320px; 
+  height: 420px;
+  opacity: 1 !important; /* Forces cards to stay completely solid */
+  filter: none !important; /* Ensures no blur is ever applied */
+}
+
+/* Customizing Pagination Dots */
+.swiperContainer :global(.swiper-pagination-bullet) {
+  background: #0076a8;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.swiperContainer :global(.swiper-pagination-bullet-active) {
+  background: #0076a8;
+  opacity: 1;
+  width: 24px;
+  border-radius: 6px;
+}
+
+/* Customizing Navigation Arrows */
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+  color: #0076a8;
+  background: rgba(255, 255, 255, 0.9);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.swiperContainer :global(.swiper-button-next):after,
+.swiperContainer :global(.swiper-button-prev):after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

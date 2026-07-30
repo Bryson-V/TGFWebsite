@@ -18,12 +18,12 @@ export default function Hero() {
           <Image
             src="/images/logo/tgf-logo.png"
             alt="Todu Guam Foundation"
-            width={90}
+            width={250}
             height={90}
-            className={styles.badge}
+            className={styles.heroLogo}
           />
           <h1 className={styles.headline}>
-            We are committed to <strong>Getting Guam healthy, one man, one woman, and one child at a time.</strong>
+            We are committed to <strong>getting Guam healthy, one man, one woman, and one child at a time.</strong>
           </h1>
           <p className={styles.subline}>A locally and nationally recognized 501(c)(3) non-profit organization.</p>
           <Button href="https://toduguam.com/who-we-are/">Learn more about Our Story</Button>
