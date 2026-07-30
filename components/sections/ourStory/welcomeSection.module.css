@@ -1,0 +1,98 @@
+/* --- welcomeSection.module.css --- */
+
+.section {
+  background-color: #f2f3f5; /* Light grey background */
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-right: 2rem; /* Spacing for the right accent bar */
+}
+
+/* --- Image Styling --- */
+
+.imageWrapper {
+  position: relative;
+  flex: 0 0 42%; /* Fixes image column width relative to text */
+  aspect-ratio: 4 / 3; /* Maintains aspect ratio fluidly */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Content & Typography --- */
+
+.content {
+  flex: 1;
+}
+
+.title {
+  color: #00606b; /* Accent dark teal title */
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.bodyText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bodyText p {
+  color: #333333;
+  font-size: clamp(0.875rem, 1.2vw, 0.95rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Bold key text inside paragraphs */
+.bodyText strong {
+  color: #111111;
+  font-weight: 600;
+}
+
+/* --- Accent Bar on Right Side --- */
+
+.accentBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #004146; /* Matches primary brand teal */
+  border-radius: 3px;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding-right: 1rem;
+  }
+
+  .imageWrapper {
+    flex: none;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .accentBar {
+    display: none; /* Hides edge bar on smaller mobile layouts */
+  }
+}
