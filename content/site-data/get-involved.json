@@ -1,0 +1,20 @@
+{
+  "sectionTitle": "Here's how you can help",
+  "sectionSubtitle": "There are different ways you can get involved in our advocacy",
+  "cards": [
+    {
+      "id": "volunteer",
+      "title": "Be a volunteer",
+      "description": "Since the beginning, Todu Guam has relied on many of its volunteers who have selflessly lent us their time and expertise. Here's how you can become one of them.",
+      "image": "/images/community/volunteer.webp",
+      "href": "https://toduguam.com/how-to-be-a-volunteer/"
+    },
+    {
+      "id": "donate",
+      "title": "Donate",
+      "description": "When you give to Todu Guam, you are joining us in our commitment to getting Guam healthy. Help us provide no-cost access to healthcare, education, and support to those who need it most. Si Yu'os Ma\u2019\u00e5se\u2019!",
+      "image": "/images/community/donate.webp",
+      "href": "https://toduguam.com/ways-to-help/"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+.wheelContainer {
+  padding: 4rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiperSlide {
+  width: 300px;
+  height: 400px;
+  transition: all 0.3s ease;
+}
+
+.swiperSlide:not(.swiper-slide-active) {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.cardLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 2rem 1rem 1rem;
+  color: white;
+  text-align: center;
+}

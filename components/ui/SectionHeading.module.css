@@ -1,0 +1,45 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+}
+
+.divider {
+  display: block;
+  width: 96px;
+  height: var(--divider-weight);
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+.dividerDark {
+  background-color: var(--color-text);
+}
+
+.subtitle {
+  max-width: 640px;
+  font-size: var(--font-size-h4);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}

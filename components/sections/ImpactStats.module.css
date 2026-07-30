@@ -1,0 +1,42 @@
+.section {
+  padding: 64px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 1.75rem;
+  max-width: 720px;
+  margin: 0 auto 8px;
+}
+
+.note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-text-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+}

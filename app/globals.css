@@ -1,0 +1,138 @@
+/*
+  globals.css
+  -----------
+  Design tokens (CSS custom properties) + base resets, shared by every page.
+
+  The color values and type scale below were pulled directly from the
+  original site's compiled CSS (post-479.css / post-496.css), so this is
+  the REAL Todu Guam Foundation brand palette, not a guess:
+    - Primary teal:  #015571  (headings, buttons, dividers)
+    - Accent blue:   #0082AD
+    - Accent light:  #8AC6DE / #9ED7EE  (soft background panels)
+    - Body text:     #19191A
+    - Font:          "PT Sans" (the whole site uses one typeface, at
+                      weights 400 / 500 / 600)
+
+  Component-level styles live next to their component in *.module.css
+  files. This file only holds things that are truly global: tokens,
+  resets, and base element styles.
+*/
+
+:root {
+  /* Brand colors */
+  --color-primary: #015571;
+  --color-primary-dark: #013d52;
+  --color-accent-blue: #0082ad;
+  --color-accent-light: #8ac6de;
+  --color-accent-lighter: #9ed7ee;
+
+  /* Neutrals */
+  --color-text: #19191a;
+  --color-text-muted: #33312e;
+  --color-text-soft: #6b7280;
+  --color-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f8f8;
+  --color-border: #efefef;
+
+  /* Type scale (desktop) — matches the original site's headings */
+  --font-size-hero: 4.375rem; /* 70px */
+  --font-size-h1: 2.5rem; /* 40px */
+  --font-size-h2: 2.375rem; /* 38px */
+  --font-size-h3: 1.75rem; /* 28px */
+  --font-size-h4: 1.25rem; /* 20px */
+  --font-size-body: 1.125rem; /* 18px */
+  --font-size-small: 0.9375rem; /* 15px */
+
+  /* Layout */
+  --container-max-width: 1291px;
+  --radius-pill: 50px;
+  --radius-card: 20px;
+  --divider-weight: 6px;
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: var(--font-pt-sans), "PT Sans", Arial, sans-serif;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Visible keyboard focus, everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
