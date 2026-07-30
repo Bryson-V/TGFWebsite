@@ -1,0 +1,206 @@
+/* --- storyTimeline.module.css --- */
+
+.section {
+  background-color: #f7f9fa;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 6rem); /* Vertical spacing between the 3 sub-blocks */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Shared Image Utility */
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================== 1. MISSION STATEMENT ==================== */
+
+.missionStatement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 4vw, 4rem);
+  width: 100%;
+}
+
+.missionHeadingWrapper {
+  flex: 1;
+  max-width: 550px;
+}
+
+.missionHeading {
+  color: #004d57; /* Deep brand teal */
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+}
+
+/* Dark teal underline seen below title */
+.underline {
+  width: 100%;
+  max-width: 380px;
+  height: 4px;
+  background-color: #004d57;
+  border-radius: 2px;
+}
+
+.missionImageWrapper {
+  position: relative;
+  flex: 0 0 42%;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ==================== 2. OUTREACH HISTORY ==================== */
+
+.outreachHistory {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 320px;
+}
+
+/* Overlapping Light Blue Box */
+.overlappingCard {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52%;
+  background-color: #82c4da; /* Light blue accent background */
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  padding-left: clamp(2rem, 3.5vw, 2.75rem);
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.cardAccentBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: #005a66;
+}
+
+.cardText {
+  color: #123438;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.outreachImageWrapper {
+  position: relative;
+  width: 60%;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* ==================== 3. COMMUNITY IMPACT ==================== */
+
+.communityImpact {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  width: 100%;
+}
+
+.photoGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 500px;
+}
+
+.gridImageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.impactContent {
+  flex: 1;
+}
+
+.impactText {
+  color: #005a6b;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.impactText strong {
+  color: #003640;
+  font-weight: 700;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+
+@media (max-width: 868px) {
+  /* 1. Mission Statement Stack */
+  .missionStatement {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .missionHeadingWrapper {
+    max-width: 100%;
+  }
+
+  .missionImageWrapper {
+    width: 100%;
+  }
+
+  /* 2. Outreach History Stack */
+  .outreachHistory {
+    flex-direction: column-reverse;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+
+  .outreachImageWrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .overlappingCard {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+  }
+
+  /* 3. Community Impact Stack */
+  .communityImpact {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .photoGrid {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,107 @@
+/* --- storyHero.module.css --- */
+
+.hero {
+  background-color: #004146;
+  color: #ffffff;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.text {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.headline {
+  /* Scales font size dynamically between 1.75rem and 2.5rem */
+  font-size: clamp(1.75rem, 4vw, 2.5rem); 
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* --- Dynamic Image Cluster --- */
+
+.imageCluster {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  /* Scales cluster max width fluidly */
+  max-width: clamp(280px, 45vw, 480px); 
+  /* Uses aspect ratio to maintain scale dynamically without hardcoding pixel height */
+  aspect-ratio: 16 / 10; 
+}
+
+/* --- Primary Image (Fluid sizing) --- */
+
+.primaryImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%; /* Takes up 65% of the cluster width */
+  height: 80%; /* Takes up 80% of the cluster height */
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 3px solid #ffffff;
+}
+
+.primaryImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Secondary Image (Fluid sizing) --- */
+
+.secondaryImageWrapper {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 42%; /* Scaled proportional to cluster */
+  aspect-ratio: 1 / 1; /* Maintains square shape automatically */
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 3px solid #ffffff;
+}
+
+.secondaryImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Mobile / Small Tablet Stack --- */
+
+@media (max-width: 640px) {
+  .grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .imageCluster {
+    /* Takes almost full width on small screens while keeping the same layered proportions */
+    max-width: 90%; 
+    aspect-ratio: 16 / 10;
+  }
+}
