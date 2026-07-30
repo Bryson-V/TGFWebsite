@@ -1,0 +1,54 @@
+{
+  "donateButton": {
+    "label": "DONATE",
+    "href": "https://toduguam.com/ways-to-help/"
+  },
+  "menus": [
+    {
+      "id": "about",
+      "label": "ABOUT US",
+      "panelTitle": "ABOUT US",
+      "panelSubtitle": "Learn about our operations, leadership, and more.",
+      "links": [
+        { "label": "Our Story", "href": "https://toduguam.com/who-we-are/" },
+        { "label": "Board of Directors", "href": "https://toduguam.com/board-of-directors/" },
+        { "label": "FAQs & Resources", "href": "https://toduguam.com/faq/" }
+      ]
+    },
+    {
+      "id": "work",
+      "label": "OUR WORK",
+      "panelTitle": "OUR WORK",
+      "panelSubtitle": "Learn more about the foundation programs that are making an impact on Guam, One Man, One Woman, and One Child at a time!",
+      "links": [
+        { "label": "Mobile Care Clinic", "href": "https://toduguam.com/mobile-care-clinic/" },
+        { "label": "Prevention and Outreach", "href": "https://toduguam.com/health-prevention-outreach/" },
+        { "label": "Healing for Women", "href": "https://toduguam.com/women-health/" },
+        { "label": "Patient Navigation and Financial Assistance", "href": "https://toduguam.com/patient-navigation-financial-assistance/" },
+        { "label": "Sliding Fee Discount Program", "href": "https://toduguam.com/tgf-sliding-fee-feb-26/" },
+        { "label": "CARES Program", "href": "https://toduguam.com/cares/" },
+        { "label": "Mind Care", "href": "https://toduguam.com/mind-care/" }
+      ],
+      "featuredImage": "/images/programs/mobile-care-clinic-thumb.png",
+      "featuredCaption": "Mobile Care Clinic Medical Outreach",
+      "featuredHref": "https://toduguam.com/mobile-care-clinic/"
+    },
+    {
+      "id": "community",
+      "label": "OUR COMMUNITY",
+      "panelTitle": "OUR COMMUNITY",
+      "panelSubtitle": "See our volunteers in action and learn how you can join the mission.",
+      "links": [
+        { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
+        { "label": "Careers", "href": "https://toduguam.com/careers/" },
+        { "label": "Volunteer", "href": "https://toduguam.com/how-to-be-a-volunteer/" },
+        { "label": "Contact Us", "href": "https://toduguam.com/contact/" },
+        { "label": "Latest News & Stories", "href": "https://toduguam.com/blogs/" },
+        { "label": "Todu Guam in the News", "href": "https://toduguam.com/news/" }
+      ],
+      "featuredImage": "/images/community/staff-and-volunteers.jpg",
+      "featuredCaption": "TGF Staff and Volunteers",
+      "featuredHref": "https://toduguam.com/ways-to-help/"
+    }
+  ]
+}

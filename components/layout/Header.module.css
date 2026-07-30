@@ -1,0 +1,287 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  padding: 0.25rem 0;
+}
+
+.logoImg {
+  width: auto;
+  height: auto;
+  max-height: 48px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* Desktop Nav */
+.desktopNav {
+  display: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navItem {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.navButton {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #2c3e50;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navButton:hover,
+.activeButton {
+  color: #0076a8; /* Brand Accent */
+  background: rgba(0, 118, 168, 0.05);
+}
+
+.caret {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.navItem:hover .caret {
+  transform: rotate(180deg);
+}
+
+/* Mega Panel */
+.megaPanel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.megaPanelText h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.megaPanelText p {
+  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.megaPanelText ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.megaPanelText li {
+  margin-bottom: 0.5rem;
+}
+
+.megaPanelText a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.megaPanelText a:hover {
+  color: #0076a8;
+}
+
+/* Mega Panel Feature Card */
+.megaPanelFeature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.megaPanelFeature:hover {
+  transform: translateY(-2px);
+  background: #f0f4f8;
+}
+
+.featureImgWrapper {
+  border-radius: 6px;
+  overflow: hidden;
+  height: 120px;
+}
+
+.megaPanelFeature span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Donate Button */
+.donateButton {
+  display: none;
+  background: #e63946;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s, background 0.2s;
+}
+
+@media (min-width: 992px) {
+  .donateButton {
+    display: inline-block;
+  }
+}
+
+.donateButton:hover {
+  background: #d62839;
+  transform: translateY(-1px);
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #2c3e50;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Nav Drawer */
+.mobileNav {
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  padding: 1rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileSectionToggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+}
+
+.mobileLinks {
+  list-style: none;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin: 0;
+}
+
+.mobileLinks li {
+  padding: 0.4rem 0;
+}
+
+.mobileLinks a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.mobileDonate {
+  display: block;
+  text-align: center;
+  background: #e63946;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* Dark Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}

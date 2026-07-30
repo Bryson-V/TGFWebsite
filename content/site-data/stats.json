@@ -1,0 +1,13 @@
+{
+  "sectionTitle": "What we've been up to since the 1st quarter of 2026",
+  "sectionNote": "*Figures are updated every quarter",
+  "items": [
+    { "id": "residents-served", "value": 29815, "label": "Guam residents received services from the Todu Guam Foundation" },
+    { "id": "patients-cared", "value": 25901, "label": "patients have received medical care" },
+    { "id": "kinder-days", "value": 3914, "label": "students committed to Kinder Days Ahead with the TGF CARES Movement" },
+    { "id": "outreach-missions", "value": 209, "label": "medical outreach missions across the island" },
+    { "id": "programs", "value": 6, "label": "programs that provide access to care for the people of Guam" },
+    { "id": "volunteers", "value": 396, "label": "doctors, nurses, medical professionals, and students who have volunteered with TGF" },
+    { "id": "unified-org", "value": 1, "label": "unified organization committed to #GettingGuamHealthy One Man, One Woman, and One Child at a time!" }
+  ]
+}

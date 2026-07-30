@@ -1,0 +1,62 @@
+.hero {
+  padding: 48px 0 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.badge {
+  border-radius: 12px;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.headline strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.subline {
+  font-size: 1.1rem;
+  color: var(--color-text-soft);
+}
+
+.imageLink {
+  display: block;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-base);
+}
+
+.imageLink:hover .image {
+  transform: scale(1.03);
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .headline {
+    font-size: 2.75rem;
+  }
+}
