@@ -63,16 +63,16 @@ export default function Header() {
       <header className={styles.header}>
         <Container className={styles.bar}>
           {/* Logo */}
-            <Link href="/" className={styles.logoLink} onClick={closeAll} aria-label="Todu Guam Foundation home">
-              <Image
-                src="/images/logo/TGFLogo.png"
-                alt="Todu Guam Foundation"
-                width={180}
-                height={60}
-                priority
-                className={styles.logoImg}
-              />
-            </Link>
+          <Link href="/" className={styles.logoLink} onClick={closeAll} aria-label="Todu Guam Foundation home">
+            <Image
+              src="/images/logo/TGFLogo.png"
+              alt="Todu Guam Foundation"
+              width={180}
+              height={60}
+              priority
+              className={styles.logoImg}
+            />
+          </Link>
 
           {/* Desktop Nav */}
           <nav className={styles.desktopNav} aria-label="Primary">
@@ -94,7 +94,7 @@ export default function Header() {
                 </button>
 
                 {openMenu === menu.id && (
-                  <div className={styles.megaPanel}>
+                  <div className={`${styles.megaPanel} ${!menu.featuredImage ? styles.megaPanelNoImage : ""}`}>
                     <div className={styles.megaPanelText}>
                       <h3>{menu.panelTitle}</h3>
                       <p>{menu.panelSubtitle}</p>
@@ -121,7 +121,7 @@ export default function Header() {
                             alt={menu.featuredCaption}
                             width={240}
                             height={140}
-                            style={{ objectFit: "cover" }}
+                            style={{ objectFit: "cover", width: "100%", height: "auto" }}
                           />
                         </div>
                         <span>{menu.featuredCaption} →</span>
