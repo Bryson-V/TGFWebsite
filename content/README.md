@@ -29,7 +29,7 @@ a failure.
    ```
 
 5. Below the second `---`, write the article body as plain text.
-6. Save the file. That's it — the homepage automatically picks up the 6
+6. Save the file. That's it — the homepage automatically picks up the 9
    most recent articles by date, newest first. No other file needs to
    change.
 
