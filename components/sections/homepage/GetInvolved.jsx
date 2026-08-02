@@ -19,12 +19,31 @@ export default function GetInvolved() {
           {getInvolved.cards.map((card) => (
             <div key={card.id} className={styles.card}>
               <div className={styles.imageWrap}>
-                <Image src={card.image} alt={card.title} fill className={styles.image} sizes="(min-width: 1025px) 45vw, 90vw" />
+                <Image 
+                  src={card.image} 
+                  alt={card.title} 
+                  fill 
+                  className={styles.image} 
+                  sizes="(min-width: 1025px) 45vw, 90vw" 
+                />
               </div>
               <div className={styles.body}>
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-                <Button href={card.href}>{card.title}</Button>
+                <h3 className={styles.cardTitle}>{card.title}</h3>
+                
+                {/* NEW WRAPPER: description and button tight coupling */}
+                <div className={styles.ctaArea}>
+                  <p className={styles.cardDesc}>{card.description}</p>
+                  
+                  <div className={styles.buttonWrap}>
+                    <Button 
+                      href={card.href} 
+                      className={`${styles.ctaButton} ${card.id === 'donate' ? styles.primaryBtn : styles.secondaryBtn}`}
+                    >
+                      {card.buttonText}
+                    </Button>
+                  </div>
+                </div>
+
               </div>
             </div>
           ))}

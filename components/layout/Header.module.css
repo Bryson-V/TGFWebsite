@@ -2,10 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* Updated to soft Baby Blue as requested */
-  background-color: #E3F2FD; 
+  background-color: #c6e7ff; /* Bar color */
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -31,8 +30,8 @@
 .logoImg {
   width: auto;
   height: auto;
-  max-height: 54px; /* Slightly larger for better visibility */
-  max-width: 200px;
+  max-height: 64px;
+  max-width: 210px;
   object-fit: contain;
 }
 
@@ -60,7 +59,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #1A365D; /* Dark Navy for contrast against Baby Blue */
+  color: #1A365D; /* Text color */
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
@@ -85,7 +84,7 @@
   transform: rotate(180deg);
 }
 
-/* Mega Panel / Dropdown */
+/* Drop down menu */
 .megaPanel {
   position: absolute;
   top: 100%;
@@ -100,7 +99,6 @@
   grid-template-columns: 1fr 240px;
   gap: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  margin-top: 0.5rem;
   animation: slideUp 0.3s ease-out forwards;
 }
 
@@ -211,7 +209,7 @@
 /* Donate Button */
 .donateButton {
   display: none;
-  background: #00A89E; /* Updated to modern Teal */
+  background: #00A89E;
   color: #ffffff;
   padding: 0.75rem 2rem;
   border-radius: 50px;
@@ -220,7 +218,7 @@
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0 4px 10px rgba(0, 168, 158, 0.2);
 }
 
