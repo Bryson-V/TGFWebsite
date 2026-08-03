@@ -10,7 +10,7 @@
       "title": "About Us",
       "links": [
         { "label": "Our Story", "href": "/ourStory" },
-        { "label": "Board of Directors", "href": "https://toduguam.com/board-of-directors/" },
+        { "label": "Board of Directors", "href": "/boardOfDirectors/" },
         { "label": "Doctors", "href": null },
         { "label": "FAQs & Resources", "href": "https://toduguam.com/faq/" }
       ]

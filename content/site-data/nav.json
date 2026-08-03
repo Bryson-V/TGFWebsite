@@ -11,7 +11,7 @@
       "panelSubtitle": "Learn about our operations, leadership, and more.",
       "links": [
         { "label": "Our Story", "href": "/ourStory" },
-        { "label": "Board of Directors", "href": "https://toduguam.com/board-of-directors/" },
+        { "label": "Board of Directors", "href": "/boardOfDirectors" },
         { "label": "FAQs & Resources", "href": "https://toduguam.com/faq/" }
       ]
     },
