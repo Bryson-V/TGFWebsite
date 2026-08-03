@@ -33,6 +33,9 @@ export default function ProgramsWheel({ programs = programsData }) {
 
     return (
         <div className={styles.wheelWrapper}>
+
+            <h2 className={styles.carouselTitle}>Our Programs</h2>
+
             <button ref={prevRef} className={`${styles.navBtn} ${styles.navBtnPrev}`} aria-label="Previous slide">
                 <IoIosArrowBack className={styles.arrowIcon} />
             </button>

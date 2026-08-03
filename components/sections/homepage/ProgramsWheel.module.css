@@ -7,6 +7,18 @@
   overflow: hidden; 
 }
 
+.carouselTitle {
+  display: block; 
+  width: 100%;    
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
 .swiperContainer {
   width: 100%;
   padding-top: 1.5rem !important;
