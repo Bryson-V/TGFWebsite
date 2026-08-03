@@ -1,0 +1,220 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: var(--color-text-soft, #6b7280);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 8px;
+  color: var(--color-text-heading, #111827);
+  line-height: 1.3;
+}
+
+.mainImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-card, 8px);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+/* Article Body Typography */
+.content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-body, #374151);
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+/* Quote Block (Styled like your image attachment) */
+.quote {
+  margin: 32px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 3px solid var(--color-border-quote, #e5e7eb);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-heading, #111827);
+}
+
+.quote p {
+  margin: 0;
+}
+
+/* Inline Images */
+.inlineImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 32px 0;
+  border-radius: var(--radius-card, 8px);
+  overflow: hidden;
+}
+
+.inlineImage {
+  object-fit: cover;
+}
+
+/* Links inside content */
+.link {
+  color: var(--color-primary, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link:hover {
+  opacity: 0.85;
+}
+
+/* External Link Button */
+.externalSection {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border, #e5e7eb);
+}
+
+.externalButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary, #2563eb);
+  color: #fff;
+  border-radius: var(--radius-pill, 9999px);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.buttonLink {
+  display: inline-block;
+  background-color: var(--color-primary, #0066cc);
+  color: #ffffff !important; /* Force white text */
+  padding: 10px 20px;
+  border-radius: var(--radius-pill, 9999px);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin: 1rem 0;
+}
+
+.buttonLink:hover {
+  background-color: var(--color-primary-dark, #004b99);
+  transform: translateY(-1px);
+}
+
+/* Unordered Lists (Bullet Points) */
+.articleBody ul {
+  list-style-type: disc !important;
+  padding-left: 2rem !important;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Ordered Lists (Numbered) */
+.articleBody ol {
+  list-style-type: decimal !important;
+  padding-left: 2rem !important;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Individual List Items */
+.articleBody li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Nested lists */
+.articleBody ul ul,
+.articleBody ol ul {
+  list-style-type: circle !important;
+  margin-bottom: 0;
+}
+
+/* Standard Inline Link (for email, text links, etc.) */
+/* Ensure standard inline links are clickable and interactive */
+.articleBody a.standardLink {
+  color: var(--color-primary, #0066cc);
+  text-decoration: underline;
+  font-weight: 500;
+  display: inline;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
+}
+
+.articleBody a.standardLink:hover {
+  text-decoration: none;
+}
+
+/* Blockquote container */
+.articleBody blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #e5e7eb;
+  font-style: italic;
+  color: #374151;
+  position: relative;
+  z-index: 1;
+}
+
+/* Button Link */
+.buttonLink {
+  display: inline-block;
+  background-color: var(--color-primary, #0066cc);
+  color: #ffffff !important;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill, 9999px);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  margin: 1rem 0;
+}
+
+.buttonLink:hover {
+  background-color: var(--color-primary-dark, #004b99);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Blockquote with the Vertical Accent Bar */
+.articleBody blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  
+  /* THIS IS THE BAR: Adjust color and width as needed */
+  border-left: 4px solid #e5e7eb; /* Light gray bar (use var(--color-border) or #d1d5db for darker) */
+  
+  font-style: italic;
+  color: #374151; /* Dark gray text */
+  background-color: transparent; /* Ensures background matches page */
+}
+
+/* Optional: Removes extra top/bottom margins on paragraphs inside the blockquote */
+.articleBody blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.articleBody blockquote p:last-child {
+  margin-bottom: 0;
+}

@@ -6,6 +6,7 @@ import styles from "./ProgramCard.module.css";
  * One program tile in the ProgramsGrid. Pure presentational component —
  * pass it a program object from content/site-data/programs.json.
  */
+
 export default function ProgramCard({ program }) {
   return (
     <a href={program.href} className={styles.card}>
