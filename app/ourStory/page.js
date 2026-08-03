@@ -20,6 +20,8 @@ export default function OurStoryPage() {
       <ImpactStats />
       <MissionStatement />
       <Timeline />
+            <StoryHero />
+
       {/* Add your other "Our Story" sections here */}
     </>
   );
