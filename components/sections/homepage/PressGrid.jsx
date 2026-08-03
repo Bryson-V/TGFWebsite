@@ -14,11 +14,19 @@ export default function PressGrid() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title="TODU Guam in the News" align="center" />
+        <SectionHeading title="Todu Guam in the News" align="center" />
         <div className={styles.grid}>
           {press.map((item) => (
-            <NewsCard key={item.title} title={item.title} image={item.image} href={item.href} tag={item.tag} />
-          ))}
+           <NewsCard 
+              key={item.title} 
+              title={item.title} 
+              image={item.image} 
+              href={item.href} 
+              tag={item.tag}
+              source={item.source}
+              color={item.color}
+            />
+          ))} 
         </div>
       </Container>
     </section>

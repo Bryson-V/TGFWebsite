@@ -16,7 +16,8 @@ export default function NewsGrid() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title="Latest News & Updates" />
+        {/* Added align="center" to perfectly match the other sections */}
+        <SectionHeading title="Latest News & Updates" align="center" />
         <div className={styles.grid}>
           {articles.map((article) => (
             <NewsCard
@@ -26,6 +27,8 @@ export default function NewsGrid() {
               href={`/news/${article.slug}`}
               date={formatDate(article.date)}
               excerpt={article.excerpt}
+              /* Hardcoded to the primary dark blue so every card matches */
+              color="#1A365D" 
             />
           ))}
         </div>
