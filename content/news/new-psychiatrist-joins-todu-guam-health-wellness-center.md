@@ -1,7 +1,7 @@
 ---
 title: "New Psychiatrist joins Todu Guam Health & Wellness Center"
 date: "2026-03-05"
-image: "/images/news/tgf-news-generic.jpg"
+image: "/images/news/press-screenshot.webp"
 excerpt: "Todu Guam Health & Wellness Center welcomes a new psychiatrist to the team."
 ---
 
