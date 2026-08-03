@@ -5,7 +5,6 @@ import ImpactStats from "@/components/sections/homepage/ImpactStats";
 import GetInvolved from "@/components/sections/homepage/GetInvolved";
 import NewsGrid from "@/components/sections/homepage/NewsGrid";
 import PressGrid from "@/components/sections/homepage/PressGrid";
-import NewsletterSignup from "@/components/sections/homepage/NewsletterSignup";
 
 /**
  * Homepage
@@ -25,7 +24,6 @@ export default function HomePage() {
       <GetInvolved />
       <NewsGrid />
       <PressGrid />
-      <NewsletterSignup />
     </>
   );
 }
