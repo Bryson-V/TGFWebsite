@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Recommended for Next.js internal links
 import styles from "./NewsCard.module.css";
 
 // 1. Helper to assign brand colors based on the tag name (Fallback)
@@ -38,11 +39,18 @@ export default function NewsCard({ title, image, href, tag, source, color, date 
   const finalColor = color || getTagColor(tag);
   const publisher = getPublisherName(href, source);
 
+  // Check if link is external (starts with http:// or https://)
+  const isExternal = typeof href === "string" && /^https?:\/\//i.test(href);
+
+  // Dynamic link properties based on whether it is external or internal
+  const linkProps = isExternal
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
   return (
-    <a 
+    <Link 
       href={href} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+      {...linkProps}
       className={styles.card}
       style={{ "--card-theme": finalColor }} 
     >
@@ -68,11 +76,14 @@ export default function NewsCard({ title, image, href, tag, source, color, date 
         <div className={styles.footerBar}>
           {/* Left Side: Icon FIRST, then Publisher Name */}
           <div className={styles.publisherGroup}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}>
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+            {/* Show external link icon only if it's an external site */}
+            {isExternal && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            )}
             <span className={styles.publisherName}>{publisher}</span>
           </div>
 
@@ -80,6 +91,6 @@ export default function NewsCard({ title, image, href, tag, source, color, date 
           {date && <span className={styles.date}>{date}</span>}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
