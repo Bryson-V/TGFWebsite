@@ -1,125 +1,57 @@
 .section {
-  padding: 80px 0;
-  background-color: #fafafa;
+  padding: 64px 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-  }
-}
-
-/* Modern Profile Card Styling */
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
+  border-radius: var(--radius-card);
   overflow: hidden;
-  background-color: #ffffff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06); 
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  height: 100%;
+  background-color: var(--color-bg-alt);
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-}
-
-/* HUGE IMAGE AREA */
 .imageWrap {
   position: relative;
   width: 100%;
-  height: 320px; /* Make the image truly dominant */
-  background: #f4f4f4;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.buttonWrap {
+  margin-top: auto;
+  padding-top: 16px;
 }
 
 .image {
   object-fit: cover;
 }
 
-/* Centered and Repositioned Body Content */
 .body {
-  padding: 40px 32px; /* Generous breathing room */
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
+  gap: 12px;
+  align-items: flex-start;
 }
 
-.cardTitle {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #1A365D;
-  margin: 0 0 40px 0; /* Huge margin pushes CTA block down the card */
+.body h3 {
+  font-size: 1.4rem;
 }
 
-/* NEW: The tight CTA block */
-.ctaArea {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 16px; /* Tight coupling between description and button */
-  flex-grow: 1; /* Pushes the CTA block perfectly to the bottom */
-  justify-content: space-between; /* Ensures description and button are at opposite ends of the space */
+.body p {
+  color: var(--color-text);
+  line-height: 1.5;
 }
 
-.cardDesc {
-  color: #666666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin: 0; /* Handled by ctaArea gap */
-}
-
-/* Button Wrapper & Styles */
-.buttonWrap {
-  width: 100%;
-}
-
-.ctaButton {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.primaryBtn {
-  background: #00A89E;
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 168, 158, 0.25);
-}
-
-.primaryBtn:hover {
-  background: #00938a;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 168, 158, 0.4);
-}
-
-.secondaryBtn {
-  background: #E3F2FD;
-  color: #1A365D;
-}
-
-.secondaryBtn:hover {
-  background: #d0e8fc;
-  transform: translateY(-2px);
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

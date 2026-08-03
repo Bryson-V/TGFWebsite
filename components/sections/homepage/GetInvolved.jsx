@@ -5,11 +5,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import styles from "./GetInvolved.module.css";
 
-/**
- * GetInvolved
- * The two-card "Be a volunteer" / "Donate" section. Card content lives in
- * content/site-data/get-involved.json.
- */
 export default function GetInvolved() {
   return (
     <section className={styles.section}>
@@ -28,22 +23,15 @@ export default function GetInvolved() {
                 />
               </div>
               <div className={styles.body}>
-                <h3 className={styles.cardTitle}>{card.title}</h3>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
                 
-                {/* NEW WRAPPER: description and button tight coupling */}
-                <div className={styles.ctaArea}>
-                  <p className={styles.cardDesc}>{card.description}</p>
-                  
-                  <div className={styles.buttonWrap}>
-                    <Button 
-                      href={card.href} 
-                      className={`${styles.ctaButton} ${card.id === 'donate' ? styles.primaryBtn : styles.secondaryBtn}`}
-                    >
-                      {card.buttonText}
-                    </Button>
-                  </div>
+                {/* Pushes the button to the bottom using auto margin */}
+                <div className={styles.buttonWrap}>
+                  <Button href={card.href}>
+                    {card.id === 'donate' ? 'Donate Now' : 'Sign Up Today'}
+                  </Button>
                 </div>
-
               </div>
             </div>
           ))}
