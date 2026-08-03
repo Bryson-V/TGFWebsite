@@ -27,11 +27,21 @@
   padding: 0.25rem 0;
 }
 
+.logoWrapper {
+  position: relative;
+  width: 140px;
+  height: 47px; 
+  display: block; 
+}
+
+@media (min-width: 768px) {
+  .logoWrapper {
+    width: 180px;
+    height: 60px;
+  }
+}
+
 .logoImg {
-  width: auto;
-  height: auto;
-  max-height: 64px;
-  max-width: 210px;
   object-fit: contain;
 }
 

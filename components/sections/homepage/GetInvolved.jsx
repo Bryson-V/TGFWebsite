@@ -9,7 +9,7 @@ export default function GetInvolved() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title={getInvolved.sectionTitle} subtitle={getInvolved.sectionSubtitle} />
+        <SectionHeading title={getInvolved.sectionTitle} subtitle={getInvolved.sectionSubtitle} align="center"/>
         <div className={styles.grid}>
           {getInvolved.cards.map((card) => (
             <div key={card.id} className={styles.card}>

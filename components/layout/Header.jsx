@@ -63,15 +63,22 @@ export default function Header() {
       <header className={styles.header}>
         <Container className={styles.bar}>
           {/* Logo */}
-          <Link href="/" className={styles.logoLink} onClick={closeAll} aria-label="Todu Guam Foundation home">
-            <Image
-              src="/images/logo/TGFLogo.png"
-              alt="Todu Guam Foundation"
-              width={180}
-              height={60}
-              priority
-              className={styles.logoImg}
-            />
+          <Link 
+            href="/" 
+            className={styles.logoLink} 
+            onClick={closeAll} 
+            aria-label="Todu Guam Foundation home"
+          >
+            <div className={styles.logoWrapper}>
+              <Image
+                src="/images/logo/TGFLogo.png"
+                alt="Todu Guam Foundation"
+                fill
+                sizes="(max-width: 768px) 140px, 180px"
+                priority
+                className={styles.logoImg}
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
