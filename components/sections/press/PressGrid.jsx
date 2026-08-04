@@ -1,7 +1,8 @@
 import press from "@/content/site-data/press.json";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import NewsCard from "./NewsCard";
+import NewsCard from "../homepage/NewsCard";
+import Link from "next/link";
 import styles from "./PressGrid.module.css";
 
 /**
@@ -11,12 +12,18 @@ import styles from "./PressGrid.module.css";
  * this site — on toduguam.com or third-party outlets.
  */
 export default function PressGrid() {
+  // Sort items by date and limit to the top 4
+  const limitedPress = [...press]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
+
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title="Todu Guam in the News" align="center" />
+        <SectionHeading title="Latest Press Coverage" align="center" />
+        
         <div className={styles.grid}>
-          {press.map((item) => (
+          {limitedPress.map((item) => (
            <NewsCard 
               key={item.title} 
               title={item.title} 
@@ -25,8 +32,16 @@ export default function PressGrid() {
               tag={item.tag}
               source={item.source}
               color={item.color}
+              date={item.date}
             />
           ))} 
+        </div>
+
+        {/* Bottom Action Bar with View All text link aligned to the right */}
+        <div className={styles.footerAction}>
+          <Link href="/press" className={styles.viewAllLink}>
+            View All &rarr;
+          </Link>
         </div>
       </Container>
     </section>

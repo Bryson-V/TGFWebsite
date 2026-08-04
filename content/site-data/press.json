@@ -4,6 +4,17 @@
     "tag": "Mental Health",
     "image": "/images/news/press-generic.jpg",
     "href": "https://www.mbjguam.com/new-psychiatrist-joins-todu-guam-health-wellness-center",
+    "source": "Marianas Business Journal",
+    "date": "2024-05-15",
+    "color": "#7C6FCD"
+  },
+    {
+    "title": "Testing",
+    "tag": "Mental Health",
+    "image": "/images/news/press-generic.jpg",
+    "href": "https://www.mbjguam.com/new-psychiatrist-joins-todu-guam-health-wellness-center",
+    "source": "Marianas Business Journal",
+    "date": "2020-05-15",
     "color": "#7C6FCD"
   },
   {
@@ -11,6 +22,8 @@
     "tag": "Community",
     "image": "/images/logo/tgf-logo.png",
     "href": "https://www.guampdn.com/news/reaching-out-to-the-underserved/article_ba7497c6-bcd9-11ee-ba61-9bb461edd4fe.html",
+    "source": "Pacific Daily News",
+    "date": "2024-01-22",
     "color": "#3A9E7E"
   },
   {
@@ -18,6 +31,8 @@
     "tag": "Press Release",
     "image": "/images/news/tgf-news-generic.jpg",
     "href": "https://web.archive.org/web/20240812031328/https://aapcho.org/tuberculosis-elimination-alliance-awards-mini-grants-to-expand-latent-tuberculosis-infection-and-tuberculosis-testing-screening-treatment-and-prevention/",
+    "source": "AAPCHO",
+    "date": "2024-08-10",
     "color": "#E8824A"
   },
   {
@@ -25,6 +40,8 @@
     "tag": "Outreach",
     "image": "/images/news/press-screenshot.webp",
     "href": "https://www.guampdn.com/news/yigo-medical-outreach-has-large-turnout-of-residents-some-turned-away/article_5bd50ce8-0577-11ed-9164-332d55ed170c.html",
+    "source": "Pacific Daily News",
+    "date": "2022-07-15",
     "color": "#3A7FC1"
   }
 ]

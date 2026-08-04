@@ -1,43 +1,25 @@
 import Image from "next/image";
-import Link from "next/link"; // Recommended for Next.js internal links
+import Link from "next/link";
 import styles from "./NewsCard.module.css";
 
-// 1. Helper to assign brand colors based on the tag name (Fallback)
-function getTagColor(tag) {
-  if (!tag) return "#00A89E"; 
-  
-  const t = tag.toLowerCase();
-  if (t.includes("health")) return "#00A89E"; 
-  if (t.includes("community")) return "#f87171"; 
-  if (t.includes("event")) return "#f59e0b"; 
-  if (t.includes("education")) return "#1877F2"; 
-  
-  return "#00A89E"; 
-}
-
-// 2. Helper to figure out the publisher's name from the URL
+// 2. Helper to figure out the publisher's name (uses JSON source/company first)
 function getPublisherName(href, customSource) {
   if (customSource) return customSource;
   
   try {
     const url = new URL(href);
-    const domain = url.hostname.toLowerCase();
-    
-    if (domain.includes("mbjguam.com")) return "Marianas Business Journal";
-    if (domain.includes("guampdn.com")) return "Pacific Daily News";
-    if (domain.includes("postguam.com")) return "The Guam Daily Post";
-    if (domain.includes("kuam.com")) return "KUAM News";
-    if (domain.includes("pacificislandtimes.com")) return "Pacific Island Times";
-    
-    return domain.replace("www.", "");
+    // Fallback: cleanly formats the domain name if source is left out of JSON
+    return url.hostname.replace("www.", "").split(".")[0].toUpperCase();
   } catch (error) {
     return "Read Article"; 
   }
 }
 
-export default function NewsCard({ title, image, href, tag, source, color, date }) {
+export default function NewsCard({ title, image, href, tag, source, company, color, date }) {
+  // Support both 'source' or 'company' property names from the JSON
+  const publisherSource = source || company;
   const finalColor = color || getTagColor(tag);
-  const publisher = getPublisherName(href, source);
+  const publisher = getPublisherName(href, publisherSource);
 
   // Check if link is external (starts with http:// or https://)
   const isExternal = typeof href === "string" && /^https?:\/\//i.test(href);
@@ -76,7 +58,6 @@ export default function NewsCard({ title, image, href, tag, source, color, date 
         <div className={styles.footerBar}>
           {/* Left Side: Icon FIRST, then Publisher Name */}
           <div className={styles.publisherGroup}>
-            {/* Show external link icon only if it's an external site */}
             {isExternal && (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}>
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
