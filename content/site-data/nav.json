@@ -41,14 +41,9 @@
       "links": [
         { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
         { "label": "Careers", "href": "https://toduguam.com/careers/" },
-        { "label": "Volunteer", "href": "https://toduguam.com/how-to-be-a-volunteer/" },
-        { "label": "Contact Us", "href": "https://toduguam.com/contact/" },
         { "label": "Latest News & Stories", "href": "https://toduguam.com/blogs/" },
         { "label": "Todu Guam in the News", "href": "https://toduguam.com/news/" }
-      ],
-      "featuredImage": "/images/community/staff-and-volunteers.jpg",
-      "featuredCaption": "TGF Staff and Volunteers",
-      "featuredHref": "https://toduguam.com/ways-to-help/"
+      ]
     }
   ]
 }

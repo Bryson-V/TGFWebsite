@@ -29,11 +29,9 @@
       "title": "Our Community",
       "links": [
         { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
-        { "label": "Volunteer", "href": "https://toduguam.com/how-to-be-a-volunteer/" },
+        { "label": "Careers", "href": "https://toduguam.com/careers/" },
         { "label": "Latest News & Stories", "href": "https://toduguam.com/blogs/" },
-        { "label": "Todu Guam in the News", "href": "https://toduguam.com/news/" },
-        { "label": "Contact Us", "href": "https://toduguam.com/contact" }
-      ]
+        { "label": "Todu Guam in the News", "href": "https://toduguam.com/news/" }      ]
     }
   ],
   "social": [
