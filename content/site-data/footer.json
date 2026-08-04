@@ -28,7 +28,7 @@
     {
       "title": "Our Community",
       "links": [
-        { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
+        { "label": "Ways to Help", "href": "/volunteer" },
         { "label": "Careers", "href": "https://toduguam.com/careers/" },
         { "label": "News & Stories", "href": "/allNews" },
         { "label": "Press Coverage", "href": "/allPress" }      ]
