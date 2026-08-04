@@ -12,7 +12,6 @@ import styles from "./NewsGrid.module.css";
  * content/README.md for the exact steps. No code changes required.
  */
 export default function NewsGrid() {
-  // Limited to 4 to show only the newest 4 articles
   const articles = getLatestNews(6);
 
   return (
@@ -29,7 +28,6 @@ export default function NewsGrid() {
               href={`/news/${article.slug}`}
               date={formatDate(article.date)}
               excerpt={article.excerpt}
-              /* Hardcoded to the primary dark blue so every card matches */
               color="#1A365D" 
             />
           ))}
