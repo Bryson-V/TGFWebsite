@@ -3,6 +3,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import NewsCard from "../homepage/NewsCard";
 import styles from "./PressGrid.module.css";
+import { formatDate } from "@/lib/content";
 
 /**
  * PressGrid
@@ -11,7 +12,6 @@ import styles from "./PressGrid.module.css";
  * this site — on toduguam.com or third-party outlets.
  */
 export default function PressArchive() {
-  // Sort items by date and limit to the top 4
   const limitedPress = [...press]
 
   return (
@@ -24,11 +24,11 @@ export default function PressArchive() {
               key={item.title} 
               title={item.title} 
               image={item.image} 
-              href={item.href} 
+              href={item.href}
               tag={item.tag}
               source={item.source}
               color={item.color}
-              date={item.date}
+              date={formatDate(item.date)}
             />
           ))} 
         </div>

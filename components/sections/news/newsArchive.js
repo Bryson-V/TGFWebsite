@@ -11,8 +11,6 @@ import styles from "./NewsGrid.module.css";
  * content/README.md for the exact steps. No code changes required.
  */
 export default function NewsArchive() {
-  // Pass a high number (or omit limit if your helper allows) to get all articles, 
-  // then sort chronologically by date (oldest to newest, or change to b.date - a.date for reverse)
   const articles = getLatestNews(100).sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
@@ -29,7 +27,6 @@ export default function NewsArchive() {
               href={`/news/${article.slug}`}
               date={formatDate(article.date)}
               excerpt={article.excerpt}
-              /* Hardcoded to the primary dark blue so every card matches */
               color="#1A365D" 
             />
           ))}

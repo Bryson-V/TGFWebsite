@@ -2,13 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./NewsCard.module.css";
 
-// 2. Helper to figure out the publisher's name (uses JSON source/company first)
 function getPublisherName(href, customSource) {
   if (customSource) return customSource;
   
   try {
     const url = new URL(href);
-    // Fallback: cleanly formats the domain name if source is left out of JSON
     return url.hostname.replace("www.", "").split(".")[0].toUpperCase();
   } catch (error) {
     return "Read Article"; 
@@ -16,15 +14,12 @@ function getPublisherName(href, customSource) {
 }
 
 export default function NewsCard({ title, image, href, tag, source, company, color, date }) {
-  // Support both 'source' or 'company' property names from the JSON
   const publisherSource = source || company;
   const finalColor = color || getTagColor(tag);
   const publisher = getPublisherName(href, publisherSource);
 
-  // Check if link is external (starts with http:// or https://)
   const isExternal = typeof href === "string" && /^https?:\/\//i.test(href);
 
-  // Dynamic link properties based on whether it is external or internal
   const linkProps = isExternal
     ? { target: "_blank", rel: "noopener noreferrer" }
     : {};
