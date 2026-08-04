@@ -7,21 +7,13 @@ import styles from "./Hero.module.css";
  * Hero
  * The homepage's opening mission statement banner. This is the first
  * thing a visitor sees, so the copy here is pulled directly from the
- * live site rather than a data file — treat it as page-specific content
- * you'd edit in this file directly if it changes.
+ * live site
  */
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <Container className={styles.grid}>
         <div className={styles.text}>
-          <Image
-            src="/images/logo/tgf-logo.png"
-            alt="Todu Guam Foundation"
-            width={250}
-            height={90}
-            className={styles.heroLogo}
-          />
           <h1 className={styles.headline}>
             We are committed to <strong>getting Guam healthy, one man, one woman, and one child at a time.</strong>
           </h1>
