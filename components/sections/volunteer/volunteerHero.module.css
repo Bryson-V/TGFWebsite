@@ -1,0 +1,161 @@
+/* --- Base Section --- */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; 
+  display: flex;
+  align-items: center;
+  background-color: #1A365D; 
+  color: #ffffff;
+  overflow: hidden;
+  padding: 4rem 0; 
+}
+
+/* --- Image & Gradient Overlay --- */
+.imageContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.92) 0%, rgba(0, 168, 158, 0.65) 100%);
+}
+
+/* --- Layout Grid --- */
+.contentContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* --- Text Content --- */
+.textContent {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.accentText {
+  background: linear-gradient(to right, #00A89E, #986cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  padding-right: 0.2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+
+/* --- CTA Button --- */
+.ctaButton {
+  display: inline-block;
+  background-color: #00A89E; /* Primary Teal */
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 158, 0.3);
+}
+
+.ctaButton:hover {
+  background-color: #009c92;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(92, 190, 246, 0.4);
+}
+
+/* --- Frosted Glass Stats Panel --- */
+.statsPanel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.statsEyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 1rem;
+}
+
+.statsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+/* --- Individual Stat Layout --- */
+.stat {
+  display: grid;
+  grid-template-columns: 130px 1fr; 
+  align-items: center; 
+  gap: 1rem; 
+}
+
+.statNumber {
+  font-family: 'DM Serif Display', serif; 
+  font-size: 3.5rem;
+  font-weight: 400; 
+  color: #ffffff; 
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #ffffff;
+  font-weight: 500; 
+  line-height: 1.3;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  .contentContainer {
+    grid-template-columns: 1fr; 
+    gap: 3rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+}

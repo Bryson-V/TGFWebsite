@@ -28,7 +28,7 @@
     {
       "title": "Our Community",
       "links": [
-        { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
+        { "label": "Ways to Help", "href": "/volunteer" },
         { "label": "Careers", "href": "https://toduguam.com/careers/" },
         { "label": "Latest News & Stories", "href": "https://toduguam.com/blogs/" },
         { "label": "Todu Guam in the News", "href": "https://toduguam.com/news/" }      ]
