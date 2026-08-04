@@ -1,0 +1,76 @@
+/* --- Hero Section Container --- */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  min-height: 350px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  background-color: #0c1f3f;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* --- Image & Overlay --- */
+.imageContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(12, 31, 63, 0.9) 0%, rgba(12, 31, 63, 0.4) 100%);
+}
+
+/* --- Text Content --- */
+.contentContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.textContent {
+  max-width: 650px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #f1f5f9;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .heroSection {
+    height: 35vh;
+    min-height: 300px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
