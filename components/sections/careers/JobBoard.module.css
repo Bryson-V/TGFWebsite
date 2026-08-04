@@ -1,0 +1,91 @@
+.section {
+  padding: 60px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-card, 16px);
+  padding: 28px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.jobBadge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.eventBadge {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.category {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary, #0d4a57);
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary, #0d4a57);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

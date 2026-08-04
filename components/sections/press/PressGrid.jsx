@@ -39,7 +39,7 @@ export default function PressGrid() {
 
         {/* Bottom Action Bar with View All text link aligned to the right */}
         <div className={styles.footerAction}>
-          <Link href="/press" className={styles.viewAllLink}>
+          <Link href="/allPress" className={styles.viewAllLink}>
             View All &rarr;
           </Link>
         </div>
