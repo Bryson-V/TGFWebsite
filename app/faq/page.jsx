@@ -10,7 +10,7 @@ import ResourcesGrid from "@/components/sections/faq/resourcesGrid";
  * The "Our Story" page component featuring the new StoryHero banner
  * and subsequent story-specific sections.
  */
-export default function OurStoryPage() {
+export default function frequentlyAskedQuestions() {
   return (
     <>
       <FaqHero />

@@ -43,9 +43,9 @@
     { "label": "Linkedin", "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd" }
   ],
   "legal": [
-    { "label": "Privacy Policy", "href": "https://toduguam.com/privacy/" },
-    { "label": "Terms & Conditions", "href": "https://toduguam.com/terms-and-conditions/" },
-    { "label": "Accessibility Statement", "href": "https://toduguam.com/accessibility-statement/" }
+    { "label": "Privacy Policy", "href": "/privacy" },
+    { "label": "Terms & Conditions", "href": "/termsCondtions" },
+    { "label": "Accessibility Statement", "href": "/accessibility" }
   ],
   "copyright": "Copyright 2026 \u00a9 Toduguam Foundation All rights Reserved."
 }
