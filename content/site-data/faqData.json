@@ -1,0 +1,39 @@
+[
+  {
+    "id": "location",
+    "question": "Where is Todu Guam Foundation (TGF) located?",
+    "answer": "Our office is located at 125 Tun Jesus Crisostomo Street in Tamuning, Guam."
+  },
+  {
+    "id": "support",
+    "question": "Who supports TGF?",
+    "answer": "With the help of individuals and various business institutions, we're able to carry out our services and operations. Aside from these, we also receive funding from the government and other organizations."
+  },
+  {
+    "id": "help",
+    "question": "How can I help TGF?",
+    "answer": "There are different ways to support our organization and our cause. First, you can give a monetary donation. You can send it via PayPal or check. Please note that your donations are tax-deductible. Second, you can support us by being a volunteer. Share your time and your expertise with the people of Guam by serving them as a TGF volunteer. Finally, you can also raise awareness about our projects and services. Follow us on our social media pages and share our activities with your friends and family. Thank you! For more information on how to support Todu Guam, please visit: Ways to Help"
+  },
+  {
+    "id": "volunteer",
+    "question": "Do you accept volunteers? If yes, how can I sign up?",
+    "answer": "Yes, we do. If you are interested in doing social work, you can share your expertise and time with us. To signify your interest, please send us a message on WhatsApp at 671-797-8431."
+  },
+  {
+    "id": "donations",
+    "question": "Aside from donations how can I help support TGF?",
+    "answer": "You can still make a meaningful contribution to our cause aside from giving us a monetary donation. You can do this by becoming a Todu Guam volunteer and by helping raise awareness about our activities and services."
+  },
+  {
+    "id": "work",
+    "question": "How can I work for TGF?",
+    "answer": "Thank you for considering a career at Todu Guam! We’d love to know more about you, so please send us your curriculum vitae to foundation@toduguam.com."
+  },
+  {
+    "id": "tax",
+    "question": "Do I get a tax write-off when I donate to TGF?",
+    "answer": "Yes, you do. Please just send us an email with proof of your donation, and we will prepare the document for you."
+  }
+
+
+]
