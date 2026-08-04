@@ -1,0 +1,245 @@
+/* --- Base Section --- */
+.section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+  color: #1e293b; 
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.heading {
+  color: #0c1f3f;
+  font-family: inherit; 
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* --- 2x2 Grid & Rectangular Cards --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary, #0d4a57);
+  box-shadow: 0 12px 30px -10px rgba(13, 74, 87, 0.15);
+  background-color: #ffffff;
+}
+
+/* --- Icon Box --- */
+.cardIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  border-radius: 12px;
+  background-color: #e0f2fe;
+  font-size: 1.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .cardIconWrapper {
+  background-color: var(--color-primary, #0d4a57);
+}
+
+/* --- Info & Left Accent Line Effect --- */
+.infoWrapper {
+  border-left: 3px solid #cbd5e1; 
+  padding-left: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover .infoWrapper {
+  border-left-color: var(--color-primary, #0d4a57);
+}
+
+.categoryName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c1f3f;
+  margin: 0 0 0.25rem 0;
+}
+
+.categoryRole {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- Modal Styles (Matching your template) --- */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(12, 31, 63, 0.5);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: modalFadeIn 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modalEyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary, #0d4a57);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modalAvatarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  border: 3px solid #e2e8f0;
+}
+
+.modalIconLarge {
+  font-size: 2rem;
+}
+
+.modalName {
+  font-size: 1.5rem;
+  color: #0c1f3f;
+  margin: 0 0 0.35rem 0;
+  font-weight: 700;
+}
+
+.modalRole {
+  color: #64748b;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.descriptionLabel {
+  font-size: 0.85rem;
+  color: #0c1f3f;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.requirementsLabel {
+  margin-top: 1.25rem;
+}
+
+.descriptionBox {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.modalActionWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalApplyButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-primary, #0d4a57);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modalApplyButton:hover {
+  background-color: #09343e;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}

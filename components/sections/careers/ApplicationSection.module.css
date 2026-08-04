@@ -1,0 +1,134 @@
+.section {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pdfCard {
+  background: #f8fafc;
+  border: 1px dashed var(--color-primary, #0d4a57);
+  border-radius: var(--radius-card, 16px);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pdfIcon {
+  font-size: 2rem;
+}
+
+.pdfCard h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary, #0d4a57);
+  margin-bottom: 4px;
+}
+
+.pdfCard p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0;
+}
+
+.pdfButton {
+  margin-left: auto;
+  background-color: var(--color-primary, #0d4a57);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.formContainer {
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-card, 16px);
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: var(--color-primary, #0d4a57);
+}
+
+.submitButton {
+  background-color: var(--color-primary, #0d4a57);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.successBox {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #166534;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .pdfCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pdfButton {
+    margin-left: 0;
+  }
+  .formContainer {
+    padding: 24px;
+  }
+}    
