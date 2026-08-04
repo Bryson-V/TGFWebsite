@@ -1,7 +1,8 @@
 import { getLatestNews, formatDate } from "@/lib/content";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import NewsCard from "./NewsCard";
+import NewsCard from "../homepage/NewsCard";
+import Link from "next/link";
 import styles from "./NewsGrid.module.css";
 
 /**
@@ -11,6 +12,7 @@ import styles from "./NewsGrid.module.css";
  * content/README.md for the exact steps. No code changes required.
  */
 export default function NewsGrid() {
+  // Limited to 4 to show only the newest 4 articles
   const articles = getLatestNews(6);
 
   return (
@@ -31,6 +33,13 @@ export default function NewsGrid() {
               color="#1A365D" 
             />
           ))}
+        </div>
+
+        {/* Bottom Action Bar with View All text link aligned to the right */}
+        <div className={styles.footerAction}>
+          <Link href="/allNews" className={styles.viewAllLink}>
+            View All &rarr;
+          </Link>
         </div>
       </Container>
     </section>
