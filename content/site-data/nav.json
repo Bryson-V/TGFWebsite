@@ -39,7 +39,7 @@
       "panelTitle": "OUR COMMUNITY",
       "panelSubtitle": "See our volunteers in action and learn how you can join the mission.",
       "links": [
-        { "label": "Ways to Help", "href": "https://toduguam.com/ways-to-help/" },
+        { "label": "Ways to Help", "href": "/ways-to-help" },
         { "label": "Careers", "href": "/careers" },
         { "label": "News & Stories", "href": "/allNews" },
         { "label": "Press Coverage", "href": "/allPress" }
