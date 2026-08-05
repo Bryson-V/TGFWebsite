@@ -10,9 +10,6 @@ export default function QRModule() {
         <div className={styles.header}>
           <p className={styles.eyebrow}>WAYS TO GIVE</p>
           <h2 className={styles.title}>Support our mission with a donation</h2>
-          <p className={styles.subtitle}>
-            Every dollar goes directly toward providing no-cost healthcare, education, and support to the people of Guam. Si Yu'os Ma'åse' for your generosity.
-          </p>
         </div>
 
         <div className={styles.grid}>
