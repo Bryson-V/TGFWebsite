@@ -140,6 +140,8 @@
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
+  height: 98px;
+  justify-content: center;
 }
 
 .dropZone:hover {
@@ -166,12 +168,64 @@
   font-size: 0.825rem;
   color: #475569;
   font-weight: 500;
-  word-break: break-all;
 }
 
-.fileHint {
-  font-size: 0.8rem;
+/* --- File Preview Card --- */
+.filePreviewCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0 1rem;
+  height: 98px;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.fileIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary, #0d4a57);
+  flex-shrink: 0;
+}
+
+.fileName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeIconButton {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
   color: #64748b;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.removeIconButton:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
 }
 
 /* --- Submit Button --- */
@@ -214,6 +268,23 @@
   font-size: 0.95rem;
 }
 
+.selectDropdown {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.selectDropdown:focus {
+  border-color: var(--color-primary, #0d4a57);
+  box-shadow: 0 0 0 3px rgba(13, 74, 87, 0.1);
+}
+
 /* --- Responsive Layout --- */
 @media (max-width: 768px) {
   .pdfCard {
@@ -231,19 +302,115 @@
   }
 }
 
-.selectDropdown {
-  padding: 0.75rem 1rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  color: #0f172a;
-  outline: none;
-  background-color: #ffffff;
+/* --- Clickable File Info --- */
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  flex-grow: 1;
 }
 
-.selectDropdown:focus {
-  border-color: var(--color-primary, #0d4a57);
-  box-shadow: 0 0 0 3px rgba(13, 74, 87, 0.1);
+.fileInfo:hover .fileName {
+  color: var(--color-primary, #0d4a57);
+  text-decoration: underline;
+}
+
+/* --- Modal Overlay & Preview Box --- */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.modalHeader {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalHeader h3 {
+  font-size: 1.1rem;
+  color: #0c1f3f;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.closeModalButton {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.closeModalButton:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.modalBody {
+  flex-grow: 1;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.previewIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.previewFallback {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.previewFallback p {
+  color: #475569;
+  margin: 0;
+}
+
+.downloadPreviewButton {
+  background-color: var(--color-primary, #0d4a57);
+  color: #ffffff;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
