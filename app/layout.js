@@ -28,7 +28,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={ptSans.variable}>
+    <html lang="en" className={ptSans.variable} data-scroll-behavior="smooth">
       <body>
         <Header />
         <main id="content">{children}</main>

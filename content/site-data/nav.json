@@ -12,7 +12,9 @@
       "links": [
         { "label": "Our Story", "href": "/ourStory" },
         { "label": "Board of Directors", "href": "/boardOfDirectors" },
-        { "label": "FAQs & Resources", "href": "/faq" }
+        { "label": "Doctors", "href": "/doctors" },
+        { "label": "FAQs & Resources", "href": "/faq" },
+        { "label": "Outreaches", "href": "/allOutreaches" }
       ]
     },
     {

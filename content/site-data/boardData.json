@@ -1,0 +1,47 @@
+{
+  "heading": "Executive Board Members",
+  "members": [
+    {
+      "id": "1",
+      "name": "Dennis G. Rodriguez",
+      "role": "Secretary of the Board",
+      "image": "/images/directors/Dennis.webp", 
+      "description": "Dennis has over 20 years of experience in administrative leadership and is dedicated to fostering community health initiatives across the island."
+    },
+    {
+      "id": "2",
+      "name": "Dr. Yolanda",
+      "role": "Secretary of the Board",
+      "image": "/images/directors/Yolanda.webp",
+      "description": "Dr. Yolanda is a passionate advocate for accessible healthcare, bringing a wealth of medical expertise to the foundation's strategic planning."
+    },
+    {
+      "id": "3",
+      "name": "Lena",
+      "role": "Board Member-At-Trustee",
+      "image": "/images/directors/Lena.webp",
+      "description": "Lena specializes in community outreach and has been instrumental in growing our grassroots volunteer networks."
+    },
+    {
+      "id": "4",
+      "name": "Dennis",
+      "role": "Board Member-At-Trustee",
+      "image": "/images/directors/Dennis.webp",
+      "description": "Dedicated to the foundation's mission, Dennis works closely with local partners to ensure funding and resources reach those in need."
+    },
+    {
+      "id": "5",
+      "name": "Dennis",
+      "role": "Board Member-At-Trustee",
+      "image": "/images/directors/Dennis.webp",
+      "description": "A lifelong resident of Guam, Dennis serves as a crucial voice for patient advocacy and support services."
+    },
+    {
+      "id": "6",
+      "name": "Dennis",
+      "role": "Board Member-At-Trustee",
+      "image": "/images/directors/Dennis.webp",
+      "description": "A lifelong resident of Guam, Dennis serves as a crucial voice for patient advocacy and support services."
+    }
+  ]
+}

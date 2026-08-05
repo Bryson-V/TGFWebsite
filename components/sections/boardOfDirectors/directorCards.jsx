@@ -1,58 +1,80 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import styles from "./directorCards.module.css";
+import boardData from "@/content/site-data/boardData.json";
 
-const boardData = {
-  heading: "Executive Board Members",
-  members: [
-    {
-      id: "1",
-      name: "Dennis G. Rodriguez",
-      role: "Secretary of the Board",
-      image: "/images/directors/Dennis.webp", 
-      description: "Dennis has over 20 years of experience in administrative leadership and is dedicated to fostering community health initiatives across the island."
-    },
-    {
-      id: "2",
-      name: "Dr. Yolanda Camma",
-      role: "Secretary of the Board",
-      image: "/images/directors/Yolanda.webp",
-      description: "Dr. Camma is a passionate advocate for accessible healthcare, bringing a wealth of medical expertise to the foundation's strategic planning."
-    },
-    {
-      id: "3",
-      name: "Lena",
-      role: "Board Member-At-Trustee",
-      image: "/images/directors/Lena.webp",
-      description: "Lena specializes in community outreach and has been instrumental in growing our grassroots volunteer networks."
-    },
-    {
-      id: "4",
-      name: "Dennis",
-      role: "Board Member-At-Trustee",
-      image: "/images/directors/Dennis.webp",
-      description: "Dedicated to the foundation's mission, Dennis works closely with local partners to ensure funding and resources reach those in need."
-    },
-    {
-      id: "5",
-      name: "Dennis",
-      role: "Board Member-At-Trustee",
-      image: "/images/directors/Dennis.webp",
-      description: "A lifelong resident of Guam, Dennis serves as a crucial voice for patient advocacy and support services."
-    },
-    {
-      id: "6",
-      name: "Dennis",
-      role: "Board Member-At-Trustee",
-      image: "/images/directors/Dennis.webp",
-      description: "A lifelong resident of Guam, Dennis serves as a crucial voice for patient advocacy and support services."
-    }
-  ]
-};
+function ProfileModal({ director, onClose }) {
+  
+  // Lock scroll when popup is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
+  return (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.modalOverlay} 
+      onClick={onClose}
+    >
+      <motion.div 
+        className={styles.modalContent} 
+        onClick={(e) => e.stopPropagation()} 
+      >
+        <div className={styles.modalBanner}>
+          <p className={styles.modalEyebrow}>Board of Directors Profile</p>
+          <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
+            ✕
+          </button>
+        </div>
+        
+        <div className={styles.modalBodyContainer}>
+          <div className={styles.modalHeader}>
+            <motion.div layoutId={`image-container-${director.id}`} className={styles.modalAvatarWrapper}>
+              <Image
+                src={director.image}
+                alt={director.name}
+                fill
+                sizes="300px"
+                className={styles.modalAvatar}
+              />
+            </motion.div>
+            <div className={styles.modalHeaderText}>
+              <motion.h4 layoutId={`name-${director.id}`} className={styles.modalName}>
+                {director.name}
+              </motion.h4>
+              <motion.p layoutId={`role-${director.id}`} className={styles.modalRole}>
+                {director.role}
+              </motion.p>
+            </div>
+          </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }} 
+            className={styles.modalBody}
+          >
+            <h5 className={styles.modalBodyTitle}>About</h5>
+            <p className={styles.modalDescription}>
+              {director.description || "DESCRIPTION HERE"}
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Main Component
 export default function BoardOfDirectors() {
   const [selectedMember, setSelectedMember] = useState(null);
 
@@ -66,63 +88,45 @@ export default function BoardOfDirectors() {
         </header>
 
         <div className={styles.grid}>
-          {boardData.members.map((member) => (
-            <div 
+          {boardData.members.map((member, index) => (
+            <motion.div 
               key={member.id} 
+              layoutId={`card-${member.id}`} 
               className={styles.card}
               onClick={() => setSelectedMember(member)}
             >
-              <div className={styles.imageWrapper}>
+              <motion.div layoutId={`image-container-${member.id}`} className={styles.imageWrapper}>
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  priority={index < 3}
                   className={styles.image}
                 />
-              </div>
+                <div className={styles.imageOverlay}>
+                  <div className={styles.viewProfilePill}>+ View Profile</div>
+                </div>
+              </motion.div>
+              
               <div className={styles.infoWrapper}>
-                <h3 className={styles.memberName}>{member.name}</h3>
-                <p className={styles.memberRole}>{member.role}</p>
+                <motion.h3 layoutId={`name-${member.id}`} className={styles.memberName}>
+                  {member.name}
+                </motion.h3>
+                <motion.p layoutId={`role-${member.id}`} className={styles.memberRole}>
+                  {member.role}
+                </motion.p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {selectedMember && (
-          <div className={styles.modalOverlay} onClick={closeModal}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <button className={styles.closeButton} onClick={closeModal} aria-label="Close modal">
-                ✕
-              </button>
-              
-              <p className={styles.modalEyebrow}>Board of Directors Profile</p>
-              
-              <div className={styles.modalHeader}>
-                <div className={styles.modalAvatarWrapper}>
-                  <Image
-                    src={selectedMember.image}
-                    alt={selectedMember.name}
-                    fill
-                    className={styles.modalAvatar}
-                  />
-                </div>
-                <div>
-                  <h4 className={styles.modalName}>{selectedMember.name}</h4>
-                  <p className={styles.modalRole}>{selectedMember.role}</p>
-                </div>
-              </div>
-
-              <div className={styles.modalBody}>
-                <h5 className={styles.descriptionLabel}>About</h5>
-                <div className={styles.descriptionBox}>
-                  <p>{selectedMember.description || "Description coming soon."}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
+        {/* Reverse scaling automatically */}
+        <AnimatePresence>
+          {selectedMember && (
+            <ProfileModal director={selectedMember} onClose={closeModal} />
+          )}
+        </AnimatePresence>
       </Container>
     </section>
   );
