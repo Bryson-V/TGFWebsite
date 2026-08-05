@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "src": "/images/outreaches/Cathedral.jpg",
+    "title": "Guam Cancer Care",
+    "location": "Hagåtña, Guam",
+    "date": "May 28, 2026",
+    "description": "DESCRIPTION",
+    "residents": "###"
+  },
+  {
+    "id": "2",
+    "src": "/images/outreaches/2025O2.jpeg",
+    "title": "Dededo Flea Market",
+    "location": "Dededo, Guam",
+    "date": "March 22, 2026",
+    "description": "DESCRIPTION",
+    "residents": "###"
+  },
+  {
+    "id": "3",
+    "src": "/images/outreaches/2025O3.jpeg",
+    "title": "Hagåtña Free Clinic",
+    "location": "Hagåtña, Guam",
+    "date": "February 15, 2026",
+    "description": "Our mobile care unit deployed to the central plaza to assist residents needing immediate non-emergency care.",
+    "residents": "###"
+  },
+  {
+    "id": "4",
+    "src": "/images/outreaches/2026O1.jpg",
+    "title": "Dededo Flea Market",
+    "location": "Dededo, Guam",
+    "date": "Feburary 21, 2026",
+    "description": "Providing school physicals and basic checkups for students heading back to school.",
+    "residents": "###"
+  },
+  {
+    "id": "5",
+    "src": "/images/outreaches/IslandHealthFair.jpg",
+    "title": "Island Health Fair",
+    "location": "Micronesia Mall Center Court, Dededo, Guam",
+    "date": "April 25, 2026",
+    "description": "TEST",
+    "residents": "47"
+  },
+  {
+    "id": "6",
+    "src": "/images/outreaches/ZeroDown.jpg",
+    "title": "Zero Down",
+    "location": "Yigo, Guam",
+    "date": "March 21, 2026",
+    "description": "TEST",
+    "residents": "111"
+  },
+  {
+    "id": "7",
+    "src": "/images/volunteer/volunteer.jpg",
+    "title": "TEST",
+    "location": "TEST",
+    "date": "March 1, 2025",
+    "description": "TEST",
+    "residents": "111"
+  }
+]
