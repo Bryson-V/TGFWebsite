@@ -14,5 +14,22 @@
     "badge": "Hiring Event",
     "description": "Visit our Tamuning center to meet leadership and interview on-site.",
     "date": "2026-08-15"
+  },
+  {
+    "type": "job",
+    "badge": "Full-Time",
+    "category": "Administration",
+    "title": "Operations Coordinator",
+    "description": "Manage day-to-day logistics, coordinate volunteer schedules, and assist with outreach documentation.",
+    "date": "Open Until Filled"
+  },
+  {
+    "type": "event",
+    "badge": "Community Event",
+    "category": "Outreach",
+    "title": "Dededo Flea Market Outreach",
+    "description": "Join our team on-site to help organize community outreach booths and logistics.",
+    "date": "August 15, 2026"
   }
+
 ]

@@ -1,38 +1,95 @@
 .section {
-  padding: 60px 0;
+  padding: 5rem 0;
+  background-color: #f8fafc;
 }
 
+.headerWrapper {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Filter Button Container */
+.filterButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.filterButton {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.filterButton:hover {
+  border-color: var(--color-primary, #0d4a57);
+  color: var(--color-primary, #0d4a57);
+  background-color: #f8fafc;
+}
+
+.activeFilter {
+  background-color: var(--color-primary, #0d4a57);
+  border-color: var(--color-primary, #0d4a57);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(13, 74, 87, 0.2);
+}
+
+.activeFilter:hover {
+  background-color: #09343e;
+  color: #ffffff;
+}
+
+/* Card Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 .card {
   background: #ffffff;
-  border-radius: var(--radius-card, 16px);
-  padding: 28px;
-  border: 1px solid var(--color-border, #e2e8f0);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary, #0d4a57);
+  box-shadow: 0 12px 25px -5px rgba(13, 74, 87, 0.1);
 }
 
 .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .badge {
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 0.25rem 0.75rem;
   border-radius: 50px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .jobBadge {
@@ -42,7 +99,7 @@
 
 .eventBadge {
   background-color: #fef3c7;
-  color: #d97706;
+  color: #b45309;
 }
 
 .category {
@@ -53,16 +110,16 @@
 
 .cardTitle {
   font-size: 1.25rem;
+  color: #0c1f3f;
   font-weight: 700;
-  color: var(--color-primary, #0d4a57);
-  margin-bottom: 10px;
+  margin: 0 0 0.75rem 0;
 }
 
 .cardDesc {
   font-size: 0.95rem;
   color: #475569;
-  line-height: 1.5;
-  margin-bottom: 24px;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
   flex-grow: 1;
 }
 
@@ -70,22 +127,105 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
   border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
 }
 
 .date {
-  font-size: 0.8rem;
-  color: #94a3b8;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
 }
 
 .link {
-  font-size: 0.9rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--color-primary, #0d4a57);
+  font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .link:hover {
-  text-decoration: underline;
+  color: #09343e;
+}
+
+.arrowSvg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.link:hover .arrowSvg {
+  transform: translateX(3px);
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+.headerWrapper {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.filterLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.dropdown {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0c1f3f;
+  outline: none;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--color-primary, #0d4a57);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.linkButton:hover {
+  color: #09343e;
+}
+
+.linkButton:hover .arrowSvg {
+  transform: translateX(3px);
 }
