@@ -100,7 +100,7 @@ export default function ApplicationSection() {
               <h3>Download &amp; Complete Fillable PDF</h3>
               <p>Download our official application PDF, fill it out on your device or print/scan it, then attach it below alongside your CV.</p>
             </div>
-            <a href="/fillForm.pdf" download className={styles.pdfButton}>
+            <a href="/resources/ApplicationForm.pdf" download className={styles.pdfButton}>
               Download PDF
             </a>
           </div>
