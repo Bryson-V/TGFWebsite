@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import jobsData from "@/content/site-data/jobsData.json";
@@ -26,8 +26,13 @@ const UploadIcon = () => (
 
 export default function ApplicationSection() {
   const [selectedPosition, setSelectedPosition] = useState("");
+  const pdfInputRef = useRef(null);
+  const cvInputRef = useRef(null);
 
-  // Listen for the custom event dispatched from JobBoard cards
+  // State for document preview modal
+  const [previewFile, setPreviewFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
+
   useEffect(() => {
     const handleJobSelect = (e) => {
       setSelectedPosition(e.detail);
@@ -49,7 +54,6 @@ export default function ApplicationSection() {
 
   const [submitted, setSubmitted] = useState(false);
 
-  // Strictly filter out events so they never show up in the application dropdown
   const openJobPositions = jobsData.filter(
     (item) => item.type !== "event" && item.type !== "outreach"
   );
@@ -80,9 +84,36 @@ export default function ApplicationSection() {
     e.preventDefault();
   };
 
+  const handleRemoveFile = (fieldName) => {
+    setFormData((prev) => ({
+      ...prev,
+      [fieldName]: null,
+    }));
+    if (fieldName === "applicationPdf" && pdfInputRef.current) {
+      pdfInputRef.current.value = "";
+    }
+    if (fieldName === "cvFile" && cvInputRef.current) {
+      cvInputRef.current.value = "";
+    }
+  };
+
+  const openPreview = (file) => {
+    if (!file) return;
+    const url = URL.createObjectURL(file);
+    setPreviewUrl(url);
+    setPreviewFile(file);
+  };
+
+  const closePreview = () => {
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    setPreviewUrl(null);
+    setPreviewFile(null);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitting application for position:", selectedPosition, formData);
     setSubmitted(true);
   };
 
@@ -176,50 +207,98 @@ export default function ApplicationSection() {
                 </div>
 
                 <div className={styles.row}>
+                  {/* Filled Application PDF Upload */}
                   <div className={styles.inputGroup}>
                     <label>Filled Application PDF *</label>
-                    <div 
-                      className={styles.dropZone}
-                      onDrop={(e) => handleDrop(e, "applicationPdf")}
-                      onDragOver={handleDragOver}
-                    >
-                      <UploadIcon />
-                      <span className={styles.dropText}>
-                        {formData.applicationPdf ? formData.applicationPdf.name : "Drag & drop PDF here, or click to browse"}
-                      </span>
-                      <input 
-                        type="file" 
-                        id="applicationPdf" 
-                        name="applicationPdf" 
-                        required={!formData.applicationPdf} 
-                        accept=".pdf"
-                        className={styles.fileInputHidden}
-                        onChange={handleChange}
-                      />
-                    </div>
+                    {!formData.applicationPdf ? (
+                      <div 
+                        className={styles.dropZone}
+                        onDrop={(e) => handleDrop(e, "applicationPdf")}
+                        onDragOver={handleDragOver}
+                      >
+                        <UploadIcon />
+                        <span className={styles.dropText}>Drag &amp; drop PDF here, or click to browse</span>
+                        <input 
+                          type="file" 
+                          id="applicationPdf" 
+                          name="applicationPdf" 
+                          ref={pdfInputRef}
+                          required={!formData.applicationPdf} 
+                          accept=".pdf"
+                          className={styles.fileInputHidden}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    ) : (
+                      <div className={styles.filePreviewCard}>
+                        <div 
+                          className={styles.fileInfo} 
+                          onClick={() => openPreview(formData.applicationPdf)}
+                          title="Click to preview file"
+                        >
+                          <svg className={styles.fileIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                          </svg>
+                          <span className={styles.fileName}>{formData.applicationPdf.name}</span>
+                        </div>
+                        <button 
+                          type="button" 
+                          onClick={() => handleRemoveFile("applicationPdf")} 
+                          className={styles.removeIconButton}
+                          aria-label="Remove file"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    )}
                   </div>
 
+                  {/* CV / Resume Upload */}
                   <div className={styles.inputGroup}>
                     <label>Upload Your CV / Resume *</label>
-                    <div 
-                      className={styles.dropZone}
-                      onDrop={(e) => handleDrop(e, "cvFile")}
-                      onDragOver={handleDragOver}
-                    >
-                      <UploadIcon />
-                      <span className={styles.dropText}>
-                        {formData.cvFile ? formData.cvFile.name : "Drag & drop CV (PDF, DOC), or click"}
-                      </span>
-                      <input 
-                        type="file" 
-                        id="cvFile" 
-                        name="cvFile" 
-                        required={!formData.cvFile} 
-                        accept=".pdf,.doc,.docx"
-                        className={styles.fileInputHidden}
-                        onChange={handleChange}
-                      />
-                    </div>
+                    {!formData.cvFile ? (
+                      <div 
+                        className={styles.dropZone}
+                        onDrop={(e) => handleDrop(e, "cvFile")}
+                        onDragOver={handleDragOver}
+                      >
+                        <UploadIcon />
+                        <span className={styles.dropText}>Drag &amp; drop CV (PDF, DOC), or click</span>
+                        <input 
+                          type="file" 
+                          id="cvFile" 
+                          name="cvFile" 
+                          ref={cvInputRef}
+                          required={!formData.cvFile} 
+                          accept=".pdf,.doc,.docx"
+                          className={styles.fileInputHidden}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    ) : (
+                      <div className={styles.filePreviewCard}>
+                        <div 
+                          className={styles.fileInfo} 
+                          onClick={() => openPreview(formData.cvFile)}
+                          title="Click to preview file"
+                        >
+                          <svg className={styles.fileIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                          </svg>
+                          <span className={styles.fileName}>{formData.cvFile.name}</span>
+                        </div>
+                        <button 
+                          type="button" 
+                          onClick={() => handleRemoveFile("cvFile")} 
+                          className={styles.removeIconButton}
+                          aria-label="Remove file"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -232,6 +311,30 @@ export default function ApplicationSection() {
 
         </div>
       </Container>
+
+      {/* Document Preview Modal */}
+      {previewFile && (
+        <div className={styles.modalOverlay} onClick={closePreview}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalHeader}>
+              <h3>Preview: {previewFile.name}</h3>
+              <button type="button" onClick={closePreview} className={styles.closeModalButton}>✕</button>
+            </div>
+            <div className={styles.modalBody}>
+              {previewFile.type === "application/pdf" ? (
+                <iframe src={previewUrl} title="PDF Preview" className={styles.previewIframe} />
+              ) : (
+                <div className={styles.previewFallback}>
+                  <p>Preview is not available directly in browser for this file format ({previewFile.name}).</p>
+                  <a href={previewUrl} download={previewFile.name} className={styles.downloadPreviewButton}>
+                    Download to View
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
