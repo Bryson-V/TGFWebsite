@@ -19,10 +19,10 @@ export default function QRModule() {
             <div className={styles.qrContainer}>
               <div className={styles.qrBox}>
                 <Image 
-                  src="/images/volunteer/donateQR.webp" 
+                  src="/images/donate/DonateQR.jpg" 
                   alt="QR code to donate to Todu Guam Foundation"
-                  width={180}
-                  height={180}
+                  width={250}
+                  height={250}
                   className={styles.qrImage}
                 />
               </div>

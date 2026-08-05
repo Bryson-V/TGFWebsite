@@ -10,10 +10,7 @@ import galleryData from "@/content/site-data/outreaches.json";
 export default function OutreachGallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // Set how many images you want to show on this page
   const DISPLAY_LIMIT = 6;
-  
-  // Create a sliced version of the data for the grid
   const displayedGallery = galleryData.slice(0, DISPLAY_LIMIT);
 
   useEffect(() => {
@@ -40,7 +37,6 @@ export default function OutreachGallery() {
   return (
     <section className={styles.section}>
       <Container>
-        {/* Header Section */}
         <div className={styles.header}>
           <div>
             <p className={styles.eyebrow}>OUR WORK IN ACTION</p>
@@ -69,12 +65,21 @@ export default function OutreachGallery() {
                   style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />
                 
-                {/* Hover Overlay & Slide-up Text */}
                 <div className={styles.hoverOverlay}>
                   <div className={styles.hoverContent}>
                     <h3 className={styles.hoverTitle}>{item.title}</h3>
                     <p className={styles.hoverLocation}>
-                      <span className={styles.pinIcon}>📍</span> {item.location}
+                      <span className={styles.pinIcon}>
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          fill="#ef4444" 
+                          style={{ width: '1.2em', height: '1.2em' }}
+                        >
+                          <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      {item.location}
                     </p>
                   </div>
                 </div>
@@ -91,14 +96,12 @@ export default function OutreachGallery() {
         </div>
       </Container>
 
-      {/* Lightbox Modal Popup */}
       {activePhoto && (
         <div className={styles.modalBackdrop} onClick={() => setSelectedIndex(null)}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeBtn} onClick={() => setSelectedIndex(null)}>✕</button>
             
             <div className={styles.modalSplit}>
-              {/* Left: Image */}
               <div className={styles.modalImageContainer}>
                 <Image 
                   src={activePhoto.src}
@@ -111,13 +114,11 @@ export default function OutreachGallery() {
                 </div>
               </div>
 
-              {/* Right: Details */}
               <div className={styles.modalDetails}>
                 <h3 className={styles.modalTitle}>{activePhoto.title}</h3>
                 <p className={styles.modalMeta}>{activePhoto.location} • {activePhoto.date}</p>
                 <p className={styles.modalDesc}>{activePhoto.description}</p>
                 
-                {/* Navigation Controls */}
                 <div className={styles.modalNav}>
                   <button onClick={showPrev} className={styles.navBtn}>← Previous</button>
                   <span className={styles.counter}>{selectedIndex + 1} / {displayedGallery.length}</span>

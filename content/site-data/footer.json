@@ -11,8 +11,9 @@
       "links": [
         { "label": "Our Story", "href": "/ourStory" },
         { "label": "Board of Directors", "href": "/boardOfDirectors/" },
-        { "label": "Doctors", "href": null },
-        { "label": "FAQs & Resources", "href": "/faq" }
+        { "label": "Doctors", "href": "/doctors" },
+        { "label": "FAQs & Resources", "href": "/faq" },
+        { "label": "Outreaches", "href": "/allOutreaches" }
       ]
     },
     {
@@ -46,5 +47,5 @@
     { "label": "Terms & Conditions", "href": "/termsCondtions" },
     { "label": "Accessibility Statement", "href": "/accessibility" }
   ],
-  "copyright": "Copyright 2026 \u00a9 Toduguam Foundation All rights Reserved."
+  "copyright": "Copyright 2026 \u00a9 Todu Guam Foundation All Rights Reserved."
 }
