@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import CareersHero from "@/components/sections/careers/CareersHero";
-import JobBoard from "@/components/sections/careers/JobBoard";
-import CareerCategories from "@/components/sections/careers/CareerCategories";
-import ApplicationSection from "@/components/sections/careers/ApplicationSection";
-import styles from "./CareersPage.module.css";
+import JobBoard from "./JobBoard";
+import ApplicationSection from "./ApplicationSection";
 
 export default function CareersPage() {
   const [selectedPosition, setSelectedPosition] = useState("");
@@ -21,14 +18,12 @@ export default function CareersPage() {
   };
 
   return (
-    <main className={styles.pageWrapper}>
-      <CareersHero />
+    <>
       <JobBoard onSelectPosition={handleSelectPosition} />
-      <CareerCategories onSelectCategory={handleSelectPosition} />
       <ApplicationSection 
         selectedPosition={selectedPosition} 
         setSelectedPosition={setSelectedPosition} 
       />
-    </main>
+    </>
   );
 }
