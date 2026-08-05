@@ -328,7 +328,7 @@ export default function Timeline() {
             </p>
 
             <div className={styles.ctaButtonGroup}>
-              <a href="/get-involved" className={styles.primaryBtn}>
+              <a href="/volunteer" className={styles.primaryBtn}>
                 Get Involved
               </a>
               <a href="/donate" className={styles.secondaryBtn}>

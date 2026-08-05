@@ -16,5 +16,11 @@
     "title": "Schedule of Expenditures of Federal Awards",
     "image": "/resources/expenditures-thumb.webp",
     "pdf": "/resources/schedule-of-expenditures.pdf"
+  },
+  {
+    "id": "slidingFee",
+    "title": "Sliding Discount Fee Schedule Information & Application",
+    "image": "/resources/slidingFeePic.png",
+    "pdf": "/resources/slidingFee.pdf"
   }
 ]
