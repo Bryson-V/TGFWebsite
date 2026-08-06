@@ -1,0 +1,69 @@
+{
+  "heading": "Our Medical Team",
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr. Julie Namm, MD",
+      "specialty": "Family Medicine",
+      "email": "drnamm@toduguam.com",
+      "image": "/images/doctors/julie-namm.webp",
+      "bio": "Dr. Namm specializes in comprehensive family care, preventive medicine, and managing chronic health conditions for patients of all ages."
+    },
+    {
+      "id": "2",
+      "name": "Bannuar Quiaoit, FNP",
+      "specialty": "Family Medicine",
+      "email": "bquiaoit@toduguam.com",
+      "image": "/images/doctors/bannuar-quiaoit.webp",
+      "bio": "Bannuar is a Family Nurse Practitioner committed to providing compassionate primary care and patient-centered health education."
+    },
+    {
+      "id": "3",
+      "name": "Elena Taneva-Cholakova, FNP",
+      "specialty": "Family Medicine",
+      "email": "etaneva@toduguam.com",
+      "image": "/images/doctors/elena-taneva.webp",
+      "bio": "Elena brings dedicated family nursing expertise with a focus on holistic wellness, preventative health screenings, and community care."
+    },
+    {
+      "id": "4",
+      "name": "Dr. Edwin Supit, MD",
+      "specialty": "Internal Medicine",
+      "email": "drsupit@toduguam.com",
+      "image": "/images/doctors/edwin-supit.webp",
+      "bio": "Dr. Supit focuses on internal medicine, prioritizing adult disease prevention, diagnosis, and long-term care management."
+    },
+    {
+      "id": "5",
+      "name": "Dr. Sam Song, MD",
+      "specialty": "Obstetrics & Gynecology",
+      "email": "drsong@toduguam.com",
+      "image": "/images/doctors/sam-song.webp",
+      "bio": "Dr. Song provides specialized reproductive health, routine gynecological care, and compassionate obstetrical support."
+    },
+    {
+      "id": "6",
+      "name": "Dr. William Vercio, MD",
+      "specialty": "Obstetrics & Gynecology",
+      "email": "drvercio@toduguam.com",
+      "image": "/images/doctors/william-vercio.webp",
+      "bio": "Dr. Vercio has extensive experience in women's health services, maternal-fetal care, and comprehensive gynecological treatments."
+    },
+    {
+      "id": "7",
+      "name": "Dr. Danny McClure, DO",
+      "specialty": "Psychiatry, Medical Director",
+      "email": "drmcclure@toduguam.com",
+      "image": "/images/doctors/danny-mcclure.webp",
+      "bio": "Serving as Medical Director, Dr. McClure delivers specialized psychiatric evaluations and integrated mental health treatment plans."
+    },
+    {
+      "id": "8",
+      "name": "Dr. Alan Butler, PsyD",
+      "specialty": "Clinical Psychologist",
+      "email": "drbutler@toduguam.com",
+      "image": "/images/doctors/alan-butler.webp",
+      "bio": "Dr. Butler specializes in psychological assessments, therapeutic support, and cognitive behavioral treatments."
+    }
+  ]
+}
