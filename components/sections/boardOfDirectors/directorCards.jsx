@@ -8,15 +8,6 @@ import styles from "./directorCards.module.css";
 import boardData from "@/content/site-data/boardData.json";
 
 function ProfileModal({ director, onClose }) {
-  
-  // Lock scroll when popup is open
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, []);
-
   return (
     <motion.div 
       initial={{ opacity: 0 }}
