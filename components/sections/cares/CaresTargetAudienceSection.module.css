@@ -1,0 +1,97 @@
+.section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0c1f3f;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 2.5rem;
+}
+
+.pointItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkSvg {
+  width: 32px;
+  height: 32px;
+}
+
+.pointText {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #0c1f3f;
+  font-weight: 600;
+  margin: 0;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .imageColumn {
+    order: -1; /* Puts image on top on smaller screens if desired, or remove to keep below */
+  }
+}
+
+@media (max-width: 640px) {
+  .pointsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
