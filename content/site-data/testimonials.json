@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "quote": "The CARES Movement helped me understand my emotions and how to deal with them in a healthy way.",
+    "author": "Trevor, 17 yrs. old",
+    "role": "Student"
+  },
+  {
+    "id": 2,
+    "quote": "This program gave our family a safe space to connect and talk about things we normally struggled to bring up.",
+    "author": "Maria S.",
+    "role": "Parent"
+  },
+  {
+    "id": 3,
+    "quote": "Learning about the 24 character strengths completely changed how I look at my daily challenges and goals.",
+    "author": "Jordan, 15 yrs. old",
+    "role": "Student"
+  }
+]
