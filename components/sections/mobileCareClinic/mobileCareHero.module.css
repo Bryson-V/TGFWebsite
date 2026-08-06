@@ -1,0 +1,78 @@
+.heroSection {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.bgImageWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Adds a dark blue tint over the truck image */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 31, 63, 0.65); 
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color:#ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.ctaButton {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f766e; 
+  color: #ffffff;
+  padding: 0.875rem 2.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.ctaButton:hover {
+  background-color: #0d9488;
+  transform: translateY(-2px);
+  color: #ffffff;
+}

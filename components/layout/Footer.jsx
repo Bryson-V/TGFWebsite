@@ -136,6 +136,13 @@ export default function Footer() {
           {/* RIGHT COLUMN: The Navigation Columns & Newsletter */}
           <div className={styles.linksAndNewsletter}>
             
+            {/* NEW: Upcoming Events Button */}
+            <div className={styles.footerActionContainer}>
+              <Link href={footer.upcomingButton.href} className={styles.upcomingEventsBtn}>
+                {footer.upcomingButton.label}
+              </Link>
+            </div>
+
             {/* Dynamic Columns from footer.json */}
             <div className={styles.navColumns}>
               {footer.columns.map((column) => (
