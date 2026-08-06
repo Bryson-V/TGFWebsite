@@ -27,7 +27,7 @@
         { "label": "Prevention and Outreach", "href": "https://toduguam.com/health-prevention-outreach/" },
         { "label": "Healing for Women", "href": "https://toduguam.com/women-health/" },
         { "label": "Financial Assistance", "href": "/financialAssistance" },
-        { "label": "CARES Program", "href": "https://toduguam.com/cares/" },
+        { "label": "CARES Program", "href": "/cares" },
         { "label": "Mind Care", "href": "https://toduguam.com/mind-care/" }
       ],
       "featuredImage": "/images/programs/mobile-care-clinic-thumb.png",
