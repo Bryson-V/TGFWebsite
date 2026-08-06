@@ -1,0 +1,51 @@
+.tickerWrapper {
+  width: 100%;
+  background-color: #0f766e; /* Using the brand teal color */
+  color: #ffffff;
+  overflow: hidden;
+  padding: 1.25rem 0;
+  display: flex;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tickerTrack {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  /* Adjust the '30s' below to make it scroll faster or slower */
+  animation: scroll 30s linear infinite;
+}
+
+/* Pause the scrolling when a user hovers over the bar with their mouse */
+.tickerWrapper:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-right: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bullet {
+  color: #99f6e4; /* Light teal accent for the bullet points */
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+/* The magic keyframes that create the infinite loop */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Because we duplicated the array in React, moving it exactly 50% 
+       left brings the start of the second array perfectly into position */
+    transform: translateX(-50%);
+  }
+}

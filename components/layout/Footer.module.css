@@ -5,6 +5,24 @@
   margin-top: 80px;
 }
 
+.footerActionContainer {
+  margin-bottom: 0.1rem; /* Reduced from 2rem to bring the columns much closer */
+  display: flex; 
+}
+
+.upcomingEventsBtn {
+  color: #ffffff; /* Make sure this matches your normal footer text color */
+  font-size: 1.2rem;
+  font-weight: 600; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.upcomingEventsBtn:hover {
+  color: #0d9488; /* Just changes to teal on hover, matching standard links */
+}
+
 /* TOP SECTION LAYOUT */
 .topSection {
   display: grid;

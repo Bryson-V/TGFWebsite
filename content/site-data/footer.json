@@ -1,4 +1,8 @@
 {
+  "upcomingButton": {
+    "label": "View Upcoming Events",
+    "href": "/upcoming"
+  },
   "tagline": "We are a nonprofit Getting Guam Healthy, One Man, One Woman, and One Child at a time.",
   "address": "125 Tun Jesus Crisostomo Street, Tamuning, Guam",
   "phones": [
@@ -19,7 +23,7 @@
     {
       "title": "Our Work",
       "links": [
-        { "label": "Mobile Care Clinic", "href": "https://toduguam.com/mobile-care-clinic/" },
+        { "label": "Mobile Care Clinic", "href": "/mobileCareClinic" },
         { "label": "Health Prevention and Outreach", "href": "https://toduguam.com/health-prevention-outreach/" },
         { "label": "CARES Program", "href": "/cares" },
         { "label": "Financial Aid", "href": "/financialAssistance"},
@@ -33,7 +37,8 @@
         { "label": "Volunteer", "href": "/volunteer" },
         { "label": "Careers", "href": "/careers" },
         { "label": "News & Stories", "href": "/allNews" },
-        { "label": "Press Coverage", "href": "/allPress" }      ]
+        { "label": "Press Coverage", "href": "/allPress" }      
+      ]
     }
   ],
   "social": [
@@ -47,5 +52,5 @@
     { "label": "Terms & Conditions", "href": "/termsCondtions" },
     { "label": "Accessibility Statement", "href": "/accessibility" }
   ],
-  "copyright": "Copyright 2026 \u00a9 Todu Guam Foundation All Rights Reserved."
+  "copyright": "Copyright 2026 © Todu Guam Foundation All Rights Reserved."
 }

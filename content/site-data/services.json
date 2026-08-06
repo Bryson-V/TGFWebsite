@@ -1,0 +1,10 @@
+[
+  { "name": "Primary Care", "iconName": "FaStethoscope", "color": "#ffffff" },
+  { "name": "Health Screenings", "iconName": "MdOutlineHealthAndSafety", "color": "#86efac" },
+  { "name": "Immunizations", "iconName": "FaSyringe", "color": "#fca5a5" },
+  { "name": "Pediatric Care", "iconName": "FaBaby", "color": "#93c5fd" },
+  { "name": "Women's Health", "iconName": "FaFemale", "color": "#f9a8d4" },
+  { "name": "Vitals Check", "iconName": "TbActivityHeartbeat", "color": "#fda4af" },
+  { "name": "Patient Navigation", "iconName": "FaUserDoctor", "color": "#d8b4fe" },
+  { "name": "Family Planning", "iconName": "MdFamilyRestroom", "color": "#86efac" }
+]

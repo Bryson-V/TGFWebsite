@@ -5,6 +5,11 @@
   },
   "menus": [
     {
+      "id": "upcoming",
+      "label": "UPCOMING EVENTS",
+      "href": "/upcoming"
+    },
+    {
       "id": "about",
       "label": "ABOUT US",
       "panelTitle": "ABOUT US",
@@ -23,7 +28,7 @@
       "panelTitle": "OUR WORK",
       "panelSubtitle": "Learn more about the foundation programs that are making an impact on Guam, One Man, One Woman, and One Child at a time!",
       "links": [
-        { "label": "Mobile Care Clinic", "href": "https://toduguam.com/mobile-care-clinic/" },
+        { "label": "Mobile Care Clinic", "href": "/mobileCareClinic" },
         { "label": "Prevention and Outreach", "href": "https://toduguam.com/health-prevention-outreach/" },
         { "label": "Healing for Women", "href": "https://toduguam.com/women-health/" },
         { "label": "Financial Assistance", "href": "/financialAssistance" },

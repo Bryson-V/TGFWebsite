@@ -86,54 +86,71 @@ export default function Header() {
               <div
                 key={menu.id}
                 className={styles.navItem}
-                onMouseEnter={() => setOpenMenu(menu.id)}
-                onMouseLeave={() => setOpenMenu(null)}
+                onMouseEnter={() => !menu.href && setOpenMenu(menu.id)}
+                onMouseLeave={() => !menu.href && setOpenMenu(null)}
               >
-                <button
-                  type="button"
-                  className={`${styles.navButton} ${openMenu === menu.id ? styles.activeButton : ""}`}
-                  aria-expanded={openMenu === menu.id}
-                  onClick={() => setOpenMenu(openMenu === menu.id ? null : menu.id)}
-                >
-                  {menu.label}
-                  <span className={styles.caret}>▾</span>
-                </button>
+                {/* Check if it's a direct link or a dropdown menu */}
+                {menu.href ? (
+                  <SmartLink
+                    href={menu.href}
+                    className={styles.navButton}
+                    onClick={closeAll}
+                  >
+                    {menu.label}
+                  </SmartLink>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className={`${styles.navButton} ${openMenu === menu.id ? styles.activeButton : ""}`}
+                      aria-expanded={openMenu === menu.id}
+                      onClick={() => setOpenMenu(openMenu === menu.id ? null : menu.id)}
+                    >
+                      {menu.label}
+                      <span className={styles.caret}>▾</span>
+                    </button>
 
-                {openMenu === menu.id && (
-                  <div className={`${styles.megaPanel} ${!menu.featuredImage ? styles.megaPanelNoImage : ""}`}>
-                    <div className={styles.megaPanelText}>
-                      <h3>{menu.panelTitle}</h3>
-                      <p>{menu.panelSubtitle}</p>
-                      <ul>
-                        {menu.links.map((link) => (
-                          <li key={link.label}>
-                            <SmartLink href={link.href} onClick={closeAll}>
-                              {link.label}
-                            </SmartLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {menu.featuredImage && (
-                      <SmartLink
-                        href={menu.featuredHref}
-                        className={styles.megaPanelFeature}
-                        onClick={closeAll}
-                      >
-                        <div className={styles.featureImgWrapper}>
-                          <Image
-                            src={menu.featuredImage}
-                            alt={menu.featuredCaption}
-                            width={240}
-                            height={140}
-                            style={{ objectFit: "cover", width: "100%", height: "auto" }}
-                          />
+                    {openMenu === menu.id && (
+                      <div className={`${styles.megaPanel} ${!menu.featuredImage ? styles.megaPanelNoImage : ""}`}>
+                        <div className={styles.megaPanelText}>
+                          {menu.panelTitle && <h3>{menu.panelTitle}</h3>}
+                          {menu.panelSubtitle && <p>{menu.panelSubtitle}</p>}
+                          
+                          {/* Safeguard the links map */}
+                          {menu.links && (
+                            <ul>
+                              {menu.links.map((link) => (
+                                <li key={link.label}>
+                                  <SmartLink href={link.href} onClick={closeAll}>
+                                    {link.label}
+                                  </SmartLink>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
-                        <span>{menu.featuredCaption} →</span>
-                      </SmartLink>
+
+                        {menu.featuredImage && (
+                          <SmartLink
+                            href={menu.featuredHref}
+                            className={styles.megaPanelFeature}
+                            onClick={closeAll}
+                          >
+                            <div className={styles.featureImgWrapper}>
+                              <Image
+                                src={menu.featuredImage}
+                                alt={menu.featuredCaption}
+                                width={240}
+                                height={140}
+                                style={{ objectFit: "cover", width: "100%", height: "auto" }}
+                              />
+                            </div>
+                            <span>{menu.featuredCaption} →</span>
+                          </SmartLink>
+                        )}
+                      </div>
                     )}
-                  </div>
+                  </>
                 )}
               </div>
             ))}
@@ -163,25 +180,38 @@ export default function Header() {
           <nav className={styles.mobileNav} aria-label="Primary mobile">
             {nav.menus.map((menu) => (
               <div key={menu.id} className={styles.mobileSection}>
-                <button
-                  type="button"
-                  className={styles.mobileSectionToggle}
-                  aria-expanded={mobileExpanded === menu.id}
-                  onClick={() => toggleMobileSection(menu.id)}
-                >
-                  <span>{menu.label}</span>
-                  <span>{mobileExpanded === menu.id ? "−" : "+"}</span>
-                </button>
-                {mobileExpanded === menu.id && (
-                  <ul className={styles.mobileLinks}>
-                    {menu.links.map((link) => (
-                      <li key={link.label}>
-                        <SmartLink href={link.href} onClick={closeAll}>
-                          {link.label}
-                        </SmartLink>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Mobile: Check if it's a direct link or a dropdown */}
+                {menu.href ? (
+                  <SmartLink
+                    href={menu.href}
+                    className={styles.mobileSectionToggle}
+                    onClick={closeAll}
+                  >
+                    <span>{menu.label}</span>
+                  </SmartLink>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className={styles.mobileSectionToggle}
+                      aria-expanded={mobileExpanded === menu.id}
+                      onClick={() => toggleMobileSection(menu.id)}
+                    >
+                      <span>{menu.label}</span>
+                      <span>{mobileExpanded === menu.id ? "−" : "+"}</span>
+                    </button>
+                    {mobileExpanded === menu.id && menu.links && (
+                      <ul className={styles.mobileLinks}>
+                        {menu.links.map((link) => (
+                          <li key={link.label}>
+                            <SmartLink href={link.href} onClick={closeAll}>
+                              {link.label}
+                            </SmartLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
                 )}
               </div>
             ))}
