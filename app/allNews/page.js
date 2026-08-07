@@ -1,6 +1,6 @@
 import NewsArchive from "@/components/sections/news/newsArchive";
 
-export default function OurStoryPage() {
+export default function AllNews() {
   return (
     <>
       <NewsArchive />
