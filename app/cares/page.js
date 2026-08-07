@@ -9,7 +9,6 @@ import CaresViaSurveySection from "@/components/sections/cares/CaresViaSurveySec
 import CaresVideoSection from "@/components/sections/cares/CaresVideoSection";
 import CaresWhyAndHelpSection from "@/components/sections/cares/CaresWhyAndHelp";
 
-
 export default function Cares() {
   return (
     <>
