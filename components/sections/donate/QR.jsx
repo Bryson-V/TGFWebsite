@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -28,7 +30,6 @@ export default function QRModule() {
               </div>
               <p className={styles.qrInstruction}>Point your camera here</p>
               
-              {/* Clickable link updated */}
               <Link 
                 href="https://www.paypal.com/donate/?hosted_button_id=N7E56HC6NXHUE&source=qr" 
                 target="_blank" 
@@ -65,24 +66,11 @@ export default function QRModule() {
               <div className={styles.optionHeader}>
                 <h4 className={styles.optionTitle}>Check or Money Order</h4>
                 <p className={styles.optionDesc}>
-                  Make payable to <strong>Todu Guam Foundation</strong> and mail to: <br/>
-                  125 Tun Jesus Crisostomo St, Tamuning, Guam 96913.
+                  Make payable to <strong>Todu Guam Foundation </strong> and mail&nbsp;to: 125 Tun Jesus Crisostomo St, Tamuning, Guam 96913.
                 </p>
               </div>
-              <Link href="mailto:info@toduguam.com" className={styles.secondaryButton}>
-                Contact Us
-              </Link>
             </div>
           </div>
-        </div>
-
-        {/* Tax Deductible Callout */}
-        <div className={styles.taxCallout}>
-          <p>
-            Todu Guam Foundation is a 501(c)(3) nonprofit. All donations are tax-deductible to the fullest extent allowed by law. 
-            <br />
-            <strong> For tax write-off documentation, please send us an email with proof of your donation and we will gladly prepare your receipt.</strong>
-          </p>
         </div>
       </Container>
     </section>
