@@ -33,7 +33,7 @@ export default function JobBoard() {
     const isEvent = item.type === "event" || item.type === "outreach";
 
     if (isEvent) {
-      window.location.href = item.eventUrl || "/events"; 
+      window.location.href = item.eventUrl || "/upcoming"; 
       return;
     }
 
