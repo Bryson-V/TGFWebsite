@@ -1,0 +1,94 @@
+{
+  "mainBranches": [
+    {
+      "id": "courage",
+      "label": "COURAGE",
+      "color": "#4ADE80",
+      "bgColor": "#15803D",
+      "x": 500,
+      "y": 180,
+      "radius": 80,
+      "subBranches": [
+        { "id": "bravery", "label": "Bravery", "icon": "FaShieldAlt", "x": 380, "y": 70, "textX": -65, "textY": -35, "link": "https://posproject.org/character-strengths/bravery/" },
+        { "id": "perseverance", "label": "Perseverance", "icon": "FaMountain", "x": 460, "y": 40, "textX": 0, "textY": -45, "link": "https://posproject.org/character-strengths/perseverance/" },
+        { "id": "integrity", "label": "Integrity", "icon": "FaCheckCircle", "x": 540, "y": 40, "textX": 0, "textY": -45, "link": "https://posproject.org/character-strengths/integrity/" },
+        { "id": "enthusiasm", "label": "Enthusiasm", "icon": "FaBolt", "x": 620, "y": 70, "textX": 65, "textY": -35, "link": "https://posproject.org/character-strengths/enthusiasm/" }
+      ]
+    },
+    {
+      "id": "humanity",
+      "label": "HUMANITY",
+      "color": "#FB923C",
+      "bgColor": "#C2410C",
+      "x": 750,
+      "y": 300,
+      "radius": 80,
+      "subBranches": [
+        { "id": "love", "label": "Love", "icon": "FaHeart", "x": 860, "y": 180, "textX": 55, "textY": -20, "link": "https://posproject.org/character-strengths/love/" },
+        { "id": "kindness", "label": "Kindness", "icon": "FaGift", "x": 920, "y": 250, "textX": 65, "textY": 5, "link": "https://posproject.org/character-strengths/kindness/" },
+        { "id": "social_intelligence", "label": "Social Intelligence", "icon": "FaComments", "x": 930, "y": 340, "textX": 110, "textY": 5, "link": "https://posproject.org/character-strengths/social-intelligence/" }
+      ]
+    },
+    {
+      "id": "transcendence",
+      "label": "TRANSCENDENCE",
+      "color": "#F472B6",
+      "bgColor": "#BE185D",
+      "x": 750,
+      "y": 550,
+      "radius": 80,
+      "subBranches": [
+        { "id": "appreciation", "label": "Appreciation of Beauty", "icon": "FaSpa", "x": 930, "y": 450, "textX": 125, "textY": 5, "link": "https://posproject.org/character-strengths/appreciation-of-beauty-and-excellence/" },
+        { "id": "gratitude", "label": "Gratitude", "icon": "FaThumbsUp", "x": 920, "y": 540, "textX": 75, "textY": 5, "link": "https://posproject.org/character-strengths/gratitude/" },
+        { "id": "optimism", "label": "Optimism", "icon": "FaStar", "x": 880, "y": 620, "textX": 65, "textY": 5, "link": "https://posproject.org/character-strengths/optimism/" },
+        { "id": "humor", "label": "Humor", "icon": "FaSmileBeam", "x": 820, "y": 690, "textX": 60, "textY": 15, "link": "https://posproject.org/character-strengths/humor/" },
+        { "id": "purpose", "label": "Purpose", "icon": "FaWater", "x": 740, "y": 740, "textX": 60, "textY": 30, "link": "https://posproject.org/character-strengths/purpose/" }
+      ]
+    },
+    {
+      "id": "temperance",
+      "label": "TEMPERANCE",
+      "color": "#C084FC",
+      "bgColor": "#7E22CE",
+      "x": 500,
+      "y": 680,
+      "radius": 80,
+      "subBranches": [
+        { "id": "self_control", "label": "Self-Control", "icon": "FaTachometerAlt", "x": 620, "y": 800, "textX": 65, "textY": 35, "link": "https://posproject.org/character-strengths/self-control/" },
+        { "id": "prudence", "label": "Prudence", "icon": "FaTasks", "x": 540, "y": 830, "textX": 0, "textY": 45, "link": "https://posproject.org/character-strengths/prudence/" },
+        { "id": "humility", "label": "Humility", "icon": "FaLink", "x": 460, "y": 830, "textX": 0, "textY": 45, "link": "https://posproject.org/character-strengths/humility/" },
+        { "id": "forgiveness", "label": "Forgiveness", "icon": "FaHandshake", "x": 380, "y": 800, "textX": -75, "textY": 35, "link": "https://posproject.org/character-strengths/forgiveness/" }
+      ]
+    },
+    {
+      "id": "justice",
+      "label": "JUSTICE",
+      "color": "#22D3EE",
+      "bgColor": "#0284C7",
+      "x": 250,
+      "y": 550,
+      "radius": 80,
+      "subBranches": [
+        { "id": "leadership", "label": "Leadership", "icon": "FaUserShield", "x": 160, "y": 700, "textX": -75, "textY": 15, "link": "https://posproject.org/character-strengths/leadership/" },
+        { "id": "fairness", "label": "Fairness", "icon": "FaBalanceScale", "x": 100, "y": 610, "textX": -65, "textY": 5, "link": "https://posproject.org/character-strengths/fairness/" },
+        { "id": "teamwork", "label": "Teamwork", "icon": "FaFlag", "x": 80, "y": 520, "textX": -70, "textY": 5, "link": "https://posproject.org/character-strengths/teamwork/" }
+      ]
+    },
+    {
+      "id": "wisdom",
+      "label": "WISDOM",
+      "color": "#60A5FA",
+      "bgColor": "#2563EB",
+      "x": 250,
+      "y": 300,
+      "radius": 80,
+      "subBranches": [
+        { "id": "perspective", "label": "Perspective", "icon": "FaEye", "x": 80, "y": 420, "textX": -75, "textY": 5, "link": "https://posproject.org/character-strengths/perspective/" },
+        { "id": "love_of_learning", "label": "Love of Learning", "icon": "FaBookOpen", "x": 80, "y": 330, "textX": -105, "textY": 5, "link": "https://posproject.org/character-strengths/love-of-learning/" },
+        { "id": "open_mindedness", "label": "Open-mindedness", "icon": "FaPaperPlane", "x": 110, "y": 240, "textX": -110, "textY": -5, "link": "https://posproject.org/character-strengths/open-mindedness/" },
+        { "id": "curiosity", "label": "Curiosity", "icon": "FaSearch", "x": 160, "y": 160, "textX": -65, "textY": -15, "link": "https://posproject.org/character-strengths/curiosity/" },
+        { "id": "creativity", "label": "Creativity", "icon": "FaPalette", "x": 240, "y": 100, "textX": -70, "textY": -25, "link": "https://posproject.org/character-strengths/creativity/" }
+      ]
+    }
+  ]
+}
