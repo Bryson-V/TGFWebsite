@@ -1,0 +1,248 @@
+.section {
+  padding: 3rem 5%;
+  background-color: #f8fafc;
+  color: #334155;
+  overflow: hidden; 
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: #0f766e;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #042f2e;
+  margin-bottom: 0.5rem;
+}
+
+.headerDesc {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Gallery Carousel */
+.galleryWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hard set the card size */
+.slideCard {
+  width: 100%;
+  height: 480px; /* <--- HARD SET HEIGHT */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.slideCard:active {
+  cursor: grabbing;
+}
+
+/* Ensure the column acts as a strict mask for the parallax image */
+.imageColumn {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden; /* <--- CRITICAL for parallax so the scaled image doesn't bleed out */
+}
+
+/* Image fills the column */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; 
+}
+
+/* ... keep the rest of your CSS exactly the same until the media queries ... */
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+  .slideCard {
+    grid-template-columns: 1fr;
+    height: auto; /* Remove hard height on mobile so text can stack naturally */
+  }
+  
+  .imageColumn {
+    height: 350px; /* Hard set mobile image height */
+  }
+
+  .textColumn {
+    padding: 3rem 2rem;
+  }
+}
+
+.dragHint {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+/* Right side (Text Details) */
+.textColumn {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dateBadge {
+  align-self: flex-start;
+  background-color: #e2e8f0;
+  color: #0f766e;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.eventTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #042f2e;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.speaker {
+  font-size: 1.1rem;
+  color: #0f766e;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.topicBox {
+  background-color: #f1f5f9;
+  border-left: 4px solid #0f766e;
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Navigation Controls (Arrows & Dots) */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.arrowButton {
+  background-color: #ffffff;
+  color: #0f766e;
+  border: 2px solid #e2e8f0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.arrowButton:hover {
+  background-color: #0f766e;
+  color: #ffffff;
+  border-color: #0f766e;
+}
+
+.dots {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: #0f766e;
+  width: 24px; 
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .slideCard {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .imageColumn {
+    height: 350px;
+  }
+
+  .textColumn {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 4rem 5%;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .eventTitle {
+    font-size: 1.5rem;
+  }
+
+  .textColumn {
+    padding: 2rem 1.5rem;
+  }
+}
