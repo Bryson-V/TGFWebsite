@@ -13,16 +13,16 @@ import CaresWhyAndHelpSection from "@/components/sections/cares/CaresWhyAndHelp"
 export default function Cares() {
   return (
     <>
-    <CaresHero />
-    <CaresVideoSection />
-    <CaresObjectiveSection />
-    <CaresAcronymSection />
-    <CaresProgramSection />
-    <CaresTargetAudienceSection />
-    <CaresWhyAndHelpSection />
-    <CaresTestimonialsSlider />
-    <CaresViaSurveySection />
-    <CaresCharacterStrengthsTree />
+      <CaresHero />
+      <CaresVideoSection />
+      <CaresObjectiveSection />
+      <CaresAcronymSection />
+      <CaresProgramSection />
+      <CaresTargetAudienceSection />
+      <CaresWhyAndHelpSection />
+      <CaresTestimonialsSlider />
+      <CaresCharacterStrengthsTree />
+      <CaresViaSurveySection />
     </>
   );
 }

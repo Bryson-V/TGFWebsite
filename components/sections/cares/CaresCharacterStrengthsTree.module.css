@@ -1,263 +1,70 @@
 .section {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #eaf4fc 0%, #fce8ef 100%);
-  display: flex;
-  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: #FFFFFF;
+  overflow: hidden;
 }
 
-.wrapper {
-  max-width: 1000px;
+.container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
+  margin-bottom: 10px;
 }
 
 .title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: #0c1f3f;
-  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 5px;
 }
 
-/* Fluid stage container to prevent overflow cuts on narrow viewports */
-.stage {
-  position: relative;
-  max-width: 760px;
+.subtitle {
+  color: #000000;
+  margin-top: 2px;
+}
+
+.treeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.treeSvg {
   width: 100%;
-  height: 440px;
-  margin: 0 auto;
+  height: auto;
+  max-width: 1100px;
+  overflow: visible; 
 }
 
-/* Outer wrapper handles absolute centering safely away from Framer Motion */
-.rootWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
+.mainLine {
+  stroke-width: 2;
+  fill: none;
 }
 
-/* Inner button is purely styled and free to animate scale without layout shifts */
-.rootNode {
-  background: #0c1f3f;
-  border: 4px solid #93d2ed;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 15px 35px rgba(12, 31, 63, 0.25);
-  padding: 0;
-  outline: none;
-}
-
-.rootNode:focus-visible {
-  outline: 3px solid #93d2ed;
-  outline-offset: 4px;
-}
-
-.rootIconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rootLogo {
-  object-fit: contain;
-}
-
-/* Four Corner Branch Placements */
-.branchContainer {
-  position: absolute;
-  z-index: 10;
-  width: 260px;
-}
-
-.topLeft {
-  top: 30px;
-  left: 30px;
-}
-
-.topRight {
-  top: 30px;
-  right: 30px;
-}
-
-.bottomLeft {
-  bottom: 30px;
-  left: 30px;
-}
-
-.bottomRight {
-  bottom: 30px;
-  right: 30px;
-}
-
-.nodeWrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.topLeft .nodeWrapper,
-.bottomLeft .nodeWrapper {
-  align-items: flex-start;
-}
-
-.topRight .nodeWrapper,
-.bottomRight .nodeWrapper {
-  align-items: flex-end;
-}
-
-.categoryButton {
-  background: #ffffff;
-  border: 3px solid;
-  border-radius: 30px;
-  padding: 0.6rem 1.4rem;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, background 0.2s ease;
-  white-space: nowrap;
-}
-
-.categoryButton:hover {
-  transform: scale(1.05);
-}
-
-.activeCategoryButton {
-  background: #0c1f3f !important;
-}
-
-.categoryButtonText {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-/* Dropdown Strengths Cluster Popup */
-.strengthsCluster {
-  position: absolute;
-  top: calc(100% + 12px);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  width: 280px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.85rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  z-index: 30;
-}
-
-.topLeft .strengthsCluster,
-.bottomLeft .strengthsCluster {
-  left: 0;
-}
-
-.topRight .strengthsCluster,
-.bottomRight .strengthsCluster {
-  right: 0;
-}
-
-.strengthBubble {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: #ffffff;
-  border: 1.5px solid;
-  border-radius: 50px;
-  padding: 0.2rem 0.55rem 0.2rem 0.2rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
-  text-decoration: none;
-  transition: transform 0.15s ease, background-color 0.15s ease;
-}
-
-.strengthBubble:hover {
-  transform: scale(1.05);
-  background-color: #f8fafc;
-}
-
-.bubbleCircle {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.7rem;
-}
-
-.bubbleText {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #0c1f3f;
-}
-
-/* ==========================================
-   MOBILE RESPONSIVE (Phones <= 640px)
-   ================ ========================== */
-@media (max-width: 640px) {
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
   .section {
-    padding: 4rem 1rem;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
-  .stage {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
+  .subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
   }
+}
 
-  .rootWrapper {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    order: -1; 
-    margin-bottom: 0.5rem;
-  }
-
-  .branchContainer {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .nodeWrapper {
-    width: 100%;
-    align-items: center !important;
-  }
-
-  .categoryButton {
-    width: 100%;
-    text-align: center;
-  }
-
-  .strengthsCluster {
-    position: relative;
-    top: 8px;
-    left: auto !important;
-    right: auto !important;
-    width: 100%;
-    justify-content: center;
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
   }
 }
