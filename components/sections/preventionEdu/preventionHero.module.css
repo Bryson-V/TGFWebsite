@@ -1,0 +1,92 @@
+.heroContainer {
+  position: relative;
+  height: 75vh; 
+  min-height: 600px; 
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  overflow: hidden;
+  background-color: #042f2e;
+  color: #ffffff;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: -30%; 
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-image: url('/images/preventionEdu/Education.jpg');
+  background-size: cover;
+  background-position: center 80%; 
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #0f766e, #0f766e);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 700px;
+  margin-top: 0; 
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: #99f6e4;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.05; 
+  margin-bottom: 1.5rem;
+}
+
+.brightText {
+  color: #99f6e4; 
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* --- RESPONSIVE SCALING --- */
+@media (max-width: 768px) {
+  .heroContainer {
+    height: 70vh; 
+    min-height: 550px;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    padding-top: 2rem; 
+  }
+  .title {
+    font-size: 3rem; 
+  }
+  .description {
+    font-size: 1rem;
+  }
+}

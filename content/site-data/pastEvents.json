@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "date": "April 2019",
+    "title": "\"Let's Talk\" Functional Medicine Forum",
+    "speaker": "Dr. Raymond Escalona, MD",
+    "topic": "\"Functional Medicine Approach to Autism\"",
+    "description": "Dr. Escalona spoke with local government and private clinic medical professionals about the efficacy of the Functional Medicine approach on Autism.",
+    "image": "/images/preventionEdu/FuncMed.webp"
+  },
+  {
+    "id": 2,
+    "date": "September 2023",
+    "title": "\"Let's Talk\" Functional Medicine Forum",
+    "speaker": "Dr. Michael Stone, MD, MS, IFMCP",
+    "topic": "\"Functional Medicine Approach to Diabetic Foot Ulcers\"",
+    "description": "An educational forum at Todu Guam focused on the Functional Medicine approach to managing diabetic foot ulcers and non-communicable diseases.",
+    "image": "/images/preventionEdu/Teaching.jpg"
+  },
+  {
+    "id": 3,
+    "date": "Ongoing",
+    "title": "Community Health Outreaches",
+    "speaker": "TGF Medical Team",
+    "topic": "\"Bringing Healthcare to the Villages\"",
+    "description": "Continuing our mission to provide accessible health education and proactive care directly to the people of Guam.",
+    "image": "/images/preventionEdu/staff.webp"
+  }
+]

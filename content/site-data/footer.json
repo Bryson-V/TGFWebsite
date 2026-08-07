@@ -24,7 +24,7 @@
       "title": "Our Work",
       "links": [
         { "label": "Mobile Care Clinic", "href": "/mobileCareClinic" },
-        { "label": "Health Prevention and Outreach", "href": "https://toduguam.com/health-prevention-outreach/" },
+        { "label": "Health Prevention and Outreach", "href": "/preventionEdu" },
         { "label": "CARES Program", "href": "/cares" },
         { "label": "Financial Aid", "href": "/financialAssistance"},
         { "label": "Mind Care", "href": "https://toduguam.com/mind-care/" },
