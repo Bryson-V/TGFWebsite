@@ -37,8 +37,7 @@ export default function PreventionHero() {
         <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · OUR WORK</h5>
         
         <h1 className={styles.title}>
-          Prevention<br />
-          &<br />
+          Prevention &<br />
           <span className={styles.brightText}>Education.</span>
         </h1>
         
