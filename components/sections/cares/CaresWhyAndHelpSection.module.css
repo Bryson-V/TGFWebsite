@@ -1,0 +1,89 @@
+.section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.reverseRow {
+  direction: ltr; /* Keeps layout controllable via grid column ordering if needed */
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0c1f3f;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0c1f3f;
+  margin: 0;
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+.highlightText {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0c1f3f;
+  margin-top: 0.5rem;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section {
+    gap: 4rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Reverses image position for the second row on mobile if desired */
+  .reverseRow .imageColumn {
+    order: -1;
+  }
+}

@@ -1,0 +1,163 @@
+.section {
+  position: relative;
+  /* Warm pink gradient background matching your theme */
+  background: linear-gradient(135deg, #f3d1df 0%, #e2c9e7 50%, #d8e2f3 100%);
+  padding: 7rem 0;
+  overflow: hidden;
+}
+
+/* Subtle background accent overlay */
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sliderContainer {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 3.5rem 4rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(186, 131, 163, 0.15);
+  width: 100%;
+  backdrop-filter: blur(8px);
+  
+  /* Smooth animation properties */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote {
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #0c1f3f;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+.authorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.author {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0c1f3f;
+}
+
+.role {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #475569;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  color: #0c1f3f;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.arrowButton:hover {
+  background: #ffffff;
+  color: #6b21a8;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prevButton {
+  left: -65px;
+}
+
+.nextButton {
+  right: -65px;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(12, 31, 63, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.activeDot {
+  background-color: #0c1f3f;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+  .prevButton {
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .nextButton {
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2.5rem 2rem;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+}

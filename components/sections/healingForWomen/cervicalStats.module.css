@@ -1,0 +1,72 @@
+.section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #eaf4fc 0%, #fce8ef 100%);
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Strict 2-column grid layout */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(226, 140, 214, 0.12);
+  border: 2px solid rgba(226, 140, 214, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+}
+
+.iconBox {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e04a8b; /* Vibrant pink theme branding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(224, 74, 139, 0.3);
+}
+
+.checkmarkIcon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+
+.statText {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #e04a8b; /* Deep pink text matching the reference cards */
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Responsive adjustments: collapses into a single column on mobile devices */
+@media (max-width: 900px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .statCard {
+    padding: 1.5rem;
+  }
+}
