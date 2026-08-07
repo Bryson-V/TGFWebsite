@@ -37,9 +37,6 @@ export default function FullGalleryPage() {
       <Container>
         {/* Page Header */}
         <div className={styles.header}>
-          <Link href="/volunteer" className={styles.backLink}>
-            ← Back to Volunteer Page
-          </Link>
           <h1 className={styles.title}>Outreach Gallery</h1>
           <p className={styles.subtitle}>
             Explore our full history of community events, mobile clinics, and health education initiatives across the island.
