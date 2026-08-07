@@ -1,0 +1,33 @@
+.section {
+  padding: 2rem 0;
+  background-color: #f8fafc; /* Matches the main section background color */
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.taxCallout {
+  text-align: center;
+  background-color: #fffbeb;
+  color: #b45309;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  border: 1px solid #fde68a;
+  box-shadow: 0 4px 15px rgba(180, 83, 9, 0.05);
+}
+
+.taxCallout p {
+  margin: 0;
+}
+
+.taxCallout strong {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: #92400e;
+}
