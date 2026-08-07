@@ -1,17 +1,16 @@
 .footer {
   background-color: var(--color-primary, #1A365D);
   color: var(--color-white, #ffffff);
-  padding: 80px 0 32px;
-  margin-top: 80px;
+  padding: 80px 5% 32px;
 }
 
 .footerActionContainer {
-  margin-bottom: 0.1rem; /* Reduced from 2rem to bring the columns much closer */
+  margin-bottom: 0.1rem;
   display: flex; 
 }
 
 .upcomingEventsBtn {
-  color: #ffffff; /* Make sure this matches your normal footer text color */
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600; 
   text-decoration: none;
@@ -20,7 +19,7 @@
 }
 
 .upcomingEventsBtn:hover {
-  color: #0d9488; /* Just changes to teal on hover, matching standard links */
+  color: #0d9488;
 }
 
 /* TOP SECTION LAYOUT */
@@ -34,7 +33,6 @@
 
 @media (min-width: 1025px) {
   .topSection {
-    /* Brand col takes ~30% space, Links & Newsletter take ~70% */
     grid-template-columns: 320px 1fr;
     gap: 80px;
   }
@@ -81,7 +79,7 @@
 .contactIcon {
   width: 18px;
   height: 18px;
-  color: #00A89E; /* Brand Teal to make the icons pop */
+  color: #00A89E;
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -108,11 +106,11 @@
 }
 
 .contactItem a:hover {
-  color: #00A89E; /* Teal hover */
+  color: #00A89E;
   text-decoration: underline;
 }
 
-/* MODERN SOCIAL BUTTONS (Always Colorful) */
+/* MODERN SOCIAL BUTTONS */
 .socials {
   display: flex;
   gap: 14px;
@@ -225,7 +223,7 @@
 }
 
 .linkGroup a:hover {
-  color: #00A89E; /* Teal */
+  color: #00A89E;
   transform: translateX(4px);
 }
 
