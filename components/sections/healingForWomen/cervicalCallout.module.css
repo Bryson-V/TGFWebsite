@@ -1,0 +1,76 @@
+.section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #eaf4fc 0%, #fce8ef 100%);
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Container that creates the spinning gradient border via a pseudo-element */
+.rotatingBorderCard {
+  position: relative;
+  border-radius: 30px;
+  padding: 3px; /* Controls the thickness of the rotating border */
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(226, 140, 214, 0.25);
+}
+
+.rotatingBorderCard::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    #93d2ed 0deg,
+    #e04a8b 120deg,
+    #ffffff 200deg,
+    #93d2ed 360deg
+  );
+  animation: rotateGlow 6s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Inner content card styled over the spinning gradient */
+.calloutCard {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f9 100%);
+  border-radius: 27px;
+  padding: 3.5rem 3rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.calloutText {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #0c1f3f; /* Deep navy matching your primary headings */
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rotatingBorderCard {
+    border-radius: 22px;
+  }
+
+  .calloutCard {
+    padding: 2.5rem 1.5rem;
+    border-radius: 19px;
+  }
+
+  .calloutText {
+    font-size: 1.4rem;
+  }
+}

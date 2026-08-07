@@ -1,0 +1,31 @@
+[
+  {
+    "id": "hpv-vaccination",
+    "title": "HPV Vaccination",
+    "image": "/images/healing/hpv-vaccination.jpeg",
+    "imageAlt": "Healthcare worker administering HPV vaccine",
+    "paragraphs": [
+      "If you are 9 to 26 years old, HPV vaccination is recommended.",
+      "The HPV vaccine targets the HPV types that most commonly cause cervical cancer and can cause some cancers of the vulva, vagina, anus, and oropharynx. It also protects against the HPV types that cause most genital warts. The HPV vaccine is highly effective in preventing the targeted HPV types, as well as the most common health problems caused by them."
+    ]
+  },
+  {
+    "id": "pap-smear",
+    "title": "Pap Smear",
+    "image": "/images/healing/pap-smear.jpeg",
+    "imageAlt": "Medical staff wearing masks",
+    "paragraphs": [
+      "Women 21 to 65 years old may get pap smears.",
+      "You should start getting pap tests at age 21. If your pap test result is normal, your doctor may tell you that you can wait three years until your next pap test. Women over 29 years old should talk to a doctor for the best recommended test."
+    ]
+  },
+  {
+    "id": "well-woman-checkup",
+    "title": "Well Woman Checkup",
+    "image": "/images/healing/well-woman.jpeg",
+    "imageAlt": "Two women smiling together during checkup",
+    "paragraphs": [
+      "In this consultation, we look into your health. Here, we focus on preventive care for women. We help you make informed health decisions through education and counseling."
+    ]
+  }
+]

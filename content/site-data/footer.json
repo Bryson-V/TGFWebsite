@@ -28,7 +28,7 @@
         { "label": "CARES Program", "href": "/cares" },
         { "label": "Financial Aid", "href": "/financialAssistance"},
         { "label": "Mind Care", "href": "https://toduguam.com/mind-care/" },
-        { "label": "Healing for Women", "href": "https://toduguam.com/women-health/" }
+        { "label": "Healing for Women", "href": "/healingForWomen" }
       ]
     }, 
     {
