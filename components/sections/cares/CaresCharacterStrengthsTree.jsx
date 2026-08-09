@@ -115,6 +115,7 @@ export default function CaresCharacterStrengthsTree() {
 
             <motion.g 
               className={styles.centralLogo} 
+              initial={{ opacity: 1, scale: 1 }}
               animate={{ 
                 opacity: selectedBranch ? 0 : 1, 
                 scale: selectedBranch ? 0.8 : 1,
@@ -178,6 +179,7 @@ export default function CaresCharacterStrengthsTree() {
 
                     <motion.circle 
                         cx="0" cy="0" 
+                        initial={{ r: branch.radius }}
                         animate={{ r: targetRadius }} 
                         transition={SPRING_TRANSITION}
                         fill={branch.color} 
@@ -186,6 +188,7 @@ export default function CaresCharacterStrengthsTree() {
                     />
                     
                     <motion.foreignObject 
+                      initial={{ x: -branch.radius, y: -branch.radius, width: branch.radius * 2, height: branch.radius * 2 }}
                       animate={{ 
                         x: -targetRadius, 
                         y: -targetRadius, 
@@ -202,9 +205,8 @@ export default function CaresCharacterStrengthsTree() {
                         width: '100%',
                       }}>
                         <motion.div 
+                          initial={{ y: 0, fontSize: "16px" }}
                           animate={{ 
-                            // 0 keeps it perfectly centered when unclicked
-                            // -150 pushes it up when open (but lower down than the old -190)
                             y: isSelected ? -150 : 0,
                             fontSize: isSelected ? "36px" : "16px"
                           }}
