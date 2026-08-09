@@ -8,6 +8,7 @@ import CaresTestimonialsSlider from "@/components/sections/cares/CaresTestimonia
 import CaresViaSurveySection from "@/components/sections/cares/CaresViaSurveySection";
 import CaresVideoSection from "@/components/sections/cares/CaresVideoSection";
 import CaresWhyAndHelpSection from "@/components/sections/cares/CaresWhyAndHelp";
+import LearnMoreCta from "@/components/sections/cares/learnMoreCta";
 
 export default function Cares() {
   return (
@@ -21,6 +22,7 @@ export default function Cares() {
       <CaresWhyAndHelpSection />
       <CaresTestimonialsSlider />
       <CaresCharacterStrengthsTree />
+      <LearnMoreCta />
       <CaresViaSurveySection />
     </>
   );
