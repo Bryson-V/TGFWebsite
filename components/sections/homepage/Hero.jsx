@@ -21,21 +21,16 @@ export default function Hero() {
           <Button href="/ourStory">Learn more about Our Story</Button>
         </div>
 
-        <a
-          href="https://www.instagram.com/toduguam.foundation/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.imageLink}
-        >
-          <Image
-            src="/images/hero/getting-guam-healthy.webp"
-            alt="Getting Guam Healthy"
-            width={640}
+        <div className={styles.imageWrapper}>
+          <Image 
+            src="/images/hero/getting-guam-healthy.webp" 
+            alt="Getting Guam Healthy" 
+            width={640} 
             height={480}
             className={styles.image}
             priority
           />
-        </a>
+        </div>
       </Container>
     </section>
   );

@@ -34,7 +34,6 @@ export default function CaresProgramSection() {
         <div className={styles.headerBlock}>
           <SectionHeading title="We Have a 3-Part Program at Work" align="center" />
           <p className={styles.subtitle}>
-            Contact us with the form below to see how you can be part of the movement.
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export default function LearnMoreCta() {
               rel="noopener noreferrer" 
               className={styles.button}
             >
-              Visit The Postivity Project &rarr;
+              Visit The Positivity Project &rarr;
             </a>
           </div>
         </div>

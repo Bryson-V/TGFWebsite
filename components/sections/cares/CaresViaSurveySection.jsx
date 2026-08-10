@@ -11,16 +11,7 @@ export default function CaresViaSurveySection() {
             Know your greatest strengths
           </h2>
           <p className={styles.description}>
-            Take this short survey from{" "}
-            <a 
-              href="https://www.viacharacter.org/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              viacharacter.org
-            </a>{" "}
-            to find out what your character strengths are. Is it love of learning, humor, hope, or something else?
+            Take this short survey from viacharacter.org to find out what your character strengths are. Is it love of learning, humor, hope, or something else?
           </p>
           <div className={styles.buttonWrapper}>
             <a 
@@ -29,7 +20,7 @@ export default function CaresViaSurveySection() {
               rel="noopener noreferrer"
               className={styles.ctaButton}
             >
-              Discover it here
+              Discover them here
             </a>
           </div>
         </div>
