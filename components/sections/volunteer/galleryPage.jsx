@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Container from "@/components/ui/Container";
 import styles from "./galleryPage.module.css";
 import galleryData from "@/content/site-data/outreaches.json";

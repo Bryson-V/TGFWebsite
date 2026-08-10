@@ -3,10 +3,10 @@
   height: 75vh; 
   min-height: 600px; 
   display: flex;
-  align-items: center;
-  padding: 0 5%;
+  align-items: center; 
+  padding: 0 5%;       
   overflow: hidden;
-  background-color: #831843;
+  background-color: #083344;
   color: #ffffff;
 }
 
@@ -21,13 +21,14 @@
 
 .bgImage {
   object-fit: cover;
-  object-position: center 30%; 
+  object-position: center;
 }
 
-.pinkOverlay {
+/* Cyan Overlay */
+.cyanOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #722042, #630f32);
+  background: linear-gradient(to right, #0891b2, #0e7490);
   z-index: 2;
 }
 
@@ -37,11 +38,12 @@
   max-width: 700px;
   margin-top: 0; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
+/* Pale cyan highlight colors */
 .subtitle {
-  color: #fadeee; 
+  color: #a5f3fc; 
   letter-spacing: 0.1em;
   font-weight: 600;
   font-size: 0.9rem;
@@ -58,7 +60,7 @@
 }
 
 .brightText {
-  color: #fbcfe8;
+  color: #a5f3fc; /* Pale cyan accent text */
 }
 
 .description {
@@ -67,7 +69,7 @@
   opacity: 0.9;
 }
 
-/* --- RESPONSIVE SCALING (Identical to Prevention) --- */
+/* --- RESPONSIVE SCALING --- */
 @media (max-width: 768px) {
   .heroContainer {
     height: 70vh; 
