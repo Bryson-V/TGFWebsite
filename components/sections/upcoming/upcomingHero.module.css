@@ -1,0 +1,219 @@
+.heroContainer {
+  position: relative; /* Required to anchor absolute-positioned background icons */
+  width: 100%;
+  background: linear-gradient(135deg, #0A5E73 0%, #084B5C 100%);
+  color: #ffffff;
+  padding: 4rem 1.5rem 3.5rem;
+  font-family: 'Open Sans', system-ui, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden; /* Clips background icons so they don't cause horizontal scrolling */
+}
+
+/* BACKGROUND DECORATIONS LAYER */
+.bgDecorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* Allows clicks to pass through to the foreground text & buttons */
+  z-index: 1;
+}
+
+/* Ambient Radial Glow Effects */
+.glowTopLeft {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(35, 180, 196, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+}
+
+.glowBottomRight {
+  position: absolute;
+  bottom: -20%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 139, 159, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+}
+
+/* Megaphone Icons in Background */
+.megaphoneLeft {
+  position: absolute;
+  top: 12%;
+  left: 3%;
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 0.08);
+  transform: rotate(-18deg);
+}
+
+.megaphoneRight {
+  position: absolute;
+  top: 22%;
+  right: 4%;
+  font-size: 5.5rem;
+  color: rgba(35, 181, 196, 0.15);
+  transform: rotate(15deg);
+}
+
+/* Plus / Cross Medical Accents */
+.crossTopRight {
+  position: absolute;
+  top: 15%;
+  right: 18%;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.crossBottomLeft {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  font-size: 1.25rem;
+  color: rgba(35, 181, 196, 0.2);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(35, 181, 196, 0.2);
+  color: #23B5C4;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(35, 181, 196, 0.4);
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Subscribe button */
+.notificationBanner {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.notificationText {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  background-color: #148B9F;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notificationText strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.notificationText p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.subscribeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #23B5C4;
+  color: #084B5C;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+.subscribeBtn:hover {
+  background-color: #ffffff;
+  color: #0A5E73;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 3rem 1rem 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .megaphoneLeft,
+  .megaphoneRight {
+    display: none;
+  }
+
+  .notificationBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .subscribeBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
