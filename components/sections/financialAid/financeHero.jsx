@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./healingHero.module.css";
+import styles from "./financeHero.module.css";
 
-export default function HealingHero() {
+export default function FinancialHero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,7 +16,8 @@ export default function HealingHero() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]); 
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.65, 0.85]);
+  
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.45, 0.85]);
 
   return (
     <section ref={containerRef} className={styles.heroContainer}>
@@ -29,17 +30,17 @@ export default function HealingHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/healing/Hinemlo.jpg" 
-          alt="Healing Background" 
+          src="/images/financial/Finance.jpg" 
+          alt="Financial Assistance Background" 
           fill
           className={styles.bgImage}
           priority
         />
       </motion.div>
 
-      {/* Pink Overlay */}
+      {/* Green Overlay */}
       <motion.div
-        className={styles.pinkOverlay}
+        className={styles.greenOverlay}
         style={{ opacity: overlayOpacity }}
       />
 
@@ -51,14 +52,14 @@ export default function HealingHero() {
         <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · OUR WORK</h5>
         
         <h1 className={styles.title}>
-          Healing for<br />
-          <span className={styles.brightText}>Women</span>
+          Financial<br />
+          <span className={styles.brightText}>Assistance</span>
         </h1>
         
         <p className={styles.description}>
-          Hinemlo' Famalao'an - Healing for Women. We help you make
-          <br />informed health decisions through education and counseling.
-          <br />Be a #wellwoman, and take charge of your well-being!
+          Navigating medical and financial decisions shouldn't be done alone. 
+          <br />We provide compassionate guidance, helping you access resources, 
+          <br />coordinate treatments, and find affordable healthcare solutions.
         </p>
       </motion.div>
       
