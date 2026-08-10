@@ -34,10 +34,7 @@
         { "label": "Financial Assistance", "href": "/financialAssistance" },
         { "label": "CARES Program", "href": "/cares" },
         { "label": "Mind Care", "href": "/mindCare" }
-      ],
-      "featuredImage": "/images/programs/mobile-care-clinic-thumb.png",
-      "featuredCaption": "Mobile Care Clinic Medical Outreach",
-      "featuredHref": "/mobileCareClinic"
+      ]
     },
     {
       "id": "community",
