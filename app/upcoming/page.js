@@ -1,5 +1,6 @@
 import Calendar from "@/components/sections/upcoming/calendar";
-import StandaloneMap from "@/components/sections/upcoming/map";
+import MapWrapper from "@/components/sections/upcoming/MapWrapper";
+import RequestLocation from "@/components/sections/upcoming/requestLocation";
 import UpcomingHero from "@/components/sections/upcoming/upcomingHero";
 
 export default function UpcomingPage() {
@@ -7,7 +8,8 @@ export default function UpcomingPage() {
     <>    
       <UpcomingHero />
       <Calendar />
-      <StandaloneMap />
+      <MapWrapper />
+      <RequestLocation />
     </>
   );
 }
