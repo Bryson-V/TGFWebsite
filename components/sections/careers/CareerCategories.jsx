@@ -4,6 +4,8 @@ import { useState } from "react";
 import Container from "@/components/ui/Container";
 import styles from "./CareerCategories.module.css";
 
+// TODO: Refactor SVG to use library package
+
 const StethoscopeIcon = () => (
   <svg className={styles.svgIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
@@ -84,7 +86,6 @@ export default function CareerCategories() {
     const event = new CustomEvent("selectJobPosition", { detail: "General Submission" });
     window.dispatchEvent(event);
 
-    // Scroll smoothly down to the form
     const applySection = document.getElementById("apply");
     if (applySection) {
       applySection.scrollIntoView({ behavior: "smooth" });
