@@ -1,130 +1,108 @@
-# Todu Guam Foundation — Website
+# Todu Guam Foundation — Website Rebuild
 
-A Next.js rebuild of toduguam.com, migrated off WordPress/Elementor. This
-first pass covers the **homepage only** — the architecture is built so the
-rest of the site (About, Programs, Contact, Blog, etc.) can be added as
-more page folders under `app/`, following the same pattern.
+A modern, full-stack Next.js rebuild of toduguam.com, migrated off WordPress and Elementor to deliver higher performance, better accessibility, and maintainable custom styling.
 
-## Getting started
+---
 
-You'll need [Node.js](https://nodejs.org) 18.18 or newer installed.
+## 🚀 Getting Started
 
-```bash
-npm install
-npm run dev
-```
+### Prerequisites
+* Node.js: v18.18.0 or newer
+* npm: v9.0.0 or newer
 
-Then open http://localhost:3000. Every save hot-reloads in the browser.
+### Local Development
 
-To build for production:
+1. Install dependencies:
+   npm install
 
-```bash
+2. Run the local development server:
+   npm run dev
+
+3. Open the site:
+   Navigate to http://localhost:3000 in your browser. Any changes made to code or content will hot-reload automatically.
+
+### Production Build
+
+To test or generate a production build:
+
+# Build static / optimized assets
 npm run build
+
+# Preview the production build locally
 npm start
+
+---
+
+## 🛠 Tech Stack
+
+* Framework: Next.js (App Router)
+* Styling: CSS Modules (*.module.css) & Global Design Tokens
+* Content System: Local Markdown (.md) + JSON data files & Modular Page Layouts
+* Language: JavaScript (ES6+ / JSX)
+
+---
+
+## 📁 How the Project is Organized
+
+```text
+app/                       # Next.js App Router (Pages & Routes)
+├── layout.js              # Root layout: Fonts, Global Providers, <Header>, <Footer>
+├── globals.css            # Design tokens (colors, typography, spacing) & CSS resets
+├── page.js                # Homepage route
+├── about/                 # About Us page route
+├── programs/              # Programs & Services route
+├── news/                  # News & Announcements (Archive & [slug] dynamic pages)
+├── contact/               # Contact page route
+└── blog/                  # Blog / Press release pages
+
+components/                # React UI Components
+├── layout/                # Persistent site elements (Header, Footer, Navigation)
+├── sections/              # Modular section blocks (Composed directly inside page.js files)
+└── ui/                    # Reusable low-level UI (Button, Container, Modal, Cards)
+
+content/                   # Data & Words (Separated from Code)
+├── site-data/*.json       # Structured datasets (Nav links, impact metrics, team details)
+└── news/*.md              # Markdown files for news articles & blog posts
+
+lib/                       # Utility Functions & Helpers
+└── content.js             # Filesystem reader (parses Markdown frontmatter & site JSON)
+
+public/                    # Static Assets
+└── images/                # Images organized by page and component usage
+
+
 ```
 
-This project has never been installed or run yet — it was written by hand
-in an environment with no internet access, so `npm install` here will be
-the first real test of it. If something doesn't compile, the most likely
-culprits are a typo'd import path or a JSX syntax slip; the error message
-from `next dev` will point at the exact file and line.
+---
 
-## How the project is organized
+## 📄 Managing Site Content
 
-```
-app/                    Pages (Next.js "App Router" — one folder per route)
-  layout.js             Wraps every page: fonts, <Header>, <Footer>
-  page.js               The homepage — just lists which sections to render
-  globals.css           Design tokens (colors, fonts, spacing) + resets
+This repository separates site copy and datasets from core application logic so that non-developers can easily update the website:
 
-components/
-  layout/                Header, Footer — used on every page
-  sections/               One component per homepage section
-                          (Hero, ProgramsGrid, NewsGrid, etc.)
-  ui/                     Small reusable pieces (Button, Container,
-                          SectionHeading) used across multiple sections
+* Page Structure & Layout: Managed modularly by composing section components inside app/*/page.js files.
+* Page Copy & Data: Managed inside .json files in content/site-data/.
+* News Articles & Blog Posts: Managed as Markdown files in content/news/.
 
-content/
-  site-data/*.json        Structured content: nav links, program list,
-                          impact stats, footer links, press mentions
-  news/*.md                One file per news article
+📘 Detailed Guide: See content/README.md for a step-by-step editor guide on writing and publishing new articles or updating existing site content.
 
-lib/
-  content.js               The only file that reads from the filesystem.
-                          Turns the markdown files into data components
-                          can use.
+---
 
-public/images/            All site images, organized by purpose
-```
+## 🎨 Styling Approach
 
-**The rule of thumb:** page structure and behavior live in `.jsx` files
-under `components/`; the words and numbers that appear on the page live in
-`content/`. If you're changing what something *says*, you want a file in
-`content/`. If you're changing how something *looks or behaves*, you want
-a file in `components/`. See `content/README.md` for a plain-language
-guide aimed at non-developers editing content.
+* CSS Modules: Each component uses its own ComponentName.module.css file sitting right next to it. Styles are automatically scoped to that specific component to prevent global style bleeding.
+* Global Design Tokens: Brand colors, font stacks, container widths, and spacing rules are defined as CSS variables inside app/globals.css (e.g., var(--color-primary)).
 
-## Styling approach
+---
 
-Each component has its own `ComponentName.module.css` file sitting right
-next to it. These are [CSS Modules](https://nextjs.org/docs/app/building-your-application/styling/css-modules) —
-plain CSS, scoped automatically to that one component so styles never leak
-between sections and collide. There's no CSS framework (no Tailwind, no
-Bootstrap) — just organized, ordinary CSS, on purpose, to keep the
-learning curve flat for whoever works on this next.
+## ➕ Adding New Pages & Components
 
-Global design tokens (brand colors, font, spacing, border radii) live as
-CSS variables in `app/globals.css` — e.g. `var(--color-primary)`. Change a
-token there and it updates everywhere it's used.
+### Adding a New Page
+1. Create a folder under app/ matching the desired URL path (e.g., app/about/page.js for /about).
+2. Build the page composition modularly by importing and arranging section components inside page.js wrapped in a React fragment. It will automatically inherit the global <Header> and <Footer> layout.
+3. Update content/site-data/nav.json to route navigation links to the new internal path.
 
-## Adding a new page
+### Adding Reusable Components & Modules
+* Place multi-page shared elements (buttons, cards, inputs) inside components/ui/.
+* Place modular section blocks (e.g., specific heroes, feature grids, or content blocks) inside components/sections/ (and subfolders like components/sections/cares/).
 
-1. Create a folder under `app/` matching the URL you want, e.g.
-   `app/about/page.js` for `/about`.
-2. Export a default component from `page.js`. It automatically gets the
-   shared `<Header>`/`<Footer>` from `app/layout.js`.
-3. Build out the page using existing components from `components/ui/` and
-   new section components under `components/sections/` as needed.
-4. Update `content/site-data/nav.json` to point the relevant nav link at
-   your new internal path instead of the live toduguam.com URL.
-
-## Adding a new reusable component
-
-Anything used in more than one place (a card style, a button variant,
-etc.) belongs in `components/ui/`. Anything specific to one section of one
-page belongs in `components/sections/`. Give it its own `.module.css` file
-and a short comment at the top explaining what it renders and where its
-content comes from — every existing component follows that pattern, so a
-new file will look at home next to the others.
-
-## What's not built yet (known gaps in this first pass)
-
-- **Individual news article pages** (`/news/[slug]`) — the homepage links
-  to these, but the route doesn't exist yet. Building
-  `app/news/[slug]/page.js`, which reads a single article via a
-  `getNewsBySlug()` function in `lib/content.js` (not written yet — you'd
-  add it alongside the existing `getAllNews()`), is the natural next step.
-- **All other pages** (About, Programs, Contact, Careers, Volunteer,
-  FAQ, Privacy, Terms, etc.) — for now, every nav and footer link that
-  isn't the homepage points at the equivalent page on the live
-  toduguam.com site, so nothing is a dead link. As each page gets rebuilt
-  here, swap its link in `content/site-data/nav.json` or
-  `content/site-data/footer.json` to the new internal path.
-- **Newsletter signup** — the form UI works, but doesn't send anywhere.
-  See the comment at the top of `components/sections/NewsletterSignup.jsx`
-  for how to connect it to a real email service.
-- **Cookie consent banner** — the old site's cookie consent plugin was
-  intentionally left out of this pass to keep scope focused on the
-  architecture. If GDPR/cookie compliance is needed, that's worth
-  scoping as its own small task.
-- **Content is placeholder in places** — see `content/README.md` for
-  what still needs real copy from the team.
-
-## A couple of things worth double-checking with the team
-
-- The original site's homepage text says "Todu Guam's 5 main programs,"
-  but lists 6 program cards. I carried the copy over exactly as written
-  rather than editing it myself — worth a quick look.
-- The footer's second phone number's display text (`671 - 649 - 8638`)
-  and its click-to-call link (`671 - 989 - 0731`) don't match on the live
-  site. Also carried over as-is in `content/site-data/footer.json`.
+---
