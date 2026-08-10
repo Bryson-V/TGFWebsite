@@ -22,12 +22,12 @@ export default function CaresTargetAudienceSection() {
       <Container>
         <div className={styles.wrapper}>
           
-          {/* Left Column: Heading & 2x2 Check Grid */}
+          {/* Left Column: Heading & 2x2 Card Grid */}
           <div className={styles.contentColumn}>
             <h2 className={styles.title}>This is for you if...</h2>
             <div className={styles.pointsGrid}>
               {checkPoints.map((point, index) => (
-                <div key={index} className={styles.pointItem}>
+                <div key={index} className={styles.pointCard}>
                   <div className={styles.iconWrapper}>
                     <CheckIcon />
                   </div>

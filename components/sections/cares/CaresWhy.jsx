@@ -2,7 +2,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import styles from "./CaresWhyAndHelpSection.module.css";
 
-export default function CaresWhyAndHelpSection() {
+export default function CaresWhy() {
   return (
     <section className={styles.section}>
       <Container>
@@ -29,27 +29,6 @@ export default function CaresWhyAndHelpSection() {
                 className={styles.image}
               />
             </div>
-          </div>
-        </div>
-
-        {/* Section 2: What We Help You Work On */}
-        <div className={`${styles.row} ${styles.reverseRow}`}>
-          <div className={styles.imageColumn}>
-            <div className={styles.imageWrapper}>
-              <Image 
-                src="/images/cares/what-we-help.jpeg" 
-                alt="Presentation and classroom activity setup" 
-                width={550} 
-                height={360}
-                className={styles.image}
-              />
-            </div>
-          </div>
-          <div className={styles.textContent}>
-            <h2 className={styles.title}>What We Help You Work On</h2>
-            <p className={styles.paragraph}>
-              We all have character strengths that we can tap into. But sometimes, we encounter different circumstances, changes, and challenges that make it difficult for us to harness our inner strength. The key is to develop the life skills that will help us learn, grow, and believe in ourselves. At the same time, it will allow us to gain an appreciation for others and become more aware of other people&apos;s feelings. To do so, we focus on these four areas: <strong>Gratitude, Open-Mindedness, Social Intelligence, Kindness.</strong>
-            </p>
           </div>
         </div>
 

@@ -39,7 +39,7 @@
   color: var(--color-text-soft);
 }
 
-.imageLink {
+.imageWrapper {
   display: block;
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -48,11 +48,6 @@
 .image {
   width: 100%;
   height: auto;
-  transition: transform var(--transition-base);
-}
-
-.imageLink:hover .image {
-  transform: scale(1.03);
 }
 
 @media (min-width: 1025px) {

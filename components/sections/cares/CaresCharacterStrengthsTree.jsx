@@ -61,9 +61,10 @@ export default function CaresCharacterStrengthsTree() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.header}>
+        <div className={styles.headerCard}>
+          <div className={styles.badge}>Explore</div>
           <h2 className={styles.title}>The 24 Character Strengths</h2>
-          <p className={styles.subtitle}>Explore the categories below to learn more about each strength.</p>
+          <p className={styles.subtitle}>Click on the categories below to learn more about each strength.</p>
         </div>
 
         <div className={styles.treeWrapper} style={{ position: 'relative' }}>
