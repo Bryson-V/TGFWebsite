@@ -1,76 +1,94 @@
-/* --- Hero Section Container --- */
-.heroSection {
+.heroContainer {
   position: relative;
-  width: 100%;
-  height: 35vh;
-  min-height: 350px;
-  max-height: 500px;
+  height: 50vh;
+  min-height: 450px;
   display: flex;
   align-items: center;
+  padding: 0 5%;
+  overflow: hidden;
   background-color: #0c1f3f;
   color: #ffffff;
-  overflow: hidden;
 }
 
-/* --- Image & Overlay --- */
-.imageContainer {
+.backgroundImage {
   position: absolute;
-  inset: 0;
+  top: -15%;
+  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.heroImage {
-  object-fit: cover;
-  object-position: center 30%;
+  height: 130%;
+  background-image: url('/images/directors/directorHero.webp');
+  background-size: cover;
+  background-position: center 30%; 
+  z-index: 1;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(12, 31, 63, 0.9) 0%, rgba(12, 31, 63, 0.4) 100%);
+  background: linear-gradient(to right, rgba(8, 21, 43, 0.8) 0%, rgba(12, 31, 63, 0.2) 100%);
+  z-index: 2;
 }
 
-/* --- Text Content --- */
-.contentContainer {
+.content {
   position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.textContent {
-  max-width: 650px;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: #f1f5f9;
+  z-index: 3;
+  max-width: 800px;
+  margin-top: 0; 
+  display: flex;
+  flex-direction: column;
 }
 
 .subtitle {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: #f1f5f9;
-  margin: 0;
+  color: #38bdf8; 
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-/* --- Mobile Responsiveness --- */
+.title {
+  color: #ffffff;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.05; 
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.brightText {
+  color: #38bdf8; 
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 650px;
+}
+
+/* --- RESPONSIVE SCALING --- */
 @media (max-width: 768px) {
-  .heroSection {
-    height: 35vh;
-    min-height: 300px;
+  .heroContainer {
+    height: 45vh;
+    min-height: 400px;
   }
-
   .title {
-    font-size: 2.5rem;
+    font-size: 3.25rem;
   }
+  .description {
+    font-size: 1.05rem;
+  }
+}
 
-  .subtitle {
+@media (max-width: 480px) {
+  .heroContainer {
+    padding-top: 2rem; 
+  }
+  .title {
+    font-size: 2.5rem; 
+  }
+  .description {
     font-size: 1rem;
   }
 }

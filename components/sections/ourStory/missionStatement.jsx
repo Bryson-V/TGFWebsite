@@ -7,7 +7,7 @@ export default function MissionStatement() {
     <section className={styles.section}>
       <Container className={styles.container}>
         
-        {/* ==================== 1. MISSION STATEMENT ==================== */}
+        {/* Mission Statement */}
         <div className={styles.missionStatement}>
           <div className={styles.missionHeadingWrapper}>
             <h2 className={styles.missionHeading}>
@@ -19,7 +19,7 @@ export default function MissionStatement() {
 
           <div className={styles.missionImageWrapper}>
             <Image
-              src="/images/story/mobile-clinic-early.webp" // Slot: Early Mobile Clinic Photo
+              src="/images/story/mobile-clinic-early.webp"
               alt="Dennis Rodriguez Jr Mobile Care Clinic"
               fill
               sizes="(max-width: 992px) 100vw, 450px"
@@ -29,9 +29,8 @@ export default function MissionStatement() {
           </div>
         </div>
 
-        {/* ==================== 2. OUTREACH HISTORY ==================== */}
+        {/* Outreach History */}
         <div className={styles.outreachHistory}>
-          {/* Overlapping Light Blue Card */}
           <div className={styles.overlappingCard}>
             <div className={styles.cardAccentBar} />
             <p className={styles.cardText}>
@@ -48,7 +47,7 @@ export default function MissionStatement() {
           {/* Right Mobile Clinic Image */}
           <div className={styles.outreachImageWrapper}>
             <Image
-              src="/images/story/mobile-clinic-rainbow.webp" // Slot: Rainbow Mobile Clinic Photo
+              src="/images/story/truck.webp"
               alt="TGF Mobile Care Clinic with Rainbow"
               fill
               sizes="(max-width: 992px) 100vw, 600px"
@@ -57,13 +56,13 @@ export default function MissionStatement() {
           </div>
         </div>
 
-        {/* ==================== 3. COMMUNITY IMPACT ==================== */}
+        {/* Community Impact */}
         <div className={styles.communityImpact}>
           {/* Left Side: 2x2 Photo Grid */}
           <div className={styles.photoGrid}>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-1.webp" // Slot: Grid Image 1 (Top Left)
+                src="/images/story/grid-1.webp" // (Top Left)
                 alt="TGF Community Kids"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -72,7 +71,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-2.webp" // Slot: Grid Image 2 (Top Right)
+                src="/images/story/grid-2.webp" // (Top Right)
                 alt="Mother and Child"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -81,7 +80,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-3.webp" // Slot: Grid Image 3 (Bottom Left)
+                src="/images/story/grid-3.webp" // (Bottom Left)
                 alt="Young Girl Peace Sign"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -90,7 +89,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-4.webp" // Slot: Grid Image 4 (Bottom Right)
+                src="/images/story/grid-4.webp" // (Bottom Right)
                 alt="TGF Outreach Team"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
