@@ -32,7 +32,7 @@
   background-color: #ffffff;
   cursor: pointer;
   display: flex;
-  flex-direction: row; /* Horizontal layout */
+  flex-direction: row; 
   overflow: hidden; 
   border: 2px solid transparent;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -41,8 +41,8 @@
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: #129c91;
-  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.15);
+  border-color: #1259d3;
+  box-shadow: 0 20px 25px -5px rgba(12, 31, 63, 0.15);
 }
 
 /* --- Image Column --- */
@@ -84,7 +84,7 @@
 
 .memberRole {
   font-size: 1rem;
-  color: #0d9488;
+  color: #245bba;
   font-weight: 600;
   margin: 0;
 }
@@ -102,7 +102,7 @@
 }
 
 .ctaText {
-  color: #129c91;
+  color: #245ab8;
   font-weight: 700;
   font-size: 0.95rem;
   transition: color 0.2s ease;
@@ -143,7 +143,7 @@
 .modalBanner {
   width: 100%;
   height: 140px;
-  background: linear-gradient(135deg, #175a75 0%, #129c91 100%);
+  background: linear-gradient(135deg, #112c5a 0%, #3563ad 100%); /* Blue gradient */
   position: relative;
   flex-shrink: 0;
 }
@@ -232,7 +232,7 @@
 }
 
 .modalRole {
-  color: #0d9488;
+  color: #245bba; /* Blue accent */
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
@@ -268,70 +268,18 @@
 
 /* --- Mobile Responsive Styling --- */
 @media (max-width: 768px) {
-  .section {
-    padding: 3rem 1rem; 
-  }
-  
-  .heading {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .card {
-    flex-direction: column;
-  }
-
-  .imageWrapper {
-    width: 100%;
-    min-width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .infoWrapper {
-    padding: 1.5rem;
-  }
-
-  .modalContent {
-    max-width: 95%;
-    max-height: 85vh;
-  }
-
-  .modalBanner {
-    height: 120px;
-  }
-
-  .modalEyebrow {
-    top: 1rem;
-    left: 1.25rem;
-  }
-  
-  .closeButton {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
-  .modalBodyContainer {
-    padding: 0 1.5rem 2rem 1.5rem;
-  }
-
-  .modalHeader {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: -60px;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .modalAvatarWrapper {
-    width: 120px;
-  }
-
-  .modalName {
-    font-size: 1.4rem;
-  }
-  
-  .modalRole {
-    font-size: 1rem;
-  }
+  .section { padding: 3rem 1rem; }
+  .heading { font-size: 2.25rem; margin-bottom: 2rem; }
+  .card { flex-direction: column; }
+  .imageWrapper { width: 100%; min-width: 100%; aspect-ratio: 16 / 9; }
+  .infoWrapper { padding: 1.5rem; }
+  .modalContent { max-width: 95%; max-height: 85vh; }
+  .modalBanner { height: 120px; }
+  .modalEyebrow { top: 1rem; left: 1.25rem; }
+  .closeButton { top: 0.5rem; right: 0.5rem; }
+  .modalBodyContainer { padding: 0 1.5rem 2rem 1.5rem; }
+  .modalHeader { flex-direction: column; align-items: center; text-align: center; margin-top: -60px; gap: 1rem; padding-bottom: 1.5rem; }
+  .modalAvatarWrapper { width: 120px; }
+  .modalName { font-size: 1.4rem; }
+  .modalRole { font-size: 1rem; }
 }

@@ -32,7 +32,7 @@
   background-color: #ffffff;
   cursor: pointer;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   overflow: hidden; 
   border: 2px solid transparent;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -41,7 +41,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: #0c1f3f;
+  border-color: #129c91;
   box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.15);
 }
 
@@ -88,8 +88,10 @@
   margin: 0 0 0.1rem 0;
 }
 
-.modalspecialty {
-  color: #245bba;
+.memberRole {
+  font-size: 1rem;
+  color: #0d9488; /* Teal accent */
+  font-weight: 600;
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
@@ -117,7 +119,8 @@
 .memberPreviewItem {
   font-size: 0.95rem;
   color: #475569;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 .cardAction {
@@ -126,14 +129,14 @@
 }
 
 .ctaText {
-  color: #2c6ee1;
+  color: #129c91; /* Teal CTA text */
   font-weight: 700;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
 .card:hover .ctaText {
-  color: #0c1f3f;
+  color: #1c325a;
   text-decoration: underline;
 }
 
@@ -141,7 +144,7 @@
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(12, 31, 63, 0.6);
+  background-color: rgba(4, 47, 46, 0.7); /* Dark teal overlay to match */
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -167,7 +170,7 @@
 .modalBanner {
   width: 100%;
   height: 140px;
-  background: linear-gradient(135deg, #153773 0%, #2b497a 100%);
+  background: linear-gradient(135deg, #175a75 0%, #129c91 100%); /* Teal gradient */
   position: relative;
   flex-shrink: 0;
 }
@@ -255,12 +258,11 @@
   line-height: 1.2;
 }
 
-.modalEmailTag {
-  font-size: 0.95rem;
-  color: #64748b;
-  margin-top: 0.2rem;
-  font-weight: 500;
-  display: inline-block;
+.modalRole {
+  color: #0d9488; /* Teal accent */
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .modalBody {
@@ -294,87 +296,18 @@
 
 /* --- Mobile Responsive Styling --- */
 @media (max-width: 768px) {
-  .section {
-    padding: 3rem 1rem; 
-  }
-  
-  .heading {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .card {
-    flex-direction: column;
-  }
-
-  .imageWrapper {
-    width: 100%;
-    min-width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .infoWrapper {
-    padding: 1.5rem;
-  }
-
-  /* Revert bullets back to a single column on mobile devices */
-  .cardBulletList {
-    grid-template-columns: 1fr;
-  }
-
-  .modalContent {
-    max-width: 95%;
-    max-height: 85vh;
-  }
-
-  .modalBanner {
-    height: 120px;
-  }
-
-  .modalEyebrow {
-    top: 1rem;
-    left: 1.25rem;
-  }
-  
-  .closeButton {
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
-  .modalBodyContainer {
-    padding: 0 1.5rem 2rem 1.5rem;
-  }
-
-  .modalHeader {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: -60px;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .modalAvatarWrapper {
-    width: 120px;
-  }
-
-  .modalName {
-    font-size: 1.4rem;
-  }
-}
-
-.modalSectionGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-}
-
-.detailList {
-  list-style-type: disc;
-  margin: 0 0 0 1.25rem;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  .section { padding: 3rem 1rem; }
+  .heading { font-size: 2.25rem; margin-bottom: 2rem; }
+  .card { flex-direction: column; }
+  .imageWrapper { width: 100%; min-width: 100%; aspect-ratio: 16 / 9; }
+  .infoWrapper { padding: 1.5rem; }
+  .modalContent { max-width: 95%; max-height: 85vh; }
+  .modalBanner { height: 120px; }
+  .modalEyebrow { top: 1rem; left: 1.25rem; }
+  .closeButton { top: 0.5rem; right: 0.5rem; }
+  .modalBodyContainer { padding: 0 1.5rem 2rem 1.5rem; }
+  .modalHeader { flex-direction: column; align-items: center; text-align: center; margin-top: -60px; gap: 1rem; padding-bottom: 1.5rem; }
+  .modalAvatarWrapper { width: 120px; }
+  .modalName { font-size: 1.4rem; }
+  .modalRole { font-size: 1rem; }
 }
