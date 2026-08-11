@@ -8,6 +8,11 @@ import styles from "./directorCards.module.css";
 import boardData from "@/content/site-data/boardData.json";
 
 function ProfileModal({ director, onClose }) {
+  // Helper to handle both array of paragraphs or legacy string format seamlessly
+  const bioContent = Array.isArray(director.bio) 
+    ? director.bio 
+    : [director.bio || director.description || "DESCRIPTION HERE"];
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -21,7 +26,7 @@ function ProfileModal({ director, onClose }) {
         onClick={(e) => e.stopPropagation()} 
       >
         <div className={styles.modalBanner}>
-          <p className={styles.modalEyebrow}>Board of Doctors Profile</p>
+          <p className={styles.modalEyebrow}>Board of Directors Profile</p>
           <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
             ✕
           </button>
@@ -51,13 +56,17 @@ function ProfileModal({ director, onClose }) {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .2 }} 
+            transition={{ delay: 0.2 }} 
             className={styles.modalBody}
           >
             <h5 className={styles.modalBodyTitle}>About</h5>
-            <p className={styles.modalDescription}>
-              {director.bio || director.description || "DESCRIPTION HERE"}
-            </p>
+            <div className={styles.modalDescriptionWrapper}>
+              {bioContent.map((paragraph, index) => (
+                <p key={index} className={styles.modalDescription}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </motion.div>
         </div>
       </motion.div>
@@ -88,7 +97,7 @@ export default function BoardOfDirectors() {
                 className={`${styles.card} ${isSelected ? styles.cardActive : ""}`}
                 onClick={() => setSelectedMember(member)}
                 animate={{ opacity: isSelected ? 0 : 1 }}
-                transition={{ duration: .687 }}
+                transition={{ duration: 0.687 }}
               >
                 <motion.div layoutId={`image-container-${member.id}`} className={styles.imageWrapper}>
                   <Image
@@ -112,7 +121,7 @@ export default function BoardOfDirectors() {
                   </div>
 
                   <p className={styles.memberPreview}>
-                    {member.preview || member.bio}
+                    {member.preview || (Array.isArray(member.bio) ? member.bio[0] : member.bio)}
                   </p>
 
                   <div className={styles.cardAction}>

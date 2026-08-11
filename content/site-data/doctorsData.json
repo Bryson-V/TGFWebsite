@@ -6,64 +6,221 @@
       "name": "Dr. Julie Namm, MD",
       "specialty": "Family Medicine",
       "email": "drnamm@toduguam.com",
-      "image": "/images/doctors/julie-namm.webp",
-      "bio": "Dr. Namm specializes in comprehensive family care, preventive medicine, and managing chronic health conditions for patients of all ages."
+      "image": "/images/doctors/julie-namm.png",
+      "education": [
+        "Loma Linda University, California"
+      ],
+      "certifications": [
+        "Board Certified Family Medicine Physician"
+      ],
+      "preview": [
+        "Primary Care",
+        "Women's Health & Prevention",
+        "Whole-Person Wellness",
+        "Comprehensive family care"
+      ],
+      "bio": [
+        "Dr. Julie Namm specializes in comprehensive family care, preventive medicine, and managing chronic health conditions for patients of all ages.",
+        "She is deeply committed to holistic wellness, long-term patient education, and providing personalized healthcare tailored to every stage of life."
+      ]
     },
     {
       "id": "2",
       "name": "Bannuar Quiaoit, FNP",
       "specialty": "Family Medicine",
       "email": "bquiaoit@toduguam.com",
-      "image": "/images/doctors/bannuar-quiaoit.webp",
-      "bio": "Bannuar is a Family Nurse Practitioner committed to providing compassionate primary care and patient-centered health education."
+      "image": "/images/doctors/bannuar-quiaoit.png",
+      "education": [],
+      "certifications": [],
+      "preview": [
+        "Committed to providing compassionate primary healthcare services.",
+        "Focuses on patient-centered health education and disease prevention."
+      ],
+      "bio": [
+        "Bannuar Quiaoit is a dedicated Family Nurse Practitioner committed to providing compassionate primary care and patient-centered health education.",
+        "He focuses heavily on early disease prevention, routine wellness exams, and helping patients navigate chronic condition management."
+      ]
     },
     {
       "id": "3",
       "name": "Elena Taneva-Cholakova, FNP",
       "specialty": "Family Medicine",
       "email": "etaneva@toduguam.com",
-      "image": "/images/doctors/elena-taneva.webp",
-      "bio": "Elena brings dedicated family nursing expertise with a focus on holistic wellness, preventative health screenings, and community care."
+      "image": "/images/doctors/elena-taneva.png",
+      "education": [],
+      "certifications": [],
+      "preview": [
+        "Brings dedicated family nursing expertise and personalized patient attention.",
+        "Focuses on holistic wellness, lifestyle medicine, and routine screenings."
+      ],
+      "bio": [
+        "Elena Taneva-Cholakova brings dedicated family nursing expertise with a core focus on holistic wellness, preventative health screenings, and community care.",
+        "She works closely with patients to emphasize lifestyle medicine, empowering them to take charge of their everyday physical and mental health."
+      ]
     },
     {
       "id": "4",
       "name": "Dr. Edwin Supit, MD",
       "specialty": "Internal Medicine",
       "email": "drsupit@toduguam.com",
-      "image": "/images/doctors/edwin-supit.webp",
-      "bio": "Dr. Supit focuses on internal medicine, prioritizing adult disease prevention, diagnosis, and long-term care management."
+      "image": "/images/doctors/edwin-supit.png",
+      "education": [],
+      "certifications": [],
+      "preview": [
+        "Focuses on comprehensive internal medicine for adult patients.",
+        "Prioritizes advanced disease prevention, accurate diagnosis, and chronic care."
+      ],
+      "bio": [
+        "Dr. Edwin Supit focuses on comprehensive internal medicine, prioritizing adult disease prevention, precise diagnosis, and long-term care management.",
+        "He has extensive experience helping adult patients navigate complex medical histories and multi-system chronic health conditions."
+      ]
     },
     {
       "id": "5",
-      "name": "Dr. Sam Song, MD",
+      "name": "Dr. Sam Song, MD, FACOG",
       "specialty": "Obstetrics & Gynecology",
       "email": "drsong@toduguam.com",
-      "image": "/images/doctors/sam-song.webp",
-      "bio": "Dr. Song provides specialized reproductive health, routine gynecological care, and compassionate obstetrical support."
+      "image": "/images/doctors/sam-song.png",
+      "education": [
+        "Medical College of Pennsylvania"
+      ],
+      "certifications": [
+        "Board-certified Obstetrics and Gynecology (OB/GYN)",
+        "Certified Practitioner by the Menopause Society",
+        "Fellow of the American Congress of Obstetricians and Gynecologists (FACOG)"
+      ],
+      "preview": [
+        "28 years of clinical experience in OB/GYN care.",
+        "Well Woman Health Exams & Cervical Cancer Screening.",
+        "High-Risk Obstetric Care & Minimally Invasive Surgery.",
+        "Management of Menopausal Symptoms."
+      ],
+      "bio": [
+        "Dr. Sam Song brings 28 years of extensive experience in obstetrics and gynecology, providing specialized women's health and reproductive care services.",
+        "He is dedicated to maintaining a safe, welcoming environment, emphasizing preventative screenings, and delivering exceptional general OB/GYN care across all stages of a patient's life."
+      ]
     },
     {
       "id": "6",
       "name": "Dr. William Vercio, MD",
       "specialty": "Obstetrics & Gynecology",
       "email": "drvercio@toduguam.com",
-      "image": "/images/doctors/william-vercio.webp",
-      "bio": "Dr. Vercio has extensive experience in women's health services, maternal-fetal care, and comprehensive gynecological treatments."
+      "image": "/images/doctors/william-vercio.png",
+      "education": [],
+      "certifications": [],
+      "preview": [
+        "Has extensive clinical experience in comprehensive women's health services.",
+        "Specializes in advanced maternal-fetal care and specialized treatments."
+      ],
+      "bio": [
+        "Dr. William Vercio has extensive experience in women's health services, maternal-fetal care, and comprehensive gynecological treatments.",
+        "He is committed to delivering attentive, high-standard medical care tailored to the unique clinical needs of every patient."
+      ]
     },
     {
       "id": "7",
       "name": "Dr. Danny McClure, DO",
       "specialty": "Psychiatry, Medical Director",
       "email": "drmcclure@toduguam.com",
-      "image": "/images/doctors/danny-mcclure.webp",
-      "bio": "Serving as Medical Director, Dr. McClure delivers specialized psychiatric evaluations and integrated mental health treatment plans."
+      "image": "/images/doctors/danny-macclure.png",
+      "education": [
+        "A.T. Still University School of Osteopathic Medicine in Arizona"
+      ],
+      "certifications": [
+        "American Board of Psychiatry and Neurology"
+      ],
+      "preview": [
+        "Psychiatric evaluation and treatment",
+        "Behavioral health care",
+        "Mental health services without referral",
+        "Genetic testing to help tailor psychiatric medications",
+        "Transcranial Magnetic Stimulation (TMS) for depression and other mental health conditions",
+        "Outpatient mental health care",
+        "Collaborative treatment planning with primary care providers"
+      ],
+      "bio": [
+        "Serving as Medical Director, Dr. Danny McClure delivers specialized psychiatric evaluations and integrated mental health treatment plans.",
+        "He takes a whole-person approach to behavioral medicine, blending clinical psychiatry with supportive therapeutic strategies."
+      ]
     },
     {
       "id": "8",
       "name": "Dr. Alan Butler, PsyD",
       "specialty": "Clinical Psychologist",
       "email": "drbutler@toduguam.com",
-      "image": "/images/doctors/alan-butler.webp",
-      "bio": "Dr. Butler specializes in psychological assessments, therapeutic support, and cognitive behavioral treatments."
+      "image": "/images/doctors/alan-butler.png",
+      "education": [
+        "Antioch University Seattle"
+      ],
+      "certifications": [
+        "Licensed Clinical Psychologist"
+      ],
+      "preview": [
+        "Psychological evaluations",
+        "Individual therapy for children, adolescents, and adults",
+        "Couples therapy",
+        "Family therapy",
+        "Diagnostic assessments",
+        "Assessment of ADHD",
+        "Assessment of Autism Spectrum Disorder",
+        "Assessment of learning disabilities",
+        "Treatment of behavioral health concerns",
+        "Psychotherapy",
+        "Collaborative treatment planning"
+      ],
+      "bio": [
+        "Dr. Alan Butler specializes in comprehensive psychological assessments, therapeutic support, and evidence-based cognitive behavioral treatments.",
+        "He provides a safe, empathetic space for patients seeking help with emotional well-being, life transitions, and mental health challenges."
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Dr. Fredrick Niegos, MD, FACE, CDD",
+      "specialty": "Endocrinology and Internal Medicine",
+      "email": "drniegos@toduguam.com",
+      "image": "/images/doctors/fredrick-niegos.png",
+      "education": [
+        "University of Santo Tomas Manila, Philippines"
+      ],
+      "certifications": [
+        "Double board-certified in Internal Medicine and Endocrinology, Diabetes & Metabolism."
+      ],
+      "preview": [
+        "Diabetes management",
+        "Thyroid disorder treatment",
+        "Hormone imbalance management",
+        "Metabolic disease treatment",
+        "Bone health evaluation and treatment",
+        "Adrenal disorders",
+        "Pituitary disorders",
+        "Personalized endocrine care"
+      ],
+      "bio": [
+        "Dr. Alan Butler specializes in comprehensive psychological assessments, therapeutic support, and evidence-based cognitive behavioral treatments.",
+        "He provides a safe, empathetic space for patients seeking help with emotional well-being, life transitions, and mental health challenges."
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Dr. Patrick Santos, MD",
+      "specialty": "Family Medicine",
+      "email": "drsantos@toduguam.com",
+      "image": "/images/doctors/patrick-santos.png",
+      "education": [
+        "University of Santo Tomas Faculty of Medicine & Surgery, Manila, Philippines"
+      ],
+      "certifications": [],
+      "preview": [
+        "Preventive care",
+        "Wellness-focused care",
+        "Management of acute medical conditions",
+        "Management of chronic medical conditions",
+        "Comprehensive family care"
+      ],
+      "bio": [
+        "Dr. Alan Butler specializes in comprehensive psychological assessments, therapeutic support, and evidence-based cognitive behavioral treatments.",
+        "He provides a safe, empathetic space for patients seeking help with emotional well-being, life transitions, and mental health challenges."
+      ]
     }
   ]
 }
