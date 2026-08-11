@@ -1,6 +1,6 @@
 /* --- Base Section --- */
 .section {
-  background-color: #f8fafc; /* Slight off-white background to make white cards pop */
+  background-color: #f8fafc;
   padding: 5rem 0;
   color: #1e293b; 
 }
@@ -17,12 +17,12 @@
   letter-spacing: -0.02em;
 }
 
-/* --- Grid & Cards --- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-  max-width: 1100px;
+/* --- Horizontal List Layout --- */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
   background-color: #ffffff;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Horizontal layout */
   overflow: hidden; 
   border: 2px solid transparent;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -40,16 +40,17 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   border-color: #129c91;
-  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.25);
+  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.15);
 }
 
-/* --- Rectangular Image & Hover Overlay --- */
+/* --- Image Column --- */
 .imageWrapper {
   position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4;
+  width: 260px;
+  min-width: 260px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background-color: #f1f5f9;
 }
@@ -60,71 +61,60 @@
 }
 
 .card:hover .image {
-  transform: scale(1.05); /* Slight zoom */
+  transform: scale(1.03);
 }
 
-/* Teal Gradient & Pill that appear on hover */
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(15, 118, 110, 0.55) 0%, transparent 35%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.card:hover .imageOverlay {
-  opacity: 1;
-}
-
-.viewProfilePill {
-  background-color: #129c91;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  transform: translateY(15px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.card:hover .viewProfilePill {
-  transform: translateY(0);
-}
-
-/* --- Info Footer --- */
+/* --- Content Column --- */
 .infoWrapper {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  justify-content: space-between;
   background-color: #ffffff;
   text-align: left; 
-  z-index: 11; /* Keeps text above the image overlay */
+  flex-grow: 1;
 }
 
 .memberName {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #0c1f3f;
-  margin: 0;
+  margin: 0 0 0.25rem 0;
 }
 
 .memberRole {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #0d9488;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 }
 
-/* --- Modal Styles with Banner Design --- */
+.memberPreview {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 1rem 0;
+  /* No line-clamping; text displays fully without ellipses */
+}
+
+.cardAction {
+  display: flex;
+  align-items: center;
+}
+
+.ctaText {
+  color: #129c91;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.card:hover .ctaText {
+  color: #0c1f3f;
+  text-decoration: underline;
+}
+
+/* --- Modal Styles --- */
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -147,14 +137,16 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-/* Executive Banner Area */
 .modalBanner {
   width: 100%;
   height: 140px;
   background: linear-gradient(135deg, #175a75 0%, #129c91 100%);
   position: relative;
+  flex-shrink: 0;
 }
 
 .modalEyebrow {
@@ -194,12 +186,10 @@
   color: #0c1f3f;
 }
 
-/* Body Container pushed down from banner */
 .modalBodyContainer {
   padding: 0 2.5rem 3rem 2.5rem;
 }
 
-/* Avatar overlaps the banner */
 .modalHeader {
   display: flex;
   align-items: flex-end;
@@ -272,7 +262,7 @@
   margin: 0;
 }
 
-/* --- Mobile Responsive Scaling --- */
+/* --- Mobile Responsive Styling --- */
 @media (max-width: 768px) {
   .section {
     padding: 3rem 1rem; 
@@ -283,17 +273,23 @@
     margin-bottom: 2rem;
   }
 
-  /* Adjust grid for smaller phones */
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+  .card {
+    flex-direction: column; /* Stacks image on top of text for small screens */
   }
 
-  /* --- Modal Mobile Fixes --- */
+  .imageWrapper {
+    width: 100%;
+    min-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .infoWrapper {
+    padding: 1.5rem;
+  }
+
   .modalContent {
     max-width: 95%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 85vh;
   }
 
   .modalBanner {
