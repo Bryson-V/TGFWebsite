@@ -1,107 +1,92 @@
-/* --- storyHero.module.css --- */
-
-.hero {
-  background-color: #004146;
-  color: #ffffff;
-  padding: clamp(2rem, 4vw, 3.5rem) 0;
+.heroContainer {
   position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.grid {
+  height: 70vh; 
+  min-height: 550px; 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 3vw, 2.5rem);
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.text {
-  flex: 1;
-  padding-left: 1rem;
-}
-
-.headline {
-  /* Scales font size dynamically between 1.75rem and 2.5rem */
-  font-size: clamp(1.75rem, 4vw, 2.5rem); 
-  font-weight: 700;
-  margin: 0;
+  padding: 0 5%;
+  overflow: hidden;
+  background-color: #042f2e;
   color: #ffffff;
 }
 
-/* --- Dynamic Image Cluster --- */
-
-.imageCluster {
-  position: relative;
-  flex: 1;
-  width: 100%;
-  /* Scales cluster max width fluidly */
-  max-width: clamp(280px, 45vw, 480px); 
-  /* Uses aspect ratio to maintain scale dynamically without hardcoding pixel height */
-  aspect-ratio: 16 / 10; 
-}
-
-/* --- Primary Image (Fluid sizing) --- */
-
-.primaryImageWrapper {
+.backgroundImage {
   position: absolute;
-  top: 0;
+  top: -25%; 
   left: 0;
-  width: 65%; /* Takes up 65% of the cluster width */
-  height: 80%; /* Takes up 80% of the cluster height */
+  width: 100%;
+  height: 140%;
+  background-image: url('/images/story/Rainbow.webp');
+  background-size: cover;
+  background-position: center 80%; 
   z-index: 1;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  border: 3px solid #ffffff;
 }
 
-.primaryImage {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* --- Secondary Image (Fluid sizing) --- */
-
-.secondaryImageWrapper {
+.overlay {
   position: absolute;
-  bottom: 0;
-  right: 5%;
-  width: 42%; /* Scaled proportional to cluster */
-  aspect-ratio: 1 / 1; /* Maintains square shape automatically */
+  inset: 0;
+  background: linear-gradient(to right, #0f766e, #0f766e);
   z-index: 2;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  border: 3px solid #ffffff;
 }
 
-.secondaryImage {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 700px;
+  margin-top: 0; 
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- Mobile / Small Tablet Stack --- */
+.subtitle {
+  color: #99f6e4;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
 
-@media (max-width: 640px) {
-  .grid {
-    flex-direction: column;
-    text-align: center;
+.title {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.05; 
+  margin-bottom: 1.5rem;
+}
+
+.brightText {
+  color: #99f6e4; 
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* --- RESPONSIVE SCALING --- */
+@media (max-width: 768px) {
+  .heroContainer {
+    height: 70vh; 
+    min-height: 550px;
   }
-
-  .text {
-    padding: 0;
-    margin-bottom: 1rem;
+  .title {
+    font-size: 4rem;
   }
+  .description {
+    font-size: 1.1rem;
+  }
+}
 
-  .imageCluster {
-    /* Takes almost full width on small screens while keeping the same layered proportions */
-    max-width: 90%; 
-    aspect-ratio: 16 / 10;
+@media (max-width: 480px) {
+  .heroContainer {
+    padding-top: 2rem; 
+  }
+  .title {
+    font-size: 3rem; 
+  }
+  .description {
+    font-size: 1rem;
   }
 }

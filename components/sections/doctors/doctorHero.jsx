@@ -1,54 +1,52 @@
 "use client";
 
-import Image from "next/image";
-import Container from "@/components/ui/Container";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./doctorHero.module.css";
 
 export default function DoctorHero() {
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]); 
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.65, 0.95]);
 
   return (
-    <section className={styles.heroSection}>
-      <Container className={styles.container}>
-        <div className={styles.content}>
-          {/* Eyebrow Badge */}
-          <div className={styles.badge}>
-            <span className={styles.badgeDot}></span>
-            Guam's Trusted Healthcare Providers
-          </div>
+    <div ref={containerRef} className={styles.heroContainer}>
+      
+      <motion.div
+        className={styles.backgroundImage}
+        style={{ y: backgroundY }}
+      />
 
-          <h1 className={styles.title}>
-            Meet Our Renowned <br />
-            <span className={styles.highlight}>Team of Doctors</span>
-          </h1>
+      <motion.div
+        className={styles.overlay}
+        style={{ opacity: overlayOpacity }}
+      />
 
-          <p className={styles.description}>
-            Dedicated, compassionate, and highly skilled specialists working together 
-            to deliver exceptional medical care across our Guam community.
-          </p>
-
-          <div className={styles.actions}>
-            <a href="mailto:info@toduguam.com" className={styles.secondaryBtn}>
-              Contact Medical Office
-            </a>
-          </div>
-        </div>
-
-        {/* Hero Image Container */}
-        <div className={styles.imageContainer}>
-          <div className={styles.imageWrapper}>
-            <Image
-              src="/images/doctors/hero.jpg"
-              alt="Todu Guam Medical Team of Doctors"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className={styles.heroImage}
-            />
-          </div>
-          {/* Decorative Backing Frame */}
-          <div className={styles.imageBackdrop}></div>
-        </div>
-      </Container>
-    </section>
+      <motion.div 
+        className={styles.content} 
+        style={{ y: textY, opacity: textOpacity }} 
+      >
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · ABOUT US</h5>
+        
+        <h1 className={styles.title}>
+          Meet Our Renowned<br />
+          <span className={styles.brightText}>Team of Doctors</span>
+        </h1>
+        
+        <p className={styles.description}>
+          Dedicated, compassionate, and highly skilled specialists working together 
+          <br />to deliver exceptional medical care across our Guam community.
+        </p>
+      </motion.div>
+      
+    </div>
   );
 }

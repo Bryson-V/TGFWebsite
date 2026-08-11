@@ -1,38 +1,52 @@
-import Image from "next/image";
-import Container from "@/components/ui/Container";
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./storyHero.module.css";
 
 export default function StoryHero() {
-  return (
-    <section className={styles.hero}>
-      <Container className={styles.grid}>
-        <div className={styles.text}>
-          <h1 className={styles.headline}>Our Story</h1>
-        </div>
+  const containerRef = useRef(null);
 
-        <div className={styles.imageCluster}>
-          <div className={styles.primaryImageWrapper}>
-            <Image
-              src="/images/story/truck.webp"
-              alt="Mobile Care Clinic"
-              fill
-              sizes="(max-width: 768px) 100vw, 300px"
-              className={styles.primaryImage}
-              priority
-            />
-          </div>
-          <div className={styles.secondaryImageWrapper}>
-            <Image
-              src="/images/story/B&W.webp"
-              alt="Todu Guam Foundation Volunteers"
-              fill
-              sizes="(max-width: 768px) 100vw, 100px"
-              className={styles.secondaryImage}
-              priority
-            />
-          </div>
-        </div>
-      </Container>
-    </section>
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]); 
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.65, 0.95]);
+
+  return (
+    <div ref={containerRef} className={styles.heroContainer}>
+      
+      <motion.div
+        className={styles.backgroundImage}
+        style={{ y: backgroundY }}
+      />
+
+      <motion.div
+        className={styles.overlay}
+        style={{ opacity: overlayOpacity }}
+      />
+
+      <motion.div 
+        className={styles.content} 
+        style={{ y: textY, opacity: textOpacity }} 
+      >
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · ABOUT US</h5>
+        
+        <h1 className={styles.title}>
+          Our <span className={styles.brightText}> Story</span>
+        </h1>
+        
+        <p className={styles.description}>
+          Established in 2016, TGF is an esteemed 501(c)(3) non-profit organization 
+          <br />dedicated to addressing health disparities and promoting 
+          <br />health equity on the beautiful island of Guam.
+        </p>
+      </motion.div>
+      
+    </div>
   );
 }
