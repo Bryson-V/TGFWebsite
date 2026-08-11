@@ -21,7 +21,7 @@ function ProfileModal({ director, onClose }) {
         onClick={(e) => e.stopPropagation()} 
       >
         <div className={styles.modalBanner}>
-          <p className={styles.modalEyebrow}>Board of Directors Profile</p>
+          <p className={styles.modalEyebrow}>Medical Team Profile</p>
           <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
             ✕
           </button>
@@ -45,6 +45,11 @@ function ProfileModal({ director, onClose }) {
               <motion.p layoutId={`specialty-${director.id}`} className={styles.modalspecialty}>
                 {director.specialty}
               </motion.p>
+              {director.email && (
+                <motion.span layoutId={`email-${director.id}`} className={styles.modalEmailTag}>
+                  {director.email}
+                </motion.span>
+              )}
             </div>
           </div>
 
@@ -54,10 +59,47 @@ function ProfileModal({ director, onClose }) {
             transition={{ delay: .2 }} 
             className={styles.modalBody}
           >
-            <h5 className={styles.modalBodyTitle}>About</h5>
-            <p className={styles.modalDescription}>
-              {director.bio || director.description || "DESCRIPTION HERE"}
-            </p>
+            {/* Education Section */}
+            {director.education && director.education.length > 0 && (
+              <div className={styles.modalSectionGroup}>
+                <h5 className={styles.modalBodyTitle}>Education</h5>
+                <ul className={styles.detailList}>
+                  {director.education.map((item, index) => (
+                    <li key={index} className={styles.modalDescription}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Certifications Section */}
+            {director.certifications && director.certifications.length > 0 && (
+              <div className={styles.modalSectionGroup}>
+                <h5 className={styles.modalBodyTitle}>Certifications & Credentials</h5>
+                <ul className={styles.detailList}>
+                  {director.certifications.map((item, index) => (
+                    <li key={index} className={styles.modalDescription}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* About / Bio Section */}
+            <div className={styles.modalSectionGroup}>
+              <h5 className={styles.modalBodyTitle}>About</h5>
+              <div className={styles.paragraphContainer}>
+                {Array.isArray(director.bio) ? (
+                  director.bio.map((paragraph, index) => (
+                    <p key={index} className={styles.modalDescription}>
+                      {paragraph}
+                    </p>
+                  ))
+                ) : (
+                  <p className={styles.modalDescription}>
+                    {director.bio || "DESCRIPTION HERE"}
+                  </p>
+                )}
+              </div>
+            </div>
           </motion.div>
         </div>
       </motion.div>
@@ -102,18 +144,31 @@ export default function BoardOfDoctors() {
                 </motion.div>
                 
                 <div className={styles.infoWrapper}>
-                  <div>
+                  <div className={styles.topInfo}>
                     <motion.h3 layoutId={`name-${member.id}`} className={styles.memberName}>
                       {member.name}
                     </motion.h3>
-                    <motion.p layoutId={`specialty-${member.id}`} className={styles.doctorspecialty}>
+                    <motion.p layoutId={`specialty-${member.id}`} className={styles.modalspecialty}>
                       {member.specialty}
                     </motion.p>
+                    {member.email && (
+                      <motion.p layoutId={`email-${member.id}`} className={styles.memberemail}>
+                        {member.email}
+                      </motion.p>
+                    )}
                   </div>
 
-                  <p className={styles.memberemail}>
-                    {member.email || member.bio}
-                  </p>
+                  <ul className={styles.cardBulletList}>
+                    {Array.isArray(member.preview) ? (
+                      member.preview.map((point, i) => (
+                        <li key={i} className={styles.memberPreviewItem}>
+                          {point}
+                        </li>
+                      ))
+                    ) : (
+                      <li className={styles.memberPreviewItem}>{member.preview}</li>
+                    )}
+                  </ul>
 
                   <div className={styles.cardAction}>
                     <span className={styles.ctaText}>Read Full Bio →</span>

@@ -14,9 +14,14 @@ A modern, full-stack Next.js rebuild of toduguam.com, migrated off WordPress and
 
 1. Install dependencies:
    npm install
+   npm install leaflet react-leaflet
+   npm install framer-motion
+   npm install gray-matter
+   npm install three @react-three/fiber @react-three/drei
 
 2. Run the local development server:
    npm run dev
+   
 
 3. Open the site:
    Navigate to http://localhost:3000 in your browser. Any changes made to code or content will hot-reload automatically.
