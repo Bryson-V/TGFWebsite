@@ -17,21 +17,12 @@
   letter-spacing: -0.02em;
 }
 
-.subheading {
-  color: #64748b;
-  font-size: 1.1rem;
-  margin-top: 0.75rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- Grid & Cards --- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
+/* --- Horizontal List Layout --- */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -41,7 +32,7 @@
   background-color: #ffffff;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Horizontal layout */
   overflow: hidden; 
   border: 2px solid transparent;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -49,16 +40,17 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #0f766e; 
-  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.25);
+  transform: translateY(-4px);
+  border-color: #0c1f3f;
+  box-shadow: 0 20px 25px -5px rgba(15, 118, 110, 0.15);
 }
 
-/* --- 3:4 Aspect Ratio Image Wrapper --- */
+/* --- Image Column --- */
 .imageWrapper {
   position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4; 
+  width: 260px;
+  min-width: 260px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background-color: #f1f5f9;
 }
@@ -69,75 +61,57 @@
 }
 
 .card:hover .image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* --- Hover Overlay & Button --- */
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(15, 118, 110, 0.65) 0%, transparent 35%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.card:hover .imageOverlay {
-  opacity: 1;
-}
-
-.viewProfilePill {
-  background-color: #0f766e;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  transform: translateY(15px);
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.card:hover .viewProfilePill {
-  transform: translateY(0);
-}
-
-/* --- Info Footer --- */
+/* --- Content Column --- */
 .infoWrapper {
-  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  justify-content: space-between;
   background-color: #ffffff;
   text-align: left; 
-  z-index: 11;
+  flex-grow: 1;
 }
 
-.doctorName {
-  font-size: 1.15rem;
+.memberName {
+  font-size: 1.4rem;
   font-weight: 700;
   color: #0c1f3f;
-  margin: 0;
+  margin: 0 0 0.25rem 0;
 }
 
-.doctorSpecialty {
-  font-size: 0.9rem;
-  color: #0d9488;
+.memberRole {
+  font-size: 1rem;
+  color: #0c1f3f;
   font-weight: 600;
   margin: 0;
 }
 
-.doctorEmail {
-  font-size: 0.825rem;
-  color: #64748b;
-  margin-top: 0.35rem;
-  word-break: break-all;
+.memberPreview {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 1rem 0;
+  /* No line-clamping; text displays fully without ellipses */
+}
+
+.cardAction {
+  display: flex;
+  align-items: center;
+}
+
+.ctaText {
+  color: #2c6ee1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.card:hover .ctaText {
+  color: #0c1f3f;
+  text-decoration: underline;
 }
 
 /* --- Modal Styles --- */
@@ -163,13 +137,16 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modalBanner {
   width: 100%;
   height: 140px;
-  background: linear-gradient(135deg, #0295a0 0%, #0aa363 100%);
+  background: linear-gradient(135deg, #153773 0%, #2b497a 100%);
   position: relative;
+  flex-shrink: 0;
 }
 
 .modalEyebrow {
@@ -243,40 +220,23 @@
 .modalHeaderText {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding-bottom: 0.25rem;
+  gap: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .modalName {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #0c1f3f;
   margin: 0;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.modalSpecialty {
-  color: #0d9488;
+.modalRole {
+  color: #245bba;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-}
-
-.modalEmailLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #0d9488;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  margin-top: 0.25rem;
-  transition: color 0.2s;
-}
-
-.modalEmailLink:hover {
-  color: #0c1f3f;
-  text-decoration: underline;
 }
 
 .modalBody {
@@ -302,31 +262,34 @@
   margin: 0;
 }
 
-/* --- Mobile Responsive Scaling --- */
+/* --- Mobile Responsive Styling --- */
 @media (max-width: 768px) {
-  /* Scale down section padding and heading */
   .section {
     padding: 3rem 1rem; 
   }
   
   .heading {
     font-size: 2.25rem;
-  }
-
-  .header {
     margin-bottom: 2rem;
   }
 
-  /* Adjust grid for smaller phones */
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+  .card {
+    flex-direction: column; /* Stacks image on top of text for small screens */
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .infoWrapper {
+    padding: 1.5rem;
   }
 
   .modalContent {
     max-width: 95%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 85vh;
   }
 
   .modalBanner {
@@ -364,7 +327,7 @@
     font-size: 1.4rem;
   }
   
-  .modalSpecialty {
+  .modalRole {
     font-size: 1rem;
   }
 }

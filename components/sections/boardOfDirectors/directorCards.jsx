@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
@@ -21,7 +21,7 @@ function ProfileModal({ director, onClose }) {
         onClick={(e) => e.stopPropagation()} 
       >
         <div className={styles.modalBanner}>
-          <p className={styles.modalEyebrow}>Board of Directors Profile</p>
+          <p className={styles.modalEyebrow}>Board of Doctors Profile</p>
           <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
             ✕
           </button>
@@ -51,12 +51,12 @@ function ProfileModal({ director, onClose }) {
           <motion.div 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }} 
+            transition={{ delay: .2 }} 
             className={styles.modalBody}
           >
             <h5 className={styles.modalBodyTitle}>About</h5>
             <p className={styles.modalDescription}>
-              {director.description || "DESCRIPTION HERE"}
+              {director.bio || director.description || "DESCRIPTION HERE"}
             </p>
           </motion.div>
         </div>
@@ -65,7 +65,6 @@ function ProfileModal({ director, onClose }) {
   );
 }
 
-// Main Component
 export default function BoardOfDirectors() {
   const [selectedMember, setSelectedMember] = useState(null);
 
@@ -78,41 +77,53 @@ export default function BoardOfDirectors() {
           <h2 className={styles.heading}>{boardData.heading}</h2>
         </header>
 
-        <div className={styles.grid}>
-          {boardData.members.map((member, index) => (
-            <motion.div 
-              key={member.id} 
-              layoutId={`card-${member.id}`} 
-              className={styles.card}
-              onClick={() => setSelectedMember(member)}
-            >
-              <motion.div layoutId={`image-container-${member.id}`} className={styles.imageWrapper}>
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  priority={index < 3}
-                  className={styles.image}
-                />
-                <div className={styles.imageOverlay}>
-                  <div className={styles.viewProfilePill}>+ View Profile</div>
+        <div className={styles.listContainer}>
+          {boardData.members.map((member, index) => {
+            const isSelected = selectedMember?.id === member.id;
+
+            return (
+              <motion.div 
+                key={member.id} 
+                layoutId={`card-${member.id}`} 
+                className={`${styles.card} ${isSelected ? styles.cardActive : ""}`}
+                onClick={() => setSelectedMember(member)}
+                animate={{ opacity: isSelected ? 0 : 1 }}
+                transition={{ duration: .687 }}
+              >
+                <motion.div layoutId={`image-container-${member.id}`} className={styles.imageWrapper}>
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 300px"
+                    priority={index < 3}
+                    className={styles.image}
+                  />
+                </motion.div>
+                
+                <div className={styles.infoWrapper}>
+                  <div>
+                    <motion.h3 layoutId={`name-${member.id}`} className={styles.memberName}>
+                      {member.name}
+                    </motion.h3>
+                    <motion.p layoutId={`role-${member.id}`} className={styles.memberRole}>
+                      {member.role}
+                    </motion.p>
+                  </div>
+
+                  <p className={styles.memberPreview}>
+                    {member.preview || member.bio}
+                  </p>
+
+                  <div className={styles.cardAction}>
+                    <span className={styles.ctaText}>Read Full Bio →</span>
+                  </div>
                 </div>
               </motion.div>
-              
-              <div className={styles.infoWrapper}>
-                <motion.h3 layoutId={`name-${member.id}`} className={styles.memberName}>
-                  {member.name}
-                </motion.h3>
-                <motion.p layoutId={`role-${member.id}`} className={styles.memberRole}>
-                  {member.role}
-                </motion.p>
-              </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Reverse scaling automatically */}
         <AnimatePresence>
           {selectedMember && (
             <ProfileModal director={selectedMember} onClose={closeModal} />
