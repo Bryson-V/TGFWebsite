@@ -37,7 +37,7 @@ export default function BoardHero() {
         <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · ABOUT US</h5>
         
         <h1 className={styles.title}>
-          Our <br />
+          Meet Our<br />
           <span className={styles.brightText}>Board of Directors</span>
         </h1>
         

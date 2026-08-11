@@ -7,24 +7,28 @@
   padding: 6rem 0;
   color: #ffffff;
   text-align: center;
+  overflow: hidden; 
 }
 
 .bgImageWrapper {
   position: absolute;
-  inset: 0;
+  top: -25%; 
+  left: 0;
+  width: 100%;
+  height: 150%; 
   z-index: -1;
 }
 
 .bgImage {
   object-fit: cover;
-  object-position: center;
+  object-position: center 70%; 
 }
 
-/* Adds a dark blue tint over the truck image */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(12, 31, 63, 0.65); 
+  background: rgb(12, 31, 63); 
+  z-index: 0;
 }
 
 .heroContent {

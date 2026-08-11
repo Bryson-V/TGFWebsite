@@ -1,13 +1,13 @@
 import FreeOutreachBanner from "@/components/sections/financialAid/FreeOutreachBanner";
+import ClinicInfo from "@/components/sections/mobileCareClinic/clinicInfo";
 import MobileCareHero from "@/components/sections/mobileCareClinic/mobileCareHero";
-import ServicesTicker from "@/components/sections/mobileCareClinic/servicesTicker";
 
 export default function MobileCareClinicPage() {
   return (
     <>
       <MobileCareHero />
-      <ServicesTicker />
       <FreeOutreachBanner />
+      <ClinicInfo />
     </>
   );
 }
