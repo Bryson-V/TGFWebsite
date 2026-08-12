@@ -2,7 +2,8 @@
 
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
+import { EffectCoverflow, Navigation, Autoplay, Parallax } from "swiper/modules";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 import programsData from "@/content/site-data/programs.json";
 import ProgramCard from "./ProgramCard";
@@ -12,18 +13,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
 import styles from "./ProgramsWheel.module.css";
-
-const IoIosArrowBack = ({ className }) => (
-    <svg className={className} fill="currentColor" viewBox="0 0 512 512" height="1em" width="1em">
-        <path d="M352 115.4L331.3 96 160 256l171.3 160 20.7-19.4L201.5 256z" />
-    </svg>
-);
-
-const IoIosArrowForward = ({ className }) => (
-    <svg className={className} fill="currentColor" viewBox="0 0 512 512" height="1em" width="1em">
-        <path d="M160 115.4l20.7-19.4L352 256 180.7 416 160 396.6 310.5 256z" />
-    </svg>
-);
 
 export default function ProgramsWheel({ programs = programsData }) {
     const prevRef = useRef(null);
@@ -37,13 +26,14 @@ export default function ProgramsWheel({ programs = programsData }) {
             <h2 className={styles.carouselTitle}>Our Programs</h2>
 
             <button ref={prevRef} className={`${styles.navBtn} ${styles.navBtnPrev}`} aria-label="Previous slide">
-                <IoIosArrowBack className={styles.arrowIcon} />
+                <FaChevronLeft className={styles.arrowIcon} />
             </button>
             <button ref={nextRef} className={`${styles.navBtn} ${styles.navBtnNext}`} aria-label="Next slide">
-                <IoIosArrowForward className={styles.arrowIcon} />
+                <FaChevronRight className={styles.arrowIcon} />
             </button>
 
             <Swiper
+                parallax={true}
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
@@ -76,7 +66,7 @@ export default function ProgramsWheel({ programs = programsData }) {
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                 }}
-                modules={[EffectCoverflow, Navigation, Autoplay]}
+                modules={[EffectCoverflow, Navigation, Autoplay, Parallax]}
                 className={styles.swiperContainer}
             >
                 {displayPrograms.map((program, index) => (
