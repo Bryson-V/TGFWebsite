@@ -59,7 +59,6 @@ function ProfileModal({ director, onClose }) {
             transition={{ delay: .2 }} 
             className={styles.modalBody}
           >
-            {/* Education Section */}
             {director.education && director.education.length > 0 && (
               <div className={styles.modalSectionGroup}>
                 <h5 className={styles.modalBodyTitle}>Education</h5>
@@ -71,7 +70,6 @@ function ProfileModal({ director, onClose }) {
               </div>
             )}
 
-            {/* Certifications Section */}
             {director.certifications && director.certifications.length > 0 && (
               <div className={styles.modalSectionGroup}>
                 <h5 className={styles.modalBodyTitle}>Certifications & Credentials</h5>
@@ -83,7 +81,6 @@ function ProfileModal({ director, onClose }) {
               </div>
             )}
 
-            {/* About / Bio Section */}
             <div className={styles.modalSectionGroup}>
               <h5 className={styles.modalBodyTitle}>About</h5>
               <div className={styles.paragraphContainer}>
@@ -109,18 +106,47 @@ function ProfileModal({ director, onClose }) {
 
 export default function BoardOfDoctors() {
   const [selectedMember, setSelectedMember] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("all"); // "all", "general", "specialist"
 
   const closeModal = () => setSelectedMember(null);
+
+  // Filter the doctors based on the selected button
+  const filteredDoctors = doctorsData.doctors.filter((member) => {
+    if (activeFilter === "all") return true;
+    return member.category === activeFilter;
+  });
 
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
         <header className={styles.header}>
           <h2 className={styles.heading}>{doctorsData.heading}</h2>
+          
+          {/* Filter Buttons */}
+          <div className={styles.filterContainer}>
+            <button 
+              className={`${styles.filterBtn} ${activeFilter === "all" ? styles.activeFilter : ""}`}
+              onClick={() => setActiveFilter("all")}
+            >
+              All Doctors
+            </button>
+            <button 
+              className={`${styles.filterBtn} ${activeFilter === "general" ? styles.activeFilter : ""}`}
+              onClick={() => setActiveFilter("general")}
+            >
+              General Practice
+            </button>
+            <button 
+              className={`${styles.filterBtn} ${activeFilter === "specialist" ? styles.activeFilter : ""}`}
+              onClick={() => setActiveFilter("specialist")}
+            >
+              Specialists
+            </button>
+          </div>
         </header>
 
         <div className={styles.listContainer}>
-          {doctorsData.doctors.map((member, index) => {
+          {filteredDoctors.map((member, index) => {
             const isSelected = selectedMember?.id === member.id;
 
             return (

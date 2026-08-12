@@ -62,4 +62,3 @@ At Todu Guam Foundation, our holistic approach ensures that individuals and fami
 
 &nbsp;
 
-[Read Original News Article](https://toduguam.com/expanding-womens-healthcare/#button)

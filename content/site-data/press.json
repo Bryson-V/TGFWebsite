@@ -8,19 +8,10 @@
     "date": "2024-05-15",
     "color": "#7C6FCD"
   },
-    {
-    "title": "Testing",
-    "tag": "Mental Health",
-    "image": "/images/news/press-generic.jpg",
-    "href": "https://www.mbjguam.com/new-psychiatrist-joins-todu-guam-health-wellness-center",
-    "source": "Marianas Business Journal",
-    "date": "2020-05-15",
-    "color": "#7C6FCD"
-  },
   {
     "title": "Todu Guam Reaching Out to the Underserved",
     "tag": "Community",
-    "image": "/images/logo/tgf-logo.png",
+    "image": "/images/news/tgf-news-generic.jpg",
     "href": "https://www.guampdn.com/news/reaching-out-to-the-underserved/article_ba7497c6-bcd9-11ee-ba61-9bb461edd4fe.html",
     "source": "Pacific Daily News",
     "date": "2024-01-22",
@@ -42,6 +33,24 @@
     "href": "https://www.guampdn.com/news/yigo-medical-outreach-has-large-turnout-of-residents-some-turned-away/article_5bd50ce8-0577-11ed-9164-332d55ed170c.html",
     "source": "Pacific Daily News",
     "date": "2022-07-15",
+    "color": "#3A7FC1"
+  },
+  {
+    "title": "OPINION Rodriguez: The real cure for Guam's health care crisis starts with universal coverage",
+    "tag": "Press Release",
+    "image": "/images/news/opinion-rodriguez.jpg",
+    "href": "https://www.guampdn.com/opinion/opinion-rodriguez-the-real-cure-for-guams-health-care-crisis-starts-with-universal-coverage/article_ec3344a9-397c-491f-be41-da3ed2620319.html",
+    "source": "Pacific Daily News",
+    "date": "2025-09-22",
+    "color": "#E8824A"
+  },
+  {
+    "title": "WATCH: Todu Guam hosts outreach event in Talo'fo'fo'",
+    "tag": "Outreach",
+    "image": "/images/news/talofofo.jpg",
+    "href": "https://www.guampdn.com/multimedia/watch-todu-guam-hosts-outreach-event-in-talofofo/video_75e0de12-6125-5dc3-8cf5-9e420b2be650.html",
+    "source": "Pacific Daily News",
+    "date": "2025-10-26",
     "color": "#3A7FC1"
   }
 ]

@@ -11,7 +11,8 @@ import styles from "./NewsGrid.module.css";
  * content/README.md for the exact steps. No code changes required.
  */
 export default function NewsArchive() {
-  const articles = getLatestNews(100).sort((a, b) => new Date(a.date) - new Date(b.date));
+  // Sort from newest to oldest based on the date field
+  const articles = getLatestNews(100).sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <section className={styles.section}>

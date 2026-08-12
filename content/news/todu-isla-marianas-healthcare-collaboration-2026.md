@@ -44,4 +44,3 @@ Looking ahead, Todu Guam Foundation announced its upcoming **Guam Health Forward
 
 &nbsp;
 
-[Read Original News Article](https://toduguam.com/todu-isla-marianas-healthcare-collaboration-2026/#button)

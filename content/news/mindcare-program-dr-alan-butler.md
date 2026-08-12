@@ -54,4 +54,3 @@ The foundation works to break down barriers that prevent individuals and familie
 
 &nbsp;
 
-[Read Original News Article](https://toduguam.com/mindcare-program-dr-alan-butler/#button)

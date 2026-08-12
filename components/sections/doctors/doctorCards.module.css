@@ -378,3 +378,36 @@
   flex-direction: column;
   gap: 0.4rem;
 }
+
+/* --- Filter Buttons Layout --- */
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.filterBtn {
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  color: #475569;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  border-color: #1a3667;
+  background-color: #3269c6;
+  color: white;
+
+}
+ 
+.activeFilter {
+  background-color: #1e3967;
+  border-color: #244070;
+  color: #ffffff;
+}

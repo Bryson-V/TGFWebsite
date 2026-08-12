@@ -3,6 +3,7 @@
   "doctors": [
     {
       "id": "1",
+      "category": "general",
       "name": "Dr. Julie Namm, MD",
       "specialty": "Family Medicine",
       "email": "drnamm@toduguam.com",
@@ -26,6 +27,7 @@
     },
     {
       "id": "2",
+      "category": "general",
       "name": "Bannuar Quiaoit, FNP",
       "specialty": "Family Medicine",
       "email": "bquiaoit@toduguam.com",
@@ -43,6 +45,7 @@
     },
     {
       "id": "3",
+      "category": "general",
       "name": "Elena Taneva-Cholakova, FNP",
       "specialty": "Family Medicine",
       "email": "etaneva@toduguam.com",
@@ -60,6 +63,7 @@
     },
     {
       "id": "4",
+      "category": "general",
       "name": "Dr. Edwin Supit, MD",
       "specialty": "Internal Medicine",
       "email": "drsupit@toduguam.com",
@@ -77,6 +81,7 @@
     },
     {
       "id": "5",
+      "category": "specialist",
       "name": "Dr. Sam Song, MD, FACOG",
       "specialty": "Obstetrics & Gynecology",
       "email": "drsong@toduguam.com",
@@ -102,6 +107,7 @@
     },
     {
       "id": "6",
+      "category": "specialist",
       "name": "Dr. William Vercio, MD",
       "specialty": "Obstetrics & Gynecology",
       "email": "drvercio@toduguam.com",
@@ -115,10 +121,11 @@
       "bio": [
         "Dr. William Vercio has extensive experience in women's health services, maternal-fetal care, and comprehensive gynecological treatments.",
         "He is committed to delivering attentive, high-standard medical care tailored to the unique clinical needs of every patient."
-      ]
+      ] 
     },
     {
       "id": "7",
+      "category": "specialist",
       "name": "Dr. Danny McClure, DO",
       "specialty": "Psychiatry, Medical Director",
       "email": "drmcclure@toduguam.com",
@@ -145,6 +152,7 @@
     },
     {
       "id": "8",
+      "category": "specialist",
       "name": "Dr. Alan Butler, PsyD",
       "specialty": "Clinical Psychologist",
       "email": "drbutler@toduguam.com",
@@ -175,6 +183,7 @@
     },
     {
       "id": "9",
+      "category": "specialist",
       "name": "Dr. Fredrick Niegos, MD, FACE, CDD",
       "specialty": "Endocrinology and Internal Medicine",
       "email": "drniegos@toduguam.com",
@@ -202,6 +211,7 @@
     },
     {
       "id": "10",
+      "category": "general",
       "name": "Dr. Patrick Santos, MD",
       "specialty": "Family Medicine",
       "email": "drsantos@toduguam.com",
