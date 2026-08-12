@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, OrbitControls, Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
+import { getAssetPath } from "@/lib/utils"; // 1. Import your helper function
 
 function AnimatedPlate() {
   const plateRef = useRef();
@@ -25,7 +26,8 @@ function AnimatedPlate() {
 }
 
 function TruckModel() {
-  const { scene } = useGLTF("/assets/truck.glb"); 
+  // 2. Wrap the GLTF path with getAssetPath()
+  const { scene } = useGLTF(getAssetPath("/assets/truck.glb")); 
   const truckRef = useRef();
   const { invalidate } = useThree();
   const [startTruck, setStartTruck] = useState(false);
