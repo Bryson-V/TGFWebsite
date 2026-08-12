@@ -54,5 +54,3 @@ TGF remains committed to our mission of delivering compassionate, comprehensive 
 > For more information about our services or to schedule an appointment at the TGF Health & Wellness Center, please visit [toduguam.com](https://toduguam.com), contact us via phone at [(671) 649-8638](tel:+16716498638), or via email at [peoplefirst@toduguam.com](mailto:peoplefirst@toduguam.com).
 
 &nbsp;
-
-[Read Original News Article](https://toduguam.com/health-wellness-center-nhsc/#button)

@@ -12,14 +12,15 @@ import { formatDate } from "@/lib/content";
  * this site — on toduguam.com or third-party outlets.
  */
 export default function PressArchive() {
-  const limitedPress = [...press]
+  // Sort from newest to oldest based on the date field
+  const sortedPress = [...press].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <section className={styles.section}>
       <Container>
         <SectionHeading title="Press Coverage" align="center" />
         <div className={styles.grid}>
-          {limitedPress.map((item) => (
+          {sortedPress.map((item) => (
            <NewsCard 
               key={item.title} 
               title={item.title} 
