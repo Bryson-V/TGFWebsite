@@ -11,34 +11,34 @@
     "title": "Prevention & Education",
     "description": "Island-wide outreach and education initiatives focused on preventive health and community wellness.",
     "image": "/images/preventionEdu/Education.jpg",
-    "href": "/preventionEdu"
+    "href": "preventionEdu"
   },
   {
     "id": "patient-navigation",
     "title": "Financial Assistance",
     "description": "One-on-one support to help patients navigate care options and access financial assistance.",
     "image": "/images/financial/Finance.jpg",
-    "href": "/financialAssistance"
+    "href": "financialAssistance"
   },
   {
     "id": "cares-movement",
     "title": "CARES Movement",
     "description": "A community-driven movement committed to Guam's health, wellness, and youth development.",
     "image": "/images/cares/CARES.jpg",
-    "href": "/cares"
+    "href": "cares"
   },
   {
     "id": "mind-care",
     "title": "Mind Care",
     "description": "Behavioral health services aimed at expanding access to mental health care across Guam.",
     "image": "/images/mindCare/MindCare.jpg",
-    "href": "/mindCare"
+    "href": "mindCare"
   },
   {
     "id": "womens-health",
     "title": "Hinemlo' Para i Famalao'an",
     "description": "Women's health services dedicated to expanding access to obstetric and gynecological care.",
     "image": "/images/healing/womens-health-care.jpeg",
-    "href": "/healingForWomen"
+    "href": "healingForWomen"
   }
 ]

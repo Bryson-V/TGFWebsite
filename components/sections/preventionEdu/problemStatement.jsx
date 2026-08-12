@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils"; // 1. Import helper function
 import styles from "./problemStatement.module.css";
 
 export default function ProblemStatement() {
@@ -17,8 +18,9 @@ export default function ProblemStatement() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <div className={styles.imageWrapper}>
+            {/* 2. Wrap image path with getAssetPath() */}
             <img
-              src="/images/preventionEdu/EduPic.webp"
+              src={getAssetPath("/images/preventionEdu/EduPic.webp")}
               alt="Todu Guam Foundation team at a Let's Talk outreach event"
               className={styles.image}
             />

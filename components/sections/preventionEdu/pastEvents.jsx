@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { getAssetPath } from "@/lib/utils"; // 1. Import helper function
 import styles from "./pastEvents.module.css";
 import events from "@/content/site-data/pastEvents.json"; 
 
@@ -94,11 +95,11 @@ export default function PastEvents() {
             >
               
               <div className={styles.imageColumn}>
-                {/* Changed to motion.img and added parallax variants */}
+                {/* 2. Wrap image path with getAssetPath() */}
                 <motion.img 
                   custom={direction}
                   variants={imageVariants}
-                  src={events[currentIndex].image} 
+                  src={getAssetPath(events[currentIndex].image)} 
                   alt={events[currentIndex].title}
                   className={styles.image}
                   draggable="false" 
@@ -123,7 +124,7 @@ export default function PastEvents() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation Controls remain the same */}
+          {/* Navigation Controls */}
           <div className={styles.controls}>
             <button onClick={handlePrev} className={styles.arrowButton}>
               <FaChevronLeft />
