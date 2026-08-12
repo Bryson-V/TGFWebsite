@@ -1,11 +1,20 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './partners.module.css';
 import partnersData from '@/content/site-data/partners.json';
 
 export default function Partner() {
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const handleCardClick = (index) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
     <section className={styles.partnerContainer}>
       <div className={styles.contentWrapper}>
@@ -14,8 +23,12 @@ export default function Partner() {
           
           <div className={styles.cardGrid}>
             {partnersData.map((partner, index) => (
-              <div key={index} className={styles.flipCard}>
-                <div className={styles.flipCardInner}>
+              <div 
+                key={index} 
+                className={styles.flipCard}
+                onClick={() => handleCardClick(index)}
+              >
+                <div className={`${styles.flipCardInner} ${flippedCards[index] ? styles.flipped : ''}`}>
                   
                   {/* FRONT FACE */}
                   <div className={styles.flipCardFront}>
