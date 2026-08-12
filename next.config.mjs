@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const repoName = 'TGFWebsite';
+const basePath = isGithubActions ? `/${repoName}` : '';
 
 const nextConfig = {
   output: 'export',
-  // Adds /TGFWebsite to routes and static assets when built via GitHub Actions
-  basePath: isGithubActions ? '/TGFWebsite' : '',
-  assetPrefix: isGithubActions ? '/TGFWebsite/' : '',
+  basePath: basePath,
+  assetPrefix: isGithubActions ? `/${repoName}/` : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
-    unoptimized: true, // Required for static exports
+    unoptimized: true,
   },
 };
 

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import styles from "./ProgramCard.module.css";
 
 export default function ProgramCard({ program }) {

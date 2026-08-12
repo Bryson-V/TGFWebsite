@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import styles from "./outreachGallery.module.css";

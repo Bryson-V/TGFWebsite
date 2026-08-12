@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import Container from "@/components/ui/Container";
 import servicesData from "@/content/site-data/healingServicesData.json";
 import styles from "./healingServices.module.css";

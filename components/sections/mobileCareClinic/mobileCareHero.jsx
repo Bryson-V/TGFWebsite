@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import styles from "./mobileCareHero.module.css";

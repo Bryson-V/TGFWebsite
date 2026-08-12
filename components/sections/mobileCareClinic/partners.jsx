@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from '@/components/ui/Image';
 import styles from './partners.module.css';
 import partnersData from '@/content/site-data/partners.json';
 

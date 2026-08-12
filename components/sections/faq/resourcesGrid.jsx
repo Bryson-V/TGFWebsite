@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import Container from "@/components/ui/Container";
 import resourcesData from "@/content/site-data/resourcesData.json";
 import styles from "./resourcesGrid.module.css";

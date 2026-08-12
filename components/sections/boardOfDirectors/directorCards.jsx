@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import styles from "./directorCards.module.css";

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from '@/components/ui/Image';
 import getInvolved from "@/content/site-data/get-involved.json";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
