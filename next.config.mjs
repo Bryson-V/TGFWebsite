@@ -1,16 +1,13 @@
-/** @type {import('next').NextJSConfigFile} */
+/** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-// If repository name is TGFWebsite
-const repoName = 'TGFWebsite';
 
 const nextConfig = {
   output: 'export',
-  // Set the base path to your repository name when deploying on GitHub Actions
-  basePath: isGithubActions ? `/${repoName}` : '',
-  assetPrefix: isGithubActions ? `/${repoName}/` : '',
+  // Adds /TGFWebsite to routes and static assets when built via GitHub Actions
+  basePath: isGithubActions ? '/TGFWebsite' : '',
+  assetPrefix: isGithubActions ? '/TGFWebsite/' : '',
   images: {
-    unoptimized: true, // Required for static export on GitHub Pages
+    unoptimized: true, // Required for static exports
   },
 };
 
