@@ -6,7 +6,7 @@
   align-items: center;
   padding: 0 5%;
   overflow: hidden;
-  background-color: #0c1f3f;
+  background-color: #0c1f3f; /* Dark Blue Background */
   color: #ffffff;
 }
 
@@ -25,7 +25,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(8, 21, 43, 0.8) 0%, rgba(12, 31, 63, 0.2) 100%);
+  background: linear-gradient(to right, rgba(4, 19, 46, 0.8) 0%, rgba(12, 31, 63, 0.2) 100%);
   z-index: 2;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .subtitle {
-  color: #38bdf8; 
+  color: #2da9df; /* Light blue accent */
   letter-spacing: 0.1em;
   font-weight: 600;
   font-size: 0.9rem;
@@ -57,7 +57,7 @@
 }
 
 .brightText {
-  color: #38bdf8; 
+  color: #2da9df; /* Light blue accent */
 }
 
 .description {
