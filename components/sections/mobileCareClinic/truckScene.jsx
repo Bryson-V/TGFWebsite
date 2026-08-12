@@ -69,7 +69,7 @@ export default function TruckScene({ isInView = true }) {
     <Canvas 
       frameloop={isInView ? "demand" : "never"} 
       camera={{ position: [0, 3, 10], fov: 45 }} 
-      dpr={[1, 1.25]}
+      dpr={1}
       gl={{ powerPreference: "high-performance", antialias: true }}
     >
       <ambientLight intensity={0.6} />
@@ -95,7 +95,7 @@ export default function TruckScene({ isInView = true }) {
         maxPolarAngle={Math.PI / 2 - 0.1}
       />
       
-      <Environment preset="city" />
+      <Environment preset="city" resolution={256}/>
     </Canvas>
   );
 }

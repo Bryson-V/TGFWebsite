@@ -52,7 +52,12 @@ export default function ClinicInfo() {
 
         {/* Right Side: Information & Mission */}
         <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Healthcare Without Boundaries</h2>
+          <span className={styles.eyebrow}>The Solution</span>
+          
+          {/* New Action Header */}
+          <h2 className={styles.heading}>
+            We bring the clinic <span className={styles.highlightText}>to you.</span>
+          </h2>
           
           <p className={styles.paragraph}>
             Our Mobile Care Clinic travels around the island, bringing free, comprehensive healthcare directly to the communities of Guam that need it most. Whether you have insurance or not, our doors are open.

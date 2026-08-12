@@ -50,11 +50,24 @@
   margin: 0;
 }
 
+.eyebrow {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #005A8C;
+}
+
 .paragraph {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #334155;
   margin: 0;
+}
+
+.highlightText {
+  color: #00A3E0; 
 }
 
 .highlightBox {
@@ -111,5 +124,8 @@
   }
   .modelWrapper {
     height: 400px;
+  }
+  .heading {
+    font-size: 2rem;
   }
 }
