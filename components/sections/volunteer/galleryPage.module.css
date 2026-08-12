@@ -1,51 +1,11 @@
-/* --- Page Wrapper --- */
-.pageWrapper {
-  background-color: #ffffff; /* Crisp white for the full page */
-  padding: 8rem 0 6rem 0; /* Extra top padding to clear the global navbar */
-  color: #1e293b;
+/* --- Styles --- */
+.section {
+  padding: 64px 0;
+  background-color: var(--color-bg-alt);
   min-height: 100vh;
 }
 
-/* --- Header Section --- */
-.header {
-  margin-bottom: 4rem;
-  max-width: 800px;
-}
-
-.backLink {
-  display: inline-block;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #00A89E;
-  text-decoration: none;
-  margin-bottom: 2rem;
-  transition: color 0.2s ease;
-}
-
-.backLink:hover {
-  color: #0c1f3f;
-  text-decoration: underline;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #0c1f3f;
-  margin: 0 0 1rem 0;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #64748b;
-  margin: 0;
-}
-
-/* --- Masonry Grid --- */
+/* --- Masonry Grid (Staggered Layout) --- */
 .masonryGrid {
   column-count: 3;
   column-gap: 1.5rem;
@@ -224,7 +184,7 @@
 }
 
 .modalMeta {
-  color: #00A89E;
+  color: var(--color-primary, #00A89E);
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
@@ -259,7 +219,7 @@
 }
 
 .navBtn:hover {
-  color: #00A89E;
+  color: var(--color-primary, #00A89E);
 }
 
 .counter {
@@ -277,7 +237,5 @@
 }
 
 @media (max-width: 768px) {
-  .pageWrapper { padding-top: 6rem; }
   .masonryGrid { column-count: 1; }
-  .title { font-size: 2.5rem; }
 }

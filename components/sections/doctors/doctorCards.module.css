@@ -296,18 +296,120 @@
 
 /* --- Mobile Responsive Styling --- */
 @media (max-width: 768px) {
-  .section { padding: 3rem 1rem; }
-  .heading { font-size: 2.25rem; margin-bottom: 2rem; }
-  .card { flex-direction: column; }
-  .imageWrapper { width: 100%; min-width: 100%; aspect-ratio: 16 / 9; }
-  .infoWrapper { padding: 1.5rem; }
-  .modalContent { max-width: 95%; max-height: 85vh; }
-  .modalBanner { height: 120px; }
-  .modalEyebrow { top: 1rem; left: 1.25rem; }
-  .closeButton { top: 0.5rem; right: 0.5rem; }
-  .modalBodyContainer { padding: 0 1.5rem 2rem 1.5rem; }
-  .modalHeader { flex-direction: column; align-items: center; text-align: center; margin-top: -60px; gap: 1rem; padding-bottom: 1.5rem; }
-  .modalAvatarWrapper { width: 120px; }
-  .modalName { font-size: 1.4rem; }
-  .modalRole { font-size: 1rem; }
+  .section {
+    padding: 3rem 1rem; 
+  }
+  
+  .heading {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .infoWrapper {
+    padding: 1.5rem;
+  }
+
+  /* Revert bullets back to a single column on mobile devices */
+  .cardBulletList {
+    grid-template-columns: 1fr;
+  }
+
+  .modalContent {
+    max-width: 95%;
+    max-height: 85vh;
+  }
+
+  .modalBanner {
+    height: 120px;
+  }
+
+  .modalEyebrow {
+    top: 1rem;
+    left: 1.25rem;
+  }
+  
+  .closeButton {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .modalBodyContainer {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+  .modalHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -60px;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .modalAvatarWrapper {
+    width: 120px;
+  }
+
+  .modalName {
+    font-size: 1.4rem;
+  }
+}
+
+.modalSectionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.detailList {
+  list-style-type: disc;
+  margin: 0 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* --- Filter Buttons Layout --- */
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.filterBtn {
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  color: #475569;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  border-color: #1a3667;
+  background-color: #3269c6;
+  color: white;
+
+}
+ 
+.activeFilter {
+  background-color: #1e3967;
+  border-color: #244070;
+  color: #ffffff;
 }

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
 import styles from "./galleryPage.module.css";
 import galleryData from "@/content/site-data/outreaches.json";
 
@@ -32,17 +33,11 @@ export default function FullGalleryPage() {
   const activePhoto = selectedIndex !== null ? galleryData[selectedIndex] : null;
 
   return (
-    <main className={styles.pageWrapper}>
+    <section className={styles.section}>
       <Container>
-        {/* Page Header */}
-        <div className={styles.header}>
-          <h1 className={styles.title}>Outreach Gallery</h1>
-          <p className={styles.subtitle}>
-            Explore our full history of community events, mobile clinics, and health education initiatives across the island.
-          </p>
-        </div>
+        <SectionHeading title="Outreach Gallery" align="center" />
 
-        {/* Full Masonry Grid (Shows ALL items in the JSON) */}
+        {/* Full Masonry Grid (Staggered Layout) */}
         <div className={styles.masonryGrid}>
           {galleryData.map((item, index) => (
             <div 
@@ -112,6 +107,6 @@ export default function FullGalleryPage() {
           </div>
         </div>
       )}
-    </main>
+    </section>
   );
 }
