@@ -5,7 +5,7 @@
   },
   "reqAppointment": {
     "label": "REQUEST APPOINTMENT",
-    "href": "donate"
+    "href": "patient/reqAppointment"
   },
   "menus": [
     {
@@ -29,13 +29,13 @@
     },
     {
       "id": "mindcare",
-      "label": "MINDCARE",
-      "panelTitle": "MINDCARE",
-      "panelSubtitle": "Explore our behavioral health program.",
+      "label": "BEHAVIORAL HEALTH",
+      "panelTitle": "Behavioral Health",
+      "panelSubtitle": "Explore our Mind Care program.",
       "links": [
         { "label": "About", "href": "mindCare/mindAbout" },
         { "label": "Psychiatry", "href": "mindCare/psychiatry" },
-        { "label": "psychology", "href": "mindCare/psychology" },
+        { "label": "Pychology", "href": "mindCare/psychology" },
         { "label": "Therapy", "href": "mindCare/therapy" },
         { "label": "TMS", "href": "mindCare/tms" },
         { "label": "Meet the Team", "href": "mindCare/mindTeam" },
@@ -58,10 +58,6 @@
         { "label": "Healing For Women", "href": "community/healingForWomen" },
         { "label": "Prevention and Education", "href": "community/preventionEdu" },
         { "label": "CARES Program", "href": "community/cares" }
-
-
-
-
       ]
     },
     {
@@ -76,7 +72,6 @@
         { "label": "Our Impact", "href": "patient/commImpact" },
         { "label": "Financial Assistance", "href": "patient/financialAssistance" },
         { "label": "FAQs", "href": "patient/faq" }
-
       ]
     },
     {
