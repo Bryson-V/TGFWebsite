@@ -7,7 +7,6 @@ import nav from "@/content/site-data/nav.json";
 import Container from "@/components/ui/Container";
 import styles from "./Header.module.css";
 
-// Helper component: Uses Next.js Link for internal routes, standard <a> for external ones
 function SmartLink({ href, children, className, onClick }) {
   const isExternal = href?.startsWith("http://") || href?.startsWith("https://");
 
@@ -57,7 +56,6 @@ export default function Header() {
     setMobileExpanded((current) => (current === id ? null : id));
   }
 
-  // Normalizes action buttons from nav.json (supports nav.actionButtons array OR donateButton + reqAppointment/secondaryButton)
   const actionButtons = nav.actionButtons 
     ? nav.actionButtons 
     : [
@@ -97,7 +95,6 @@ export default function Header() {
                 onMouseEnter={() => !menu.href && setOpenMenu(menu.id)}
                 onMouseLeave={() => !menu.href && setOpenMenu(null)}
               >
-                {/* Check if it's a direct link or a dropdown menu */}
                 {menu.href ? (
                   <SmartLink
                     href={menu.href}
@@ -163,7 +160,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop Action Buttons (DONATE & REQUEST APPOINTMENT) */}
+          {/* Action Buttons */}
           <div className={styles.actionButtonsGroup}>
             {actionButtons.map((btn, idx) => (
               <SmartLink 
@@ -177,7 +174,7 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile Hamburger Toggle */}
+          {/* Hamburger Menu Button */}
           <button
             type="button"
             className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerActive : ""}`}
@@ -231,7 +228,6 @@ export default function Header() {
               </div>
             ))}
 
-            {/* Mobile Action Buttons */}
             <div className={styles.mobileActionGroup}>
               {actionButtons.map((btn, idx) => (
                 <SmartLink
@@ -248,7 +244,6 @@ export default function Header() {
         )}
       </header>
 
-      {/* Backdrop overlay */}
       {(openMenu || mobileOpen) && (
         <div className={styles.backdrop} onClick={closeAll} />
       )}

@@ -7,18 +7,22 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: clip; /* Hard stop against horizontal page expansion */
 }
 
-/* Container bar: Spans 100% of the screen with balanced edge padding */
+/* Container bar */
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
   width: 100%;
-  max-width: 100%; /* Spans full screen width */
-  margin: 0;
-  padding: 0 2rem; /* Clean edge spacing across all screen sizes */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .logoLink {
@@ -27,12 +31,13 @@
   text-decoration: none;
   height: 100%;
   padding: 0.25rem 0;
+  flex-shrink: 0;
 }
 
 .logoWrapper {
   position: relative;
-  width: 140px;
-  height: 47px; 
+  width: 130px;
+  height: 44px; 
   display: block; 
 }
 
@@ -47,22 +52,22 @@
   object-fit: contain;
 }
 
-/* Desktop Nav */
+/* Desktop Nav - Raised breakpoint to prevent button collision */
 .desktopNav {
   display: none;
-  gap: 1.25rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .desktopNav {
     display: flex;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
   .desktopNav {
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
 }
 
@@ -74,33 +79,34 @@
 .navButton {
   background: transparent;
   border: none;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  color: #1A365D; /* Text color */
+  letter-spacing: 0.02em;
+  color: #1A365D;
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 0.5rem 0.5rem;
+  gap: 4px;
+  padding: 0.5rem;
   border-radius: 6px;
   transition: all 0.3s ease;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
   .navButton {
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
-    gap: 8px;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    gap: 6px;
     padding: 0.5rem 0.75rem;
   }
 }
 
 .navButton:hover,
 .activeButton {
-  color: #00A89E; /* Modern Teal Accent */
+  color: #00A89E;
 }
 
 .caret {
@@ -112,13 +118,13 @@
   transform: rotate(180deg);
 }
 
-/* Drop down menu */
+/* Dropdown megaPanel */
 .megaPanel {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 720px;
+  width: min(720px, 85vw);
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
@@ -128,6 +134,7 @@
   gap: 2rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
   animation: slideUp 0.3s ease-out forwards;
+  box-sizing: border-box;
 }
 
 @keyframes slideUp {
@@ -141,7 +148,6 @@
   }
 }
 
-/* Triangle indicator for dropdown */
 .megaPanel::before {
   content: '';
   position: absolute;
@@ -188,6 +194,7 @@
   display: block;
   padding: 0.5rem;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .megaPanelText li a:hover {
@@ -195,7 +202,6 @@
   background-color: #F0FDF4;
 }
 
-/* Mega Panel Feature Card */
 .megaPanelFeature {
   display: flex;
   flex-direction: column;
@@ -205,6 +211,7 @@
   padding: 1rem;
   border-radius: 10px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .megaPanelFeature:hover {
@@ -231,17 +238,18 @@
 
 .megaPanelNoImage {
   grid-template-columns: 1fr;
-  width: 520px;
+  width: min(520px, 85vw);
 }
 
 /* Desktop Action Buttons Container */
 .actionButtonsGroup {
   display: none;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .actionButtonsGroup {
     display: flex;
   }
@@ -249,25 +257,29 @@
 
 /* Primary Action Button (DONATE) */
 .donateButton {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #00A89E;
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0 4px 10px rgba(0, 168, 158, 0.2);
   white-space: nowrap;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
   .donateButton {
-    padding: 0.75rem 1.75rem;
-    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -282,25 +294,29 @@
 
 /* Secondary Action Button (REQUEST APPOINTMENT) */
 .secondaryActionButton {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: #1A365D;
   border: 2px solid #1A365D;
-  padding: 0.65rem 1.25rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: all 0.3s ease;
   white-space: nowrap;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
   .secondaryActionButton {
-    padding: 0.65rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -317,20 +333,21 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Mobile Hamburger */
+/* Mobile Hamburger Toggle */
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 24px;
+  width: 28px;
+  height: 22px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  flex-shrink: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .hamburger {
     display: none;
   }
@@ -348,11 +365,14 @@
 .mobileNav {
   background: #ffffff;
   border-top: 1px solid #eee;
-  padding: 1rem 1.5rem 2rem;
+  padding: 1rem 1.25rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   animation: slideDown 0.3s ease-out;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 @keyframes slideDown {
@@ -369,10 +389,11 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #f0f0f0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #1A365D;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .mobileLinks {
@@ -388,7 +409,7 @@
 .mobileLinks a {
   text-decoration: none;
   color: #444;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -397,7 +418,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mobileDonate {
@@ -405,11 +428,13 @@
   text-align: center;
   background: #00A89E;
   color: white;
-  padding: 1rem;
+  padding: 0.85rem;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .mobileSecondaryButton {
@@ -423,6 +448,8 @@
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Dark Backdrop */

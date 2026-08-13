@@ -2,12 +2,7 @@
   background-color: var(--color-primary, #1A365D);
   color: var(--color-white, #ffffff);
   padding: 50px 3rem 28px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -65,7 +60,7 @@
     padding-bottom: 0;
     padding-right: 32px;
     border-bottom: none;
-  border-right: 3px solid hsla(0, 0%, 100%, .2);
+    border-right: 3px solid hsla(0, 0%, 100%, .2);
   }
 }
 
@@ -207,7 +202,6 @@
   min-width: 140px;
   padding: 0 24px;
   box-sizing: border-box;
-  /* Subtle vertical divider between link columns */
   border-right: 3px solid hsla(0, 0%, 100%, .2);
 }
 
@@ -223,7 +217,7 @@
   .linkGroup {
     padding: 0 0 16px 0;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Horizontal lines on mobile */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .linkGroup:last-child {
@@ -240,7 +234,7 @@
   letter-spacing: 0.05em;
   margin: 0 0 12px 0;
   padding-bottom: 6px;
-  border-bottom: 2px solid #00A89E; /* Accent line under column headers */
+  border-bottom: 2px solid #00A89E;
   display: inline-block;
 }
 
@@ -274,7 +268,7 @@
   transform: translateX(4px);
 }
 
-/* NEWSLETTER CARD WITH TOP SEPARATION LINE */
+/* NEWSLETTER CARD */
 .newsletterCard {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -286,7 +280,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15); /* Distinct separator line above newsletter */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 @media (min-width: 900px) {

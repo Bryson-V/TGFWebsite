@@ -23,11 +23,6 @@
       ]
     },
     {
-      "id": "doctors",
-      "label": "Doctors",
-      "href": "doctors"
-    },
-    {
       "id": "mindcare",
       "label": "BEHAVIORAL HEALTH",
       "panelTitle": "Behavioral Health",
@@ -66,6 +61,7 @@
       "panelTitle": "PATIENT RESOURCES",
       "panelSubtitle": "Learn more about what resources are available to patients",
       "links": [
+        { "label": "Doctors", "href": "doctors" },
         { "label": "Healow", "href": "patient/healow" },
         { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },
