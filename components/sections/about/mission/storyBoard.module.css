@@ -1,0 +1,251 @@
+.scrollContainer {
+  height: 1200vh;
+  position: relative;
+  background-color: #ffffff;
+  overflow-x: clip;
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #ffffff 0%, #f0f8ff 100%);
+}
+
+/* --- 1. Slogan Phase --- */
+.sloganContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem;
+  z-index: 10;
+}
+
+.word {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #0077b6;
+  text-align: center;
+}
+
+/* --- Slogan Background Images --- */
+.sloganBgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.sloganBgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: opacity;
+}
+
+.sloganBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45); 
+  z-index: 2; 
+}
+
+/* --- Scroll Indicator --- */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #0077b6;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.scrollIcon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #0077b6;
+  border-radius: 50%;
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* --- 2 & 3. Video Cards --- */
+.cardWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 5vw, 2rem);
+  pointer-events: none; 
+}
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  /* Removed box-shadow and border to eliminate the glow */
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  pointer-events: auto;
+}
+
+.videoContainer {
+  width: 100%;
+  height: 40vh;
+  min-height: 200px;
+  max-height: 400px;
+  background-color: #e0f2f1;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardText {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+  overflow-y: auto;
+}
+
+.sceneTag {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #00b4d8;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+.cardText h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #333;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+.cardText p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- 4. Mission & Vision Phase --- */
+.missionVisionPanel {
+  position: absolute;
+  inset: 0;
+  background-color: #00b4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(2rem, 5vw, 4rem);
+  color: white;
+  text-align: center;
+}
+
+/* --- Wave Animation Styles --- */
+.waveContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(80px, 10vw, 150px);
+  transform: translateY(-99%); 
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.waveSvg {
+  width: 200%; 
+  height: 100%;
+  animation: waveWash 6s linear infinite; 
+}
+
+@keyframes waveWash {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.missionVisionPanel h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.mvCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  max-width: 1200px;
+  width: 100%;
+  margin-top: clamp(1.5rem, 3vw, 3rem);
+}
+
+.mvCard {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.mvCard h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.mvCard p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+  color: #f8f9fa;
+}

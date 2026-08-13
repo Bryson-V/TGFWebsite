@@ -1,9 +1,11 @@
-import NewsArchive from "@/components/sections/about/news/newsArchive";
+import MissionHero from "@/components/sections/about/mission/missionHero";
+import ScrollStoryboard from "@/components/sections/about/mission/storyBoard";
 
-export default function AllNews() {
+export default function MissionAndVisionPage() {
   return (
     <>
-      <NewsArchive />
+      <MissionHero />
+      <ScrollStoryboard />
     </>
   );
 }
