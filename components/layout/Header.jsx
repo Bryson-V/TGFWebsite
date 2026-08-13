@@ -60,7 +60,7 @@ export default function Header() {
     ? nav.actionButtons 
     : [
         nav.donateButton, 
-        nav.reqAppointment || nav.secondaryButton
+        nav.reqAppointment
       ].filter(Boolean);
 
   return (

@@ -5,7 +5,7 @@
   },
   "reqAppointment": {
     "label": "REQUEST APPOINTMENT",
-    "href": "patient/reqAppointment"
+    "href": "https://mycw188.ecwcloud.com/portal24196/jsp/100mp/login_otp.jsp"
   },
   "menus": [
     {
