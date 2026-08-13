@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "@/components/ui/Image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./storyHero.module.css";
 
@@ -18,18 +19,29 @@ export default function StoryHero() {
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.65, 0.95]);
 
   return (
-    <div ref={containerRef} className={styles.heroContainer}>
+    <section ref={containerRef} className={styles.heroContainer}>
       
+      {/* Background Image Container with Parallax */}
       <motion.div
-        className={styles.backgroundImage}
+        className={styles.backgroundImageWrapper}
         style={{ y: backgroundY }}
-      />
+      >
+        <Image 
+          src="/images/story/Rainbow.webp" 
+          alt="Our Story Background" 
+          fill
+          className={styles.bgImage}
+          priority
+        />
+      </motion.div>
 
+      {/* Overlay */}
       <motion.div
         className={styles.overlay}
         style={{ opacity: overlayOpacity }}
       />
 
+      {/* Text Content */}
       <motion.div 
         className={styles.content} 
         style={{ y: textY, opacity: textOpacity }} 
@@ -47,6 +59,6 @@ export default function StoryHero() {
         </p>
       </motion.div>
       
-    </div>
+    </section>
   );
 }

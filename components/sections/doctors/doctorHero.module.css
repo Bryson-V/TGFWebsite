@@ -10,16 +10,18 @@
   color: #ffffff;
 }
 
-.backgroundImage {
+.backgroundImageWrapper {
   position: absolute;
   top: -45%; 
   left: 0;
   width: 100%;
   height: 150%;
-  background-image: url('/images/doctors/hero.jpg');
-  background-size: cover;
-  background-position: center 30%;
   z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .overlay {
@@ -39,7 +41,7 @@
 }
 
 .subtitle {
-  color: #99f6e4; /* Light teal accent */
+  color: #99f6e4;
   letter-spacing: 0.1em;
   font-weight: 600;
   font-size: 0.9rem;
@@ -56,7 +58,7 @@
 }
 
 .brightText {
-  color: #99f6e4; /* Light teal accent */
+  color: #99f6e4;
 }
 
 .description {

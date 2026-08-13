@@ -10,16 +10,18 @@
   color: #ffffff;
 }
 
-.backgroundImage {
+.backgroundImageWrapper {
   position: absolute;
   top: -25%; 
   left: 0;
   width: 100%;
   height: 140%;
-  background-image: url('/images/story/Rainbow.webp');
-  background-size: cover;
-  background-position: center 80%; 
   z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 80%;
 }
 
 .overlay {
