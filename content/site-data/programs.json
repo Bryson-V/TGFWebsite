@@ -3,42 +3,42 @@
     "id": "mobile-care-clinic",
     "title": "Mobile Care Clinic",
     "description": "Our traveling clinic provides basic and preventive healthcare assistance to the underserved and uninsured. Services like immunizations, TB tests, and physicals come at no cost to the patient.",
-    "image": "/images/programs/Truck.jpg",
+    "image": "images/programs/Truck.jpg",
     "href": "mobileCareClinic"
   },
   {
     "id": "prevention-education",
     "title": "Prevention & Education",
     "description": "Island-wide outreach and education initiatives focused on preventive health and community wellness.",
-    "image": "/images/preventionEdu/Education.jpg",
+    "image": "images/preventionEdu/Education.jpg",
     "href": "preventionEdu"
   },
   {
     "id": "patient-navigation",
     "title": "Financial Assistance",
     "description": "One-on-one support to help patients navigate care options and access financial assistance.",
-    "image": "/images/financial/Finance.jpg",
+    "image": "images/financial/Finance.jpg",
     "href": "financialAssistance"
   },
   {
     "id": "cares-movement",
     "title": "CARES Movement",
     "description": "A community-driven movement committed to Guam's health, wellness, and youth development.",
-    "image": "/images/cares/CARES.jpg",
+    "image": "images/cares/CARES.jpg",
     "href": "cares"
   },
   {
     "id": "mind-care",
     "title": "Mind Care",
     "description": "Behavioral health services aimed at expanding access to mental health care across Guam.",
-    "image": "/images/mindCare/MindCare.jpg",
+    "image": "images/mindCare/MindCare.jpg",
     "href": "mindCare"
   },
   {
     "id": "womens-health",
     "title": "Hinemlo' Para i Famalao'an",
     "description": "Women's health services dedicated to expanding access to obstetric and gynecological care.",
-    "image": "/images/healing/womens-health-care.jpeg",
+    "image": "images/healing/womens-health-care.jpeg",
     "href": "healingForWomen"
   }
 ]
