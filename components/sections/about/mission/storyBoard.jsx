@@ -10,7 +10,7 @@ const SLOGAN_TOKENS = [
   { word: "Getting", seq: 0 },
   { word: "Guam", seq: 1 },
   { word: "Healthy", seq: 2 },
-  { word: "—", seq: 3 },
+  { word: "—", seq: 3, addNewLine: true },
   { word: "One", seq: 4 },
   { word: "Man,", seq: 5 },
   { word: "One", seq: 6 },
@@ -54,14 +54,14 @@ const SloganBackgrounds = ({ progress }) => {
 
   return (
     <motion.div className={styles.sloganBgContainer} style={{ opacity: mainOpacity }}>
-        <motion.img style={{ opacity: op0 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/Beach.jpg")} alt="Getting Guam Healthy" />
-        <motion.img style={{ opacity: op1 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/outreach-growth.webp")} alt="Man" />
-        <motion.img style={{ opacity: op2 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/womens-health-care.jpeg")} alt="Woman" />
-        <motion.img style={{ opacity: op3 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/ZeroDown.jpg")} alt="Child" />
+      <motion.img style={{ opacity: op0 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/Beach.jpg")} alt="Getting Guam Healthy" />
+      <motion.img style={{ opacity: op1 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/outreach-growth.webp")} alt="Man" />
+      <motion.img style={{ opacity: op2 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/womens-health-care.jpeg")} alt="Woman" />
+      <motion.img style={{ opacity: op3 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/ZeroDown.jpg")} alt="Child" />
       <div className={styles.sloganBgOverlay}></div>
     </motion.div>
   );
-}
+};
 
 export default function StoryBoard() {
   const containerRef = useRef(null);
@@ -79,17 +79,22 @@ export default function StoryBoard() {
 
   const c1X = useTransform(smoothProgress, [0.30, 0.40, 0.55, 0.65], ["100vw", "0vw", "0vw", "-100vw"]);
   const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100vw", "0vw"]);
-  const mvY = useTransform(smoothProgress, [0.80, 0.90], ["100%", "0%"]);
+  
+  // Starts at 120% so the wave edge remains completely off-screen until scrolling down
+  const mvY = useTransform(smoothProgress, [0.80, 0.90], ["120%", "0%"]);
 
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
       <div className={styles.stickyWrapper}>
 
-        {/* SLOGAN PHASE */}
+        {/* SLOGAN PHASE WITH BACKGROUND IMAGES */}
         <SloganBackgrounds progress={smoothProgress} />
         <div className={styles.sloganContainer}>
           {SLOGAN_TOKENS.map((token, i) => (
-            <SloganWord key={i} token={token} progress={smoothProgress} />
+            <React.Fragment key={i}>
+              <SloganWord token={token} progress={smoothProgress} />
+              {token.addNewLine && <div className={styles.lineBreak} />}
+            </React.Fragment>
           ))}
         </div>
 
@@ -110,7 +115,7 @@ export default function StoryBoard() {
         {/* VIDEO CARD 2 */}
         <motion.div className={styles.cardWrapper} style={{ x: c2X, zIndex: 20 }}>
           <div className={styles.videoCard}>
-             <div className={styles.videoContainer}>
+            <div className={styles.videoContainer}>
               <video autoPlay loop muted playsInline className={styles.video} src={getAssetPath("/videos/TruckLeave.mov")} />
             </div>
             <div className={styles.cardText}>
@@ -130,6 +135,16 @@ export default function StoryBoard() {
 
         {/* MISSION & VISION */}
         <motion.div className={styles.missionVisionPanel} style={{ y: mvY, zIndex: 30 }}>
+          
+          <div className={styles.waveContainer}>
+            <svg className={styles.waveSvg} viewBox="0 0 2400 120" preserveAspectRatio="none">
+              <path 
+                d="M0,60 C300,120 300,0 600,60 C900,120 900,0 1200,60 C1500,120 1500,0 1800,60 C2100,120 2100,0 2400,60 L2400,120 L0,120 Z" 
+                fill="#00a4c5" 
+              />
+            </svg>
+          </div>
+
           <h1>TODU GUAM FOUNDATION</h1>
           <div className={styles.mvCardContainer}>
             <div className={styles.mvCard}>
