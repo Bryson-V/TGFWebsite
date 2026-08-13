@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "@/components/ui/Image";
+import { getAssetPath } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   FaShieldAlt, FaMountain, FaCheckCircle, FaBolt, 
@@ -125,7 +127,18 @@ export default function CaresCharacterStrengthsTree() {
               style={{ pointerEvents: 'none' }}
             >
               <circle cx="500" cy="430" r="65" fill="#00A89E" stroke="#042F2E" strokeWidth="4" />
-              <image href="/images/cares/cares-thumb.jpeg" x="450" y="380" height="100" width="100" />
+              
+              {/* Refactored Image inside foreignObject for SVG support */}
+              <foreignObject x="450" y="380" width="100" height="100">
+                <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', position: 'relative' }}>
+                  <Image 
+                    src="/images/cares/cares-thumb.jpeg" 
+                    alt="CARES Logo" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </foreignObject>
             </motion.g>
 
             <g className={styles.bubbles}>
@@ -236,7 +249,9 @@ export default function CaresCharacterStrengthsTree() {
                         return (
                           <motion.a 
                             key={`zoom-sub-${sub.id}`}
-                            href={sub.link} target="_blank" rel="noopener noreferrer"
+                            href={getAssetPath(sub.link)} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
                             initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
                             animate={{ 
                               x: pos.x, y: pos.y, scale: 1, opacity: 1,
