@@ -1,0 +1,83 @@
+.sectionContainer {
+  padding: 1.5rem 5%;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.contentWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Outer White Card Container matching your design system */
+.cardContainer {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3.5rem;
+  box-shadow: 0 10px 30px -10px rgba(8, 51, 68, 0.05);
+}
+
+.headerGroup {
+  margin-bottom: 1.75rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ecfeff;
+  color: #0891b2;
+  border: 1px solid #cff4fc;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #083344;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.highlightText {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 600;
+  color: #0e7490;
+  margin: 0;
+}
+
+.standardText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 1rem 5%;
+  }
+  .cardContainer {
+    padding: 2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .highlightText {
+    font-size: 1.1rem;
+  }
+  .standardText {
+    font-size: 1.05rem;
+  }
+}

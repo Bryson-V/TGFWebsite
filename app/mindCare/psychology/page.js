@@ -1,9 +1,15 @@
-import NewsArchive from "@/components/sections/about/news/newsArchive";
+import CollaborativeCare from "@/components/sections/mindCare/psychiatry/collaborativeCare";
+import PsychologyHero from "@/components/sections/mindCare/psychology/psychologyHero";
+import PsychologyOverview from "@/components/sections/mindCare/psychology/psychologyOverview";
+import PsychologyServices from "@/components/sections/mindCare/psychology/psychologyServices";
 
 export default function AllNews() {
   return (
     <>
-      <NewsArchive />
+      <PsychologyHero />
+      <CollaborativeCare />
+      <PsychologyOverview />
+      <PsychologyServices />
     </>
   );
 }

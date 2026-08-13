@@ -1,0 +1,59 @@
+.sectionContainer {
+  padding: 4rem 5% 1.5rem 5%;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.contentWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.overviewCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3.5rem;
+  box-shadow: 0 10px 30px -10px rgba(8, 51, 68, 0.05);
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.leadText {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-weight: 600;
+  color: #0e7490;
+  margin-bottom: 1.25rem;
+}
+
+.bodyText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 3rem 5% 1rem 5%;
+  }
+  .overviewCard {
+    padding: 2rem;
+  }
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+  .leadText {
+    font-size: 1.1rem;
+  }
+  .bodyText {
+    font-size: 1.05rem;
+  }
+}
