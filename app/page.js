@@ -3,8 +3,8 @@ import WhyWereHere from "@/components/sections/homepage/WhyWereHere";
 import ProgramsWheel from "@/components/sections/homepage/ProgramsWheel";
 import ImpactStats from "@/components/sections/homepage/ImpactStats";
 import GetInvolved from "@/components/sections/homepage/GetInvolved";
-import NewsGrid from "@/components/sections/news/NewsGrid";
-import PressGrid from "@/components/sections/press/PressGrid";
+import NewsGrid from "@/components/sections/about/news/NewsGrid";
+import PressGrid from "@/components/sections/about/press/PressGrid";
 /**
  * Homepage
  *

@@ -1,7 +1,7 @@
 {
   "upcomingButton": {
-    "label": "View Upcoming Events",
-    "href": "/upcoming"
+    "label": "View list of Providers",
+    "href": "/doctors"
   },
   "tagline": "We are a nonprofit Getting Guam Healthy, One Man, One Woman, and One Child at a time.",
   "address": "125 Tun Jesus Crisostomo Street, Tamuning, Guam",
@@ -11,33 +11,56 @@
   ],
   "columns": [
     {
-      "title": "About Us",
+      "title": "Cares & Services",
       "links": [
-        { "label": "Our Story", "href": "ourStory" },
-        { "label": "Board of Directors", "href": "boardOfDirectors/" },
-        { "label": "Doctors", "href": "doctors" },
-        { "label": "FAQs & Resources", "href": "faq" },
-        { "label": "Outreaches", "href": "allOutreaches" }
+        { "label": "Primary Care", "href": "primaryCare" },
+        { "label": "Endocrinology & Diabetes", "href": "endoDiabetes" },
+        { "label": "Women's Health & OB-GYN", "href": "womenHealth" },
+        { "label": "Behavioral Health", "href": "mindCare" },
+        { "label": "Preventive Care & Screenings", "href": "screening" },
+        { "label": "Community Health Programs", "href": "communityHealth" },
+        { "label": "Doctors", "href": "doctors" }
       ]
     },
     {
-      "title": "Our Work",
+      "title": "MindCare",
       "links": [
-        { "label": "Mobile Care Clinic", "href": "mobileCareClinic" },
-        { "label": "Health Prevention and Outreach", "href": "preventionEdu" },
-        { "label": "CARES Program", "href": "cares" },
-        { "label": "Financial Aid", "href": "financialAssistance"},
-        { "label": "Mind Care", "href": "mindCare" },
-        { "label": "Healing for Women", "href": "healingForWomen" }
+        { "label": "About MindCare", "href": "mindAbout" },
+        { "label": "Psychiatry", "href": "psychiatry" },
+        { "label": "Psychology", "href": "psychology" },
+        { "label": "Therapy", "href": "therapy" },
+        { "label": "TMS", "href": "tms" },
+        { "label": "Meet the Team", "href": "mindTeam" },
+        { "label": "FAQ", "href": "mindFAQ" }
       ]
-    }, 
+    },
     {
-      "title": "Our Community",
+      "title": "Community & Impact",
       "links": [
         { "label": "Volunteer", "href": "volunteer" },
         { "label": "Careers", "href": "careers" },
-        { "label": "News & Stories", "href": "allNews" },
-        { "label": "Press Coverage", "href": "allPress" }      
+        { "label": "Community Outreach", "href": "commOutreach" },
+        { "label": "Partnerships", "href": "partnerships" },
+        { "label": "Our Impact", "href": "commImpact" }
+      ]
+    },
+    {
+      "title": "Patient Resources",
+      "links": [
+        { "label": "Healow", "href": "healow" },
+        { "label": "Insurance", "href": "insurance" },
+        { "label": "Financial Assistance", "href": "financialAssistance" }
+      ]
+    },
+    {
+      "title": "About Us",
+      "links": [
+        { "label": "Mission & Vision", "href": "mission" },
+        { "label": "Our Story", "href": "ourStory" },
+        { "label": "Board of Directors", "href": "boardOfDirectors" },
+        { "label": "Leadership", "href": "leadership" },
+        { "label": "News & Media", "href": "allNews" },
+        { "label": "Contact Us", "href": "contacts" }
       ]
     }
   ],
