@@ -297,17 +297,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  color: #1A365D;
-  border: 2px solid #1A365D;
-  padding: 0.5rem 0.85rem;
+  background: linear-gradient(45deg, #1A365D, #0284c7, #1A365D);
+  background-size: 300% 300%;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(26, 54, 93, 0.25);
   white-space: nowrap;
   box-sizing: border-box;
   max-width: 100%;
@@ -315,16 +316,16 @@
 
 @media (min-width: 1350px) {
   .secondaryActionButton {
-    padding: 0.65rem 1.25rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
   }
 }
 
 .secondaryActionButton:hover {
-  background: #1A365D;
-  color: #ffffff;
+  animation: gradientShift 3s ease infinite;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.25);
+  box-shadow: 0 0 15px rgba(2, 132, 199, 0.5), 0 0 25px rgba(14, 165, 233, 0.4);
+  color: #ffffff;
 }
 
 @keyframes gradientShift {
@@ -440,9 +441,8 @@
 .mobileSecondaryButton {
   display: block;
   text-align: center;
-  background: transparent;
-  border: 2px solid #1A365D;
-  color: #1A365D;
+  background: #0284c7;
+  color: #ffffff;
   padding: 0.85rem;
   border-radius: 10px;
   text-decoration: none;

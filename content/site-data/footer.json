@@ -18,49 +18,59 @@
         { "label": "Women's Health & OB-GYN", "href": "womenHealth" },
         { "label": "Behavioral Health", "href": "mindCare" },
         { "label": "Preventive Care & Screenings", "href": "screening" },
-        { "label": "Community Health Programs", "href": "communityHealth" },
-        { "label": "Doctors", "href": "doctors" }
-      ]
-    },
-    {
-      "title": "MindCare",
-      "links": [
-        { "label": "About MindCare", "href": "mindAbout" },
-        { "label": "Psychiatry", "href": "psychiatry" },
-        { "label": "Psychology", "href": "psychology" },
-        { "label": "Therapy", "href": "therapy" },
-        { "label": "TMS", "href": "tms" },
-        { "label": "Meet the Team", "href": "mindTeam" },
-        { "label": "FAQ", "href": "mindFAQ" }
+        { "label": "Community Health Programs", "href": "communityHealth" }
       ]
     },
     {
       "title": "Community & Impact",
       "links": [
-        { "label": "Volunteer", "href": "volunteer" },
-        { "label": "Careers", "href": "careers" },
-        { "label": "Community Outreach", "href": "commOutreach" },
-        { "label": "Partnerships", "href": "partnerships" },
-        { "label": "Our Impact", "href": "commImpact" }
+        { "label": "About", "href": "mindCare/mindAbout" },
+        { "label": "Psychiatry", "href": "mindCare/psychiatry" },
+        { "label": "Pychology", "href": "mindCare/psychology" },
+        { "label": "Therapy", "href": "mindCare/therapy" },
+        { "label": "TMS", "href": "mindCare/tms" },
+        { "label": "Meet the Team", "href": "mindCare/mindTeam" },
+        { "label": "FAQ", "href": "mindCare/mindFAQ" },
+        { "label": "Appointment", "href": "mindCare/mindAppointment" }
+      ]
+    },
+    {
+      "title": "Community & Impact",
+      "links": [
+        { "label": "Volunteer", "href": "community/volunteer" },
+        { "label": "Careers", "href": "community/careers" },
+        { "label": "Community Outreach", "href": "community/commOutreach" },
+        { "label": "Partnerships", "href": "community/partnerships" },
+        { "label": "Our Impact", "href": "community/commImpact" },
+        { "label": "Outreach Gallery", "href": "community/allOutreaches" },
+        { "label": "Healing For Women", "href": "community/healingForWomen" },
+        { "label": "Prevention and Education", "href": "community/preventionEdu" },
+        { "label": "CARES Program", "href": "community/cares" }
       ]
     },
     {
       "title": "Patient Resources",
       "links": [
-        { "label": "Healow", "href": "healow" },
-        { "label": "Insurance", "href": "insurance" },
-        { "label": "Financial Assistance", "href": "financialAssistance" }
+        { "label": "Doctors", "href": "doctors" },
+        { "label": "Healow", "href": "patient/healow" },
+        { "label": "Request Appointment", "href": "patient/reqAppointment" },
+        { "label": "Insurance", "href": "patient/insurance" },
+        { "label": "Our Impact", "href": "patient/commImpact" },
+        { "label": "Financial Assistance", "href": "patient/financialAssistance" },
+        { "label": "FAQs", "href": "patient/faq" }
       ]
     },
     {
       "title": "About Us",
       "links": [
-        { "label": "Mission & Vision", "href": "mission" },
-        { "label": "Our Story", "href": "ourStory" },
-        { "label": "Board of Directors", "href": "boardOfDirectors" },
-        { "label": "Leadership", "href": "leadership" },
-        { "label": "News & Media", "href": "allNews" },
-        { "label": "Contact Us", "href": "contacts" }
+        { "label": "Mission & Vision", "href": "about/mission" },
+        { "label": "Our Story", "href": "about/ourStory" },
+        { "label": "Board of Directors", "href": "about/boardOfDirectors" },
+        { "label": "News & Media", "href": "about/allNews" },
+        { "label": "Careers", "href": "about/careers" },
+        { "label": "Leadership", "href": "about/leadership" },
+        { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
+        { "label": "Contact Us", "href": "about/contacts" }
       ]
     }
   ],
