@@ -1,4 +1,4 @@
-import MindCareHero from "@/components/sections/mindCare/mindCare/mindCareHero";
+import MindCareHero from "@/components/sections/mindCare/tms/tmsHero";
 
 export default function MindCare() {
   return (

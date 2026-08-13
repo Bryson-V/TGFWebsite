@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import Image from '@/components/ui/Image';
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./mindCareHero.module.css";
+import styles from "./tmsHero.module.css";
 
-export default function MindCareHero() {
+export default function TmsHero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -51,13 +51,11 @@ export default function MindCareHero() {
         <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · OUR WORK</h5>
         
         <h1 className={styles.title}>
-          Mind Care
+          TMS
         </h1>
         
         <p className={styles.description}>
-          Prioritizing mental well-being and emotional wellness. We offer 
-          <br />compassionate support, community resources, and guidance 
-          <br />to help build a stronger, healthier mind.
+          An advanced, noninvasive therapy using targeted magnetic pulses to reactivate brain networks involved in mood regulation.
         </p>
       </motion.div>
       

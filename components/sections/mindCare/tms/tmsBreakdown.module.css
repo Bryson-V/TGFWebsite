@@ -1,0 +1,182 @@
+.breakdownContainer {
+  padding: 6rem 5%;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.headerWrapper {
+  max-width: 850px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #0e7490;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* 3D Perspective Wrapper */
+.cardContainer {
+  perspective: 1000px;
+  height: 420px; /* Taller card container for larger content */
+  cursor: pointer;
+  outline: none;
+}
+
+.cardContainer:focus-visible .cardInner {
+  box-shadow: 0 0 0 4px #0891b2;
+  border-radius: 20px;
+}
+
+/* Flipping Inner Container */
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.cardInner.isFlipped {
+  transform: rotateY(180deg);
+}
+
+/* Base Card Face */
+.cardFront,
+.cardBack {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 12px 30px -5px rgba(8, 51, 68, 0.12);
+}
+
+/* FRONT FACE */
+.cardFront {
+  background: linear-gradient(145deg, #083344, #0e7490);
+  color: #ffffff;
+}
+
+.cardFront:hover {
+  background: linear-gradient(145deg, #0c4a6e, #0891b2);
+}
+
+.giantLetter {
+  font-size: 9rem; /* Significantly larger giant letter */
+  font-weight: 900;
+  line-height: 1;
+  color: #a5f3fc;
+  text-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+.clickPrompt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.25rem;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.pointerIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* BACK FACE */
+.cardBack {
+  background: #ffffff;
+  color: #0f172a;
+  border: 3px solid #a5f3fc;
+  transform: rotateY(180deg);
+  justify-content: space-between;
+}
+
+.badge {
+  width: 52px;
+  height: 52px;
+  background-color: #0891b2;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #334155;
+  margin-bottom: auto;
+}
+
+.flipBackHint {
+  font-size: 0.9rem;
+  color: #0891b2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE SCALING */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+  .cardContainer {
+    height: 380px;
+  }
+
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+}
