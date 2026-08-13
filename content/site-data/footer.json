@@ -13,31 +13,31 @@
     {
       "title": "About Us",
       "links": [
-        { "label": "Our Story", "href": "/ourStory" },
-        { "label": "Board of Directors", "href": "/boardOfDirectors/" },
-        { "label": "Doctors", "href": "/doctors" },
-        { "label": "FAQs & Resources", "href": "/faq" },
-        { "label": "Outreaches", "href": "/allOutreaches" }
+        { "label": "Our Story", "href": "ourStory" },
+        { "label": "Board of Directors", "href": "boardOfDirectors/" },
+        { "label": "Doctors", "href": "doctors" },
+        { "label": "FAQs & Resources", "href": "faq" },
+        { "label": "Outreaches", "href": "allOutreaches" }
       ]
     },
     {
       "title": "Our Work",
       "links": [
-        { "label": "Mobile Care Clinic", "href": "/mobileCareClinic" },
-        { "label": "Health Prevention and Outreach", "href": "/preventionEdu" },
-        { "label": "CARES Program", "href": "/cares" },
-        { "label": "Financial Aid", "href": "/financialAssistance"},
-        { "label": "Mind Care", "href": "/mindCare" },
-        { "label": "Healing for Women", "href": "/healingForWomen" }
+        { "label": "Mobile Care Clinic", "href": "mobileCareClinic" },
+        { "label": "Health Prevention and Outreach", "href": "preventionEdu" },
+        { "label": "CARES Program", "href": "cares" },
+        { "label": "Financial Aid", "href": "financialAssistance"},
+        { "label": "Mind Care", "href": "mindCare" },
+        { "label": "Healing for Women", "href": "healingForWomen" }
       ]
     }, 
     {
       "title": "Our Community",
       "links": [
-        { "label": "Volunteer", "href": "/volunteer" },
-        { "label": "Careers", "href": "/careers" },
-        { "label": "News & Stories", "href": "/allNews" },
-        { "label": "Press Coverage", "href": "/allPress" }      
+        { "label": "Volunteer", "href": "volunteer" },
+        { "label": "Careers", "href": "careers" },
+        { "label": "News & Stories", "href": "allNews" },
+        { "label": "Press Coverage", "href": "allPress" }      
       ]
     }
   ],
@@ -48,9 +48,9 @@
     { "label": "Linkedin", "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd" }
   ],
   "legal": [
-    { "label": "Privacy Policy", "href": "/privacy" },
-    { "label": "Terms & Conditions", "href": "/termsCondtions" },
-    { "label": "Accessibility Statement", "href": "/accessibility" }
+    { "label": "Privacy Policy", "href": "privacy" },
+    { "label": "Terms & Conditions", "href": "termsCondtions" },
+    { "label": "Accessibility Statement", "href": "accessibility" }
   ],
   "copyright": "Copyright 2026 © Todu Guam Foundation All Rights Reserved."
 }
