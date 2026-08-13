@@ -9,14 +9,16 @@
   width: 100%;
 }
 
+/* Container bar: Spans 100% of the screen with balanced edge padding */
 .bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 5%;
+  width: 100%;
+  max-width: 100%; /* Spans full screen width */
+  margin: 0;
+  padding: 0 2rem; /* Clean edge spacing across all screen sizes */
 }
 
 .logoLink {
@@ -48,13 +50,19 @@
 /* Desktop Nav */
 .desktopNav {
   display: none;
-  gap: 2rem;
+  gap: 1.25rem;
   align-items: center;
 }
 
 @media (min-width: 992px) {
   .desktopNav {
     display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .desktopNav {
+    gap: 1.75rem;
   }
 }
 
@@ -66,18 +74,28 @@
 .navButton {
   background: transparent;
   border: none;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: #1A365D; /* Text color */
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0.5rem 0.75rem;
+  gap: 6px;
+  padding: 0.5rem 0.5rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .navButton {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    gap: 8px;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 .navButton:hover,
@@ -100,7 +118,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 650px;
+  width: 720px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
@@ -213,44 +231,86 @@
 
 .megaPanelNoImage {
   grid-template-columns: 1fr;
-  width: 450px;
+  width: 520px;
 }
 
-/* Donate Button */
-.donateButton {
+/* Desktop Action Buttons Container */
+.actionButtonsGroup {
   display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 992px) {
+  .actionButtonsGroup {
+    display: flex;
+  }
+}
+
+/* Primary Action Button (DONATE) */
+.donateButton {
+  display: inline-block;
   background: #00A89E;
   color: #ffffff;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0 4px 10px rgba(0, 168, 158, 0.2);
+  white-space: nowrap;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .donateButton {
-    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
   }
 }
 
-/* Animated Gradient & Glow Hover Effect */
 .donateButton:hover {
-  /* Creates the Blue, Teal, and Green gradient */
   background: linear-gradient(45deg, #0284c7, #00A89E, #22c55e, #0284c7); 
   background-size: 300% 300%;
   animation: gradientShift 3s ease infinite;
   transform: translateY(-2px);
-  /* The glow effect using the same colors */
   box-shadow: 0 0 15px rgba(2, 132, 199, 0.5), 0 0 25px rgba(34, 197, 94, 0.4);
   color: #ffffff;
 }
 
-/* Add this keyframe block at the bottom of your CSS file */
+/* Secondary Action Button (REQUEST APPOINTMENT) */
+.secondaryActionButton {
+  display: inline-block;
+  background: transparent;
+  color: #1A365D;
+  border: 2px solid #1A365D;
+  padding: 0.65rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .secondaryActionButton {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+.secondaryActionButton:hover {
+  background: #1A365D;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.25);
+}
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -284,6 +344,7 @@
   transition: all 0.3s ease;
 }
 
+/* Mobile Drawer */
 .mobileNav {
   background: #ffffff;
   border-top: 1px solid #eee;
@@ -331,6 +392,14 @@
   font-weight: 500;
 }
 
+/* Mobile Action Buttons Group */
+.mobileActionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 .mobileDonate {
   display: block;
   text-align: center;
@@ -340,7 +409,19 @@
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mobileSecondaryButton {
+  display: block;
+  text-align: center;
+  background: transparent;
+  border: 2px solid #1A365D;
+  color: #1A365D;
+  padding: 0.85rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
   text-transform: uppercase;
 }
 

@@ -9,7 +9,7 @@ import styles from "./Header.module.css";
 
 // Helper component: Uses Next.js Link for internal routes, standard <a> for external ones
 function SmartLink({ href, children, className, onClick }) {
-  const isExternal = href.startsWith("http://") || href.startsWith("https://");
+  const isExternal = href?.startsWith("http://") || href?.startsWith("https://");
 
   if (isExternal) {
     return (
@@ -26,7 +26,7 @@ function SmartLink({ href, children, className, onClick }) {
   }
 
   return (
-    <Link href={href} className={className} onClick={onClick}>
+    <Link href={href ? `/${href.replace(/^\//, '')}` : "#"} className={className} onClick={onClick}>
       {children}
     </Link>
   );
@@ -56,6 +56,14 @@ export default function Header() {
   function toggleMobileSection(id) {
     setMobileExpanded((current) => (current === id ? null : id));
   }
+
+  // Normalizes action buttons from nav.json (supports nav.actionButtons array OR donateButton + reqAppointment/secondaryButton)
+  const actionButtons = nav.actionButtons 
+    ? nav.actionButtons 
+    : [
+        nav.donateButton, 
+        nav.reqAppointment || nav.secondaryButton
+      ].filter(Boolean);
 
   return (
     <>
@@ -116,11 +124,10 @@ export default function Header() {
                           {menu.panelTitle && <h3>{menu.panelTitle}</h3>}
                           {menu.panelSubtitle && <p>{menu.panelSubtitle}</p>}
                           
-                          {/* Safeguard the links map */}
                           {menu.links && (
                             <ul>
-                              {menu.links.map((link) => (
-                                <li key={link.label}>
+                              {menu.links.map((link, idx) => (
+                                <li key={`${link.label}-${idx}`}>
                                   <SmartLink href={link.href} onClick={closeAll}>
                                     {link.label}
                                   </SmartLink>
@@ -139,7 +146,7 @@ export default function Header() {
                             <div className={styles.featureImgWrapper}>
                               <Image
                                 src={menu.featuredImage}
-                                alt={menu.featuredCaption}
+                                alt={menu.featuredCaption || "Featured section"}
                                 width={240}
                                 height={140}
                                 style={{ objectFit: "cover", width: "100%", height: "auto" }}
@@ -156,10 +163,19 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Action Button */}
-          <SmartLink href={nav.donateButton.href} className={styles.donateButton}>
-            {nav.donateButton.label}
-          </SmartLink>
+          {/* Desktop Action Buttons (DONATE & REQUEST APPOINTMENT) */}
+          <div className={styles.actionButtonsGroup}>
+            {actionButtons.map((btn, idx) => (
+              <SmartLink 
+                key={btn.label || idx} 
+                href={btn.href} 
+                className={idx === 0 ? styles.donateButton : styles.secondaryActionButton}
+                onClick={closeAll}
+              >
+                {btn.label}
+              </SmartLink>
+            ))}
+          </div>
 
           {/* Mobile Hamburger Toggle */}
           <button
@@ -180,7 +196,6 @@ export default function Header() {
           <nav className={styles.mobileNav} aria-label="Primary mobile">
             {nav.menus.map((menu) => (
               <div key={menu.id} className={styles.mobileSection}>
-                {/* Mobile: Check if it's a direct link or a dropdown */}
                 {menu.href ? (
                   <SmartLink
                     href={menu.href}
@@ -202,8 +217,8 @@ export default function Header() {
                     </button>
                     {mobileExpanded === menu.id && menu.links && (
                       <ul className={styles.mobileLinks}>
-                        {menu.links.map((link) => (
-                          <li key={link.label}>
+                        {menu.links.map((link, idx) => (
+                          <li key={`${link.label}-${idx}`}>
                             <SmartLink href={link.href} onClick={closeAll}>
                               {link.label}
                             </SmartLink>
@@ -215,18 +230,25 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <SmartLink
-              href={nav.donateButton.href}
-              className={styles.mobileDonate}
-              onClick={closeAll}
-            >
-              {nav.donateButton.label}
-            </SmartLink>
+
+            {/* Mobile Action Buttons */}
+            <div className={styles.mobileActionGroup}>
+              {actionButtons.map((btn, idx) => (
+                <SmartLink
+                  key={btn.label || idx}
+                  href={btn.href}
+                  className={idx === 0 ? styles.mobileDonate : styles.mobileSecondaryButton}
+                  onClick={closeAll}
+                >
+                  {btn.label}
+                </SmartLink>
+              ))}
+            </div>
           </nav>
         )}
       </header>
 
-      {/* Backdrop overlay for focus */}
+      {/* Backdrop overlay */}
       {(openMenu || mobileOpen) && (
         <div className={styles.backdrop} onClick={closeAll} />
       )}
