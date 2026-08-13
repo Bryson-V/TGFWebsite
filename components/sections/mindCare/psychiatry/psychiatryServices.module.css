@@ -1,0 +1,89 @@
+.sectionContainer {
+  padding: 1.5rem 5% 5rem 5%;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.contentWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Outer White Card Container (Matches Psychology) */
+.servicesContainer {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3.5rem;
+  box-shadow: 0 12px 35px -10px rgba(8, 51, 68, 0.08);
+}
+
+.cardHeader {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #f1f5f9;
+  letter-spacing: -0.01em;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Inner Pill Cards */
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+}
+
+.bulletIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: #ecfeff;
+  color: #0891b2;
+  font-weight: 900;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cff4fc;
+}
+
+.serviceText {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 1rem 5% 3rem 5%;
+  }
+  .servicesContainer {
+    padding: 2rem;
+  }
+  .cardHeader {
+    font-size: 1.5rem;
+  }
+  .serviceItem {
+    padding: 1rem;
+  }
+  .serviceText {
+    font-size: 1.05rem;
+  }
+}
