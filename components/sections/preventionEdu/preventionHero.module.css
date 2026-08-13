@@ -3,23 +3,25 @@
   height: 75vh; 
   min-height: 600px; 
   display: flex;
-  align-items: center;
-  padding: 0 5%;
+  align-items: center; 
+  padding: 0 5%;       
   overflow: hidden;
   background-color: #042f2e;
   color: #ffffff;
 }
 
-.backgroundImage {
+.backgroundImageWrapper {
   position: absolute;
   top: -30%; 
   left: 0;
   width: 100%;
   height: 140%;
-  background-image: url('/images/preventionEdu/Education.jpg');
-  background-size: cover;
-  background-position: center 80%; 
   z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 80%;
 }
 
 .overlay {
@@ -35,11 +37,11 @@
   max-width: 700px;
   margin-top: 0; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .subtitle {
-  color: #99f6e4;
+  color: #99f6e4; 
   letter-spacing: 0.1em;
   font-weight: 600;
   font-size: 0.9rem;
