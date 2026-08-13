@@ -58,10 +58,6 @@
         { "label": "Healing For Women", "href": "community/healingForWomen" },
         { "label": "Prevention and Education", "href": "community/preventionEdu" },
         { "label": "CARES Program", "href": "community/cares" }
-
-
-
-
       ]
     },
     {
@@ -76,7 +72,6 @@
         { "label": "Our Impact", "href": "patient/commImpact" },
         { "label": "Financial Assistance", "href": "patient/financialAssistance" },
         { "label": "FAQs", "href": "patient/faq" }
-
       ]
     },
     {
