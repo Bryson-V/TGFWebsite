@@ -85,8 +85,6 @@ export default function StoryBoard() {
 
   const c1X = useTransform(smoothProgress, [0.30, 0.40, 0.55, 0.65], ["100vw", "0vw", "0vw", "-100vw"]);
   const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100vw", "0vw"]);
-  
-  // Starts at 120% so the wave edge remains completely off-screen until scrolling down
   const mvY = useTransform(smoothProgress, [0.80, 0.90], ["120%", "0%"]);
 
   return (
@@ -165,13 +163,13 @@ export default function StoryBoard() {
             {/* Fish 1: Mission */}
             <motion.div className={`${styles.fishCard} ${styles.fishMission}`}>
               <h2>Our Mission</h2>
-              <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations of Guam and the Micronesian region.</p>
+              <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations.</p>
             </motion.div>
 
             {/* Fish 2: Vision */}
             <motion.div className={`${styles.fishCard} ${styles.fishVision}`}>
               <h2>Our Vision</h2>
-              <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics, preventative programs, and local specialty care.</p>
+              <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics.</p>
             </motion.div>
 
             {/* Fish 3: Call to Action */}
