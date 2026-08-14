@@ -75,7 +75,6 @@ export default function StoryBoard() {
     stiffness: 70, damping: 22, mass: 0.4
   });
 
-  // Fades out earlier to match the faster videos
   const indicatorOpacity = useTransform(smoothProgress, [0.30, 0.45, 0.75, 0.85], [0, 1, 1, 0]);
 
   const subtitleOpacity = useTransform(
@@ -84,13 +83,9 @@ export default function StoryBoard() {
     [0, 1, 1, 0]
   );
 
-  // Video 1 slides in, holds, and exits
   const c1X = useTransform(smoothProgress, [0.40, 0.50, 0.65, 0.75], ["100vw", "0vw", "0vw", "-100vw"]);
-  
-  // Video 2 slides in perfectly as Video 1 exits
   const c2X = useTransform(smoothProgress, [0.65, 0.75], ["100vw", "0vw"]);
   
-  // The fish scene slides up and locks into place right as the scroll container ends
   const mvY = useTransform(smoothProgress, [0.85, 1.0], ["120%", "0%"]);
   
   return (
@@ -169,13 +164,13 @@ export default function StoryBoard() {
             {/* Fish 1: Mission */}
             <motion.div className={`${styles.fishCard} ${styles.fishMission}`}>
               <h2>Our Mission</h2>
-              <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations of Guam and the Micronesian region.</p>
+              <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations.</p>
             </motion.div>
 
             {/* Fish 2: Vision */}
             <motion.div className={`${styles.fishCard} ${styles.fishVision}`}>
               <h2>Our Vision</h2>
-              <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics, preventative programs, and local specialty care.</p>
+              <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics.</p>
             </motion.div>
 
             {/* Fish 3: Call to Action */}

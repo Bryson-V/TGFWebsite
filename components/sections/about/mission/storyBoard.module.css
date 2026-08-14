@@ -361,13 +361,11 @@
 
   .fishContainer {
     flex-direction: column;
-    gap: 2rem; /* Better spacing between fish */
-    padding: 1rem 1rem 4rem 1rem; /* 4rem bottom padding ensures the last fish scrolls fully into view */
-    flex: 1; /* Allows container to fill available height below title */
-    overflow-y: auto; /* ENABLES SCROLLING JUST FOR THE FISH */
+    gap: 2rem;
+    padding: 1rem 1rem 4rem 1rem;
+    flex: 1;
+    overflow-y: auto;
     width: 100%;
-    
-    /* Hide scrollbar for a cleaner mobile look */
     scrollbar-width: none; 
     -ms-overflow-style: none;
   }
@@ -377,7 +375,7 @@
   }
 
   .fishCard {
-    flex-shrink: 0; /* Prevents the fish from getting squished by flexbox */
+    flex-shrink: 0;
     width: 320px;
     height: 220px;
     padding: 1.5rem 2rem;
