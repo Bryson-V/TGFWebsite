@@ -27,7 +27,7 @@ export default function ContactHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/mindCare/contact-hero.jpg" 
+          src="/images/contactUs/Contact.jpeg" 
           alt="Contact Mind Care Background" 
           fill
           className={styles.bgImage}
@@ -44,12 +44,12 @@ export default function ContactHero() {
       {/* Text Content */}
       <motion.div 
         className={styles.content} 
-        style={{ y: textY, opacity: textOpacity }} 
+        style={{ y: textY, opacity: textOpacity }}
       >
-        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · CONNECT WITH US</h5>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · ABOUT US</h5>
         
         <h1 className={styles.title}>
-          We’re Here to Help
+          Contact Us
         </h1>
         
         <p className={styles.description}>
