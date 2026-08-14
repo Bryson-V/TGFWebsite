@@ -1,0 +1,108 @@
+.sectionContainer {
+  /* Reduced top/bottom padding from 1.5rem/4rem down to a tight 1rem */
+  padding: 1rem 5%;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.contentWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bannerContainer {
+  background-color: #fff1f2; /* Soft red alert tint */
+  border: 1px solid #fecdd3;
+  border-radius: 20px;
+  padding: 2rem; /* Reduced inner banner padding slightly from 2.5rem */
+}
+
+.headerGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem; /* Reduced margin */
+  border-bottom: 1px solid #ffe4e6;
+  padding-bottom: 1.25rem; /* Reduced padding */
+}
+
+.alertIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #9f1239;
+  margin: 0 0 0.5rem 0;
+}
+
+.disclaimerText {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #881337;
+  margin: 0;
+}
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.resourceCard {
+  background-color: #ffffff;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.resourceLabel {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #9f1239;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.resourceValue {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #be123c;
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.resourceValue:hover {
+  text-decoration: underline;
+}
+
+.resourceSub {
+  font-size: 0.85rem;
+  color: #9f1239;
+}
+
+@media (max-width: 868px) {
+  .resourceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 0.75rem 5%;
+  }
+  .bannerContainer {
+    padding: 1.5rem;
+  }
+  .headerGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

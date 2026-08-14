@@ -1,45 +1,77 @@
 "use client";
 
+import Image from '@/components/ui/Image';
 import styles from "./holisticCare.module.css";
 
 export default function AboutMindCareHolisticCare() {
   const pillars = [
-    { title: "Psychiatry", desc: "Biological & medical evaluations" },
-    { title: "Psychology", desc: "Comprehensive testing & therapy" },
-    { title: "Counseling", desc: "Relational & emotional support" }
+    {
+      tier: "PILLAR 1",
+      title: "Psychiatry",
+      desc: "Biological and medical evaluations providing psychiatric care and medication management tailored to individual needs.",
+      image: "/images/mindCare/psychiatry.jpg"
+    },
+    {
+      tier: "PILLAR 2",
+      title: "Psychology",
+      desc: "Comprehensive psychological testing, clinical diagnostic assessments, and evidence-based therapeutic modalities.",
+      image: "/images/mindCare/psychology.jpg"
+    },
+    {
+      tier: "PILLAR 3",
+      title: "Counseling",
+      desc: "Relational, emotional, and practical counseling support guiding individuals and families through life's challenges.",
+      image: "/images/mindCare/counseling.jpg"
+    }
   ];
 
   return (
-    <section className={styles.sectionContainer}>
-      <div className={styles.contentWrapper}>
-        <div className={styles.cardContainer}>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        
+        {/* Section Header */}
+        <div className={styles.header}>
           <span className={styles.badge}>OUR PHILOSOPHY</span>
           <h2 className={styles.title}>A Truly Holistic Perspective</h2>
-          
-          <p className={styles.bodyText}>
-            What makes Mind Care especially valuable is our multi-perspective approach. Our team integrates <strong>psychiatry, psychology, and counseling services</strong> to address the biological, psychological, emotional, relational, and social factors that influence well-being.
+          <p className={styles.subtitle}>
+            Integrating psychiatry, psychology, and counseling to address the biological, emotional, and social factors that influence overall well-being.
           </p>
+        </div>
 
-          {/* Service Pillars Grid */}
-          <div className={styles.pillarGrid}>
-            {pillars.map((pillar, index) => (
-              <div key={index} className={styles.pillarCard}>
-                <span className={styles.pillarIcon}>✓</span>
-                <div>
-                  <h4 className={styles.pillarTitle}>{pillar.title}</h4>
-                  <p className={styles.pillarDesc}>{pillar.desc}</p>
-                </div>
+        {/* 3 Pillar Cards with Image Tops */}
+        <div className={styles.cardsGrid}>
+          {pillars.map((pillar, index) => (
+            <div key={index} className={styles.pillarCard}>
+              <div className={styles.cardImageWrapper}>
+                <Image src={pillar.image} alt={pillar.title} fill className={styles.cardImage} />
               </div>
-            ))}
-          </div>
+              <div className={styles.cardContent}>
+                <span className={styles.tierTag}>{pillar.tier}</span>
+                <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+                <p className={styles.pillarDesc}>{pillar.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          <div className={styles.contextCard}>
-            <h3 className={styles.contextTitle}>Honoring the Whole Person</h3>
-            <p className={styles.bodyText}>
-              We view behavioral health through the lens of each individual’s complete story—incorporating cultural context, biological and genetic factors, and unique personal experiences. Our clinical interventions focus on empowering patients to make choices aligned with their core values, cultural background, and desired future.
+        {/* Floating Offset Overlay Block */}
+        <div className={styles.overlapContainer}>
+          <div className={styles.overlayCard}>
+            <h3 className={styles.overlayTitle}>Honoring the Whole Person</h3>
+            <p className={styles.overlayText}>
+              We view behavioral health through the lens of each individual’s complete story—incorporating cultural context, biological factors, and unique personal experiences. Our clinical interventions focus on empowering patients to make choices aligned with their core values and desired future.
             </p>
           </div>
+          <div className={styles.overlayImageWrapper}>
+            <Image 
+              src="/images/mindCare/whole-person.jpg" 
+              alt="Honoring the Whole Person" 
+              fill 
+              className={styles.cardImage} 
+            />
+          </div>
         </div>
+
       </div>
     </section>
   );
