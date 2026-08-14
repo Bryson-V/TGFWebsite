@@ -83,6 +83,13 @@
   font-size: 1.25rem;
   color: #0f172a;
   font-weight: 700;
+  margin: 0 0 0.5rem 0; /* Adjusted slightly for better spacing */
+}
+
+.frontText {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -94,6 +101,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 4rem; /* Critical: Adds space at the bottom so text doesn't overlap the button */
 }
 
 .flipCardBack h4 {
@@ -103,8 +111,37 @@
   color: #ffffff;
 }
 
-.flipCardBack p {
+.backText {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* --- BOTTOM RIGHT LINK --- */
+.visitLink {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.visitLink:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.externalIcon {
+  width: 16px;
+  height: 16px;
 }

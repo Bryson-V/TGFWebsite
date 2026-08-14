@@ -1,9 +1,11 @@
-import NewsArchive from "@/components/sections/about/news/newsArchive";
+import PartnerHero from "@/components/sections/community/partner/partnerHero";
+import Partner from "@/components/sections/community/partner/partners";
 
-export default function AllNews() {
+export default function Partnerships() {
   return (
     <>
-      <NewsArchive />
+      <PartnerHero />
+      <Partner />
     </>
   );
 }
