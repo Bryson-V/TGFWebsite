@@ -22,7 +22,7 @@
       ]
     },
     {
-      "title": "Community & Impact",
+      "title": "Behavioral Health",
       "links": [
         { "label": "About", "href": "mindCare/mindAbout" },
         { "label": "Psychiatry", "href": "mindCare/psychiatry" },
@@ -52,7 +52,7 @@
       "title": "Patient Resources",
       "links": [
         { "label": "Doctors", "href": "doctors" },
-        { "label": "Healow", "href": "patient/healow" },
+        { "label": "Patient Portal", "href": "https://health.healow.com/toduguam" },
         { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },
         { "label": "Our Impact", "href": "patient/commImpact" },
@@ -67,7 +67,7 @@
         { "label": "Our Story", "href": "about/ourStory" },
         { "label": "Board of Directors", "href": "about/boardOfDirectors" },
         { "label": "News & Media", "href": "about/allNews" },
-        { "label": "Careers", "href": "about/careers" },
+        { "label": "Careers Info", "href": "about/careers" },
         { "label": "Leadership", "href": "about/leadership" },
         { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
         { "label": "Contact Us", "href": "about/contacts" }

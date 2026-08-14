@@ -77,6 +77,12 @@ export default function StoryBoard() {
 
   const indicatorOpacity = useTransform(smoothProgress, [0.25, 0.35, 0.70, 0.80], [0, 1, 1, 0]);
 
+  const subtitleOpacity = useTransform(
+    smoothProgress, 
+    [0, 0.02, SLOGAN_END, SLOGAN_END + 0.05], 
+    [0, 1, 1, 0]
+  );
+
   const c1X = useTransform(smoothProgress, [0.30, 0.40, 0.55, 0.65], ["100vw", "0vw", "0vw", "-100vw"]);
   const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100vw", "0vw"]);
   
@@ -90,6 +96,14 @@ export default function StoryBoard() {
         {/* SLOGAN PHASE WITH BACKGROUND IMAGES */}
         <SloganBackgrounds progress={smoothProgress} />
         <div className={styles.sloganContainer}>
+
+          <motion.span 
+            className={styles.sloganSubtitle} 
+            style={{ opacity: subtitleOpacity }}
+          >
+            TODU GUAM FOUNDATION · OUR SLOGAN
+          </motion.span>
+
           {SLOGAN_TOKENS.map((token, i) => (
             <React.Fragment key={i}>
               <SloganWord token={token} progress={smoothProgress} />
@@ -146,15 +160,30 @@ export default function StoryBoard() {
           </div>
 
           <h1>TODU GUAM FOUNDATION</h1>
-          <div className={styles.mvCardContainer}>
-            <div className={styles.mvCard}>
+          <div className={styles.fishContainer}>
+            
+            {/* Fish 1: Mission */}
+            <motion.div className={`${styles.fishCard} ${styles.fishMission}`}>
               <h2>Our Mission</h2>
               <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations of Guam and the Micronesian region.</p>
-            </div>
-            <div className={styles.mvCard}>
+            </motion.div>
+
+            {/* Fish 2: Vision */}
+            <motion.div className={`${styles.fishCard} ${styles.fishVision}`}>
               <h2>Our Vision</h2>
               <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics, preventative programs, and local specialty care.</p>
-            </div>
+            </motion.div>
+
+            {/* Fish 3: Call to Action */}
+            <motion.div className={`${styles.fishCard} ${styles.fishCta}`}>
+              <h2>Make an Impact</h2>
+              <p>Join our movement today. Be part of the change in our community.</p>
+              <div className={styles.fishActions}>
+                <a href="/community/volunteer" className={styles.fishBtn}>Volunteer</a>
+                <a href="/donate" className={styles.fishBtn}>Donate</a>
+              </div>
+            </motion.div>
+
           </div>
         </motion.div>
 
