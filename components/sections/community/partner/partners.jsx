@@ -5,6 +5,14 @@ import Image from '@/components/ui/Image';
 import styles from './partners.module.css';
 import partnersData from '@/content/site-data/partners.json';
 
+const ExternalLinkIcon = () => (
+  <svg className={styles.externalIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
 export default function Partner() {
   const [flippedCards, setFlippedCards] = useState({});
 
@@ -48,6 +56,19 @@ export default function Partner() {
                   <div className={styles.flipCardBack}>
                     <h4>{partner.title}</h4>
                     <p className={styles.backText}>{partner.details}</p>
+
+                    {/* BOTTOM RIGHT LINK */}
+                    {partner.link && (
+                      <a 
+                        href={partner.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={styles.visitLink}
+                        onClick={(e) => e.stopPropagation()} // Prevents the card from flipping back over
+                      >
+                        <ExternalLinkIcon /> Visit Page
+                      </a>
+                    )}
                   </div>
 
                 </div>
