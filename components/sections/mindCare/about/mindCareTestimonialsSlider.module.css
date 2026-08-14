@@ -1,0 +1,177 @@
+.section {
+  position: relative;
+  /* Soft cyan/teal gradient background matching Mind Care branding */
+  background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 50%, #e0f2fe 100%);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* Subtle background accent overlay */
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sliderContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #cff4fc;
+  border-radius: 20px;
+  padding: 3.5rem 4rem;
+  text-align: center;
+  box-shadow: 0 12px 35px -10px rgba(8, 51, 68, 0.08);
+  width: 100%;
+  backdrop-filter: blur(8px);
+  
+  /* Smooth animation properties */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.badge {
+  display: inline-block;
+  background-color: #ecfeff;
+  color: #0891b2;
+  border: 1px solid #cff4fc;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.quote {
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: #083344;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+.authorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.author {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #083344;
+}
+
+.role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0891b2;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #cff4fc;
+  color: #083344;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(8, 51, 68, 0.05);
+}
+
+.arrowButton:hover {
+  background: #ffffff;
+  color: #0891b2;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 15px rgba(8, 51, 68, 0.1);
+}
+
+.prevButton {
+  left: -65px;
+}
+
+.nextButton {
+  right: -65px;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(8, 145, 178, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeDot {
+  background-color: #0891b2;
+  transform: scale(1.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .prevButton {
+    left: 10px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .nextButton {
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .quote {
+    font-size: 1.15rem;
+  }
+}
