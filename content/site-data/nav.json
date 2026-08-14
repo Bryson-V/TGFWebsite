@@ -4,7 +4,7 @@
     "href": "donate"
   },
   "reqAppointment": {
-    "label": "REQUEST APPOINTMENT",
+    "label": "APPOINTMENT",
     "href": "https://mycw188.ecwcloud.com/portal24196/jsp/100mp/login_otp.jsp"
   },
   "menus": [
@@ -61,8 +61,8 @@
       "panelTitle": "PATIENT RESOURCES",
       "panelSubtitle": "Learn more about what resources are available to patients",
       "links": [
-        { "label": "Doctors", "href": "doctors" },
-        { "label": "Patient Portal", "href": "https://health.healow.com/toduguam" },
+        { "label": "Doctors", "href": "patient/doctors" },
+        { "label": "Patient Portal", "href": "patient/healow" },
         { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },
         { "label": "Our Impact", "href": "patient/commImpact" },

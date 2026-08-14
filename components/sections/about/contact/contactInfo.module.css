@@ -1,0 +1,117 @@
+.mainSection {
+  /* REMOVED: margin-top: -2.5rem; */
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  background-color: #ffffff;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.infoCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px -10px rgba(8, 51, 68, 0.05);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #083344;
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 2rem 0;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  background-color: #ecfeff;
+  border: 1px solid #cff4fc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0891b2;
+  flex-shrink: 0;
+}
+
+.itemLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #0891b2;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.itemValue {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #083344;
+  font-weight: 600;
+  margin: 0;
+}
+
+.itemLink {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #083344;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.itemLink:hover {
+  color: #0891b2;
+  text-decoration: underline;
+}
+
+.itemSubtext {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  background-color: #ecfeff;
+  border: 1px solid #cff4fc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svgIcon {
+  color: #0891b2;
+}
