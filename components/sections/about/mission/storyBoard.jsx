@@ -83,10 +83,13 @@ export default function StoryBoard() {
     [0, 1, 1, 0]
   );
 
-  const c1X = useTransform(smoothProgress, [0.40, 0.50, 0.65, 0.75], ["100vw", "0vw", "0vw", "-100vw"]);
-  const c2X = useTransform(smoothProgress, [0.65, 0.75], ["100vw", "0vw"]);
+  const c1X = useTransform(smoothProgress, [0.35, 0.45, 0.55, 0.65], ["100vw", "0vw", "0vw", "-100vw"]);
   
-  const mvY = useTransform(smoothProgress, [0.85, 1.0], ["120%", "0%"]);
+  // Video 2 slides in perfectly as Video 1 exits
+  const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100vw", "0vw"]);
+  
+  // The fish scene slides up from 70% to 80%, then LOCKS perfectly centered from 80% to 100%
+  const mvY = useTransform(smoothProgress, [0.70, 0.80, 1.0], ["120%", "0%", "0%"]);
   
   return (
     <div ref={containerRef} className={styles.scrollContainer}>

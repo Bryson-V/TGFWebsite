@@ -1,5 +1,5 @@
 .scrollContainer {
-  height: 480vh;
+  height: 550vh;
   position: relative;
   background-color: #ffffff;
   overflow-x: clip;
@@ -183,20 +183,18 @@
   line-height: 1.6;
 }
 
-/* Mission & Vision Phase */
 .missionVisionPanel {
   position: absolute;
   inset: 0;
   background-color: #00a4c5;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: center; 
   align-items: center;
-  padding-top: clamp(4rem, 10vh, 8rem);
-  padding-bottom: 1rem;
+  padding: 4rem 1rem 1rem 1rem;
   color: white;
   text-align: center;
-  overflow: visible; /* Keeps wave visible */
+  overflow: visible; 
 }
 
 .waveContainer {
@@ -238,7 +236,6 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  min-height: 0; /* Helps with flex child sizing */
 }
 
 .fishCard {
@@ -339,9 +336,6 @@
 }
 .fishCta .fishBtn { color: #2a9d8f; }
 
-/* =========================================
-   MOBILE RESPONSIVENESS OVERRIDES
-   ========================================= */
 @media (max-width: 1024px) {
   .fishContainer {
     gap: 2rem;
@@ -350,91 +344,83 @@
 
 @media (max-width: 768px) {
   .missionVisionPanel {
-    padding-top: 4.5rem; 
-    padding-bottom: 0; /* Removed padding to maximize scroll area */
+    padding: 3rem 0.5rem 1rem 0.5rem; 
   }
   
   .missionVisionPanel h1 {
     font-size: 1.75rem;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 1rem; 
   }
 
   .fishContainer {
     flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 1rem 4rem 1rem;
-    flex: 1;
-    overflow-y: auto;
+    flex-wrap: nowrap; 
+    gap: 1rem; 
+    padding: 0 1rem;
     width: 100%;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
-  }
-
-  .fishContainer::-webkit-scrollbar {
-    display: none;
   }
 
   .fishCard {
-    flex-shrink: 0;
-    width: 320px;
-    height: 220px;
-    padding: 1.5rem 2rem;
+    width: 260px;
+    height: 145px;
+    padding: 0.75rem 1.5rem;
   }
 
-  .fishCard h2 { font-size: 1.4rem; }
-  .fishCard p { font-size: 0.85rem; margin-bottom: 0.75rem; }
+  .fishCard h2 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+  .fishCard p { font-size: 0.8rem; margin-bottom: 0.5rem; line-height: 1.25; }
 
   .fishCard::after {
-    border-top: 60px solid transparent;
-    border-bottom: 60px solid transparent; 
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent; 
   }
-  .fishMission::after { left: -50px; border-left: 80px solid #ff9f1c; }
-  .fishVision::after { right: -50px; border-right: 80px solid #0077b6; }
-  .fishCta::after { left: -50px; border-left: 80px solid #2a9d8f; }
+  .fishMission::after { left: -35px; border-left: 55px solid #ff9f1c; }
+  .fishVision::after { right: -35px; border-right: 55px solid #0077b6; }
+  .fishCta::after { left: -35px; border-left: 55px solid #2a9d8f; }
 
   .fishCard::before {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .missionVisionPanel {
-    padding-top: 4rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
   }
 
   .missionVisionPanel h1 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .fishContainer {
-    gap: 1.5rem; 
+    gap: 0.75rem;
   }
 
   .fishCard {
-    width: 280px;
-    height: 190px; 
-    padding: 1rem 1.5rem;
+    width: 250px;
+    height: 135px; 
+    padding: 0.5rem 1.25rem;
   }
 
-  .fishCard h2 { font-size: 1.25rem; }
+  .fishCard h2 { font-size: 1.15rem; margin-bottom: 0.25rem; }
   .fishCard p { 
-    font-size: 0.8rem; 
-    line-height: 1.3; 
-    margin-bottom: 0.5rem; 
+    font-size: 0.75rem; 
+    line-height: 1.2; 
+    margin-bottom: 0.3rem; 
   }
 
   .fishActions { gap: 8px; }
   .fishBtn {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.75rem;
   }
 
   .fishCard::after {
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent; 
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent; 
   }
-  .fishMission::after { left: -40px; border-left: 65px solid #ff9f1c; }
-  .fishVision::after { right: -40px; border-right: 65px solid #0077b6; }
-  .fishCta::after { left: -40px; border-left: 65px solid #2a9d8f; }
+  .fishMission::after { left: -30px; border-left: 50px solid #ff9f1c; }
+  .fishVision::after { right: -30px; border-right: 50px solid #0077b6; }
+  .fishCta::after { left: -30px; border-left: 50px solid #2a9d8f; }
 }
