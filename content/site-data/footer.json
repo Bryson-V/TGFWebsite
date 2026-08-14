@@ -1,8 +1,4 @@
 {
-  "upcomingButton": {
-    "label": "View list of Providers",
-    "href": "/doctors"
-  },
   "tagline": "We are a nonprofit Getting Guam Healthy, One Man, One Woman, and One Child at a time.",
   "address": "125 Tun Jesus Crisostomo Street, Tamuning, Guam",
   "phones": [
@@ -51,7 +47,7 @@
     {
       "title": "Patient Resources",
       "links": [
-        { "label": "Doctors", "href": "doctors" },
+        { "label": "Doctors", "href": "patient/doctors" },
         { "label": "Patient Portal", "href": "https://health.healow.com/toduguam" },
         { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },

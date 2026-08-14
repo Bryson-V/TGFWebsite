@@ -1,0 +1,54 @@
+{
+  "locationCard": {
+    "title": "Visit & Reach Us",
+    "description": "Our main office location and direct communication lines.",
+    "items": [
+      {
+        "id": "location",
+        "icon": "map-pin",
+        "label": "LOCATION",
+        "value": "125 Tun Jesus Crisostomo Street,\nTamuning, Guam",
+        "href": "https://maps.google.com/?q=125+Tun+Jesus+Crisostomo+Street,+Tamuning,+Guam",
+        "isAddress": true,
+        "isExternal": true
+      },
+      {
+        "id": "phone",
+        "icon": "phone",
+        "label": "PHONE",
+        "value": "671 - 649 - 8638",
+        "href": "tel:6716498638"
+      },
+      {
+        "id": "whatsapp",
+        "icon": "message-square",
+        "label": "WHATSAPP",
+        "value": "671 - 797 - 5463",
+        "href": "https://wa.me/16717975463",
+        "isExternal": true
+      }
+    ]
+  },
+  "emailCard": {
+    "title": "Email Directory",
+    "description": "Send us a direct message based on your specific inquiry.",
+    "items": [
+      {
+        "id": "general",
+        "icon": "mail",
+        "label": "GENERAL INQUIRIES",
+        "value": "peoplefirst@toduguam.com",
+        "href": "mailto:peoplefirst@toduguam.com",
+        "subtext": "For general questions & clinic information"
+      },
+      {
+        "id": "hr",
+        "icon": "briefcase",
+        "label": "HUMAN RESOURCES",
+        "value": "hr@toduguam.com",
+        "href": "mailto:hr@toduguam.com",
+        "subtext": "For employment, verification & HR inquiries"
+      }
+    ]
+  }
+}
