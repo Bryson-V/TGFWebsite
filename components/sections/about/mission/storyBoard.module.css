@@ -17,7 +17,7 @@
   background: radial-gradient(circle at center, #ffffff 0%, #f0f8ff 100%);
 }
 
-/* --- 1. Slogan Phase --- */
+/* Slogan Phase */
 .sloganContainer {
   position: absolute;
   inset: 0;
@@ -213,35 +213,163 @@
   margin-bottom: 1rem;
 }
 
-.mvCardContainer {
+.fishContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  gap: 6rem;
   max-width: 1200px;
   width: 100%;
-  margin-top: clamp(1.5rem, 3vw, 3rem);
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.mvCard {
-  flex: 1 1 300px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: clamp(1.5rem, 4vw, 3rem);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: left;
+.fishCard {
+  position: relative;
+  width: 380px;
+  height: 250px; 
+  padding: 1.5rem 2.5rem 1rem 2.5rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  color: #fff;
+  z-index: 1;
 }
 
-.mvCard h2 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+.fishCard:hover {
+  transform: translateY(-10px);
+}
+
+/* Tail */
+.fishCard::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent; 
+  z-index: -1; 
+}
+
+.fishCard::before {
+  content: '';
+  position: absolute;
+  top: 15%; 
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.fishMission {
+  background: radial-gradient(ellipse 100px 150px at 98% 50%, rgba(0,0,0,0.15) 98%, transparent 100%), #ff9f1c;
+}
+.fishMission::after {
+  left: -65px; 
+  border-left: 95px solid #ff9f1c; 
+}
+.fishMission::before {
+  right: 14%; 
+  background: radial-gradient(circle at 70% 50%, #000 35%, #fff 40%); 
+}
+
+.fishVision {
+  background: radial-gradient(ellipse 100px 150px at 2% 50%, rgba(0,0,0,0.15) 98%, transparent 100%), #0077b6;
+}
+.fishVision::after {
+  right: -65px; 
+  border-right: 95px solid #0077b6; 
+}
+.fishVision::before {
+  left: 14%; 
+  background: radial-gradient(circle at 30% 50%, #000 35%, #fff 40%);
+}
+
+.fishCta {
+  background: radial-gradient(ellipse 100px 150px at 98% 50%, rgba(0,0,0,0.15) 98%, transparent 100%), #2a9d8f;
+}
+.fishCta::after {
+  left: -65px;
+  border-left: 95px solid #2a9d8f;
+}
+.fishCta::before {
+  right: 14%;
+  background: radial-gradient(circle at 70% 50%, #000 35%, #fff 40%);
+}
+
+/* Fish Text & Buttons */
+.fishCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.fishCard p {
+  font-size: 0.9rem;
+  line-height: 1.35;
   margin-bottom: 1rem;
-  color: #ffffff;
+  z-index: 2;
 }
 
-.mvCard p {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  line-height: 1.7;
-  color: #f8f9fa;
+.fishActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.5rem;
+  z-index: 2;
+}
+
+.fishBtn {
+  background: #fff;
+  color: #333;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.fishBtn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.fishCta .fishBtn {
+  color: #2a9d8f; 
+}
+
+.sloganContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.sloganSubtitle {
+  width: 100%;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #00a4c5;
+  margin-bottom: 1rem;
 }
 
 @keyframes waveWash {
