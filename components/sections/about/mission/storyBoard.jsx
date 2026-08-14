@@ -75,7 +75,8 @@ export default function StoryBoard() {
     stiffness: 70, damping: 22, mass: 0.4
   });
 
-  const indicatorOpacity = useTransform(smoothProgress, [0.25, 0.35, 0.70, 0.80], [0, 1, 1, 0]);
+  // Fades out earlier to match the faster videos
+  const indicatorOpacity = useTransform(smoothProgress, [0.30, 0.45, 0.75, 0.85], [0, 1, 1, 0]);
 
   const subtitleOpacity = useTransform(
     smoothProgress, 
@@ -83,12 +84,15 @@ export default function StoryBoard() {
     [0, 1, 1, 0]
   );
 
-  const c1X = useTransform(smoothProgress, [0.30, 0.40, 0.55, 0.65], ["100vw", "0vw", "0vw", "-100vw"]);
-  const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100vw", "0vw"]);
+  // Video 1 slides in, holds, and exits
+  const c1X = useTransform(smoothProgress, [0.40, 0.50, 0.65, 0.75], ["100vw", "0vw", "0vw", "-100vw"]);
   
-  // Starts at 120% so the wave edge remains completely off-screen until scrolling down
-  const mvY = useTransform(smoothProgress, [0.80, 0.90], ["120%", "0%"]);
-
+  // Video 2 slides in perfectly as Video 1 exits
+  const c2X = useTransform(smoothProgress, [0.65, 0.75], ["100vw", "0vw"]);
+  
+  // The fish scene slides up and locks into place right as the scroll container ends
+  const mvY = useTransform(smoothProgress, [0.85, 1.0], ["120%", "0%"]);
+  
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
       <div className={styles.stickyWrapper}>
