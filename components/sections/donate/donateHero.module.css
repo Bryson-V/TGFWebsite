@@ -1,86 +1,79 @@
-/* --- Base Section --- */
-.heroSection {
+.heroContainer {
   position: relative;
-  width: 100%;
-  min-height: 50vh; 
+  height: 65vh;
+  min-height: 500px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #0A192F; 
-  color: #ffffff;
+  justify-content: center; /* Centers horizontally in the section */
+  padding: 0 5%;
   overflow: hidden;
-  padding: 4rem 1.5rem; 
+  background-color: #0a192f;
+  color: #ffffff;
 }
 
-/* --- Image & Gradient Overlay --- */
-.imageContainer {
+.backgroundImageWrapper {
   position: absolute;
-  inset: 0;
+  top: -15%; /* Changed from -45% to pull the top of the image down into view */
+  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 130%; /* Adjusted height so parallax still has room to scroll */
+  z-index: 1;
 }
 
-.heroImage {
-  width: 100%;
-  height: 125%;
+.bgImage {
   object-fit: cover;
-  object-position: center;
+  object-position: center top !important; /* Focuses directly on faces/people instead of the floor */
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(10, 25, 47, 0.8);
+  background: radial-gradient(circle, rgba(10, 25, 47, 0.7) 0%, rgba(10, 25, 47, 0.95) 100%);
+  z-index: 2;
 }
 
-/* --- Layout Grid --- */
-.contentContainer {
+.content {
   position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  z-index: 3;
   max-width: 900px;
   margin: 0 auto;
-}
-
-/* --- Text Content --- */
-.textContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.eyebrow {
-  font-family: inherit;
-  color: #00bebb; 
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  margin: 0 0 1.5rem 0;
-}
-
-.title {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.1;
-  color: #ffffff;
+  align-items: center; /* Centers items inside flex container */
+  text-align: center;   /* Centers all paragraph/heading text */
 }
 
 .subtitle {
+  color: #00bebb;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #ffffff;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.brightText {
+  color: #00bebb;
+}
+
+.description {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #e2e8f0;
+  opacity: 0.9;
   max-width: 650px;
   margin: 0 auto;
 }
 
-/* --- Mobile Responsiveness --- */
+/* --- RESPONSIVE SCALING --- */
 @media (max-width: 992px) {
   .title {
     font-size: 3rem;
@@ -88,15 +81,15 @@
 }
 
 @media (max-width: 768px) {
-  .heroSection {
+  .heroContainer {
+    height: 70vh;
+    min-height: 550px;
     padding: 3rem 1rem;
   }
-  
   .title {
     font-size: 2.5rem;
   }
-  
-  .subtitle {
+  .description {
     font-size: 1.1rem;
   }
 }

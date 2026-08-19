@@ -13,7 +13,17 @@ function getPublisherName(href, customSource) {
   }
 }
 
-export default function NewsCard({ title, image, href, tag, source, company, color, date }) {
+export default function NewsCard({ 
+  title, 
+  image, 
+  href, 
+  tag, 
+  source, 
+  company, 
+  color, 
+  date,
+  priority = false // <-- Added priority prop with a default fallback of false
+}) {
   const publisherSource = source || company;
   const finalColor = color || getTagColor(tag);
   const publisher = getPublisherName(href, publisherSource);
@@ -36,6 +46,7 @@ export default function NewsCard({ title, image, href, tag, source, company, col
           src={image} 
           alt={title} 
           fill 
+          priority={priority} // <-- Forward priority prop here
           className={styles.image}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
