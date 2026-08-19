@@ -29,7 +29,7 @@ export default function GetInvolved() {
                 {/* Pushes the button to the bottom using auto margin */}
                 <div className={styles.buttonWrap}>
                   <Button href={card.href}>
-                    {card.id === 'donate' ? 'Donate Now' : 'Sign Up Today'}
+                    {card.buttonText}
                   </Button>
                 </div>
               </div>
