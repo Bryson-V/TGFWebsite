@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import { useGLTF, Environment, Center, Image } from '@react-three/drei';
 import * as THREE from 'three'; 
 import styles from './SocialMedia.module.css';
@@ -9,18 +9,28 @@ import platformsData from '@/content/site-data/socialMedia.json';
 
 const getBasePath = () => process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-const getPlatforms = () => {
+// Ensures a single slash between basePath and path
+const normalizePath = (path) => {
+  if (!path) return '';
   const basePath = getBasePath();
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${cleanPath}`;
+};
+
+const getPlatforms = () => {
   return platformsData.map((platform) => ({
     ...platform,
-    image: `${basePath}${platform.image}`
+    image: normalizePath(platform.image)
   }));
 };
 
 const PhoneModel = ({ activeImage, isMobile }) => {
-  const modelPath = `${getBasePath()}/assets/iphone16.glb`;
+  const modelPath = normalizePath('/assets/iphone16.glb');
   const { scene } = useGLTF(modelPath);
   const groupRef = useRef();
+
+  const clonedScene = useMemo(() => scene.clone(), [scene]);
+  const { useFrame } = require('@react-three/fiber');
 
   useFrame((state) => {
     if (!groupRef.current) return;
@@ -38,7 +48,7 @@ const PhoneModel = ({ activeImage, isMobile }) => {
   return (
     <Center position={[xPosition, -0.2, 0]} scale={phoneScale} rotation={[0, 0, 0.5]}>
       <group ref={groupRef}>
-        <primitive object={scene} scale={1} position={[0, 0, 0]} />
+        <primitive object={clonedScene} scale={1} position={[0, 0, 0]} />
 
         <Image 
           url={activeImage}
@@ -54,6 +64,31 @@ const PhoneModel = ({ activeImage, isMobile }) => {
   );
 };
 
+// Dynamic wrapper for SSR Safety
+const SocialCanvas = dynamic(
+  async () => {
+    const { Canvas } = await import('@react-three/fiber');
+    const { Suspense } = await import('react');
+
+    return function DynamicCanvas({ activeImage, isMobile }) {
+      return (
+        <Canvas 
+          camera={{ position: [0, 0, 15], fov: 45 }}
+          style={{ pointerEvents: 'auto' }} 
+        >
+          <ambientLight intensity={1} />
+          <directionalLight position={[5, 5, 5]} intensity={2} />
+          <Environment preset="city" />
+          <Suspense fallback={null}>
+            <PhoneModel activeImage={activeImage} isMobile={isMobile} />
+          </Suspense>
+        </Canvas>
+      );
+    };
+  },
+  { ssr: false }
+);
+
 export default function SocialMedia() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -62,7 +97,7 @@ export default function SocialMedia() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const modelPath = `${getBasePath()}/assets/iphone16.glb`;
+      const modelPath = normalizePath('/assets/iphone16.glb');
       useGLTF.preload(modelPath);
 
       const checkMobile = () => setIsMobile(window.innerWidth <= 968);
@@ -90,16 +125,7 @@ export default function SocialMedia() {
       <div className={styles.contentWrapper}>
         
         <div className={styles.canvasContainer}>
-          <Canvas 
-            camera={{ position: [0, 0, 15], fov: 45 }}
-            style={{ pointerEvents: 'auto' }} 
-          >
-            <ambientLight intensity={1} />
-            <directionalLight position={[5, 5, 5]} intensity={2} />
-            <Environment preset="city" />
-            
-            <PhoneModel activeImage={activeData.image} isMobile={isMobile} />
-          </Canvas>
+          <SocialCanvas activeImage={activeData.image} isMobile={isMobile} />
         </div>
 
         <div className={styles.textContent}>
