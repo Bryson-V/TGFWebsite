@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -6,29 +6,33 @@ import { useGLTF, Environment, Center, Image } from '@react-three/drei';
 import * as THREE from 'three'; 
 import styles from './SocialMedia.module.css';
 
+// Base path helper for GitHub Pages compatibility
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const MODEL_PATH = `${basePath}/assets/iphone16.glb`;
+
 const platforms = [
   {
     id: 'instagram',
     name: 'Instagram',
     gradient: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
-    image: 'images/social/InstaPost.jpg', 
+    image: `${basePath}/images/social/InstaPost.jpg`, 
   },
   {
     id: 'facebook',
     name: 'Facebook',
     gradient: 'linear-gradient(45deg, #1877F2 0%, #033c82 100%)',
-    image: 'images/social/Facebook.jpg', 
+    image: `${basePath}/images/social/Facebook.jpg`, 
   },
   {
     id: 'tiktok',
     name: 'TikTok',
-    gradient: 'linear-gradient(45deg, #111111 0%, #444444 100%)',
-    image: 'images/social/TikTok.png', 
+    gradient: 'linear-gradient(135deg, #121212 0%, #303030 100%)',
+    image: `${basePath}/images/social/TikTok.png`, 
   }
 ];
 
 const PhoneModel = ({ activeImage }) => {
-  const { scene } = useGLTF('assets/iphone16.glb');
+  const { scene } = useGLTF(MODEL_PATH);
   const groupRef = useRef();
 
   useFrame((state) => {
@@ -43,7 +47,6 @@ const PhoneModel = ({ activeImage }) => {
   });
 
   return (
-    // CHANGED: Scaled down from 0.9 to 0.8
     <Center position={[-5.5, -0.2, 0]} scale={0.7} rotation={[0, 0, 0.5]}>
       <group ref={groupRef}>
         <primitive object={scene} scale={1} position={[0, 0, 0]} />
@@ -134,4 +137,4 @@ export default function SocialMedia() {
   );
 }
 
-useGLTF.preload('/assets/iphone16.glb');
+useGLTF.preload(MODEL_PATH);
