@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React, { useEffect, useRef, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import { useGLTF, Center } from '@react-three/drei';
 import * as THREE from 'three';
 import styles from './newsHero.module.css';
@@ -14,8 +14,11 @@ const GlowySphere = () => {
   const { scene } = useGLTF(MODEL_PATH);
   const sphereRef = useRef();
 
+  // Clone scene to avoid mutating cached GLTF objects across re-renders
+  const clonedScene = useMemo(() => scene.clone(), [scene]);
+
   useEffect(() => {
-    scene.traverse((child) => {
+    clonedScene.traverse((child) => {
       if (child.isMesh) {
         child.material = new THREE.MeshStandardMaterial({
           color: new THREE.Color('#0284c7'),
@@ -26,7 +29,10 @@ const GlowySphere = () => {
         });
       }
     });
-  }, [scene]);
+  }, [clonedScene]);
+
+  // Safely import and call useFrame inside the 3D Canvas tree
+  const { useFrame } = require('@react-three/fiber');
 
   useFrame((state, delta) => {
     if (sphereRef.current) {
@@ -38,24 +44,39 @@ const GlowySphere = () => {
   return (
     <group ref={sphereRef} position={[4, -0.5, 2]}>
       <Center>
-        <primitive object={scene} scale={3} />
+        <primitive object={clonedScene} scale={3} />
       </Center>
     </group>
   );
 };
 
-const NewsHero = () => {
-  return (
-    <section className={styles.heroContainer}>
-      <div className={styles.canvasContainer}>
+// Dynamically import Canvas without SSR to avoid blocking the main thread during initial load
+const NewsCanvas = dynamic(
+  async () => {
+    const { Canvas } = await import('@react-three/fiber');
+    const { Suspense } = await import('react');
+
+    return function DynamicCanvas() {
+      return (
         <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
-          
           <Suspense fallback={null}>
             <GlowySphere />
           </Suspense>
         </Canvas>
+      );
+    };
+  },
+  { ssr: false }
+);
+
+const NewsHero = () => {
+  return (
+    <section className={styles.heroContainer}>
+      {/* Dynamic 3D GLB Background */}
+      <div className={styles.canvasContainer}>
+        <NewsCanvas />
       </div>
 
       <div className={styles.overlay}></div>

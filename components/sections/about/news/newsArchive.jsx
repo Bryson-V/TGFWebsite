@@ -17,10 +17,9 @@ export default function NewsArchive() {
   return (
     <section className={styles.section}>
       <Container>
-        {/* Added align="center" to perfectly match the other sections */}
         <SectionHeading title="All News & Updates" align="center" />
         <div className={styles.grid}>
-          {articles.map((article) => (
+          {articles.map((article, index) => (
             <NewsCard
               key={article.slug}
               title={article.title}
@@ -28,7 +27,9 @@ export default function NewsArchive() {
               href={`/news/${article.slug}`}
               date={formatDate(article.date)}
               excerpt={article.excerpt}
-              color="#1A365D" 
+              color="#1A365D"
+              // Eagerly load only the first image above the fold
+              priority={index === 0} 
             />
           ))}
         </div>
