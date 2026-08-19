@@ -17,12 +17,12 @@ import SocialMedia from "@/components/sections/homepage/SocialMedia";
 export default function HomePage() {
   return (
     <>
-      <SocialMedia />
       <Hero />
       <WhyWereHere />
       <ProgramsWheel />
       <ImpactStats />
       <GetInvolved />
+      <SocialMedia />
       <NewsGrid />
       <PressGrid />
     </>
