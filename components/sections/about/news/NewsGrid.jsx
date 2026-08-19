@@ -35,7 +35,7 @@ export default function NewsGrid() {
 
         {/* Bottom Action Bar with View All text link aligned to the right */}
         <div className={styles.footerAction}>
-          <Link href="/allNews" className={styles.viewAllLink}>
+          <Link href="about/allNews" className={styles.viewAllLink}>
             View All &rarr;
           </Link>
         </div>
