@@ -28,7 +28,7 @@ const platforms = [
 ];
 
 const PhoneModel = ({ activeImage }) => {
-  const { scene } = useGLTF('/assets/iphone16.glb');
+  const { scene } = useGLTF('assets/iphone16.glb');
   const groupRef = useRef();
 
   useFrame((state) => {
