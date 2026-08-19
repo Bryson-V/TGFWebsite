@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import styles from './newsHero.module.css';
 
 const GlowySphere = () => {
-  const { scene } = useGLTF('/assets/sphere.glb');
+  const { scene } = useGLTF('assets/sphere.glb');
   const sphereRef = useRef();
 
   useEffect(() => {
@@ -72,6 +72,6 @@ const NewsHero = () => {
   );
 };
 
-useGLTF.preload('/assets/sphere.glb');
+useGLTF.preload('assets/sphere.glb');
 
 export default NewsHero;
