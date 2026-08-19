@@ -5,6 +5,7 @@ import ImpactStats from "@/components/sections/homepage/ImpactStats";
 import GetInvolved from "@/components/sections/homepage/GetInvolved";
 import NewsGrid from "@/components/sections/about/news/NewsGrid";
 import PressGrid from "@/components/sections/about/press/PressGrid";
+import SocialMedia from "@/components/sections/homepage/SocialMedia";
 /**
  * Homepage
  *
@@ -16,6 +17,7 @@ import PressGrid from "@/components/sections/about/press/PressGrid";
 export default function HomePage() {
   return (
     <>
+      <SocialMedia />
       <Hero />
       <WhyWereHere />
       <ProgramsWheel />

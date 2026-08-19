@@ -1,0 +1,156 @@
+.container {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 95%; 
+  max-width: 1300px;
+  margin: 2rem auto; 
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 5%;
+  overflow: hidden; 
+}
+
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 0;
+  border-radius: 10px; 
+}
+
+.contentWrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: flex-end; 
+  position: relative;
+  z-index: 2; 
+}
+
+/* --- 3D Canvas --- */
+.canvasContainer {
+  position: absolute;
+  inset: 0;
+  width: 130%;
+  height: 130%;
+  z-index: 1; 
+  overflow: visible;
+}
+
+/* --- Text & Buttons --- */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 450px; 
+  z-index: 10; 
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.5s ease-in-out; 
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem); 
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  transition: color 0.5s ease-in-out; 
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 280px;
+}
+
+.socialBtn {
+  background: transparent;
+  padding: 0.85rem 1.25rem;
+  border-radius: 6px; 
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialBtn:hover {
+  background: rgba(0, 0, 0, 0.15);
+  transform: translateX(8px);
+}
+
+/* --- Tablet / Smaller Desktop --- */
+@media (max-width: 968px) {
+  .container {
+    min-height: 650px; 
+    padding: 2rem 5%;
+  }
+
+  .contentWrapper {
+    justify-content: center;
+  }
+
+  .textContent {
+    text-align: center;
+    align-items: center;
+    margin-top: 350px; 
+  }
+
+  .buttonGroup {
+    width: 100%;
+    align-items: center;
+  }
+
+  .socialBtn {
+    width: 100%; 
+    max-width: 280px;
+  }
+  
+  .socialBtn:hover {
+    transform: translateY(-4px); 
+  }
+}
+
+/* --- Mobile Phones --- */
+@media (max-width: 576px) {
+  .container {
+    min-height: 550px;
+    padding: 1.5rem 5%;
+  }
+
+  .canvasContainer {
+    transform: translateX(35%); 
+  }
+
+  .textContent {
+    margin-top: 280px; 
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 2rem; 
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .socialBtn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
