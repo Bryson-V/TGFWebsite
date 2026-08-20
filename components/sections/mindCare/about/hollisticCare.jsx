@@ -1,6 +1,7 @@
 "use client";
 
-import Image from '@/components/ui/Image';
+import Link from "next/link";
+import Image from "@/components/ui/Image";
 import styles from "./holisticCare.module.css";
 
 export default function AboutMindCareHolisticCare() {
@@ -9,19 +10,22 @@ export default function AboutMindCareHolisticCare() {
       tier: "PILLAR 1",
       title: "Psychiatry",
       desc: "Biological and medical evaluations providing psychiatric care and medication management tailored to individual needs.",
-      image: "/images/mindCare/psychiatry.jpg"
+      image: "/images/mindCare/psychiatry.jpg",
+      href: "psychiatry"
     },
     {
       tier: "PILLAR 2",
       title: "Psychology",
       desc: "Comprehensive psychological testing, clinical diagnostic assessments, and evidence-based therapeutic modalities.",
-      image: "/images/mindCare/psychology.jpg"
+      image: "/images/mindCare/psychology.jpg",
+      href: "psychology"
     },
     {
       tier: "PILLAR 3",
       title: "Counseling",
       desc: "Relational, emotional, and practical counseling support guiding individuals and families through life's challenges.",
-      image: "/images/mindCare/counseling.jpg"
+      image: "/images/mindCare/counseling.jpg",
+      href: "counseling"
     }
   ];
 
@@ -41,7 +45,7 @@ export default function AboutMindCareHolisticCare() {
         {/* 3 Pillar Cards with Image Tops */}
         <div className={styles.cardsGrid}>
           {pillars.map((pillar, index) => (
-            <div key={index} className={styles.pillarCard}>
+            <Link key={index} href={pillar.href} className={styles.pillarCard}>
               <div className={styles.cardImageWrapper}>
                 <Image src={pillar.image} alt={pillar.title} fill className={styles.cardImage} />
               </div>
@@ -50,7 +54,7 @@ export default function AboutMindCareHolisticCare() {
                 <h3 className={styles.pillarTitle}>{pillar.title}</h3>
                 <p className={styles.pillarDesc}>{pillar.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

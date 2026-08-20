@@ -1,0 +1,17 @@
+[
+  {
+    "step": "01",
+    "title": "Request Access",
+    "desc": "Ask our front desk staff during your visit or call our office to receive your portal invitation link."
+  },
+  {
+    "step": "02",
+    "title": "Create Credentials",
+    "desc": "Follow the link sent to your email to set up your username and secure password."
+  },
+  {
+    "step": "03",
+    "title": "Log In & Manage",
+    "desc": "Sign in through the web portal or the healow app to manage your healthcare anytime."
+  }
+]

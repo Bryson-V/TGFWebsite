@@ -1,5 +1,6 @@
 "use client";
 
+import { FiCheck } from "react-icons/fi";
 import styles from "./impact.module.css";
 
 export default function AboutMindCareImpact() {
@@ -28,7 +29,9 @@ export default function AboutMindCareImpact() {
           <ul className={styles.impactList}>
             {impactAreas.map((area, index) => (
               <li key={index} className={styles.impactItem}>
-                <span className={styles.bulletIcon}>✓</span>
+                <span className={styles.bulletIcon}>
+                  <FiCheck size={20} />
+                </span>
                 <span className={styles.impactText}>{area}</span>
               </li>
             ))}
