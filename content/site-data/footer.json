@@ -77,9 +77,9 @@
     { "label": "Linkedin", "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd" }
   ],
   "legal": [
-    { "label": "Privacy Policy", "href": "privacy" },
-    { "label": "Terms & Conditions", "href": "termsCondtions" },
-    { "label": "Accessibility Statement", "href": "accessibility" }
+    { "label": "Privacy Policy", "href": "legalTerms/privacy" },
+    { "label": "Terms & Conditions", "href": "legalTerms/termsCondtions" },
+    { "label": "Accessibility Statement", "href": "legalTerms/accessibility" }
   ],
   "copyright": "Copyright 2026 © Todu Guam Foundation All Rights Reserved."
 }
