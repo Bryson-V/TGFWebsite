@@ -374,6 +374,10 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 4rem;
 }
 
 @keyframes slideDown {
