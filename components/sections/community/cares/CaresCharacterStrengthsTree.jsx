@@ -145,15 +145,15 @@ export default function CaresCharacterStrengthsTree() {
             >
               <circle cx="500" cy="430" r="65" fill="#00A89E" stroke="#042F2E" strokeWidth="4" />
 
-              <image
-                href="/images/cares/cares-thumb.jpeg"
-                x="450"
-                y="380"
-                width="100"
-                height="100"
-                clipPath="url(#logoClip)"
-                preserveAspectRatio="xMidYMid slice"
-              />
+              <foreignObject x="450" y="380" width="100" height="100" clipPath="url(#logoClip)">
+                <Image
+                  src="/images/cares/cares-thumb.jpeg"
+                  alt="CARES Logo"
+                  width={100}
+                  height={100}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </foreignObject>
             </motion.g>
 
             <g className={styles.bubbles}>
@@ -236,8 +236,8 @@ export default function CaresCharacterStrengthsTree() {
                         <motion.div
                           initial={{ y: 0, fontSize: "16px" }}
                           animate={{
-                            y: isSelected ? (isMobile ? 120 : -150) : 0,
-                            fontSize: isSelected ? "36px" : "16px"
+                            y: isSelected ? -150 : 0,
+                            fontSize: isSelected ? (isMobile ? "24px" : "36px") : "16px"
                           }}
                           transition={SPRING_TRANSITION}
                           style={{
