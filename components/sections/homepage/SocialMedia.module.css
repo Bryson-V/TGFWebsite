@@ -1,3 +1,12 @@
+.sectionWrapper {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip; 
+  overflow-y: visible; 
+  position: relative;
+  box-sizing: border-box;
+}
+
 .container {
   position: relative;
   width: 95%; 
@@ -117,29 +126,6 @@
 }
 
 /* Mobile Scaling */
-@media (max-width: 968px) {
-  .container {
-    min-height: 600px; 
-    margin: 4rem auto;
-  }
-  .contentWrapper {
-    justify-content: center;
-  }
-  .textContent {
-    text-align: center;
-    align-items: center;
-    margin-top: 400px;
-  }
-  .buttonGroup {
-    width: 100%;
-    align-items: center;
-  }
-  .socialBtn {
-    width: 100%; 
-    max-width: 280px;
-  }
-}
-
 @media (max-width: 968px) {
   .container {
     min-height: 600px; 

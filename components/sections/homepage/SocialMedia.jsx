@@ -97,56 +97,58 @@ export default function SocialMedia() {
   const activeData = platforms[activeIndex] || {};
 
   return (
-    <section className={styles.container}>
-      <div className={styles.contentWrapper}>
-        
-        <div className={styles.canvasContainer}>
-          <Canvas 
-            camera={{ position: [0, 0, 15], fov: 45 }}
-            style={{ pointerEvents: 'auto' }} 
-          >
-            <ambientLight intensity={1} />
-            <directionalLight position={[5, 5, 5]} intensity={2} />
-            <Environment preset="city" />
-            
-            <PhoneModel activeImage={activeData.image} isMobile={isMobile} />
-          </Canvas>
-        </div>
-
-        <div className={styles.textContent}>
-          <div>
-            <span className={styles.subtitle}>
-              Stay Connected
-            </span>
-            <h2 className={styles.title}>
-              Check out our latest post.
-            </h2>
+    <div className={styles.sectionWrapper}>
+      <section className={styles.container}>
+        <div className={styles.contentWrapper}>
+          
+          <div className={styles.canvasContainer}>
+            <Canvas 
+              camera={{ position: [0, 0, 15], fov: 45 }}
+              style={{ pointerEvents: 'auto' }} 
+            >
+              <ambientLight intensity={1} />
+              <directionalLight position={[5, 5, 5]} intensity={2} />
+              <Environment preset="city" />
+              
+              <PhoneModel activeImage={activeData.image} isMobile={isMobile} />
+            </Canvas>
           </div>
 
-          <div className={styles.buttonGroup}>
-            {platforms.map((platform, index) => {
-              const isActive = activeIndex === index;
-              return (
-                <a
-                  key={platform.id}
-                  href={platform.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.socialBtn} ${isActive ? styles.activeBtn : ''}`}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  style={{
-                    '--btn-gradient': platform.gradient
-                  }}
-                >
-                  <span>{platform.name}</span>
-                  <span>→</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
+          <div className={styles.textContent}>
+            <div>
+              <span className={styles.subtitle}>
+                Stay Connected
+              </span>
+              <h2 className={styles.title}>
+                Check out our latest post.
+              </h2>
+            </div>
 
-      </div>
-    </section>
+            <div className={styles.buttonGroup}>
+              {platforms.map((platform, index) => {
+                const isActive = activeIndex === index;
+                return (
+                  <a
+                    key={platform.id}
+                    href={platform.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.socialBtn} ${isActive ? styles.activeBtn : ''}`}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    style={{
+                      '--btn-gradient': platform.gradient
+                    }}
+                  >
+                    <span>{platform.name}</span>
+                    <span>→</span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
   );
 }
