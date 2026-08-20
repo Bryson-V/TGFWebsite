@@ -1,19 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "@/components/ui/Image";
 import { getAssetPath } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  FaShieldAlt, FaMountain, FaCheckCircle, FaBolt, 
-  FaHeart, FaGift, FaComments, FaSpa, FaThumbsUp, 
-  FaStar, FaSmileBeam, FaWater, FaTachometerAlt, 
-  FaTasks, FaLink, FaHandshake, FaUserShield, 
-  FaBalanceScale, FaFlag, FaEye, FaBookOpen, 
+import {
+  FaShieldAlt, FaMountain, FaCheckCircle, FaBolt,
+  FaHeart, FaGift, FaComments, FaSpa, FaThumbsUp,
+  FaStar, FaSmileBeam, FaWater, FaTachometerAlt,
+  FaTasks, FaLink, FaHandshake, FaUserShield,
+  FaBalanceScale, FaFlag, FaEye, FaBookOpen,
   FaPaperPlane, FaSearch, FaPalette, FaArrowLeft
 } from "react-icons/fa";
 import styles from "./CaresCharacterStrengthsTree.module.css";
-import treeData from "@/content/site-data/characterStrengths.json"; 
+import treeData from "@/content/site-data/characterStrengths.json";
 
 const iconMap = {
   FaShieldAlt, FaMountain, FaCheckCircle, FaBolt,
@@ -28,11 +28,11 @@ const SPRING_TRANSITION = { type: "spring", damping: 25, stiffness: 80 };
 const EXIT_TRANSITION = { duration: 0.3, ease: "easeInOut" };
 
 const getRelativeSubBranchPos = (index, total) => {
-  const radius = 420; 
-  
+  const radius = 420;
+
   let startAngle = -150;
   let endAngle = -30;
-  
+
   if (total === 1) {
     startAngle = -90; endAngle = -90;
   } else if (total === 2) {
@@ -40,11 +40,11 @@ const getRelativeSubBranchPos = (index, total) => {
   } else if (total === 3) {
     startAngle = -135; endAngle = -45;
   }
-  
+
   const angleStep = total > 1 ? (endAngle - startAngle) / (total - 1) : 0;
   const angleDeg = startAngle + index * angleStep;
   const angleRad = (angleDeg * Math.PI) / 180;
-  
+
   return {
     x: radius * Math.cos(angleRad),
     y: radius * Math.sin(angleRad)
@@ -53,6 +53,14 @@ const getRelativeSubBranchPos = (index, total) => {
 
 export default function CaresCharacterStrengthsTree() {
   const [selectedBranch, setSelectedBranch] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleBranchClick = (branch) => {
     if (branch.subBranches && branch.subBranches.length > 0) {
@@ -70,20 +78,20 @@ export default function CaresCharacterStrengthsTree() {
         </div>
 
         <div className={styles.treeWrapper} style={{ position: 'relative' }}>
-          
+
           <AnimatePresence>
             {selectedBranch && (
-              <motion.button 
+              <motion.button
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 onClick={() => setSelectedBranch(null)}
-                style={{ 
-                  position: 'absolute', top: '15px', left: '15px', zIndex: 10, 
-                  padding: '10px 24px', background: '#042F2E', 
-                  color: 'white', border: '2px solid #00A89E', borderRadius: '30px', 
-                  cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', 
-                  fontSize: '18px', fontWeight: 'bold' 
+                style={{
+                  position: 'absolute', top: '15px', left: '15px', zIndex: 10,
+                  padding: '10px 24px', background: '#042F2E',
+                  color: 'white', border: '2px solid #00A89E', borderRadius: '30px',
+                  cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px',
+                  fontSize: '18px', fontWeight: 'bold'
                 }}
               >
                 <FaArrowLeft /> Back
@@ -91,54 +99,61 @@ export default function CaresCharacterStrengthsTree() {
             )}
           </AnimatePresence>
 
-          <svg viewBox="0 50 1000 650" className={styles.treeSvg} xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 1000 900" className={styles.treeSvg} xmlns="http://www.w3.org/2000/svg">
+
+            <defs>
+              <clipPath id="logoClip">
+                <circle cx="500" cy="430" r="50" />
+              </clipPath>
+            </defs>
 
             <rect
-              x="0" y="50" width="1200" height="650"
+              x="0" y="0" width="1000" height="900"
               fill="transparent"
               onClick={() => selectedBranch && setSelectedBranch(null)}
               style={{ pointerEvents: selectedBranch ? 'all' : 'none' }}
             />
 
-            <motion.g 
+            <motion.g
               className={styles.branchLines}
               animate={{ opacity: selectedBranch ? 0 : 1 }}
-              transition={{ duration: 0.25 }}
+              transition={{ 
+                duration: selectedBranch ? 0.2 : 0.8, 
+                delay: selectedBranch ? 0 : 0.3 
+              }}
               style={{ pointerEvents: 'none' }}
             >
               {treeData.mainBranches.map((branch) => (
-                <path 
-                  key={`line-${branch.id}`} 
-                  d={`M500,430 L${branch.x},${branch.y}`} 
-                  className={styles.mainLine} 
-                  stroke={branch.bgColor} 
+                <path
+                  key={`line-${branch.id}`}
+                  d={`M500,430 L${branch.x},${branch.y}`}
+                  className={styles.mainLine}
+                  stroke={branch.bgColor}
                 />
               ))}
             </motion.g>
 
-            <motion.g 
-              className={styles.centralLogo} 
+            <motion.g
+              className={styles.centralLogo}
               initial={{ opacity: 1, scale: 1 }}
-              animate={{ 
-                opacity: selectedBranch ? 0 : 1, 
+              animate={{
+                opacity: selectedBranch ? 0 : 1,
                 scale: selectedBranch ? 0.8 : 1,
               }}
               transition={SPRING_TRANSITION}
               style={{ pointerEvents: 'none' }}
             >
               <circle cx="500" cy="430" r="65" fill="#00A89E" stroke="#042F2E" strokeWidth="4" />
-              
-              {/* Refactored Image inside foreignObject for SVG support */}
-              <foreignObject x="450" y="380" width="100" height="100">
-                <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', position: 'relative' }}>
-                  <Image 
-                    src="/images/cares/cares-thumb.jpeg" 
-                    alt="CARES Logo" 
-                    fill 
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-              </foreignObject>
+
+              <image
+                href="/images/cares/cares-thumb.jpeg"
+                x="450"
+                y="380"
+                width="100"
+                height="100"
+                clipPath="url(#logoClip)"
+                preserveAspectRatio="xMidYMid slice"
+              />
             </motion.g>
 
             <g className={styles.bubbles}>
@@ -147,38 +162,38 @@ export default function CaresCharacterStrengthsTree() {
                 const isHidden = selectedBranch && !isSelected;
 
                 const targetX = isSelected ? 500 : branch.x;
-                const targetY = isSelected ? 750 : branch.y;
+                const targetY = isSelected ? (isMobile ? 700 : 850) : branch.y;
                 const targetRadius = isSelected ? 260 : branch.radius;
 
                 return (
-                  <motion.g 
+                  <motion.g
                     key={branch.id}
                     initial={{ x: branch.x, y: branch.y, scale: 1, opacity: 1, filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))" }}
-                    animate={{ 
-                      x: targetX, 
-                      y: targetY, 
+                    animate={{
+                      x: targetX,
+                      y: targetY,
                       opacity: isHidden ? 0 : 1,
                       scale: isHidden ? 0.85 : 1,
                       filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
                     }}
                     transition={SPRING_TRANSITION}
                     onClick={() => !selectedBranch && handleBranchClick(branch)}
-                    whileHover={!selectedBranch ? { 
-                      scale: 1.05, 
-                      filter: `drop-shadow(0px 0px 16px ${branch.color})` 
+                    whileHover={!selectedBranch ? {
+                      scale: 1.05,
+                      filter: `drop-shadow(0px 0px 16px ${branch.color})`
                     } : undefined}
-                    style={{ 
-                      pointerEvents: isHidden ? 'none' : 'auto', 
-                      cursor: isSelected ? "default" : "pointer" 
+                    style={{
+                      pointerEvents: isHidden ? 'none' : 'auto',
+                      cursor: isSelected ? "default" : "pointer"
                     }}
                   >
-                    
+
                     <AnimatePresence>
                       {isSelected && branch.subBranches.map((sub, i) => {
                         const total = branch.subBranches.length;
                         const pos = getRelativeSubBranchPos(i, total);
                         return (
-                          <motion.path 
+                          <motion.path
                             key={`zoom-line-${sub.id}`}
                             d={`M0,0 L${pos.x},${pos.y}`}
                             stroke={branch.bgColor}
@@ -191,47 +206,47 @@ export default function CaresCharacterStrengthsTree() {
                       })}
                     </AnimatePresence>
 
-                    <motion.circle 
-                        cx="0" cy="0" 
-                        initial={{ r: branch.radius }}
-                        animate={{ r: targetRadius }} 
-                        transition={SPRING_TRANSITION}
-                        fill={branch.color} 
-                        stroke={branch.bgColor} 
-                        strokeWidth={isSelected ? "8" : "4"} 
+                    <motion.circle
+                      cx="0" cy="0"
+                      initial={{ r: branch.radius }}
+                      animate={{ r: targetRadius }}
+                      transition={SPRING_TRANSITION}
+                      fill={branch.color}
+                      stroke={branch.bgColor}
+                      strokeWidth={isSelected ? "8" : "4"}
                     />
-                    
-                    <motion.foreignObject 
+
+                    <motion.foreignObject
                       initial={{ x: -branch.radius, y: -branch.radius, width: branch.radius * 2, height: branch.radius * 2 }}
-                      animate={{ 
-                        x: -targetRadius, 
-                        y: -targetRadius, 
-                        width: targetRadius * 2, 
-                        height: targetRadius * 2 
+                      animate={{
+                        x: -targetRadius,
+                        y: -targetRadius,
+                        width: targetRadius * 2,
+                        height: targetRadius * 2
                       }}
                       transition={SPRING_TRANSITION}
                     >
-                      <div style={{ 
-                        display: 'flex', 
+                      <div style={{
+                        display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center', 
+                        justifyContent: 'center',
                         height: '100%',
                         width: '100%',
                       }}>
-                        <motion.div 
+                        <motion.div
                           initial={{ y: 0, fontSize: "16px" }}
-                          animate={{ 
-                            y: isSelected ? -150 : 0,
+                          animate={{
+                            y: isSelected ? (isMobile ? 120 : -150) : 0,
                             fontSize: isSelected ? "36px" : "16px"
                           }}
                           transition={SPRING_TRANSITION}
-                          style={{ 
+                          style={{
                             color: branch.bgColor,
-                            fontWeight: '800', 
-                            textAlign: 'center', 
+                            fontWeight: '800',
+                            textAlign: 'center',
                             lineHeight: '1.2',
                             width: '100%',
-                            padding: '0 10px',
+                            padding: '0 15px',
                             boxSizing: 'border-box'
                           }}
                         >
@@ -247,33 +262,33 @@ export default function CaresCharacterStrengthsTree() {
                         const IconComponent = iconMap[sub.icon];
 
                         return (
-                          <motion.a 
+                          <motion.a
                             key={`zoom-sub-${sub.id}`}
-                            href={getAssetPath(sub.link)} 
-                            target="_blank" 
+                            href={getAssetPath(sub.link)}
+                            target="_blank"
                             rel="noopener noreferrer"
                             initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
-                            animate={{ 
+                            animate={{
                               x: pos.x, y: pos.y, scale: 1, opacity: 1,
                               transition: SPRING_TRANSITION
                             }}
                             exit={{ x: 0, y: 0, scale: 0, opacity: 0, transition: EXIT_TRANSITION }}
-                            whileHover={{ 
-                              scale: 1.15, 
-                              filter: `drop-shadow(0px 0px 14px ${branch.color})` 
+                            whileHover={{
+                              scale: 1.15,
+                              filter: `drop-shadow(0px 0px 14px ${branch.color})`
                             }}
                             style={{ cursor: "pointer" }}
                           >
                             <circle cx="0" cy="0" r="55" fill={branch.color} stroke={branch.bgColor} strokeWidth="5" />
-                            
+
                             <foreignObject x="-30" y="-35" width="60" height="60">
-                               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                                  {IconComponent && <IconComponent color={branch.bgColor} size={32} />}
-                               </div>
+                              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                {IconComponent && <IconComponent color={branch.bgColor} size={32} />}
+                              </div>
                             </foreignObject>
-                            
+
                             <text x="0" y="-75" textAnchor="middle" fill={branch.bgColor} fontSize="20px" fontWeight="700">
-                               {sub.label}
+                              {sub.label}
                             </text>
                           </motion.a>
                         );
