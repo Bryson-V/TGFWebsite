@@ -53,14 +53,6 @@ const getRelativeSubBranchPos = (index, total) => {
 
 export default function CaresCharacterStrengthsTree() {
   const [selectedBranch, setSelectedBranch] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleBranchClick = (branch) => {
     if (branch.subBranches && branch.subBranches.length > 0) {
@@ -162,7 +154,7 @@ export default function CaresCharacterStrengthsTree() {
                 const isHidden = selectedBranch && !isSelected;
 
                 const targetX = isSelected ? 500 : branch.x;
-                const targetY = isSelected ? (isMobile ? 700 : 850) : branch.y;
+                const targetY = isSelected ? 850 : branch.y;
                 const targetRadius = isSelected ? 260 : branch.radius;
 
                 return (
@@ -216,44 +208,18 @@ export default function CaresCharacterStrengthsTree() {
                       strokeWidth={isSelected ? "8" : "4"}
                     />
 
-                    <motion.foreignObject
-                      initial={{ x: -branch.radius, y: -branch.radius, width: branch.radius * 2, height: branch.radius * 2 }}
-                      animate={{
-                        x: -targetRadius,
-                        y: -targetRadius,
-                        width: targetRadius * 2,
-                        height: targetRadius * 2
-                      }}
-                      transition={SPRING_TRANSITION}
+                    <text
+                      x="0"
+                      y={isSelected ? -150 : 0}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fill={branch.bgColor}
+                      fontSize={isSelected ? "36px" : "16px"}
+                      fontWeight="800"
+                      style={{ transition: "all 0.5s ease" }}
                     >
-                      <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        height: '100%',
-                        width: '100%',
-                      }}>
-                        <motion.div
-                          initial={{ y: 0, fontSize: "16px" }}
-                          animate={{
-                            y: isSelected ? -150 : 0,
-                            fontSize: isSelected ? (isMobile ? "24px" : "36px") : "16px"
-                          }}
-                          transition={SPRING_TRANSITION}
-                          style={{
-                            color: branch.bgColor,
-                            fontWeight: '800',
-                            textAlign: 'center',
-                            lineHeight: '1.2',
-                            width: '100%',
-                            padding: '0 15px',
-                            boxSizing: 'border-box'
-                          }}
-                        >
-                          {branch.label}
-                        </motion.div>
-                      </div>
-                    </motion.foreignObject>
+                      {branch.label}
+                    </text>
 
                     <AnimatePresence>
                       {isSelected && branch.subBranches.map((sub, i) => {
