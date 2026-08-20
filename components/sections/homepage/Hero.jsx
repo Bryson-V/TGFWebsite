@@ -26,7 +26,7 @@ export default function Hero() {
 
         <div className={styles.imageWrapper}>
           <Image 
-            src="images/hero/getting-guam-healthy.webp" 
+            src="/images/hero/getting-guam-healthy.webp" 
             alt="Getting Guam Healthy" 
             width={640} 
             height={480}

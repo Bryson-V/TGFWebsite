@@ -1,5 +1,6 @@
 "use client";
 
+import { FiCheck } from "react-icons/fi";
 import styles from "./psychologyServices.module.css";
 
 export default function PsychologyServices() {
@@ -18,7 +19,9 @@ export default function PsychologyServices() {
           <ul className={styles.serviceList}>
             {psychologyServices.map((service, index) => (
               <li key={index} className={styles.serviceItem}>
-                <span className={styles.bulletIcon}>✓</span>
+                <span className={styles.bulletIcon}>
+                  <FiCheck size={20} />
+                </span>
                 <span className={styles.serviceText}>{service}</span>
               </li>
             ))}
