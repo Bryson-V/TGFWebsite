@@ -1,7 +1,6 @@
-/* SECTION STYLES */
 .section {
   padding: 80px 0;
-  background-color: var(--color-bg-alt, #fafafa); /* Restored original light gray background */
+  background-color: var(--color-bg-alt, #fafafa);
   overflow: hidden;
 }
 
@@ -14,35 +13,42 @@
 
 @media (min-width: 1025px) {
   .grid {
-    grid-template-columns: 0.85fr 1.15fr; /* Image left, text right */
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 80px;
   }
 }
 
-/* IMAGE COLUMN & OFFSET BORDER */
 .imageColumn {
   position: relative;
-  padding-right: 24px;
-  padding-bottom: 24px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.imageLink {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .imageWrap {
   position: relative;
   border-radius: 12px;
-  z-index: 2;
+  z-index: 1;
 }
 
-/* The offset decorative border behind the image */
 .imageWrap::after {
   content: '';
   position: absolute;
-  top: 24px;
-  left: 24px;
-  right: -24px;
-  bottom: -24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border: 2px solid #00A89E;
   border-radius: 12px;
   z-index: -1;
+  /* Reset to 0 so it perfectly frames the image as a standard border at rest */
+  transform: translate(0, 0); 
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .image {
@@ -51,10 +57,22 @@
   border-radius: 12px;
   object-fit: cover;
   display: block;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* TEXT COLUMN TYPOGRAPHY */
+/* ON HOVER: Image goes up/left, border pushes down/right to reveal the pop-out */
+.imageLink:hover .image {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.imageLink:hover .imageWrap::after {
+  transform: translate(8px, 8px);
+}
+
 .textColumn {
   display: flex;
   flex-direction: column;
@@ -89,7 +107,6 @@
   margin-bottom: 8px;
 }
 
-/* STATIC PILLARS FOR BULLET POINT */
 .pillars {
   display: flex;
   flex-direction: column;
@@ -100,43 +117,43 @@
 .pillar {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 8px;
-  background: #ffffff; 
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  gap: 20px;
+  padding: 12px 0;
 }
 
+.pillar:not(:last-child) {
+  border-bottom: 1px solid rgba(26, 54, 93, 0.1); 
+}
+
+/* Default icon color (used by FaPlus) */
 .pillarIcon {
-  font-size: 1.25rem;
-  background: #E3F2FD; /* Baby blue background */
-  color: #00A89E; /* Teal icon */
-  width: 44px;
-  height: 44px;
+  font-size: 1.5rem;
+  color: #00A89E; 
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 8px;
+  justify-content: flex-start;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .pillarContent {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .pillarTitle {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #1A365D; /* Dark Navy */
+  color: #1A365D;
   margin: 0;
 }
 
 .pillarText {
   font-size: 0.9rem;
-  color: #666666; /* Gray text */
+  color: #666666;
   margin: 0;
   line-height: 1.5;
 }

@@ -7,13 +7,11 @@ import * as THREE from 'three';
 import styles from './SocialMedia.module.css';
 import platformsData from '@/content/site-data/socialMedia.json';
 
-// Ensure basePath doesn't have a trailing slash
 const getBasePath = () => {
   const path = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return path.endsWith('/') ? path.slice(0, -1) : path;
 };
 
-// Guarantees a leading '/' and joins basePath cleanly
 const normalizePath = (path) => {
   if (!path) return '';
   const basePath = getBasePath();

@@ -16,11 +16,25 @@
   gap: 20px;
 }
 
-.heroLogo {
-  border-radius: 12px;
-  height: 90px;
-  max-width: 100%;
-  object-fit: contain;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(0, 78, 112, 0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(0, 78, 112, 0.15);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
 }
 
 .headline {
@@ -34,9 +48,32 @@
   font-weight: 700;
 }
 
-.subline {
-  font-size: 1.1rem;
-  color: var(--color-text-soft);
+/* Arrow Button Styling matching Social Media Links */
+.text :global(a),
+.text button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px; /* Modern, non-pill radius */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Appending the arrow automatically */
+.text :global(a)::after,
+.text button::after {
+  content: "→";
+  font-size: 1.1em;
+  line-height: 1;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover arrow nudge effect */
+.text :global(a):hover::after,
+.text button:hover::after {
+  transform: translateX(4px);
 }
 
 .imageWrapper {

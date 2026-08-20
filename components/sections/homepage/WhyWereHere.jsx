@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import Image from '@/components/ui/Image';
 import Container from "@/components/ui/Container";
+import { FaPlus, FaGraduationCap, FaHandshake } from "react-icons/fa";
 import styles from "./WhyWereHere.module.css";
 
 export default function WhyWereHere() {
@@ -7,20 +9,20 @@ export default function WhyWereHere() {
     <section className={styles.section}>
       <Container className={styles.grid}>
         
-        {/* LEFT COLUMN: Image */}
         <div className={styles.imageColumn}>
-          <div className={styles.imageWrap}>
-            <Image
-              src="/images/hero/basic-healthcare.webp"
-              alt="Community health volunteers caring for residents"
-              width={600}
-              height={450}
-              className={styles.image}
-            />
-          </div>
+          <Link href="/about/mission" className={styles.imageLink} aria-label="Learn more about Our Mission">
+            <div className={styles.imageWrap}>
+              <Image
+                src="/images/hero/basic-healthcare.webp"
+                alt="Community health volunteers caring for residents"
+                width={600}
+                height={450}
+                className={styles.image}
+              />
+            </div>
+          </Link>
         </div>
 
-        {/* RIGHT COLUMN: Text & Pillars */}
         <div className={styles.textColumn}>
           <span className={styles.eyebrow}>Our Mission</span>
           
@@ -32,10 +34,11 @@ export default function WhyWereHere() {
             To give every person in Guam access to basic healthcare, education, and support — without restrictions. Because getting Guam healthy starts with showing up for one man, one woman, and one child at a time.
           </p>
 
-          {/* The 3 Interactive Pillars */}
           <div className={styles.pillars}>
             <div className={styles.pillar}>
-              <div className={styles.pillarIcon}>✚</div>
+              <div className={styles.pillarIcon}>
+                <FaPlus />
+              </div>
               <div className={styles.pillarContent}>
                 <h4 className={styles.pillarTitle}>Basic Healthcare</h4>
                 <p className={styles.pillarText}>Medical care for every resident, regardless of ability to pay.</p>
@@ -43,7 +46,10 @@ export default function WhyWereHere() {
             </div>
             
             <div className={styles.pillar}>
-              <div className={styles.pillarIcon}>🎓</div>
+              <div className={styles.pillarIcon}>
+                {/* Changed to Dark Navy */}
+                <FaGraduationCap color="#1A365D" />
+              </div>
               <div className={styles.pillarContent}>
                 <h4 className={styles.pillarTitle}>Education</h4>
                 <p className={styles.pillarText}>Health literacy and prevention programs for all ages.</p>
@@ -51,7 +57,10 @@ export default function WhyWereHere() {
             </div>
             
             <div className={styles.pillar}>
-              <div className={styles.pillarIcon}>🤝</div>
+              <div className={styles.pillarIcon}>
+                {/* Changed to Warm Yellow */}
+                <FaHandshake color="#F5B041" />
+              </div>
               <div className={styles.pillarContent}>
                 <h4 className={styles.pillarTitle}>Support</h4>
                 <p className={styles.pillarText}>Patient navigation and financial assistance when it matters most.</p>

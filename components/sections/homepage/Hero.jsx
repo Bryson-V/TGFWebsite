@@ -17,7 +17,10 @@ export default function Hero() {
           <h1 className={styles.headline}>
             We are committed to <strong>getting Guam healthy, one man, one woman, and one child at a time.</strong>
           </h1>
-          <p className={styles.subline}>A locally and nationally recognized 501(c)(3) non-profit organization.</p>
+          <div className={styles.badge}>
+            <span className={styles.badgeDot} />
+            <span>A locally & nationally recognized 501(c)(3) non-profit</span>
+          </div>
           <Button href="about/ourStory">Learn more about Our Story</Button>
         </div>
 
