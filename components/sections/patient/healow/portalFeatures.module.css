@@ -1,0 +1,136 @@
+/* portalFeatures.module.css */
+.section {
+  padding: 5rem 5%;
+  background-color: #f8fafc;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.15rem;
+  color: #0e7490;
+  font-weight: 500;
+}
+
+.tabsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tabCard {
+  background: linear-gradient(135deg, #0e7490, #083344);
+  border: none;
+  border-radius: 20px;
+  padding: 2.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 25px rgba(8, 51, 68, 0.15);
+  color: #ffffff;
+}
+
+.tabCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(8, 51, 68, 0.25);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, #06b6d4, #0e7490);
+  outline: 3px solid #38bdf8;
+}
+
+.tabIcon {
+  color: #a5f3fc;
+  margin-bottom: 1rem;
+}
+
+.tabTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.tabBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+.detailBox {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  gap: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.accentLine {
+  width: 5px;
+  background-color: #0e7490;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.detailTag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #0e7490;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.detailTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 0.75rem;
+}
+
+.detailText {
+  font-size: 1.15rem;
+  color: #334155;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .tabsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tabsGrid {
+    grid-template-columns: 1fr;
+  }
+}
