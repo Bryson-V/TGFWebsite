@@ -46,7 +46,6 @@
   border: 2px solid #00A89E;
   border-radius: 12px;
   z-index: -1;
-  /* Reset to 0 so it perfectly frames the image as a standard border at rest */
   transform: translate(0, 0); 
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -63,7 +62,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ON HOVER: Image goes up/left, border pushes down/right to reveal the pop-out */
 .imageLink:hover .image {
   transform: translate(-4px, -4px);
   box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.12);
@@ -101,7 +99,7 @@
 }
 
 .description {
-  color: #424242;
+  color: #303030;
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 8px;
@@ -122,10 +120,9 @@
 }
 
 .pillar:not(:last-child) {
-  border-bottom: 1px solid rgba(26, 54, 93, 0.1); 
+  border-bottom: 1px solid rgba(26, 54, 93, 0.4); 
 }
 
-/* Default icon color (used by FaPlus) */
 .pillarIcon {
   font-size: 1.5rem;
   color: #00A89E; 
