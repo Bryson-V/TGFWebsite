@@ -48,7 +48,7 @@ export default function NewsCard({
           fill 
           priority={priority} // <-- Forward priority prop here
           className={styles.image}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(max-width: 768px) 100%, (max-width: 1024px) 50vw, 25vw"
         />
         {tag && (
           <span className={styles.tag}>

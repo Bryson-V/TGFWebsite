@@ -163,7 +163,7 @@ export default function BoardOfDoctors() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 300px"
+                    sizes="(max-width: 768px) 100%, 300px"
                     priority={index < 3}
                     className={styles.image}
                   />

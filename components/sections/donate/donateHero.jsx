@@ -34,7 +34,7 @@ export default function DonateHero() {
           alt="Volunteers helping the Guam community"
           fill
           priority
-          sizes="100vw"
+          sizes="100%"
           className={styles.bgImage}
         />
       </motion.div>

@@ -52,7 +52,6 @@
         { "label": "Patient Portal", "href": "https://health.healow.com/toduguam" },
         { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },
-        { "label": "Our Impact", "href": "patient/commImpact" },
         { "label": "Financial Assistance", "href": "patient/financialAssistance" },
         { "label": "FAQs", "href": "patient/faq" }
       ]

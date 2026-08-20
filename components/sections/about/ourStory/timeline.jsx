@@ -103,7 +103,7 @@ function TimelineItem({
             src={event.image}
             alt={event.alt}
             fill
-            sizes="(max-width: 768px) 100vw, 400px"
+            sizes="(max-width: 768px) 100%, 400px"
             className={styles.image}
           />
         </div>
