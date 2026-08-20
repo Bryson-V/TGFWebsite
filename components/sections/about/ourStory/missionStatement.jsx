@@ -22,7 +22,7 @@ export default function MissionStatement() {
               src="/images/story/mobile-clinic-early.webp"
               alt="Dennis Rodriguez Jr Mobile Care Clinic"
               fill
-              sizes="(max-width: 992px) 100vw, 450px"
+              sizes="(max-width: 992px) 100%, 450px"
               className={styles.image}
               priority
             />
@@ -50,7 +50,7 @@ export default function MissionStatement() {
               src="/images/story/truck.webp"
               alt="TGF Mobile Care Clinic with Rainbow"
               fill
-              sizes="(max-width: 992px) 100vw, 600px"
+              sizes="(max-width: 992px) 100%, 600px"
               className={styles.image}
             />
           </div>

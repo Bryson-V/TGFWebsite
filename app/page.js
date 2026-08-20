@@ -22,7 +22,6 @@ export default function HomePage() {
       <ProgramsWheel />
       <ImpactStats />
       <GetInvolved />
-      <SocialMedia />
       <NewsGrid />
       <PressGrid />
     </>

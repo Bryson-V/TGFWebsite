@@ -12,7 +12,7 @@ export default function WelcomeSection() {
             src="/images/story/founders.webp" // Update path to your image
             alt="TGF Founders"
             fill
-            sizes="(max-width: 992px) 100vw, 450px"
+            sizes="(max-width: 992px) 100%, 450px"
             className={styles.image}
             priority
           />
