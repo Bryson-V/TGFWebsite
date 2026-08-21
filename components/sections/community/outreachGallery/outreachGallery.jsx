@@ -47,7 +47,7 @@ export default function OutreachGallery() {
           </div>
         </div>
 
-        {/* Masonry Grid (Now using displayedGallery instead of galleryData) */}
+        {/* Masonry Grid for cards */}
         <div className={styles.masonryGrid}>
           {displayedGallery.map((item, index) => (
             <div 
@@ -90,7 +90,7 @@ export default function OutreachGallery() {
 
         {/* View All Link */}
         <div className={styles.viewAllContainer}>
-          <Link href="/allOutreaches" className={styles.viewAllLink}>
+          <Link href="../community/allOutreaches" className={styles.viewAllLink}>
             View all coverage →
           </Link>
         </div>
