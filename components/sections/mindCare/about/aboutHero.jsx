@@ -73,14 +73,15 @@ export default function AboutMindCareHero() {
         className={styles.content} 
         style={{ y: textY, opacity: textOpacity }} 
       >
-        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · OUR MISSION</h5>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · BEHAVIORAL HEALTH</h5>
         
         <h1 className={styles.title}>
           About Mind Care
         </h1>
         
         <p className={styles.description}>
-          A holistic, whole-person approach to behavioral health integrating biological, cultural, and personal care.
+          A holistic, whole-person approach to behavioral health <br/> 
+          integrating biological, cultural, and personal care.
         </p>
       </motion.div>
       

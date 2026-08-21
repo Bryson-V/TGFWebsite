@@ -54,7 +54,7 @@ const PhoneModel = ({ activeImage, isMobile }) => {
             url={activeImage}
             transparent
             radius={0.8}
-            position={[0, 0, 0.4]} 
+            position={[0, 0, 0.379]} 
             scale={[6.7, 14.1]} 
             toneMapped={false}
             depthTest={false}
