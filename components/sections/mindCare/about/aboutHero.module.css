@@ -1,43 +1,44 @@
 .heroContainer {
   position: relative;
-  height: 75vh; 
-  min-height: 600px; 
+  height: 60vh; 
+  min-height: 500px; 
   display: flex;
   align-items: center; 
   padding: 0 5%;       
   overflow: hidden;
-  background-color: #083344;
+  background: linear-gradient(135deg, #083344, #0891b2);
   color: #ffffff;
 }
 
-.backgroundImageWrapper {
+.canvasWrapper {
   position: absolute;
-  top: -30%; 
+  top: 0;
   left: 0;
   width: 100%;
-  height: 140%;
-  z-index: 1;
-}
-
-.bgImage {
-  object-fit: cover;
-  object-position: center;
+  height: 100%;
+  z-index: 1; 
 }
 
 .cyanOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #0891b2, #0e7490);
+  background: linear-gradient(to right, rgba(8, 51, 68, 0.4), rgba(14, 116, 144, 0.1));
   z-index: 2;
+  pointer-events: none; 
 }
 
 .content {
   position: relative;
-  z-index: 3;
+  z-index: 3; 
   max-width: 800px;
   margin-top: 0; 
   display: flex;
   flex-direction: column; 
+  pointer-events: none; 
+}
+
+.content > * {
+  pointer-events: auto; 
 }
 
 .subtitle {
@@ -65,10 +66,11 @@
   font-weight: 500;
 }
 
+/* Reduced height for mobile view */
 @media (max-width: 768px) {
   .heroContainer {
-    height: 70vh; 
-    min-height: 550px;
+    height: 50vh; 
+    min-height: 450px;
   }
   .title {
     font-size: 3.5rem;

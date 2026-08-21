@@ -9,15 +9,13 @@ import AboutMindCareMission from "@/components/sections/mindCare/about/mission";
 export default function AllNews() {
   return (
     <>
-        <AboutMindCareHero/>
-        <CrisisSupportBanner />
-        <AboutMindCareMission />
-                <FirstVisitSteps />
-
-        <AboutMindCareHolisticCare />
-        <AboutMindCareImpact />
-        <MindCareTestimonialsSlider />
-
+      <AboutMindCareHero />
+      <CrisisSupportBanner />
+      <AboutMindCareMission />
+      <FirstVisitSteps />
+      <AboutMindCareHolisticCare />
+      <AboutMindCareImpact />
+      <MindCareTestimonialsSlider />
     </>
   );
 }
