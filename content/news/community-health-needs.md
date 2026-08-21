@@ -1,7 +1,7 @@
 ---
 title: "Community Health Needs Assessment Survey"
 date: "2023-8-30"
-image: "/images/news/felis-pasgua.jpeg"
+image: "/images/AboutUs/news/felis-pasgua.jpeg"
 excerpt: "Season's greetings from the Todu Guam Foundation team."
 ---
 The Todu Guam Foundation is asking for your help in completing their 2023 Community Health Needs Assessment survey.

@@ -35,7 +35,7 @@ export default function CervicalCancerModule() {
           <div className={styles.imageColumn}>
             <div className={styles.circleWrapper}>
               <Image
-                src="/images/healing/cervical-cancer.jpeg" // Update with your actual image path
+                src="/images/CommunityAndImpact/healing/cervical-cancer.jpeg" // Update with your actual image path
                 alt="Cervical Cancer Awareness Ribbon and Syringe"
                 width={420}
                 height={420}

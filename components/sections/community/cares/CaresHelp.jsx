@@ -6,14 +6,11 @@ export default function CaresHelp() {
   return (
     <section className={styles.section}>
       <Container>
-        
-
-        {/* Section 2: What We Help You Work On */}
         <div className={`${styles.row} ${styles.reverseRow}`}>
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image 
-                src="/images/cares/what-we-help.jpeg" 
+                src="/images/CommunityAndImpact/cares/what-we-help.jpeg" 
                 alt="Presentation and classroom activity setup" 
                 width={550} 
                 height={360}

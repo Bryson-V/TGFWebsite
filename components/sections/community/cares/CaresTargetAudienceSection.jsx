@@ -41,7 +41,7 @@ export default function CaresTargetAudienceSection() {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image 
-                src="/images/cares/this-is-for-you.jpeg" 
+                src="/images/CommunityAndImpact/cares/this-is-for-you.jpeg" 
                 alt="Participants smiling and engaged in Todu Guam CARES session" 
                 width={500} 
                 height={350}

@@ -6,7 +6,7 @@
       "id": "volunteer",
       "title": "Be a volunteer",
       "description": "Since the beginning, Todu Guam has relied on many of its volunteers who have selflessly lent us their time and expertise. Here's how you can become one of them.",
-      "image": "/images/community/volunteer.webp",
+      "image": "/images/HomePage/community/volunteer.webp",
       "href": "community/volunteer",
       "buttonText": "Sign Up Today"
     },
@@ -14,7 +14,7 @@
       "id": "donate",
       "title": "Donate",
       "description": "When you give to Todu Guam, you are joining us in our commitment to getting Guam healthy. Help us provide no-cost access to healthcare, education, and support to those who need it most. Si Yu'os Ma’åse’!",
-      "image": "/images/community/donate.webp",
+      "image": "/images/HomePage/community/donate.webp",
       "href": "donate",
       "buttonText": "Donate Now"
     }

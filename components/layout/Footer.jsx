@@ -15,6 +15,29 @@ import { FaLocationDot } from "react-icons/fa6";
 import footer from "@/content/site-data/footer.json";
 import styles from "./Footer.module.css";
 
+function SmartLink({ href, children, className }) {
+  const isExternal = href?.startsWith("http://") || href?.startsWith("https://");
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href ? `/${href.replace(/^\//, '')}` : "#"} className={className}>
+      {children}
+    </Link>
+  );
+}
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
@@ -22,10 +45,7 @@ export default function Footer() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!email) return;
-
-    // TODO: replace with a call to an email service or API route.
     console.log("Newsletter signup (not yet connected to a backend):", email);
-
     setStatus("submitted");
     setEmail("");
   }
@@ -44,14 +64,11 @@ export default function Footer() {
             />
           </Link>
           
-          {/* Tagline */}
           <p className={styles.tagline}>
             Getting Guam Healthy One Man, One Woman, and One Child at a time.
           </p>
           
-          {/* Contact Info: Address, Phone, WhatsApp */}
           <div className={styles.contactList}>
-            {/* Address */}
             <div className={styles.contactItem}>
               <FaLocationDot className={styles.contactIcon} />
               <a 
@@ -63,9 +80,8 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Phone and WhatsApp */}
             {footer.phones.map((phone, index) => {
-              const isWhatsApp = index === 1; // 0 is Phone, 1 is WhatsApp
+              const isWhatsApp = index === 1; 
               const waNumber = phone.display.replace(/\D/g, ""); 
               
               return (
@@ -95,7 +111,6 @@ export default function Footer() {
             })}
           </div>
           
-          {/* Social Icons */}
           <div className={styles.socials}>
             {footer.social.map((s) => {
               let icon;
@@ -134,10 +149,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Nav Links & Newsletter */}
         <div className={styles.linksAndNewsletter}>
-
-
           <div className={styles.navColumns}>
             {footer.columns.map((column) => (
               <div key={column.title} className={styles.linkGroup}>
@@ -145,7 +157,12 @@ export default function Footer() {
                 <ul>
                   {column.links.map((link) => (
                     <li key={link.label}>
-                      {link.href ? <a href={link.href}>{link.label}</a> : <span>{link.label}</span>}
+                      {/* 2. REPLACE <a> WITH <SmartLink> */}
+                      {link.href ? (
+                        <SmartLink href={link.href}>{link.label}</SmartLink>
+                      ) : (
+                        <span>{link.label}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -176,7 +193,7 @@ export default function Footer() {
                 </form>
               )}
               <p className={styles.privacy}>
-                *We care about your data. Read our <Link href="/privacy">Privacy Policy</Link>.
+                *We care about your data. Read our <Link href="/legalTerms/privacy">Privacy Policy</Link>.
               </p>
             </div>
           </div>
@@ -189,7 +206,8 @@ export default function Footer() {
         <ul className={styles.legalLinks}>
           {footer.legal.map((item) => (
             <li key={item.label}>
-              <a href={item.href}>{item.label}</a>
+               {/* 3. REPLACE <a> WITH <SmartLink> */}
+              <SmartLink href={item.href}>{item.label}</SmartLink>
             </li>
           ))}
         </ul>

@@ -2,7 +2,7 @@
   {
     "id": "hpv-vaccination",
     "title": "HPV Vaccination",
-    "image": "/images/healing/hpv-vaccination.jpeg",
+    "image": "/images/CommunityAndImpact/healing/hpv-vaccination.jpeg",
     "imageAlt": "Healthcare worker administering HPV vaccine",
     "paragraphs": [
       "If you are 9 to 26 years old, HPV vaccination is recommended.",
@@ -12,7 +12,7 @@
   {
     "id": "pap-smear",
     "title": "Pap Smear",
-    "image": "/images/healing/pap-smear.jpeg",
+    "image": "/images/CommunityAndImpact/healing/pap-smear.jpeg",
     "imageAlt": "Medical staff wearing masks",
     "paragraphs": [
       "Women 21 to 65 years old may get pap smears.",
@@ -22,7 +22,7 @@
   {
     "id": "well-woman-checkup",
     "title": "Well Woman Checkup",
-    "image": "/images/healing/well-woman.jpeg",
+    "image": "/images/CommunityAndImpact/healing/well-woman.jpeg",
     "imageAlt": "Two women smiling together during checkup",
     "paragraphs": [
       "In this consultation, we look into your health. Here, we focus on preventive care for women. We help you make informed health decisions through education and counseling."

@@ -4,27 +4,27 @@
     "name": "Instagram",
     "href": "https://www.instagram.com/toduguam.foundation/",
     "gradient": "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-    "image": "images/social/InstaPost.jpg"
+    "image": "images/HomePage/social/InstaPost.jpg"
   },
   {
     "id": "facebook",
     "name": "Facebook",
     "href": "https://www.facebook.com/toduguamfoundation/",
     "gradient": "linear-gradient(45deg, #1877F2 0%, #033c82 100%)",
-    "image": "images/social/Facebook.jpg"
+    "image": "images/HomePage/social/Facebook.jpg"
   },
   {
     "id": "tiktok",
     "name": "TikTok",
     "href": "https://www.tiktok.com/@care_toduguam",
     "gradient": "linear-gradient(135deg, #121212 0%, #303030 100%)",
-    "image": "images/social/TikTok.png"
+    "image": "images/HomePage/social/TikTok.png"
   },
   {
     "id": "linkedin",
     "name": "LinkedIn",
     "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd",
     "gradient": "linear-gradient(45deg, #0A66C2 0%, #004182 100%)",
-    "image": "images/social/Linkedin.jpg"
+    "image": "images/HomePage/social/Linkedin.jpg"
   }
 ]

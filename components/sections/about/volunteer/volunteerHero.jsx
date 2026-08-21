@@ -50,7 +50,7 @@ export default function VolunteerHero() {
       {/* Background Image */}
       <div className={styles.imageContainer}>
         <Image
-          src="/images/volunteer/volunteer.jpg"
+          src="/images/AboutUs/volunteer/volunteer.jpg"
           alt="Todu Guam Foundation Volunteers"
           fill
           priority

@@ -1,11 +1,11 @@
 ---
 title: "Dr. Sam Song, Expanding Women's Healthcare in Guam"
 date: "2025-04-03"
-image: "/images/news/dr-sam-song.jpeg"
+image: "/images/AboutUs/news/dr-sam-song.jpeg"
 tag: "Women's Health"
 excerpt: "The Todu Guam Foundation is proud to announce the addition of Dr. Sam Song, MD, FACOG, to our dedicated team of healthcare professionals."
 ---
-![Image here](/images/news/dr-sam-song.jpeg)
+![Image here](/images/AboutUs/news/dr-sam-song.jpeg)
 **Tamuning, Guam – April 3, 2025.** The Todu Guam Foundation, a locally and nationally registered 501(c)(3) non-profit organization operating the Todu Guam Health & Wellness Center outpatient primary care clinic in Tamuning, is proud to announce the addition of **Dr. Sam Song, MD, FACOG**, to our dedicated team of healthcare professionals. With over 28 years of experience in obstetrics and gynecology, Dr. Song brings a wealth of knowledge, expertise, and a deep commitment to patient-centered care.
 
 &nbsp;

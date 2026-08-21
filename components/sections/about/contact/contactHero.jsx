@@ -27,7 +27,7 @@ export default function ContactHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/contactUs/Contact.jpeg" 
+          src="/images/AboutUs/contactUs/Contact.jpeg" 
           alt="Contact Mind Care Background" 
           fill
           className={styles.bgImage}

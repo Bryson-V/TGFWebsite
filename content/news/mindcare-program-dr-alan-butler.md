@@ -1,12 +1,12 @@
 ---
 title: "Todu Guam Foundation Health & Wellness Center Welcomes Clinical Psychologist Dr. Alan Butler to Expand MindCare Behavioral Health Program"
 date: "2026-03-06"
-image: "/images/news/dr-alan-butler.jpeg"
+image: "/images/AboutUs/news/dr-alan-butler.jpeg"
 tag: "Mental Health"
 excerpt: "Dr. Alan Butler joins the Todu Guam Health & Wellness Center, expanding the reach of the MindCare behavioral health program."
 ---
 
-![Dr. Alan Butler, Psy.D, Licensed Clinical Psychologist](/images/news/dr-alan-butler.jpeg)
+![Dr. Alan Butler, Psy.D, Licensed Clinical Psychologist](/images/AboutUs/news/dr-alan-butler.jpeg)
 *Dr. Alan Butler, Psy.D, Licensed Clinical Psychologist*
 
 **Tamuning, Guam — March 6, 2026.** The Todu Guam Foundation Health & Wellness Center (TGF) is proud to announce that **Dr. Alan Butler, Psy.D**, Licensed Clinical Psychologist, has joined the organization's growing MindCare Mental and Behavioral Health Program, expanding access to behavioral health services for the people of Guam.
@@ -15,7 +15,7 @@ Dr. Butler joins **Dr. Danny McClure, DO**, Board-Certified Psychiatrist, as par
 
 &nbsp;
 
-![Psychiatrist Dr. Danny McClure DO](/images/news/dr-danny-mcclure.jpeg)
+![Psychiatrist Dr. Danny McClure DO](/images/AboutUs/news/dr-danny-mcclure.jpeg)
 *Psychiatrist Dr. Danny McClure DO*
 
 “Dr. Butler brings strong clinical expertise and a deep commitment to serving the people of Guam,” said Lena Calvo-Rodriguez, CEO of the Todu Guam Foundation. “His addition strengthens our MindCare program and advances our mission of breaking down barriers to mental healthcare access for everyone in our community.”

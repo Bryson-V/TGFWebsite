@@ -139,7 +139,7 @@ export default function CaresCharacterStrengthsTree() {
 
               <foreignObject x="450" y="380" width="100" height="100" clipPath="url(#logoClip)">
                 <Image
-                  src="/images/cares/cares-thumb.jpeg"
+                  src="/images/CommunityAndImpact/cares/cares-thumb.jpeg"
                   alt="CARES Logo"
                   width={100}
                   height={100}

@@ -1,10 +1,10 @@
 ---
 title: "Hinemlo’ Para I Famalao’an is here for the women of Guam"
 date: "2023-6-29"
-image: "/images/news/hinemlo-thumb.jpeg"
+image: "/images/AboutUs/news/hinemlo-thumb.jpeg"
 excerpt: ""
 ---
-![hinemlo care](/images/news/hinemlo-care.jpeg)
+![hinemlo care](/images/AboutUs/news/hinemlo-care.jpeg)
 Did you know that over **70%** of cervical cancer in women from the Federal States of Micronesia (FSM) are diagnosed at the late stage? In most cases, this type of cancer is seen in women 36 to 64 years of age, which is unfortunate considering that up to **90%** of cervical cancers are treatable.
 
 &nbsp;

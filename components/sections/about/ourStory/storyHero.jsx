@@ -27,7 +27,7 @@ export default function StoryHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/story/Rainbow.webp" 
+          src="/images/AboutUs/story/Rainbow.webp" 
           alt="Our Story Background" 
           fill
           className={styles.bgImage}

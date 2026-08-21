@@ -1,7 +1,7 @@
 ---
 title: "Signs of gaslighting and what you can do about it"
 date: "2023-7-29"
-image: "/images/news/gaslighting.jpeg"
+image: "/images/AboutUs/news/gaslighting.jpeg"
 ---
 
 > “You’re so sensitive!” “I think you’re imagining things because that never happened.” “Stop being so dramatic.”
