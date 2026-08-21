@@ -27,7 +27,7 @@ export default function DoctorHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/doctors/hero.jpg" 
+          src="/images/PatientResources/doctors/hero.jpg" 
           alt="Doctors Team Background" 
           fill
           className={styles.bgImage}

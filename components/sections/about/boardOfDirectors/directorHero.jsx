@@ -27,7 +27,7 @@ export default function BoardHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/directors/directorHero.webp" 
+          src="/images/AboutUs/directors/directorHero.webp" 
           alt="Board of Directors Background" 
           fill
           className={styles.bgImage}

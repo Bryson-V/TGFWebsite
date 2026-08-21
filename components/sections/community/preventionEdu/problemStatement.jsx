@@ -20,7 +20,7 @@ export default function ProblemStatement() {
           <div className={styles.imageWrapper}>
             {/* 2. Wrap image path with getAssetPath() */}
             <img
-              src={getAssetPath("/images/preventionEdu/EduPic.webp")}
+              src={getAssetPath("/images/CommunityAndImpact/preventionEdu/EduPic.webp")}
               alt="Todu Guam Foundation team at a Let's Talk outreach event"
               className={styles.image}
             />

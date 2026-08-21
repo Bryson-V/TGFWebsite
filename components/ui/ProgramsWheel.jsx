@@ -9,16 +9,6 @@ import 'swiper/css/pagination';
 
 import styles from './ProgramsWheel.module.css';
 
-const programs = [
-  { name: 'Mobile Care Clinic', url: '/mobile-care-clinic/', img: '/images/programs/mobile-care-clinic-thumb.png' },
-  { name: 'Prevention and Outreach', url: '/health-prevention-outreach/', img: '/images/programs/prevention.jpg' },
-  { name: 'Healing for Women', url: '/women-health/', img: '/images/programs/women.jpg' },
-  { name: 'Patient Navigation & Financial Assistance', url: '/patient-navigation-financial-assistance/', img: '/images/programs/navigation.jpg' },
-  { name: 'Sliding Fee Discount Program', url: '/tgf-sliding-fee-feb-26/', img: '/images/programs/sliding-fee.jpg' },
-  { name: 'CARES Program', url: '/cares/', img: '/images/programs/cares.jpg' },
-  { name: 'Mind Care', url: '/mind-care/', img: '/images/programs/mind-care.jpg' },
-];
-
 export default function ProgramsWheel() {
   return (
     <section className={styles.wheelContainer}>

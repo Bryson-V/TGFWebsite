@@ -15,7 +15,7 @@ export default function CareersHero() {
       {/* Background Image & Overlay */}
       <div className={styles.imageContainer}>
         <Image
-          src="/images/careers/office.jpeg"
+          src="/images/AboutUs/careers/office.jpeg"
           alt="Careers at Todu Guam Foundation"
           fill
           priority

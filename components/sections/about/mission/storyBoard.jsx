@@ -54,10 +54,10 @@ const SloganBackgrounds = ({ progress }) => {
 
   return (
     <motion.div className={styles.sloganBgContainer} style={{ opacity: mainOpacity }}>
-      <motion.img style={{ opacity: op0 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/Beach.jpg")} alt="Getting Guam Healthy" />
-      <motion.img style={{ opacity: op1 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/outreach-growth.webp")} alt="Man" />
-      <motion.img style={{ opacity: op2 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/womens-health-care.jpeg")} alt="Woman" />
-      <motion.img style={{ opacity: op3 }} className={styles.sloganBgImage} src={getAssetPath("/images/mission/ZeroDown.jpg")} alt="Child" />
+      <motion.img style={{ opacity: op0 }} className={styles.sloganBgImage} src={getAssetPath("/images/AboutUs/mission/Beach.jpg")} alt="Getting Guam Healthy" />
+      <motion.img style={{ opacity: op1 }} className={styles.sloganBgImage} src={getAssetPath("/images/AboutUs/mission/outreach-growth.webp")} alt="Man" />
+      <motion.img style={{ opacity: op2 }} className={styles.sloganBgImage} src={getAssetPath("/images/AboutUs/mission/womens-health-care.jpeg")} alt="Woman" />
+      <motion.img style={{ opacity: op3 }} className={styles.sloganBgImage} src={getAssetPath("/images/AboutUs/mission/ZeroDown.jpg")} alt="Child" />
       <div className={styles.sloganBgOverlay}></div>
     </motion.div>
   );

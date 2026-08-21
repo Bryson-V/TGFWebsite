@@ -23,7 +23,7 @@ a failure.
    ---
    title: "Your headline here"
    date: "2026-08-01"
-   image: "/images/news/your-image.jpg"
+   image: "/images/AboutUs/news/your-image.jpg"
    excerpt: "One sentence describing the story, shown on the card."
    ---
    ```
@@ -33,8 +33,8 @@ a failure.
    most recent articles by date, newest first. No other file needs to
    change.
 
-**Adding the image:** drop your image file into `public/images/news/` and
-use its path (starting with `/images/news/`) as the `image:` value above.
+**Adding the image:** drop your image file into `public/images/AboutUs/news/` and
+use its path (starting with `/images/AboutUs/news/`) as the `image:` value above.
 Keep filenames simple — lowercase, no spaces (use dashes instead).
 
 **A note on quotes:** if your title or excerpt itself contains a `"`

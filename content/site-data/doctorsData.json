@@ -7,7 +7,7 @@
       "name": "Dr. Julie Namm, MD",
       "specialty": "Family Medicine",
       "email": "drnamm@toduguam.com",
-      "image": "/images/doctors/julie-namm.png",
+      "image": "/images/PatientResources/doctors/julie-namm.png",
       "education": [
         "Loma Linda University, California"
       ],
@@ -31,7 +31,7 @@
       "name": "Bannuar Quiaoit, FNP",
       "specialty": "Family Medicine",
       "email": "bquiaoit@toduguam.com",
-      "image": "/images/doctors/bannuar-quiaoit.png",
+      "image": "/images/PatientResources/doctors/bannuar-quiaoit.png",
       "education": [],
       "certifications": [],
       "preview": [
@@ -49,7 +49,7 @@
       "name": "Elena Taneva-Cholakova, FNP",
       "specialty": "Family Medicine",
       "email": "etaneva@toduguam.com",
-      "image": "/images/doctors/elena-taneva.png",
+      "image": "/images/PatientResources/doctors/elena-taneva.png",
       "education": [],
       "certifications": [],
       "preview": [
@@ -67,7 +67,7 @@
       "name": "Dr. Edwin Supit, MD",
       "specialty": "Internal Medicine",
       "email": "drsupit@toduguam.com",
-      "image": "/images/doctors/edwin-supit.png",
+      "image": "/images/PatientResources/doctors/edwin-supit.png",
       "education": [],
       "certifications": [],
       "preview": [
@@ -85,7 +85,7 @@
       "name": "Dr. Sam Song, MD, FACOG",
       "specialty": "Obstetrics & Gynecology",
       "email": "drsong@toduguam.com",
-      "image": "/images/doctors/sam-song.png",
+      "image": "/images/PatientResources/doctors/sam-song.png",
       "education": [
         "Medical College of Pennsylvania"
       ],
@@ -111,7 +111,7 @@
       "name": "Dr. William Vercio, MD",
       "specialty": "Obstetrics & Gynecology",
       "email": "drvercio@toduguam.com",
-      "image": "/images/doctors/william-vercio.png",
+      "image": "/images/PatientResources/doctors/william-vercio.png",
       "education": [],
       "certifications": [],
       "preview": [
@@ -129,7 +129,7 @@
       "name": "Dr. Danny McClure, DO",
       "specialty": "Psychiatry, Medical Director",
       "email": "drmcclure@toduguam.com",
-      "image": "/images/doctors/danny-macclure.png",
+      "image": "/images/PatientResources/doctors/danny-macclure.png",
       "education": [
         "A.T. Still University School of Osteopathic Medicine in Arizona"
       ],
@@ -156,7 +156,7 @@
       "name": "Dr. Alan Butler, PsyD",
       "specialty": "Clinical Psychologist",
       "email": "drbutler@toduguam.com",
-      "image": "/images/doctors/alan-butler.png",
+      "image": "/images/PatientResources/doctors/alan-butler.png",
       "education": [
         "Antioch University Seattle"
       ],
@@ -187,7 +187,7 @@
       "name": "Dr. Fredrick Niegos, MD, FACE, CDD",
       "specialty": "Endocrinology and Internal Medicine",
       "email": "drniegos@toduguam.com",
-      "image": "/images/doctors/fredrick-niegos.png",
+      "image": "/images/PatientResources/doctors/fredrick-niegos.png",
       "education": [
         "University of Santo Tomas Manila, Philippines"
       ],
@@ -215,7 +215,7 @@
       "name": "Dr. Patrick Santos, MD",
       "specialty": "Family Medicine",
       "email": "drsantos@toduguam.com",
-      "image": "/images/doctors/patrick-santos.png",
+      "image": "/images/PatientResources/doctors/patrick-santos.png",
       "education": [
         "University of Santo Tomas Faculty of Medicine & Surgery, Manila, Philippines"
       ],

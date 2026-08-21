@@ -13,7 +13,7 @@ export default function WomenHealthModule() {
           <div className={styles.imageColumn}>
             <div className={styles.photoWrapper}>
               <Image
-                src="/images/healing/womens-health-care.jpeg" // Update with your actual image path
+                src="/images/CommunityAndImpact/healing/womens-health-care.jpeg" // Update with your actual image path
                 alt="Healthcare provider examining a patient"
                 width={520}
                 height={360}

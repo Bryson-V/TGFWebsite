@@ -8,21 +8,21 @@ const programTiers = [
     tier: "TIER 1",
     title: "Education Outreach",
     description: "Focuses on education and awareness and features online and in-person activities that discuss the 24 character strengths",
-    image: "/images/cares/tier1.jpeg",
+    image: "/images/CommunityAndImpact/cares/tier1.jpeg",
     alt: "Education Outreach Tier 1 session"
   },
   {
     tier: "TIER 2",
     title: "You Matter Sessions",
     description: "Entails group participation and features activities that help you learn techniques on how to understand your emotions, solve problems, and handle stress, among others",
-    image: "/images/cares/tier2.jpeg",
+    image: "/images/CommunityAndImpact/cares/tier2.jpeg",
     alt: "You Matter Sessions Tier 2 group"
   },
   {
     tier: "TIER 3",
     title: "Family Sessions",
     description: "Brings you and your family together to make sure that you are supported throughout your journey",
-    image: "/images/cares/tier3.jpeg",
+    image: "/images/CommunityAndImpact/cares/tier3.jpeg",
     alt: "Family Sessions Tier 3 interaction"
   }
 ];

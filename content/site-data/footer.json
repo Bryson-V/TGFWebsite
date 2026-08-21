@@ -33,8 +33,6 @@
     {
       "title": "Community & Impact",
       "links": [
-        { "label": "Volunteer", "href": "community/volunteer" },
-        { "label": "Careers", "href": "community/careers" },
         { "label": "Community Outreach", "href": "community/commOutreach" },
         { "label": "Partnerships", "href": "community/partnerships" },
         { "label": "Our Impact", "href": "community/commImpact" },
@@ -63,7 +61,8 @@
         { "label": "Our Story", "href": "about/ourStory" },
         { "label": "Board of Directors", "href": "about/boardOfDirectors" },
         { "label": "News & Media", "href": "about/allNews" },
-        { "label": "Careers Info", "href": "about/careers" },
+        { "label": "Volunteer", "href": "about/volunteer" },
+        { "label": "Careers", "href": "about/careers" },
         { "label": "Leadership", "href": "about/leadership" },
         { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
         { "label": "Contact Us", "href": "about/contacts" }

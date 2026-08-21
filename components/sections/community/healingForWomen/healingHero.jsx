@@ -29,7 +29,7 @@ export default function HealingHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/healing/Hinemlo.jpg" 
+          src="/images/CommunityAndImpact/healing/Hinemlo.jpg" 
           alt="Healing Background" 
           fill
           className={styles.bgImage}

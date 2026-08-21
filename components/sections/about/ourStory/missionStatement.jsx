@@ -19,7 +19,7 @@ export default function MissionStatement() {
 
           <div className={styles.missionImageWrapper}>
             <Image
-              src="/images/story/mobile-clinic-early.webp"
+              src="/images/AboutUs/story/mobile-clinic-early.webp"
               alt="Dennis Rodriguez Jr Mobile Care Clinic"
               fill
               sizes="(max-width: 992px) 100%, 450px"
@@ -47,7 +47,7 @@ export default function MissionStatement() {
           {/* Right Mobile Clinic Image */}
           <div className={styles.outreachImageWrapper}>
             <Image
-              src="/images/story/truck.webp"
+              src="/images/AboutUs/story/truck.webp"
               alt="TGF Mobile Care Clinic with Rainbow"
               fill
               sizes="(max-width: 992px) 100%, 600px"
@@ -62,7 +62,7 @@ export default function MissionStatement() {
           <div className={styles.photoGrid}>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-1.webp" // (Top Left)
+                src="/images/AboutUs/story/grid-1.webp" // (Top Left)
                 alt="TGF Community Kids"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -71,7 +71,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-2.webp" // (Top Right)
+                src="/images/AboutUs/story/grid-2.webp" // (Top Right)
                 alt="Mother and Child"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -80,7 +80,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-3.webp" // (Bottom Left)
+                src="/images/AboutUs/story/grid-3.webp" // (Bottom Left)
                 alt="Young Girl Peace Sign"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"
@@ -89,7 +89,7 @@ export default function MissionStatement() {
             </div>
             <div className={styles.gridImageWrapper}>
               <Image
-                src="/images/story/grid-4.webp" // (Bottom Right)
+                src="/images/AboutUs/story/grid-4.webp" // (Bottom Right)
                 alt="TGF Outreach Team"
                 fill
                 sizes="(max-width: 768px) 50vw, 250px"

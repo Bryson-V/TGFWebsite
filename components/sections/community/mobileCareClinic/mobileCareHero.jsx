@@ -27,7 +27,7 @@ export default function MobileCareHero() {
         style={{ y: backgroundY }}
       >
         <Image
-          src="/images/mobileCareClinic/TruckC.jpg"
+          src="/images/CommunityAndImpact/mobileCareClinic/TruckC.jpg"
           alt="Todu Guam Mobile Care Clinic Truck"
           fill
           priority

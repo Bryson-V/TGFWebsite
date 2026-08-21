@@ -27,7 +27,7 @@ export default function PreventionHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/preventionEdu/Education.jpg" 
+          src="/images/CommunityAndImpact/preventionEdu/Education.jpg" 
           alt="Prevention and Education Background" 
           fill
           className={styles.bgImage}

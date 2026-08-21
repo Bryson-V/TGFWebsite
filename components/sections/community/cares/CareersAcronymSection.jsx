@@ -9,7 +9,7 @@ export default function CaresAcronymSection() {
         <div className={styles.grid}>
           <div className={styles.imageCard}>
             <Image 
-              src="/images/cares/cares-logo-card.jpeg" 
+              src="/images/CommunityAndImpact/cares/cares-logo-card.jpeg" 
               alt="Todu Guam Cares Movement Logo Card" 
               width={500} 
               height={500}
@@ -19,7 +19,7 @@ export default function CaresAcronymSection() {
           
           <div className={styles.imageCard}>
             <Image 
-              src="/images/cares/cares-acronym-card.jpeg" 
+              src="/images/CommunityAndImpact/cares/cares-acronym-card.jpeg" 
               alt="Community Approach to Resilience and Engagement for Students Acronym Card" 
               width={500} 
               height={500}

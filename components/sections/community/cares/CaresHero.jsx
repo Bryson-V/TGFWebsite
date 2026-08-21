@@ -28,7 +28,7 @@ export default function CaresHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/cares/CaresBanner.jpg" 
+          src="/images/CommunityAndImpact/cares/CaresBanner.jpg" 
           alt="CARES Movement Background" 
           fill
           className={styles.bgImage}
@@ -67,7 +67,7 @@ export default function CaresHero() {
             {/* Top Symbol Image */}
             <div className={styles.symbolContainer}>
               <Image 
-                src="/images/cares/cares-thumb.jpeg" 
+                src="/images/CommunityAndImpact/cares/cares-thumb.jpeg" 
                 alt="Kinder Days Ahead Symbol" 
                 width={100} 
                 height={100}
@@ -79,7 +79,7 @@ export default function CaresHero() {
             {/* Bottom Text Logo Image */}
             <div className={styles.textLogoContainer}>
               <Image 
-                src="/images/cares/kinder-days-ahead.jpeg" 
+                src="/images/CommunityAndImpact/cares/kinder-days-ahead.jpeg" 
                 alt="Kinder Days Ahead - Join the Movement" 
                 width={200} 
                 height={150}

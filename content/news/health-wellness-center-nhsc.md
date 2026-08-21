@@ -1,7 +1,7 @@
 ---
 title: "Todu Guam Foundation Health and Wellness Center Approved as a National Health Service Corps Site"
 date: "2026-02-18"
-image: "/images/news/tgf-news-generic.jpg"
+image: "/images/AboutUs/news/tgf-news-generic.jpg"
 excerpt: "The Todu Guam Foundation Health and Wellness Center has been approved as a National Health Service Corps site."
 ---
 

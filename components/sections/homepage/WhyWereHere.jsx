@@ -13,7 +13,7 @@ export default function WhyWereHere() {
           <Link href="/about/mission" className={styles.imageLink} aria-label="Learn more about Our Mission">
             <div className={styles.imageWrap}>
               <Image
-                src="/images/hero/basic-healthcare.webp"
+                src="/images/HomePage/hero/basic-healthcare.webp"
                 alt="Community health volunteers caring for residents"
                 width={600}
                 height={450}

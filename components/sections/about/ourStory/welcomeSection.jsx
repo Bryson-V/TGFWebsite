@@ -9,7 +9,7 @@ export default function WelcomeSection() {
         {/* Left Side: Image */}
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/story/founders.webp" // Update path to your image
+            src="/images/AboutUs/story/founders.webp"
             alt="TGF Founders"
             fill
             sizes="(max-width: 992px) 100%, 450px"

@@ -22,7 +22,7 @@ export default function CaresWhy() {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image 
-                src="/images/cares/our-why.jpeg" 
+                src="/images/CommunityAndImpact/cares/our-why.jpeg" 
                 alt="Students interacting during a Todu Guam CARES session" 
                 width={550} 
                 height={360}

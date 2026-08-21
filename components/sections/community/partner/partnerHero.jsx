@@ -30,7 +30,7 @@ export default function PartnerHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/partners/Hero.jpg"
+          src="/images/CommunityAndImpact/partners/Hero.jpg"
           alt="Todu Guam Partnership Background" 
           fill
           className={styles.bgImage}

@@ -46,7 +46,7 @@ export default function CaresObjectiveSection() {
           <div className={styles.imageColumn}>
             <div className={styles.photoWrapper}>
               <Image 
-                src="/images/cares/objective-staff.jpeg" 
+                src="/images/CommunityAndImpact/cares/objective-staff.jpeg" 
                 alt="Todu Guam CARES staff member" 
                 width={450} 
                 height={500}
@@ -60,7 +60,7 @@ export default function CaresObjectiveSection() {
               style={{ transform: `rotate(${scrollRotation}deg)` }}
             >
               <Image 
-                src="/images/cares/flower.jpeg" 
+                src="/images/CommunityAndImpact/cares/flower.jpeg" 
                 alt="Rotating decorative flower" 
                 width={80} 
                 height={80}

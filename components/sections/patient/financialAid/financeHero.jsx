@@ -30,7 +30,7 @@ export default function FinancialHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/financial/Finance.jpg" 
+          src="/images/PatientResources/financial/Finance.jpg" 
           alt="Financial Assistance Background" 
           fill
           className={styles.bgImage}
