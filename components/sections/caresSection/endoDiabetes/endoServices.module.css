@@ -1,0 +1,97 @@
+.section {
+  padding: 2rem 5%;
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 3.5rem 4rem;
+  max-width: 960px;
+  width: 100%;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.03);
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.pillTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #0e7490;
+  background-color: #e0f2fe;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.serviceCard {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.serviceCard:hover {
+  background: #f0fdfa;
+}
+
+.checkIcon {
+  color: #0d9488;
+  background: #ccfbf1;
+  padding: 0.35rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #083344;
+  margin-bottom: 0.35rem;
+}
+
+.cardDetails {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sectionCard {
+    padding: 2rem 1.5rem;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
