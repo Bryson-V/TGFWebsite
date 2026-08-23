@@ -17,7 +17,6 @@
         { "label": "Primary Care", "href": "Cares&Services/primaryCare" },
         { "label": "Endocinology & Diabetes", "href": "Cares&Services/endoDiabetes" },
         { "label": "Women's Health & OB-GYN", "href": "Cares&Services/womenHealth" },
-        { "label": "Behavioral Health", "href": "Cares&Services/mindCare" },
         { "label": "Preventive Care & Screenings", "href": "Cares&Services/screening" },
         { "label": "Community Health Programs", "href": "Cares&Services/communityHealth" }
       ]
@@ -31,11 +30,7 @@
         { "label": "About", "href": "mindCare/mindAbout" },
         { "label": "Psychiatry", "href": "mindCare/psychiatry" },
         { "label": "Pychology", "href": "mindCare/psychology" },
-        { "label": "Therapy", "href": "mindCare/therapy" },
-        { "label": "TMS", "href": "mindCare/tms" },
-        { "label": "Meet the Team", "href": "mindCare/mindTeam" },
-        { "label": "FAQ", "href": "mindCare/mindFAQ" },
-        { "label": "Appointment", "href": "mindCare/mindAppointment" }
+        { "label": "TMS", "href": "mindCare/tms" }
       ]
     },
     {
@@ -62,7 +57,6 @@
       "links": [
         { "label": "Doctors", "href": "patient/doctors" },
         { "label": "Patient Portal", "href": "patient/healow" },
-        { "label": "Request Appointment", "href": "patient/reqAppointment" },
         { "label": "Insurance", "href": "patient/insurance" },
         { "label": "Financial Assistance", "href": "patient/financialAssistance" },
         { "label": "FAQs", "href": "patient/faq" }
@@ -80,7 +74,6 @@
         { "label": "News & Media", "href": "about/allNews" },
         { "label": "Volunteer", "href": "about/volunteer" },
         { "label": "Careers", "href": "about/careers" },
-        { "label": "Leadership", "href": "about/leadership" },
         { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
         { "label": "Contact Us", "href": "about/contacts" }
       ]

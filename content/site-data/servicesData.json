@@ -1,0 +1,30 @@
+[
+  {
+    "id": "diabetes",
+    "iconType": "activity",
+    "title": "Type 1 & Type 2 Diabetes",
+    "summary": "Personalized glycemic control",
+    "details": "Customized treatment plans including insulin therapy management, dietary counseling, and ongoing A1C monitoring to prevent long-term complications."
+  },
+  {
+    "id": "cgm",
+    "iconType": "cpu",
+    "title": "CGM & Insulin Pump Support",
+    "summary": "Advanced diabetes technology",
+    "details": "Expert setup, data interpretation, and continuous support for modern Continuous Glucose Monitors (CGM) and automated insulin delivery systems."
+  },
+  {
+    "id": "thyroid",
+    "iconType": "heart",
+    "title": "Thyroid & Parathyroid",
+    "summary": "Hormonal balance & testing",
+    "details": "Diagnosis and ongoing management for hypothyroidism, hyperthyroidism, thyroid nodules, Hashimoto's disease, and calcium disorders."
+  },
+  {
+    "id": "gestational",
+    "iconType": "shield",
+    "title": "Gestational & Metabolic Care",
+    "summary": "Specialized metabolic health",
+    "details": "Focused care for pregnancy-related blood sugar control, PCOS, metabolic syndrome, and preventative lifestyle interventions."
+  }
+]
