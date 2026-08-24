@@ -1,9 +1,13 @@
-import NewsArchive from "@/components/sections/about/news/newsArchive";
+import InsuranceHero from "@/components/sections/patient/insurance/insuranceHero";
+import Insurances from "@/components/sections/patient/insurance/insurances";
+import NoInsurance from "@/components/sections/patient/insurance/noInsurance";
 
 export default function AllNews() {
   return (
     <>
-      <NewsArchive />
+      <InsuranceHero />
+      <Insurances />
+      <NoInsurance />
     </>
   );
 }
