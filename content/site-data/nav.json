@@ -74,7 +74,6 @@
         { "label": "News & Media", "href": "about/allNews" },
         { "label": "Volunteer", "href": "about/volunteer" },
         { "label": "Careers", "href": "about/careers" },
-        { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
         { "label": "Contact Us", "href": "about/contacts" }
       ]
     }
