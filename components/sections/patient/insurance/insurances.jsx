@@ -123,7 +123,7 @@ export default function Insurances() {
                 <div className={styles.providerTextGroup}>
                   <span className={styles.providerName}>{provider.name}</span>
                   <span className={styles.visitWebsiteText}>
-                    Go to website &rarr;
+                    Visit website &rarr;
                   </span>
                 </div>
               </div>
