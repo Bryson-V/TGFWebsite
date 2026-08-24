@@ -26,7 +26,6 @@
   background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(244, 251, 247, 0) 70%);
 }
 
-/* Static Decorative Border */
 .giantStaticRing {
   position: absolute;
   top: -20px;   
@@ -54,7 +53,6 @@
   box-shadow: 0 6px 18px rgba(56, 161, 105, 0.08);
   border: 1px solid rgba(56, 161, 105, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease, outline 0.2s ease, box-shadow 0.3s ease;
-  /* Prevent tap highlight flicker on mobile */
   -webkit-tap-highlight-color: transparent; 
 }
 
@@ -104,6 +102,7 @@
 }
 
 .listItem {
+  text-decoration: none;
   font-size: 1.1rem;
   padding: 12px 16px;
   border-radius: 12px;
@@ -123,10 +122,41 @@
 .listItemLeft {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-/* Scaled up the logos from 70% to 90% */
+.providerTextGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.providerName {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.visitWebsiteText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #38a169;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.listItem:hover .visitWebsiteText,
+.activeListItem .visitWebsiteText {
+  opacity: 1;
+  max-height: 20px;
+  margin-top: 2px;
+}
+
+.activeListItem .visitWebsiteText {
+  color: #e6f6ec;
+}
+
 .bubbleImage {
   width: 90%; 
   height: 90%;
@@ -200,7 +230,7 @@
 @media (max-width: 950px) {
   .sectionWrapper {
     flex-direction: column;
-    padding: 100px 20px;
+    padding: 100px 20px; 
     gap: 10px; 
   }
   
@@ -225,8 +255,7 @@
   .poolContainer {
     order: 3;
     transform: scale(0.75);
-    margin: -10px 0;
-    padding: 10px;
+    margin: -20px 0; 
   }
 
   .insuranceList {
@@ -234,6 +263,12 @@
     width: 100%;
     max-width: 500px;
     margin: 20px auto 40px auto; 
+  }
+
+  .visitWebsiteText {
+    opacity: 1;
+    max-height: 20px;
+    margin-top: 2px;
   }
 }
 
@@ -244,7 +279,7 @@
 
   .poolContainer {
     transform: scale(0.65);
-    margin: -20px 0 -10px 0; 
+    margin: -40px 0 -20px 0; 
   }
   
   .listTitle {
