@@ -1,0 +1,30 @@
+[
+  {
+    "id": "preventative-care",
+    "title": "Preventative Health Physicals",
+    "subtitle": "Annual wellness & screenings",
+    "description": "Customized wellness exams including routine lab evaluation, preventative cancer screenings, and personalized risk assessments to catch health issues early.",
+    "image": "/images/Services/primarycare/preventative-care.jpg"
+  },
+  {
+    "id": "chronic-management",
+    "title": "Chronic Disease Management",
+    "subtitle": "Long-term health monitoring",
+    "description": "Continuous monitoring and medication management for hypertension, high cholesterol, asthma, and ongoing metabolic health.",
+    "image": "/images/Services/primarycare/chronic-management.jpg"
+  },
+  {
+    "id": "immunizations",
+    "title": "Vaccinations & Immunizations",
+    "subtitle": "Routine preventive protection",
+    "description": "Recommended adult immunization schedules, booster shots, travel vaccines, and seasonal flu prevention.",
+    "image": "/images/Services/primarycare/immunizations.jpg"
+  },
+  {
+    "id": "routine-diagnostics",
+    "title": "Routine Lab Diagnostics",
+    "subtitle": "On-site testing & evaluations",
+    "description": "Comprehensive blood work, lipid panels, metabolic panels, and diagnostic referrals handled conveniently in-office.",
+    "image": "/images/Services/primarycare/diagnostics.jpg"
+  }
+]

@@ -14,6 +14,15 @@
     },
     {
       "id": "2",
+      "name": "Lena Calvo-Rodriguez",
+      "role": "President/Ex-Officio Board Member, and Co-Founder",
+      "image": "/images/AboutUs/directors/Lena.webp",
+      "preview": "Lena Calvo-Rodriguez serves as President/CEO and Co-Founder of Todu Guam Foundation, bringing expertise in executive leadership, mobile clinic operations, and community-centered healthcare expansion. Her vision and on-the-ground leadership drive strategic growth, program development, and responsible stewardship as the Foundation continues to expand access to healthcare across Guam.",
+      "bio": [
+        "Lena Calvo-Rodriguez is President/CEO and Co-Founder of Todu Guam Foundation (TGF), a nonprofit healthcare organization expanding access to care across Guam’s rural and underserved communities through Primary Care, Behavioral Health, OB/GYN, Endocrinology, and Mobile/WOW Clinic services. Since co-founding TGF in 2017, she has led the organization’s growth toward Federally Qualified Health Center designation, most recently securing a HRSA New Access Points award to expand mobile and behavioral health services across Guam’s northern and central communities. Lena brings on-the-ground experience deploying mobile clinic strategy in a remote Pacific island setting — empowering communities often left out of the national conversation on rural health — offering a distinct perspective for grantees working to transform access in rural and frontier communities."      ]
+    },
+    {
+      "id": "3",
       "name": "Dr. Yolanda Carrera",
       "role": "Board Member | Retired Pediatrician",
       "image": "/images/AboutUs/directors/Yolanda.webp",
@@ -23,16 +32,7 @@
         "Throughout her career, Dr. Carrera has been committed to compassionate, patient-centered care and the health and well-being of Guam’s families.  As a member of the Board, she helps guide Todu Guam Foundation’s commitment to accessible, high-quality healthcare, prevention, early intervention, and healthier communities throughout Guam."
       ]
     },
-    {
-      "id": "3",
-      "name": "Lena Calvo-Rodriguez",
-      "role": "President/Ex-Officio Board Member, and Co-Founder",
-      "image": "/images/AboutUs/directors/Lena.webp",
-      "preview": "Lena specializes in community outreach and growing grassroots volunteer networks.",
-      "bio": [
-        "Lena specializes in community outreach and has been instrumental in growing our grassroots volunteer networks."
-      ]
-    },
+
     {
       "id": "4",
       "name": "Maria Elizabeth V. Cristi, PE",

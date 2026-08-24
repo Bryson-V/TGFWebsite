@@ -1,0 +1,23 @@
+[
+  {
+    "id": "annual-checkup-guide",
+    "title": "Annual Exam Checklist",
+    "desc": "A complete guide to preparing for your annual preventive physical and lab work.",
+    "type": "CHECKLIST",
+    "externalUrl": "https://example.com/annual-exam-checklist.pdf"
+  },
+  {
+    "id": "hypertension-log",
+    "title": "Blood Pressure Log",
+    "desc": "Printable tracking sheet for daily home blood pressure readings.",
+    "type": "LOG SHEET",
+    "externalUrl": "https://example.com/blood-pressure-log.pdf"
+  },
+  {
+    "id": "immunization-schedule",
+    "title": "Adult Immunization Guide",
+    "desc": "Recommended vaccination timelines and preventive boosters for adults.",
+    "type": "GUIDE",
+    "externalUrl": "https://example.com/adult-immunization-guide.pdf"
+  }
+]

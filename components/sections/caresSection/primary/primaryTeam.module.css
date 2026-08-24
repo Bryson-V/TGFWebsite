@@ -1,0 +1,78 @@
+.section {
+  padding: 5rem 0 3rem 0;
+  background-color: #f8fafc;
+}
+
+.headerBlock {
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+}
+
+.subTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #047857;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #064e3b;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+.cardsWrapper {
+  margin-top: -1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0 2rem 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+.actionWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  background-color: #047857;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #065f46;
+  transform: translateY(-1px);
+}

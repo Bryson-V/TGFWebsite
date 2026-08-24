@@ -14,7 +14,7 @@
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: #0e7490;
+  color: #be185d;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
@@ -22,14 +22,14 @@
 .sectionTitle {
   font-size: 2.75rem;
   font-weight: 800;
-  color: #083344;
+  color: #881337;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
 
 .sectionSubtitle {
   font-size: 1.15rem;
-  color: #475569;
+  color: #4c0519;
 }
 
 .grid {
@@ -38,12 +38,12 @@
   gap: 1.5rem;
 }
 
-/* Left accent border card style matching OB/GYN */
+/* Left accent border card style matching screenshot */
 .card {
   background: #ffffff;
   border-radius: 1rem;
   padding: 2.25rem 2rem;
-  border-left: 5px solid #0e7490;
+  border-left: 5px solid #be185d;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
@@ -52,26 +52,26 @@
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(14, 116, 144, 0.08);
+  box-shadow: 0 10px 25px rgba(190, 24, 93, 0.08);
 }
 
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #083344;
+  color: #881337;
   margin-bottom: 0.75rem;
 }
 
 .cardDesc {
   font-size: 0.95rem;
-  color: #334155;
+  color: #4c0519;
   line-height: 1.6;
   margin-bottom: 2rem;
   flex-grow: 1;
 }
 
 .link {
-  color: #0e7490;
+  color: #be185d;
   font-weight: 800;
   font-size: 1rem;
   text-decoration: none;
@@ -81,7 +81,7 @@
 }
 
 .link:hover {
-  color: #083344;
+  color: #9d174d;
   transform: translateX(3px);
 }
 

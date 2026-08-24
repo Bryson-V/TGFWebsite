@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import Image from "@/components/ui/Image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./endoHero.module.css";
+import styles from "./primaryHero.module.css";
 
-export default function EndoHero() {
+export default function PrimaryCareHero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,15 +26,15 @@ export default function EndoHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/endo/endo-banner.jpg" 
-          alt="Endocrinology Care Background" 
+          src="/images/Services/primarycare/primarycare-banner.jpg" 
+          alt="Primary Care Background" 
           fill
           className={styles.bgImage}
           priority
         />
       </motion.div>
 
-      {/* Deep Navy Gradient Overlay */}
+      {/* Deep Emerald Gradient Overlay */}
       <motion.div
         className={styles.overlay}
         style={{ opacity: overlayOpacity }}
@@ -46,17 +46,17 @@ export default function EndoHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>SPECIALIZED CLINICAL CARE</span>
+          <span className={styles.subtitle}>FAMILY & ADULT MEDICINE</span>
           
           <h1 className={styles.title}>
-            Endocrinology<br />
-            <span className={styles.brightText}>&amp; Diabetes Center</span>
+            Primary Care<br />
+            <span className={styles.brightText}>&amp; Wellness Center</span>
           </h1>
 
           <p className={styles.description}>
-            Comprehensive hormonal health management, advanced glucose monitoring,
+            Comprehensive healthcare for every stage of life, routine preventative physicals,
             <br className={styles.desktopBreak} />
-            and dedicated clinical treatment tailored for long-term care.
+            and dedicated chronic disease management tailored for you and your family.
           </p>
         </div>
       </motion.div>

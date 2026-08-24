@@ -1,0 +1,34 @@
+[
+  {
+    "id": "well-woman",
+    "icon": "FaCalendarAlt",
+    "title": "Well-Woman Exams",
+    "subtitle": "Personalized annual wellness care",
+    "description": "Customized preventative care including pelvic exams, Pap tests, breast screenings, and ongoing wellness guidance.",
+    "image": "/images/obgyn-wellwoman.jpg"
+  },
+  {
+    "id": "obstetrics",
+    "icon": "FaFileAlt",
+    "title": "Obstetrics & Prenatal Care",
+    "subtitle": "Comprehensive maternal health",
+    "description": "Complete care throughout pregnancy, from early ultrasound imaging and routine checkups to high-risk pregnancy management.",
+    "image": "/images/obgyn-prenatal.jpg"
+  },
+  {
+    "id": "surgery",
+    "icon": "FaCommentAlt",
+    "title": "Gynecological Surgery",
+    "subtitle": "Advanced surgical solutions",
+    "description": "Minimally invasive laparoscopic options and clinical therapies designed for faster recovery and precise patient outcomes.",
+    "image": "/images/obgyn-surgery.jpg"
+  },
+  {
+    "id": "hormone",
+    "icon": "FaPrescriptionBottleAlt",
+    "title": "Hormonal & Menopause Care",
+    "subtitle": "Specialized reproductive health",
+    "description": "Tailored strategies addressing PCOS, perimenopause, menopause symptoms, and overall hormonal balance.",
+    "image": "/images/obgyn-hormone.jpg"
+  }
+]

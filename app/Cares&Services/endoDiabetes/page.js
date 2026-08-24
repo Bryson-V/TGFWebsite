@@ -3,14 +3,16 @@ import EndoCtaBanner from "@/components/sections/caresSection/endoDiabetes/endoC
 import EndoHero from "@/components/sections/caresSection/endoDiabetes/endoHero";
 import EndoResources from "@/components/sections/caresSection/endoDiabetes/endoResources";
 import EndoServices from "@/components/sections/caresSection/endoDiabetes/endoServices";
+import EndoTeamSection from "@/components/sections/caresSection/endoDiabetes/endoTeam";
 
 export default function AllNews() {
   return (
     <>
     <EndoHero />
+    <EndoCtaBanner /> 
     <EndoServices />
     <EndoResources />
-    <EndoCtaBanner /> 
+    <EndoTeamSection />
     </>
   );
 }
