@@ -204,19 +204,11 @@
 @media (max-width: 900px) {
   .layoutGrid {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "image"
-      "accordion";
-    gap: 1.5rem;
+    grid-template-areas: "accordion";
   }
 
   .imageColumn {
-    position: static;
-  }
-
-  .imageWrapper {
-    height: 230px;
-    border-radius: 20px;
+    display: none;
   }
 
   .cardHeader {

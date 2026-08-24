@@ -200,23 +200,16 @@
   margin: 0;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Adjustments */
 @media (max-width: 900px) {
   .layoutGrid {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "image"
-      "accordion";
-    gap: 1.5rem;
+    grid-template-areas: "accordion";
   }
 
+  /* Completely hide image column on mobile screens */
   .imageColumn {
-    position: static;
-  }
-
-  .imageWrapper {
-    height: 230px;
-    border-radius: 20px;
+    display: none;
   }
 
   .cardHeader {
