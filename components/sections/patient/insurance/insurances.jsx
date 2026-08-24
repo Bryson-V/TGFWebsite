@@ -19,10 +19,15 @@ const insuranceData = [
 export default function Insurances() {
   const [activeId, setActiveId] = useState(null);
 
+  // Toggle for mobile clicks
+  const handleInteraction = (id) => {
+    setActiveId(prevId => prevId === id ? null : id);
+  };
+
   return (
     <div className={styles.sectionWrapper}>
       
-      {/* LEFT SIDE: Orbital Pool (Slides in from the right) */}
+      {/* Orbital Pool */}
       <motion.div 
         className={styles.poolContainer}
         initial={{ opacity: 0, x: 100 }} 
@@ -32,7 +37,7 @@ export default function Insurances() {
       >
         <div className={styles.orbitalRing}>
           
-          {/* Static Decorative Ring with Colored Accents */}
+          {/* Static Decorative Ring */}
           <div className={styles.giantStaticRing}>
             <div className={styles.accentDot1} />
             <div className={styles.accentDot2} />
@@ -59,6 +64,7 @@ export default function Insurances() {
                 whileHover={{ scale: 1.15 }}
                 onMouseEnter={() => setActiveId(provider.id)}
                 onMouseLeave={() => setActiveId(null)}
+                onClick={() => handleInteraction(provider.id)}
               >
                 {provider.image ? (
                   <Image 
@@ -80,7 +86,7 @@ export default function Insurances() {
         </div>
       </motion.div>
 
-      {/* RIGHT SIDE: Interactive List (Fades and slides up slightly) */}
+      {/* Interactive List */}
       <motion.div 
         className={styles.listContainer}
         initial={{ opacity: 0, y: 30 }}
@@ -105,6 +111,7 @@ export default function Insurances() {
               transition={{ type: "spring", stiffness: 100, damping: 10 }}
               onMouseEnter={() => setActiveId(provider.id)}
               onMouseLeave={() => setActiveId(null)}
+              onClick={() => handleInteraction(provider.id)}
             >
               <div className={styles.listItemLeft}>
                 <span className={styles.bulletPoint}>•</span>
@@ -115,7 +122,7 @@ export default function Insurances() {
                 <Image 
                   src={provider.image} 
                   alt={`${provider.name} logo`}
-                  width={60} 
+                  width={80} 
                   height={60}
                   className={styles.listIcon}
                 />
