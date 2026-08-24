@@ -2,26 +2,29 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image'; 
+import Image from '@/components/ui/Image';
 import { FaShieldAlt } from "react-icons/fa";
 import styles from './insurances.module.css';
 
 const insuranceData = [
-  { id: 1, name: 'Medicaid', top: '10%', left: '22%', size: '120px', image: '/images/PatientResources/insurance/MedicaidLogo.png' },
-  { id: 2, name: 'Medicare', top: '15%', left: '62%', size: '115px', image: '/images/PatientResources/insurance/MedicareLogo.png' },
-  { id: 3, name: 'NetCare', top: '42%', left: '10%', size: '100px', image: '/images/PatientResources/insurance/NetcareLogo.png' },
-  { id: 4, name: 'SelectCare', top: '42%', left: '72%', size: '100px', image: '/images/PatientResources/insurance/SelectCareLogo.png' },
-  { id: 5, name: 'Staywell', top: '70%', left: '22%', size: '100px', image: '/images/PatientResources/insurance/StayWellLogo.png' },
-  { id: 6, name: 'Tricare', top: '68%', left: '55%', size: '110px', image: '/images/PatientResources/insurance/TricareLogo.png' },
-  { id: 7, name: 'Most Major Insurances', top: 'calc(50% - 65px)', left: 'calc(50% - 65px)', size: '130px', isSpecial: true, Icon: FaShieldAlt },
+  { id: 1, name: 'Medicaid', top: '10%', left: '22%', size: '120px', image: '/images/PatientResources/insurance/MedicaidLogo.png', link: 'https://www.medicaid.gov/' },
+  { id: 2, name: 'Medicare', top: '15%', left: '62%', size: '115px', image: '/images/PatientResources/insurance/MedicareLogo.png', link: 'https://www.medicare.gov/' },
+  { id: 3, name: 'NetCare', top: '42%', left: '10%', size: '100px', image: '/images/PatientResources/insurance/NetcareLogo.png', link: 'https://www.netcare.co.za/' },
+  { id: 4, name: 'SelectCare', top: '42%', left: '72%', size: '100px', image: '/images/PatientResources/insurance/SelectCareLogo.png', link: 'https://www.calvos.net/Home.aspx' },
+  { id: 5, name: 'Staywell', top: '70%', left: '22%', size: '100px', image: '/images/PatientResources/insurance/StayWellLogo.png', link: 'https://www.staywellguam.com/' },
+  { id: 6, name: 'Tricare', top: '68%', left: '55%', size: '110px', image: '/images/PatientResources/insurance/TricareLogo.png', link: 'https://tricare.mil/' },
+  { id: 7, name: 'Most Major Insurances', top: 'calc(50% - 65px)', left: 'calc(50% - 65px)', size: '130px', isSpecial: true, Icon: FaShieldAlt, link: './faq' },
 ];
 
 export default function Insurances() {
-  const [activeId, setActiveId] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
+  const [clickedId, setClickedId] = useState(null);
 
-  // Toggle for mobile clicks
-  const handleInteraction = (id) => {
-    setActiveId(prevId => prevId === id ? null : id);
+  const activeId = clickedId || hoveredId;
+
+  const handleBubbleClick = (id) => {
+    // Toggles the clicked state on or off
+    setClickedId(prevId => prevId === id ? null : id);
   };
 
   return (
@@ -62,9 +65,9 @@ export default function Insurances() {
                   height: provider.size,
                 }}
                 whileHover={{ scale: 1.15 }}
-                onMouseEnter={() => setActiveId(provider.id)}
-                onMouseLeave={() => setActiveId(null)}
-                onClick={() => handleInteraction(provider.id)}
+                onMouseEnter={() => setHoveredId(provider.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                onClick={() => handleBubbleClick(provider.id)}
               >
                 {provider.image ? (
                   <Image 
@@ -101,21 +104,28 @@ export default function Insurances() {
         
         <ul className={styles.insuranceList}>
           {insuranceData.map((provider) => (
-            <motion.li
+            <motion.a
               key={`list-${provider.id}`}
+              href={provider.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`
                 ${styles.listItem} 
                 ${activeId === provider.id ? styles.activeListItem : ''}
               `}
               whileHover={{ x: 8 }}
               transition={{ type: "spring", stiffness: 100, damping: 10 }}
-              onMouseEnter={() => setActiveId(provider.id)}
-              onMouseLeave={() => setActiveId(null)}
-              onClick={() => handleInteraction(provider.id)}
+              onMouseEnter={() => setHoveredId(provider.id)}
+              onMouseLeave={() => setHoveredId(null)}
             >
               <div className={styles.listItemLeft}>
                 <span className={styles.bulletPoint}>•</span>
-                {provider.name}
+                <div className={styles.providerTextGroup}>
+                  <span className={styles.providerName}>{provider.name}</span>
+                  <span className={styles.visitWebsiteText}>
+                    Go to website &rarr;
+                  </span>
+                </div>
               </div>
               
               {provider.image ? (
@@ -129,7 +139,7 @@ export default function Insurances() {
               ) : provider.Icon && (
                 <provider.Icon className={styles.listReactIcon} />
               )}
-            </motion.li>
+            </motion.a>
           ))}
         </ul>
       </motion.div>
