@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import Image from "@/components/ui/Image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./endoHero.module.css";
+import styles from "./obgynHero.module.css";
 
-export default function EndoHero() {
+export default function ObgynHero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,15 +26,15 @@ export default function EndoHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/endo/endo-banner.jpg" 
-          alt="Endocrinology Care Background" 
+          src="/images/Services/obgyn/obgyn-banner.jpg" 
+          alt="OB/GYN Care Background" 
           fill
           className={styles.bgImage}
           priority
         />
       </motion.div>
 
-      {/* Deep Navy Gradient Overlay */}
+      {/* Deep Burgundy Gradient Overlay */}
       <motion.div
         className={styles.overlay}
         style={{ opacity: overlayOpacity }}
@@ -46,17 +46,17 @@ export default function EndoHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>SPECIALIZED CLINICAL CARE</span>
+          <span className={styles.subtitle}>WOMEN'S HEALTH SERVICES</span>
           
           <h1 className={styles.title}>
-            Endocrinology<br />
-            <span className={styles.brightText}>&amp; Diabetes Center</span>
+            Obstetrics &amp;<br />
+            <span className={styles.brightText}>Gynecology Center</span>
           </h1>
 
           <p className={styles.description}>
-            Comprehensive hormonal health management, advanced glucose monitoring,
+            Comprehensive care for every stage of life, from annual wellness screenings
             <br className={styles.desktopBreak} />
-            and dedicated clinical treatment tailored for long-term care.
+            to specialized obstetrics, delivered with empathy and expert support.
           </p>
         </div>
       </motion.div>

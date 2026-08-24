@@ -1,24 +1,46 @@
 "use client";
 
-import { useState } from "react";
-import Image from '@/components/ui/Image';
+import { useState, useEffect, useMemo, Suspense } from "react";
+import Image from "@/components/ui/Image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import Container from "@/components/ui/Container";
 import styles from "./doctorCards.module.css";
 import doctorsData from "@/content/site-data/doctorsData.json";
 
+// Category mappings with clean labels for UI display
+const FILTER_MAP = {
+  all: "All Doctors",
+  primaryCare: "Primary Care",
+  endocrinology: "Endocrinology",
+  obgyn: "OB/GYN",
+  mindCare: "MindCare",
+};
+
 function ProfileModal({ director, onClose }) {
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className={styles.modalOverlay} 
+      className={styles.modalOverlay}
       onClick={onClose}
     >
-      <motion.div 
-        className={styles.modalContent} 
-        onClick={(e) => e.stopPropagation()} 
+      <motion.div
+        className={styles.modalContent}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={`modal-name-${director.id}`}
       >
         <div className={styles.modalBanner}>
           <p className={styles.modalEyebrow}>Medical Team Profile</p>
@@ -26,7 +48,7 @@ function ProfileModal({ director, onClose }) {
             ✕
           </button>
         </div>
-        
+
         <div className={styles.modalBodyContainer}>
           <div className={styles.modalHeader}>
             <motion.div layoutId={`image-container-${director.id}`} className={styles.modalAvatarWrapper}>
@@ -39,7 +61,11 @@ function ProfileModal({ director, onClose }) {
               />
             </motion.div>
             <div className={styles.modalHeaderText}>
-              <motion.h4 layoutId={`name-${director.id}`} className={styles.modalName}>
+              <motion.h4
+                layoutId={`name-${director.id}`}
+                className={styles.modalName}
+                id={`modal-name-${director.id}`}
+              >
                 {director.name}
               </motion.h4>
               <motion.p layoutId={`specialty-${director.id}`} className={styles.modalspecialty}>
@@ -53,10 +79,10 @@ function ProfileModal({ director, onClose }) {
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .2 }} 
+            transition={{ delay: 0.2 }}
             className={styles.modalBody}
           >
             {director.education && director.education.length > 0 && (
@@ -92,7 +118,7 @@ function ProfileModal({ director, onClose }) {
                   ))
                 ) : (
                   <p className={styles.modalDescription}>
-                    {director.bio || "DESCRIPTION HERE"}
+                    {director.bio || "Profile details coming soon."}
                   </p>
                 )}
               </div>
@@ -104,59 +130,84 @@ function ProfileModal({ director, onClose }) {
   );
 }
 
-export default function BoardOfDoctors() {
+function BoardOfDoctorsContent({ defaultCategory = "all" }) {
+  const router = useRouter();
+  const pathname = usePathname(); // Dynamic route preservation (fixes 404)
+  const searchParams = useSearchParams();
   const [selectedMember, setSelectedMember] = useState(null);
-  const [activeFilter, setActiveFilter] = useState("all"); // "all", "general", "specialist"
+
+  // Read URL search param first, fallback to defaultCategory prop if param doesn't exist
+  const currentCategoryParam = searchParams.get("category");
+  const activeFilter =
+    currentCategoryParam && currentCategoryParam in FILTER_MAP
+      ? currentCategoryParam
+      : defaultCategory;
 
   const closeModal = () => setSelectedMember(null);
 
-  // Filter the doctors based on the selected button
-  const filteredDoctors = doctorsData.doctors.filter((member) => {
-    if (activeFilter === "all") return true;
-    return member.category === activeFilter;
-  });
+  // Filter list based on selected category key
+  const filteredDoctors = useMemo(() => {
+    if (activeFilter === "all") return doctorsData.doctors;
+    return doctorsData.doctors.filter((member) => member.category === activeFilter);
+  }, [activeFilter]);
+
+  // Handle URL updates on filter click
+  const handleFilterChange = (categoryKey) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (categoryKey === "all") {
+      params.delete("category");
+    } else {
+      params.set("category", categoryKey);
+    }
+
+    const queryString = params.toString();
+    const targetUrl = queryString ? `${pathname}?${queryString}` : pathname;
+
+    router.push(targetUrl, { scroll: false });
+  };
 
   return (
     <section className={styles.section}>
       <Container className={styles.container}>
         <header className={styles.header}>
           <h2 className={styles.heading}>{doctorsData.heading}</h2>
-          
-          {/* Filter Buttons */}
+
+          {/* Dynamic Filter Buttons */}
           <div className={styles.filterContainer}>
-            <button 
-              className={`${styles.filterBtn} ${activeFilter === "all" ? styles.activeFilter : ""}`}
-              onClick={() => setActiveFilter("all")}
-            >
-              All Doctors
-            </button>
-            <button 
-              className={`${styles.filterBtn} ${activeFilter === "general" ? styles.activeFilter : ""}`}
-              onClick={() => setActiveFilter("general")}
-            >
-              General Practice
-            </button>
-            <button 
-              className={`${styles.filterBtn} ${activeFilter === "specialist" ? styles.activeFilter : ""}`}
-              onClick={() => setActiveFilter("specialist")}
-            >
-              Specialists
-            </button>
+            {Object.entries(FILTER_MAP).map(([key, label]) => (
+              <button
+                key={key}
+                className={`${styles.filterBtn} ${activeFilter === key ? styles.activeFilter : ""}`}
+                onClick={() => handleFilterChange(key)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         </header>
 
-        <div className={styles.listContainer}>
+        {/* Doctor Cards Grid */}
+        <div className={styles.listContainer} role="list">
           {filteredDoctors.map((member, index) => {
             const isSelected = selectedMember?.id === member.id;
 
             return (
-              <motion.div 
-                key={member.id} 
-                layoutId={`card-${member.id}`} 
+              <motion.div
+                key={member.id}
+                layoutId={`card-${member.id}`}
                 className={`${styles.card} ${isSelected ? styles.cardActive : ""}`}
                 onClick={() => setSelectedMember(member)}
                 animate={{ opacity: isSelected ? 0 : 1 }}
-                transition={{ duration: .687 }}
+                transition={{ duration: 0.687 }}
+                role="listitem"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setSelectedMember(member);
+                  }
+                }}
               >
                 <motion.div layoutId={`image-container-${member.id}`} className={styles.imageWrapper}>
                   <Image
@@ -168,7 +219,7 @@ export default function BoardOfDoctors() {
                     className={styles.image}
                   />
                 </motion.div>
-                
+
                 <div className={styles.infoWrapper}>
                   <div className={styles.topInfo}>
                     <motion.h3 layoutId={`name-${member.id}`} className={styles.memberName}>
@@ -205,6 +256,7 @@ export default function BoardOfDoctors() {
           })}
         </div>
 
+        {/* Bio Modal */}
         <AnimatePresence>
           {selectedMember && (
             <ProfileModal director={selectedMember} onClose={closeModal} />
@@ -212,5 +264,14 @@ export default function BoardOfDoctors() {
         </AnimatePresence>
       </Container>
     </section>
+  );
+}
+
+// Wrapped in Suspense as required by Next.js when using `useSearchParams`
+export default function BoardOfDoctors({ defaultCategory = "all" }) {
+  return (
+    <Suspense fallback={<div className={styles.section}>Loading Doctors...</div>}>
+      <BoardOfDoctorsContent defaultCategory={defaultCategory} />
+    </Suspense>
   );
 }

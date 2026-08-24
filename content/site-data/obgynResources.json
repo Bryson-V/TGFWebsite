@@ -1,0 +1,23 @@
+[
+  {
+    "id": "prenatal-guide",
+    "title": "Prenatal Care Guide",
+    "desc": "What to expect month-by-month during your pregnancy journey.",
+    "type": "PDF GUIDE",
+    "externalUrl": "https://example.com/prenatal-care-guide.pdf"
+  },
+  {
+    "id": "visit-faq",
+    "title": "First-Time Visit FAQ",
+    "desc": "Helpful details on how to prepare for your initial OB/GYN consultation.",
+    "type": "PATIENT FAQ",
+    "externalUrl": "https://example.com/obgyn-first-visit-faq.pdf"
+  },
+  {
+    "id": "patient-portal",
+    "title": "Patient Portal Guide",
+    "desc": "Access lab results, message your provider, and request appointment renewals.",
+    "type": "PORTAL GUIDE",
+    "externalUrl": "https://example.com/patient-portal-guide.pdf"
+  }
+]

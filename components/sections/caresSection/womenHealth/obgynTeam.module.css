@@ -1,0 +1,55 @@
+.section {
+  padding: 5rem 0;
+  background-color: #fff1f2;
+}
+
+.headerBlock {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #be185d;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #881337;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #4c0519;
+  line-height: 1.6;
+}
+
+.actionWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  background-color: #be185d;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #9d174d;
+}

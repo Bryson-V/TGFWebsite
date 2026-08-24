@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-/* Desktop Grid Layout */
+/* Desktop Grid */
 .layoutGrid {
   max-width: 1120px;
   width: 100%;
@@ -33,12 +33,12 @@
 }
 
 .card:hover {
-  border-color: #a7f3d0;
+  border-color: #cbd5e1;
 }
 
 .activeCard {
-  border: 2px solid #047857;
-  box-shadow: 0 6px 20px rgba(4, 120, 87, 0.08);
+  border: 2px solid #006680;
+  box-shadow: 0 6px 20px rgba(0, 102, 128, 0.06);
 }
 
 .cardHeader {
@@ -61,8 +61,8 @@
   grid-row: 1;
   width: 48px;
   height: 48px;
-  background-color: #ecfdf5;
-  color: #047857;
+  background-color: #e0f2fe;
+  color: #0284c7;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@
 }
 
 .badgeActive {
-  background-color: #047857;
+  background-color: #006680;
   color: #ffffff;
 }
 
@@ -97,7 +97,7 @@
 .cardTitle {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #064e3b;
+  color: #0a2540;
   margin: 0 0 0.15rem 0;
   letter-spacing: -0.01em;
 }
@@ -105,7 +105,7 @@
 .cardSummary {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #047857;
+  color: #0284c7;
   display: block;
 }
 
@@ -113,7 +113,7 @@
   grid-column: 3;
   grid-row: 2;
   justify-self: end;
-  color: #047857;
+  color: #0284c7;
   transition: transform 0.25s ease;
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
-  background-color: #064e3b;
+  background-color: #0a2540; /* Dark bg to prevent flash during image transition */
 }
 
 .animatedImageContainer {
@@ -180,7 +180,7 @@
   left: 0;
   right: 0;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-  background: linear-gradient(to top, rgba(6, 78, 59, 0.95) 0%, rgba(6, 78, 59, 0) 100%);
+  background: linear-gradient(to top, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0) 100%);
   color: #ffffff;
   z-index: 2;
 }
@@ -189,7 +189,7 @@
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #34d399;
+  color: #38bdf8;
   display: block;
   margin-bottom: 0.25rem;
 }
@@ -200,7 +200,7 @@
   margin: 0;
 }
 
-/* Mobile Responsive */
+/* Mobile Layout Shift */
 @media (max-width: 900px) {
   .layoutGrid {
     grid-template-columns: 1fr;

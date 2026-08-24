@@ -3,7 +3,7 @@
   "doctors": [
     {
       "id": "1",
-      "category": "general",
+      "category": "primaryCare",
       "name": "Dr. Julie Namm, MD",
       "specialty": "Family Medicine",
       "email": "drnamm@toduguam.com",
@@ -27,7 +27,7 @@
     },
     {
       "id": "2",
-      "category": "general",
+      "category": "primaryCare",
       "name": "Bannuar Quiaoit, FNP",
       "specialty": "Family Medicine",
       "email": "bquiaoit@toduguam.com",
@@ -45,7 +45,7 @@
     },
     {
       "id": "3",
-      "category": "general",
+      "category": "primaryCare",
       "name": "Elena Taneva-Cholakova, FNP",
       "specialty": "Family Medicine",
       "email": "etaneva@toduguam.com",
@@ -63,7 +63,7 @@
     },
     {
       "id": "4",
-      "category": "general",
+      "category": "primaryCare",
       "name": "Dr. Edwin Supit, MD",
       "specialty": "Internal Medicine",
       "email": "drsupit@toduguam.com",
@@ -81,7 +81,7 @@
     },
     {
       "id": "5",
-      "category": "specialist",
+      "category": "obgyn",
       "name": "Dr. Sam Song, MD, FACOG",
       "specialty": "Obstetrics & Gynecology",
       "email": "drsong@toduguam.com",
@@ -107,7 +107,7 @@
     },
     {
       "id": "6",
-      "category": "specialist",
+      "category": "obgyn",
       "name": "Dr. William Vercio, MD",
       "specialty": "Obstetrics & Gynecology",
       "email": "drvercio@toduguam.com",
@@ -121,11 +121,11 @@
       "bio": [
         "Dr. William Vercio has extensive experience in women's health services, maternal-fetal care, and comprehensive gynecological treatments.",
         "He is committed to delivering attentive, high-standard medical care tailored to the unique clinical needs of every patient."
-      ] 
+      ]
     },
     {
       "id": "7",
-      "category": "specialist",
+      "category": "mindCare",
       "name": "Dr. Danny McClure, DO",
       "specialty": "Psychiatry, Medical Director",
       "email": "drmcclure@toduguam.com",
@@ -152,7 +152,7 @@
     },
     {
       "id": "8",
-      "category": "specialist",
+      "category": "mindCare",
       "name": "Dr. Alan Butler, PsyD",
       "specialty": "Clinical Psychologist",
       "email": "drbutler@toduguam.com",
@@ -183,7 +183,7 @@
     },
     {
       "id": "9",
-      "category": "specialist",
+      "category": "endocrinology",
       "name": "Dr. Fredrick Niegos, MD, FACE, CDD",
       "specialty": "Endocrinology and Internal Medicine",
       "email": "drniegos@toduguam.com",
@@ -205,13 +205,13 @@
         "Personalized endocrine care"
       ],
       "bio": [
-        "Dr. Alan Butler specializes in comprehensive psychological assessments, therapeutic support, and evidence-based cognitive behavioral treatments.",
-        "He provides a safe, empathetic space for patients seeking help with emotional well-being, life transitions, and mental health challenges."
+        "Dr. Fredrick Niegos is double board-certified in Internal Medicine and Endocrinology, specializing in advanced diabetes management, thyroid health, and complex metabolic conditions.",
+        "He works closely with patients to create highly tailored endocrine treatment plans focused on long-term hormonal balance and chronic condition monitoring."
       ]
     },
     {
       "id": "10",
-      "category": "general",
+      "category": "primaryCare",
       "name": "Dr. Patrick Santos, MD",
       "specialty": "Family Medicine",
       "email": "drsantos@toduguam.com",
@@ -228,8 +228,8 @@
         "Comprehensive family care"
       ],
       "bio": [
-        "Dr. Alan Butler specializes in comprehensive psychological assessments, therapeutic support, and evidence-based cognitive behavioral treatments.",
-        "He provides a safe, empathetic space for patients seeking help with emotional well-being, life transitions, and mental health challenges."
+        "Dr. Patrick Santos provides whole-person family medicine, emphasizing preventive health routines, acute condition management, and chronic disease care.",
+        "He is dedicated to delivering accessible, high-quality primary care to ensure patients and families maintain optimal health throughout all stages of life."
       ]
     }
   ]
