@@ -1,0 +1,203 @@
+.sectionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 90px 40px;
+  min-height: 80vh;
+  background-color: #f4f9f9; 
+  color: #1e293b;
+  font-family: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.poolContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.orbitalRing {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 95, 115, 0.15); 
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(244, 249, 249, 0) 70%);
+}
+
+/* Static Decorative Border */
+.giantStaticRing {
+  position: absolute;
+  top: -20px;   
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px dashed rgba(0, 95, 115, 0.3); 
+  border-radius: 50%;
+  pointer-events: none; 
+}
+
+.insuranceBubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #005f73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 95, 115, 0.08);
+  border: 1px solid rgba(0, 95, 115, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, outline 0.2s ease, box-shadow 0.3s ease;
+}
+
+.specialBubble {
+  background-color: #e0f2f1;
+  border: 1px solid rgba(0, 95, 115, 0.25);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.activeBubble {
+  background-color: #005f73 !important; 
+  color: #ffffff !important;
+  outline: 3px solid #005f73; 
+  outline-offset: 4px; 
+  z-index: 10;
+  box-shadow: 0 12px 28px rgba(0, 95, 115, 0.25);
+}
+
+.listContainer {
+  max-width: 450px;
+}
+
+/* New Eyebrow Number */
+.eyebrowNumber {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.listTitle {
+  font-size: 2.5rem;
+  color: #005f73;
+  margin-bottom: 16px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.listSubtitle {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-style: italic; /* Mimics Austin Werner paragraph style */
+}
+
+.insuranceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  font-size: 1.1rem;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #334155;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.listItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bubbleImage {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.listIcon {
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.bulletPoint {
+  color: #0a7082;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.activeListItem {
+  background-color: #005f73;
+  color: #ffffff;
+  font-weight: 600;
+  border-color: #005f73;
+  box-shadow: 0 6px 16px rgba(0, 95, 115, 0.2);
+}
+
+.activeListItem .bulletPoint {
+  color: #ffffff;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.bubbleIcon {
+  font-size: 3.5rem;
+  color: #005f73;
+  transition: color 0.3s ease;
+}
+
+.iconText {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #005f73;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.activeBubble .bubbleIcon,
+.activeBubble .iconText {
+  color: #ffffff !important;
+}
+
+.listReactIcon {
+  font-size: 2.8rem;
+  color: #005f73;
+  transition: color 0.2s ease;
+  margin-right: 10px;
+}
+
+.activeListItem .listReactIcon {
+  color: #ffffff;
+}
