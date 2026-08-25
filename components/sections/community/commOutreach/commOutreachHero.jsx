@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { FaCalendarAlt, FaExternalLinkAlt, FaBullhorn, FaPlus } from 'react-icons/fa';
-import styles from './upcomingHero.module.css';
+import styles from './commOutreachHero.module.css';
 
-export default function UpcomingHero() {
+export default function CommOutreachHero() {
   const googleCalendarUrl = "https://calendar.google.com";
 
   return (

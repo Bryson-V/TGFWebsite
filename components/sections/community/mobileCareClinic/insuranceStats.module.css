@@ -50,10 +50,74 @@
 
 .statGroup {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
-  margin-bottom: 2rem; 
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem; 
+  width: 100%;
+}
+
+.massiveStat {
+  font-size: clamp(5rem, 8vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+.statSubtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  max-width: 400px;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 422px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mapSvgBase {
+  width: 100%;
+  height: 100%;
+  stroke-linejoin: round;
+}
+
+.mapSvgBase path {
+  fill: #ffffff;
+  stroke: #E2E8F0;
+  stroke-width: 2px;
+}
+
+/* Base styles for the dynamic coloring map overlay */
+.mapSvgDynamic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  fill: currentColor; /* Listens to color passed from React */
+  transition: fill 0.4s ease;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .statLinkWrapper {
@@ -63,25 +127,23 @@
 }
 
 .statLinkWrapper:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.massiveStat {
-  font-size: clamp(5rem, 8vw, 8rem);
-  font-weight: 800;
-  line-height: 1;
-  margin: 0;
-  background: linear-gradient(135deg, #005A8C 0%, #00A3E0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 10px 15px rgba(0, 163, 224, 0.15));
+.legendContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.statSubtitle {
-  font-size: 1.5rem;
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #0f172a;
-  margin: 0;
+  color: #475569;
 }
 
 .problemGrid {
@@ -98,6 +160,8 @@
   border-radius: 12px;
   border: 1px solid #E2E8F0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .problemIcon {
@@ -127,7 +191,18 @@
   .statSubtitle {
     font-size: 1.25rem;
   }
-  .solutionBox {
-    padding: 1.25rem;
+  .statGroup {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .statContent {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .mapWrapper {
+    height: 300px;
   }
 }
