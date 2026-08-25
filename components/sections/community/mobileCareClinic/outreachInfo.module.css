@@ -79,7 +79,6 @@
   text-align: center;
   position: relative;
   width: 100%;
-  max-width: 210px;
 }
 
 .timelineNode {
@@ -107,26 +106,26 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Precise horizontal connecting line spanning to next column */
 .connectRight .timelineNode::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(100% + 2rem); /* Spans cell + column gap without leaving blank spaces */
+  width: calc(100% + 2rem);
   height: 3px;
   background-color: #cbd5e1;
   z-index: 1;
   transform: translateY(-50%);
 }
 
-/* Compact content card styling with minimal padding */
 .content {
   background: #f8f9fa;
   padding: 0.65rem 0.65rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   width: 100%;
+  max-width: 210px;
+  margin: 0 auto;
   min-height: 95px;
   display: flex;
   flex-direction: column;
@@ -174,10 +173,14 @@
   color: #856404;
 }
 
-/* Responsive view */
+/* Responsive Scaling */
 @media (max-width: 992px) {
-  .forkWrapper {
-    display: none;
+  .forkWrapper, .forkSvg {
+    display: none !important;
+  }
+
+  .content {
+    max-width: 100%;
   }
 
   .gridContainer {
