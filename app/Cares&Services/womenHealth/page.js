@@ -9,8 +9,8 @@ export default function AllNews() {
     <>
       <ObgynHero />
       <ObgynCta />
-      <ObgynResources />
       <ObgynServices />
+      <ObgynResources />
       <ObgynTeamSection />
     </>
   );

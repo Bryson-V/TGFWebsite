@@ -181,8 +181,8 @@ export default function StoryBoard() {
               <h2>Make an Impact</h2>
               <p>Join our movement today. Be part of the change in our community.</p>
               <div className={styles.fishActions}>
-                <a href="/community/volunteer" className={styles.fishBtn}>Volunteer</a>
-                <a href="/donate" className={styles.fishBtn}>Donate</a>
+                <a href="volunteer" className={styles.fishBtn}>Volunteer</a>
+                <a href="../donate" className={styles.fishBtn}>Donate</a>
               </div>
             </motion.div>
 

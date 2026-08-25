@@ -19,13 +19,6 @@ export default function AboutMindCareHolisticCare() {
       desc: "Comprehensive psychological testing, clinical diagnostic assessments, and evidence-based therapeutic modalities.",
       image: "/images/mindCare/psychology.jpg",
       href: "psychology"
-    },
-    {
-      tier: "PILLAR 3",
-      title: "Counseling",
-      desc: "Relational, emotional, and practical counseling support guiding individuals and families through life's challenges.",
-      image: "/images/mindCare/counseling.jpg",
-      href: "counseling"
     }
   ];
 

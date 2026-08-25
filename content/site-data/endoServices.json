@@ -1,0 +1,61 @@
+[
+  {
+    "id": "diabetes",
+    "iconType": "calendar",
+    "title": "Diabetes",
+    "summary": "Type 1, Type 2, & gestational diabetes",
+    "image": "/images/Services/endo/services-diabetes.jpg",
+    "details": "Customized treatment plans including insulin therapy management, dietary counseling, and ongoing A1C monitoring to prevent long-term complications."
+  },
+
+  {
+    "id": "thyroid",
+    "iconType": "message",
+    "title": "Thyroid Disorders",
+    "summary": "Hypothyroidism, hyperthyroidism, nodules",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": "Diagnosis and ongoing management for hypothyroidism, hyperthyroidism, thyroid nodules, Hashimoto's disease, and calcium disorders."
+  },
+
+  {
+    "id": "hormone",
+    "iconType": "message",
+    "title": "Hormone Imabalances",
+    "summary": "Menopause, PCOS, low testosterone, and other hormonal concerns",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
+  },
+    {
+    "id": "metabolic",
+    "iconType": "message",
+    "title": "Metabolic Conditions",
+    "summary": "Obesity, High cholesterol, metabolic syndrome & more",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
+  },
+    {
+    "id": "bone",
+    "iconType": "message",
+    "title": "Bone Health",
+    "summary": "Osteoperosis, osteopenia, & other bone disorders",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
+  },
+    {
+    "id": "disorders",
+    "iconType": "message",
+    "title": "Adrenal & Pituitary Disorders",
+    "summary": "Glandular conditions that affect hormone production",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
+  },
+    {
+    "id": "care",
+    "iconType": "message",
+    "title": "Comprehensive, Personalized Care",
+    "summary": "Helping you achieve balance and live a healthier life",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
+  }
+
+]

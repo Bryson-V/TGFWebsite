@@ -27,7 +27,7 @@ export default function SlidingFeeRedirectCard() {
             </p>
           </div>
           <div className={styles.actionGroup}>
-            <Link href="/faq#sliding-fee" className={styles.button}>
+            <Link href="faq#sliding-fee" className={styles.button}>
               View Sliding Fee Details &rarr;
             </Link>
           </div>

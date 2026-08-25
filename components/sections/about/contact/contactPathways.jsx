@@ -55,7 +55,7 @@ export default function ContactPathways() {
             </Link>
 
             {/* Volunteer */}
-            <Link href="../community\volunteer" className={styles.pathwayCard}>
+            <Link href="volunteer" className={styles.pathwayCard}>
               <div className={styles.pathwayIconWrapper}>
                 <PathwayIcon name="users" />
               </div>
@@ -67,7 +67,7 @@ export default function ContactPathways() {
             </Link>
 
             {/* Careers */}
-            <Link href="../community\careers" className={styles.pathwayCard}>
+            <Link href="careers" className={styles.pathwayCard}>
               <div className={styles.pathwayIconWrapper}>
                 <PathwayIcon name="sprout" />
               </div>
