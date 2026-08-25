@@ -16,19 +16,19 @@
     "image": "/images/obgyn-prenatal.jpg"
   },
   {
-    "id": "surgery",
-    "icon": "FaCommentAlt",
-    "title": "Gynecological Surgery",
-    "subtitle": "Advanced surgical solutions",
-    "description": "Minimally invasive laparoscopic options and clinical therapies designed for faster recovery and precise patient outcomes.",
-    "image": "/images/obgyn-surgery.jpg"
-  },
-  {
     "id": "hormone",
     "icon": "FaPrescriptionBottleAlt",
     "title": "Hormonal & Menopause Care",
     "subtitle": "Specialized reproductive health",
     "description": "Tailored strategies addressing PCOS, perimenopause, menopause symptoms, and overall hormonal balance.",
     "image": "/images/obgyn-hormone.jpg"
+  },
+  {
+    "id": "cancer",
+    "iconType": "FaPrescriptionBottleAlt",
+    "title": "Cervical Cancer Screening & Abnormal Pap smears",
+    "summary": "",
+    "image": "/images/Services/endo/services-thyroid.jpg",
+    "details": ""
   }
 ]

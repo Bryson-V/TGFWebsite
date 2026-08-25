@@ -10,7 +10,7 @@ import {
   FiChevronDown 
 } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import servicesData from "@/content/site-data/servicesData.json";
+import servicesData from "@/content/site-data/endoServices.json";
 import styles from "./endoServices.module.css";
 
 const renderIcon = (iconType) => {

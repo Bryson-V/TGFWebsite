@@ -18,6 +18,8 @@
         { "label": "Endocinology & Diabetes", "href": "Cares&Services/endoDiabetes" },
         { "label": "Women's Health & OB-GYN", "href": "Cares&Services/womenHealth" },
         { "label": "Preventive Care & Screenings", "href": "Cares&Services/screening" },
+        { "label": "Upcoming Events", "href": "Cares&Services/upcoming" }
+
       ]
     },
     {
@@ -38,7 +40,6 @@
       "panelTitle": "COMMUNITY & IMPACT",
       "panelSubtitle": "See our volunteers in action and learn how you can join the mission.",
       "links": [
-        { "label": "Community Outreach", "href": "community/commOutreach" },
         { "label": "Partnerships", "href": "community/partnerships" },
         { "label": "Our Impact", "href": "community/commImpact" },
         { "label": "Mobile Care Clinic", "href": "community/mobileCareClinic" },
