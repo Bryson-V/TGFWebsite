@@ -18,7 +18,6 @@
         { "label": "Endocinology & Diabetes", "href": "Cares&Services/endoDiabetes" },
         { "label": "Women's Health & OB-GYN", "href": "Cares&Services/womenHealth" },
         { "label": "Preventive Care & Screenings", "href": "Cares&Services/screening" },
-        { "label": "Community Health Programs", "href": "Cares&Services/communityHealth" }
       ]
     },
     {
@@ -74,7 +73,6 @@
         { "label": "News & Media", "href": "about/allNews" },
         { "label": "Volunteer", "href": "about/volunteer" },
         { "label": "Careers", "href": "about/careers" },
-        { "label": "Partners & Collaborators", "href": "about/partnersCollab" },
         { "label": "Contact Us", "href": "about/contacts" }
       ]
     }
