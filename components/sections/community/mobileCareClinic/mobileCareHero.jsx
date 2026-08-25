@@ -53,7 +53,7 @@ export default function MobileCareHero() {
           </p>
           
           {/* Link to the Upcoming Events page */}
-          <Link href="/upcoming" className={styles.ctaButton}>
+          <Link href="/community/commOutreach" className={styles.ctaButton}>
             View Upcoming Outreaches
           </Link>
         </motion.div>

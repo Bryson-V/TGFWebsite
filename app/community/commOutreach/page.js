@@ -1,9 +1,17 @@
-import NewsArchive from "@/components/sections/about/news/newsArchive";
+import Calendar from "@/components/sections/community/commOutreach/calendar";
+import CommOutreachHero from "@/components/sections/community/commOutreach/commOutreachHero";
+import MapWrapper from "@/components/sections/community/commOutreach/MapWrapper";
+import MobileCarePromo from "@/components/sections/community/commOutreach/mobileCarePromo";
+import RequestLocationSection from "@/components/sections/community/commOutreach/requestLocation";
 
-export default function AllNews() {
+export default function CommunityOutreachPage() {
   return (
-    <>
-      <NewsArchive />
+    <>    
+      <CommOutreachHero />
+      <MobileCarePromo />
+      <Calendar />
+      <MapWrapper />
+      <RequestLocationSection />
     </>
   );
 }
