@@ -5,7 +5,7 @@
   },
   "reqAppointment": {
     "label": "APPOINTMENT",
-    "href": "https://mycw188.ecwcloud.com/portal24196/jsp/100mp/login_otp.jsp"
+    "href": "patient/healow"
   },
   "menus": [
     {
@@ -30,7 +30,7 @@
       "links": [
         { "label": "About", "href": "mindCare/mindAbout" },
         { "label": "Psychiatry", "href": "mindCare/psychiatry" },
-        { "label": "Pychology", "href": "mindCare/psychology" },
+        { "label": "Psychology", "href": "mindCare/psychology" },
         { "label": "TMS", "href": "mindCare/tms" }
       ]
     },

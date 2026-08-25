@@ -7,14 +7,14 @@ import styles from "./holisticCare.module.css";
 export default function AboutMindCareHolisticCare() {
   const pillars = [
     {
-      tier: "PILLAR 1",
+      tier: "",
       title: "Psychiatry",
       desc: "Biological and medical evaluations providing psychiatric care and medication management tailored to individual needs.",
       image: "/images/mindCare/psychiatry.jpg",
       href: "psychiatry"
     },
     {
-      tier: "PILLAR 2",
+      tier: "",
       title: "Psychology",
       desc: "Comprehensive psychological testing, clinical diagnostic assessments, and evidence-based therapeutic modalities.",
       image: "/images/mindCare/psychology.jpg",

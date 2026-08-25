@@ -24,7 +24,7 @@ export default function Button({ href, children, variant = "solid", ...props }) 
   }
 
   return (
-    <a href={href} className={className} target="_blank" rel="noopener noreferrer" {...props}>
+    <a href={href} className={className} rel="noopener noreferrer" {...props}>
       {children}
     </a>
   );
