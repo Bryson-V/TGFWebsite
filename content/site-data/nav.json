@@ -18,7 +18,6 @@
         { "label": "Endocinology & Diabetes", "href": "Cares&Services/endoDiabetes" },
         { "label": "Women's Health & OB-GYN", "href": "Cares&Services/womenHealth" },
         { "label": "Preventive Care & Screenings", "href": "Cares&Services/screening" },
-        { "label": "Community Health Programs", "href": "Cares&Services/communityHealth" }
       ]
     },
     {
