@@ -21,7 +21,7 @@
       "links": [
         { "label": "About", "href": "mindCare/mindAbout" },
         { "label": "Psychiatry", "href": "mindCare/psychiatry" },
-        { "label": "Pychology", "href": "mindCare/psychology" },
+        { "label": "Psychology", "href": "mindCare/psychology" },
         { "label": "TMS", "href": "mindCare/tms" }
       ]
     },

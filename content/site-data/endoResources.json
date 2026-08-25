@@ -11,13 +11,13 @@
     "title": "Daily Blood Sugar Log",
     "desc": "Printable daily tracking sheet for fasting and post-meal glucose readings.",
     "type": "LOG SHEET",
-    "externalUrl": "https://example.com/daily-blood-sugar-log.pdf"
+    "externalUrl": "https://www.heart.org/-/media/files/health-topics/high-blood-pressure/my-blood-pressure-log.pdf"
   },
   {
     "id": "prevention-tips",
     "title": "Diabetes Prevention Tips",
     "desc": "Actionable lifestyle and exercise strategies for reducing metabolic risk factors.",
     "type": "LIFESTYLE GUIDE",
-    "externalUrl": "https://example.com/diabetes-prevention-tips.pdf"
+    "externalUrl": "https://www.cdc.gov/diabetes-prevention/index.html"
   }
 ]

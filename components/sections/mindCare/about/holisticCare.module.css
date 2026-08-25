@@ -38,7 +38,7 @@
 /* 3-Card Grid */
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 5rem;
 }
@@ -49,6 +49,7 @@
   overflow: hidden;
   box-shadow: 0 10px 25px -5px rgba(8, 51, 68, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: center;
 }
 
 .pillarCard:hover {
