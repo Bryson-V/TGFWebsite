@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Come to Outreach",
+    "description": "Visit the Mobile Care Clinic at one of our community locations."
+  },
+  {
+    "id": "2",
+    "title": "Check-In",
+    "description": "Register with our staff and let us know what services you need."
+  },
+  {
+    "id": "3A",
+    "title": "Get Checked Up at Outreach",
+    "description": "Receive care directly at the mobile clinic.",
+    "branch": "outreach",
+    "isFree": true
+  },
+  {
+    "id": "3B",
+    "title": "Schedule at Clinic",
+    "description": "If service is unavailable at mobile outreach, schedule an appointment at the main clinic.",
+    "branch": "clinic"
+  },
+  {
+    "id": "4",
+    "title": "Important Cost Notice",
+    "description": "Services are ONLY FREE at the Mobile Outreach. Standard fees apply at the main clinic.",
+    "branch": "clinic",
+    "isWarning": true
+  }
+]
