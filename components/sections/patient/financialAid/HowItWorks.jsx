@@ -31,7 +31,9 @@ export default function HowItWorks() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title="How Financial Navigation Works" align="center" />
+        <div className={styles.headingWrapper}>
+          <SectionHeading title="How Financial Navigation Works" align="center" />
+        </div>
         <div className={styles.grid}>
           {steps.map((step, index) => (
             <div key={index} className={styles.card}>

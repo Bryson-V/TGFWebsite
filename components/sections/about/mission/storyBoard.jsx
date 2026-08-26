@@ -22,11 +22,12 @@ const SLOGAN_TOKENS = [
   { word: "time.", seq: 10 },
 ];
 
-const SLOGAN_END = 0.30; 
-const STEP = SLOGAN_END / 11;
+const SLOGAN_START = 0.045;
+const SLOGAN_END = 0.40;   
+const STEP = (SLOGAN_END - SLOGAN_START) / 11;
 
 const SloganWord = ({ token, progress }) => {
-  const wordIn = token.seq * STEP;
+  const wordIn = SLOGAN_START + (token.seq * STEP);
   const wordOn = wordIn + (STEP * 0.4);
 
   const opacity = useTransform(
@@ -45,10 +46,10 @@ const SloganWord = ({ token, progress }) => {
 };
 
 const SloganBackgrounds = ({ progress }) => {
-  const op0 = useTransform(progress, [0, 2 * STEP, 4 * STEP, 5 * STEP], [0, 1, 1, 0]);
-  const op1 = useTransform(progress, [4 * STEP, 5 * STEP, 6 * STEP, 7 * STEP], [0, 1, 1, 0]);
-  const op2 = useTransform(progress, [6 * STEP, 7 * STEP, 8 * STEP, 9 * STEP], [0, 1, 1, 0]);
-  const op3 = useTransform(progress, [8 * STEP, 9 * STEP, 11 * STEP, 12 * STEP], [0, 1, 1, 0]);
+  const op0 = useTransform(progress, [SLOGAN_START, SLOGAN_START + 2 * STEP, SLOGAN_START + 4 * STEP, SLOGAN_START + 5 * STEP], [0, 1, 1, 0]);
+  const op1 = useTransform(progress, [SLOGAN_START + 4 * STEP, SLOGAN_START + 5 * STEP, SLOGAN_START + 6 * STEP, SLOGAN_START + 7 * STEP], [0, 1, 1, 0]);
+  const op2 = useTransform(progress, [SLOGAN_START + 6 * STEP, SLOGAN_START + 7 * STEP, SLOGAN_START + 8 * STEP, SLOGAN_START + 9 * STEP], [0, 1, 1, 0]);
+  const op3 = useTransform(progress, [SLOGAN_START + 8 * STEP, SLOGAN_START + 9 * STEP, SLOGAN_START + 11 * STEP, SLOGAN_START + 12 * STEP], [0, 1, 1, 0]);
 
   const mainOpacity = useTransform(progress, [SLOGAN_END, SLOGAN_END + 0.05], [1, 0]);
 
@@ -75,30 +76,42 @@ export default function StoryBoard() {
     stiffness: 70, damping: 22, mass: 0.4
   });
 
-  const indicatorOpacity = useTransform(smoothProgress, [0.2, 0.45, 0.75, 0.85], [0, 1, 1, 0]);
+  const heroOpacity = useTransform(smoothProgress, [0, 0.02, 0.04], [1, 1, 0]);
+  const heroY = useTransform(smoothProgress, [0, 0.04], ["0px", "-40px"]);
+
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.70, 0.80], [1, 1, 0]);
 
   const subtitleOpacity = useTransform(
     smoothProgress, 
-    [0, 0.02, SLOGAN_END, SLOGAN_END + 0.05], 
+    [SLOGAN_START, SLOGAN_START + 0.02, SLOGAN_END, SLOGAN_END + 0.05], 
     [0, 1, 1, 0]
   );
 
-  const c1X = useTransform(smoothProgress, [0.35, 0.45, 0.55, 0.65], ["100%", "0vw", "0vw", "-100%"]);
-  
-  // Video 2 slides in perfectly as Video 1 exits
-  const c2X = useTransform(smoothProgress, [0.55, 0.65], ["100%", "0vw"]);
-  
-  // The fish scene slides up from 70% to 80%, then LOCKS perfectly centered from 80% to 100%
-  const mvY = useTransform(smoothProgress, [0.70, 0.80, 1.0], ["120%", "0%", "0%"]);
+  const c1X = useTransform(smoothProgress, [0.45, 0.50, 0.60, 0.65], ["100%", "0vw", "0vw", "-100%"]);
+  const c2X = useTransform(smoothProgress, [0.60, 0.65], ["100%", "0vw"]);
+  const mvY = useTransform(smoothProgress, [0.75, 0.85, 1.0], ["120%", "0%", "0%"]);
   
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
       <div className={styles.stickyWrapper}>
 
-        {/* SLOGAN PHASE WITH BACKGROUND IMAGES */}
+        {/* HERO PHASE (Scene 1) */}
+        <motion.div 
+          className={styles.heroContainer} 
+          style={{ opacity: heroOpacity, y: heroY }}
+        >
+          <div className={styles.heroContent}>
+            <span className={styles.heroTagline}>MISSION & VISION</span>
+            <h1 className={styles.heroHeadline}>Championing Health Equity for Guam</h1>
+            <p className={styles.heroDescription}>
+              To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics, preventative programs, and local specialty care.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* SLOGAN PHASE WITH BACKGROUND IMAGES (Scene 2) */}
         <SloganBackgrounds progress={smoothProgress} />
         <div className={styles.sloganContainer}>
-
           <motion.span 
             className={styles.sloganSubtitle} 
             style={{ opacity: subtitleOpacity }}
@@ -114,7 +127,7 @@ export default function StoryBoard() {
           ))}
         </div>
 
-        {/* VIDEO CARD 1 */}
+        {/* VIDEO CARD 1 (Scene 3) */}
         <motion.div className={styles.cardWrapper} style={{ x: c1X, zIndex: 15 }}>
           <div className={styles.videoCard}>
             <div className={styles.videoContainer}>
@@ -128,7 +141,7 @@ export default function StoryBoard() {
           </div>
         </motion.div>
 
-        {/* VIDEO CARD 2 */}
+        {/* VIDEO CARD 2 (Scene 4) */}
         <motion.div className={styles.cardWrapper} style={{ x: c2X, zIndex: 20 }}>
           <div className={styles.videoCard}>
             <div className={styles.videoContainer}>
@@ -142,41 +155,33 @@ export default function StoryBoard() {
           </div>
         </motion.div>
 
-        <motion.div className={styles.scrollIndicator} style={{ opacity: indicatorOpacity }}>
+        <motion.div className={styles.scrollIndicator} 
+          style={{ opacity: indicatorOpacity, zIndex: 100 }}
+          initial={{ opacity: 1 }}
+        >
           <div className={styles.scrollIcon}>
             <FaChevronDown size={12} />
           </div>
           <span>SCROLL TO CONTINUE</span>
         </motion.div>
 
-        {/* MISSION & VISION */}
+        {/* MISSION & VISION (Scene 5 - Final) */}
         <motion.div className={styles.missionVisionPanel} style={{ y: mvY, zIndex: 30 }}>
-          
           <div className={styles.waveContainer}>
             <svg className={styles.waveSvg} viewBox="0 0 2400 120" preserveAspectRatio="none">
-              <path 
-                d="M0,60 C300,120 300,0 600,60 C900,120 900,0 1200,60 C1500,120 1500,0 1800,60 C2100,120 2100,0 2400,60 L2400,120 L0,120 Z" 
-                fill="#00a4c5" 
-              />
+              <path d="M0,60 C300,120 300,0 600,60 C900,120 900,0 1200,60 C1500,120 1500,0 1800,60 C2100,120 2100,0 2400,60 L2400,120 L0,120 Z" fill="#00a4c5" />
             </svg>
           </div>
-
           <h1>TODU GUAM FOUNDATION</h1>
           <div className={styles.fishContainer}>
-            
-            {/* Fish 1: Mission */}
             <motion.div className={`${styles.fishCard} ${styles.fishMission}`}>
               <h2>Our Mission</h2>
               <p>To deliver vital primary healthcare, education, and support to the community — providing access to care for the uninsured, underinsured, and medically underserved populations.</p>
             </motion.div>
-
-            {/* Fish 2: Vision */}
             <motion.div className={`${styles.fishCard} ${styles.fishVision}`}>
               <h2>Our Vision</h2>
               <p>To achieve health equity across Guam and the Micronesian region — breaking down barriers, delivering compassionate care, and reducing disparities through mobile clinics.</p>
             </motion.div>
-
-            {/* Fish 3: Call to Action */}
             <motion.div className={`${styles.fishCard} ${styles.fishCta}`}>
               <h2>Make an Impact</h2>
               <p>Join our movement today. Be part of the change in our community.</p>
@@ -185,7 +190,6 @@ export default function StoryBoard() {
                 <a href="../donate" className={styles.fishBtn}>Donate</a>
               </div>
             </motion.div>
-
           </div>
         </motion.div>
 
