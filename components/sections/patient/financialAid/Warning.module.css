@@ -1,0 +1,32 @@
+.warningContainer {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  margin: 4rem auto;
+  max-width: 1100px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .warningContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
