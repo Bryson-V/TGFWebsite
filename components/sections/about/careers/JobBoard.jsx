@@ -19,7 +19,7 @@ export default function JobBoard() {
   const fixedCategories = [
     { label: "All Categories & Events", value: "all" },
     { label: "Jobs", value: "job" },
-    { label: "Outreach & Events", value: "event" },
+    { label: "Hiring Events", value: "event" },
   ];
 
   const filteredJobs = filter === "all" 

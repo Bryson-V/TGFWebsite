@@ -30,11 +30,11 @@ const cardData = [
   },
   {
     id: 2,
-    percent: 100,
+    percent: 80,
     color: '#F59E0B',
     icon: FaBusAlt,
     title: 'Transportation Barrier',
-    desc: "100% of Guam's health center delivery sites are considered rural. Even when care exists, reaching a clinic isn't always possible without a ride.",
+    desc: "80% of Guam's health center delivery sites are considered rural. Even when care exists, reaching a clinic isn't always possible without a ride.",
     subtitle: "Of Guam's health center service sites are considered rural and hard to reach.",
     legend: "Rural & Hard to Reach"
   }
