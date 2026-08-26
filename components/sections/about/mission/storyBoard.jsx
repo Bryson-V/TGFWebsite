@@ -32,7 +32,7 @@ const SloganWord = ({ token, progress }) => {
 
   const opacity = useTransform(
     progress, 
-    [wordIn - 0.01, wordIn, wordOn, SLOGAN_END, SLOGAN_END + 0.05], 
+    [wordIn - 0.05, wordIn, wordOn, SLOGAN_END, SLOGAN_END + 0.05], 
     [0, 0, 1, 1, 0] 
   );
   const y = useTransform(progress, [wordIn, wordOn], ["50%", "0%"]);
@@ -50,7 +50,6 @@ const SloganBackgrounds = ({ progress }) => {
   const op1 = useTransform(progress, [SLOGAN_START + 4 * STEP, SLOGAN_START + 5 * STEP, SLOGAN_START + 6 * STEP, SLOGAN_START + 7 * STEP], [0, 1, 1, 0]);
   const op2 = useTransform(progress, [SLOGAN_START + 6 * STEP, SLOGAN_START + 7 * STEP, SLOGAN_START + 8 * STEP, SLOGAN_START + 9 * STEP], [0, 1, 1, 0]);
   const op3 = useTransform(progress, [SLOGAN_START + 8 * STEP, SLOGAN_START + 9 * STEP, SLOGAN_START + 11 * STEP, SLOGAN_START + 12 * STEP], [0, 1, 1, 0]);
-
   const mainOpacity = useTransform(progress, [SLOGAN_END, SLOGAN_END + 0.05], [1, 0]);
 
   return (
@@ -78,9 +77,6 @@ export default function StoryBoard() {
 
   const heroOpacity = useTransform(smoothProgress, [0, 0.02, 0.04], [1, 1, 0]);
   const heroY = useTransform(smoothProgress, [0, 0.04], ["0px", "-40px"]);
-
-  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.70, 0.80], [1, 1, 0]);
-
   const subtitleOpacity = useTransform(
     smoothProgress, 
     [SLOGAN_START, SLOGAN_START + 0.02, SLOGAN_END, SLOGAN_END + 0.05], 
@@ -90,16 +86,15 @@ export default function StoryBoard() {
   const c1X = useTransform(smoothProgress, [0.45, 0.50, 0.60, 0.65], ["100%", "0vw", "0vw", "-100%"]);
   const c2X = useTransform(smoothProgress, [0.60, 0.65], ["100%", "0vw"]);
   const mvY = useTransform(smoothProgress, [0.75, 0.85, 1.0], ["120%", "0%", "0%"]);
+
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.95, 1], [1, 1, 0]);
   
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
       <div className={styles.stickyWrapper}>
 
         {/* HERO PHASE (Scene 1) */}
-        <motion.div 
-          className={styles.heroContainer} 
-          style={{ opacity: heroOpacity, y: heroY }}
-        >
+        <motion.div className={styles.heroContainer} style={{ opacity: heroOpacity, y: heroY }}>
           <div className={styles.heroContent}>
             <span className={styles.heroTagline}>MISSION & VISION</span>
             <h1 className={styles.heroHeadline}>Championing Health Equity for Guam</h1>
@@ -109,16 +104,12 @@ export default function StoryBoard() {
           </div>
         </motion.div>
 
-        {/* SLOGAN PHASE WITH BACKGROUND IMAGES (Scene 2) */}
+        {/* SLOGAN PHASE (Scene 2) */}
         <SloganBackgrounds progress={smoothProgress} />
         <div className={styles.sloganContainer}>
-          <motion.span 
-            className={styles.sloganSubtitle} 
-            style={{ opacity: subtitleOpacity }}
-          >
+          <motion.span className={styles.sloganSubtitle} style={{ opacity: subtitleOpacity }}>
             TODU GUAM FOUNDATION · OUR SLOGAN
           </motion.span>
-
           {SLOGAN_TOKENS.map((token, i) => (
             <React.Fragment key={i}>
               <SloganWord token={token} progress={smoothProgress} />
@@ -155,9 +146,10 @@ export default function StoryBoard() {
           </div>
         </motion.div>
 
-        <motion.div className={styles.scrollIndicator} 
+        {/* SCROLL INDICATOR */}
+        <motion.div 
+          className={styles.scrollIndicator} 
           style={{ opacity: indicatorOpacity, zIndex: 100 }}
-          initial={{ opacity: 1 }}
         >
           <div className={styles.scrollIcon}>
             <FaChevronDown size={12} />
