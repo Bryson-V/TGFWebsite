@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, Environment, Center, Image } from '@react-three/drei';
+import { useGLTF, Environment, Center, Image, Clone } from '@react-three/drei';
 import * as THREE from 'three'; 
 import styles from './SocialMedia.module.css';
 import platformsData from '@/content/site-data/socialMedia.json';
-import dynamic from 'next/dynamic';
 
 const getBasePath = () => {
   const path = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -28,11 +27,7 @@ const getPlatforms = () => {
 };
 
 const PhoneModel = ({ activeImage, isMobile }) => {
-  // Lazy Loading
-  const modelPath = dynamic(() => import('/assets/iphone16.glb'), {
-    ssr: false,
-    loading: () => <p>Loading 3D Model...</p>
-  });
+  const modelPath = normalizePath('/assets/iphone16.glb');
   const { scene } = useGLTF(modelPath);
   const groupRef = useRef();
 
@@ -52,7 +47,9 @@ const PhoneModel = ({ activeImage, isMobile }) => {
   return (
     <Center position={[xPosition, -0.2, 0]} scale={phoneScale} rotation={[0, 0, 0.5]}>
       <group ref={groupRef}>
-        <primitive object={scene} scale={1} position={[0, 0, 0]} />
+        
+        {/* Used <Clone> instead of <primitive> to prevent the white texture crash */}
+        <Clone object={scene} scale={1} position={[0, 0, 0]} />
 
         {activeImage && (
           <Image 
@@ -115,7 +112,9 @@ export default function SocialMedia() {
               <directionalLight position={[5, 5, 5]} intensity={2} />
               <Environment preset="city" />
               
-              <PhoneModel activeImage={activeData.image} isMobile={isMobile} />
+              <Suspense fallback={null}>
+                <PhoneModel activeImage={activeData.image} isMobile={isMobile} />
+              </Suspense>
             </Canvas>
           </div>
 
