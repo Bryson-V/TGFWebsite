@@ -27,7 +27,9 @@ export default function PatientNavigationGrid() {
   return (
     <section className={styles.section}>
       <Container>
-        <SectionHeading title="Navigation &amp; Financial Assistance Services" align="center" />
+        <div className={styles.headingWrapper}>
+          <SectionHeading title="Navigation &amp; Financial Assistance Services" align="center" />
+        </div>
         <div className={styles.grid}>
           {assistanceTracks.map((track, idx) => (
             <div key={idx} className={styles.card}>
