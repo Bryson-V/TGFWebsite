@@ -27,11 +27,11 @@ const STEP = SLOGAN_END / 11;
 
 const SloganWord = ({ token, progress }) => {
   const wordIn = token.seq * STEP;
-  const wordOn = wordIn + (STEP * 0.55);
+  const wordOn = wordIn + (STEP * 0.4);
 
   const opacity = useTransform(
     progress, 
-    [wordIn - 0.02, wordIn, wordOn, SLOGAN_END, SLOGAN_END + 0.05], 
+    [wordIn - 0.01, wordIn, wordOn, SLOGAN_END, SLOGAN_END + 0.05], 
     [0, 0, 1, 1, 0] 
   );
   const y = useTransform(progress, [wordIn, wordOn], ["50%", "0%"]);
@@ -75,7 +75,7 @@ export default function StoryBoard() {
     stiffness: 70, damping: 22, mass: 0.4
   });
 
-  const indicatorOpacity = useTransform(smoothProgress, [0.30, 0.45, 0.75, 0.85], [0, 1, 1, 0]);
+  const indicatorOpacity = useTransform(smoothProgress, [0.2, 0.45, 0.75, 0.85], [0, 1, 1, 0]);
 
   const subtitleOpacity = useTransform(
     smoothProgress, 
