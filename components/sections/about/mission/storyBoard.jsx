@@ -87,7 +87,7 @@ export default function StoryBoard() {
   const c2X = useTransform(smoothProgress, [0.60, 0.65], ["100%", "0vw"]);
   const mvY = useTransform(smoothProgress, [0.75, 0.85, 1.0], ["120%", "0%", "0%"]);
 
-  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.95, 1], [1, 1, 0]);
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.65, 0.9], [1, 1, 0]);
   
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
