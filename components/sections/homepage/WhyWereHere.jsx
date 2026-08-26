@@ -40,7 +40,7 @@ export default function WhyWereHere() {
                 <FaPlus />
               </div>
               <div className={styles.pillarContent}>
-                <h4 className={styles.pillarTitle}>Basic Healthcare</h4>
+                <h4 className={styles.pillarTitle}>Healthcare</h4>
                 <p className={styles.pillarText}>Medical care for every resident, regardless of ability to pay.</p>
               </div>
             </div>

@@ -6,6 +6,7 @@ import { useGLTF, Environment, Center, Image } from '@react-three/drei';
 import * as THREE from 'three'; 
 import styles from './SocialMedia.module.css';
 import platformsData from '@/content/site-data/socialMedia.json';
+import dynamic from 'next/dynamic';
 
 const getBasePath = () => {
   const path = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -27,7 +28,11 @@ const getPlatforms = () => {
 };
 
 const PhoneModel = ({ activeImage, isMobile }) => {
-  const modelPath = normalizePath('/assets/iphone16.glb');
+  // Lazy Loading
+  const modelPath = dynamic(() => import('/assets/iphone16.glb'), {
+    ssr: false,
+    loading: () => <p>Loading 3D Model...</p>
+  });
   const { scene } = useGLTF(modelPath);
   const groupRef = useRef();
 
