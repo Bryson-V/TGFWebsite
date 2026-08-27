@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s1",
+    "title": "Annual Wellness Exam",
+    "description": "Vital signs, blood pressure monitoring, and primary physical health evaluations.",
+    "ageGroup": "All Ages"
+  },
+  {
+    "id": "s2",
+    "title": "Chronic Condition Screenings",
+    "description": "Targeted checks for Diabetes (HbA1c), cholesterol profiles, and cardiovascular risk factors.",
+    "ageGroup": "Ages 20–39"
+  },
+  {
+    "id": "s3",
+    "title": "Cancer Screenings",
+    "description": "Mammograms, cervical cancer screenings, and colorectal cancer preventative checks.",
+    "ageGroup": "Ages 40–64"
+  },
+  {
+    "id": "s4",
+    "title": "Geriatric Health Assessment",
+    "description": "Bone density scans, cognitive screening, and comprehensive mobility assessments.",
+    "ageGroup": "Ages 65+"
+  }
+]

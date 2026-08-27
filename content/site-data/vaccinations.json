@@ -1,0 +1,26 @@
+[
+  {
+    "id": "v1",
+    "category": "adult",
+    "title": "Routine Immunizations",
+    "description": "Essential protection including COVID-19, Influenza, Tdap, and Shingles vaccines for adults."
+  },
+  {
+    "id": "v2",
+    "category": "child",
+    "title": "Childhood & Adolescent Vaccines",
+    "description": "Standard developmental vaccination schedules protecting children from early infectious diseases."
+  },
+  {
+    "id": "v3",
+    "category": "adult",
+    "title": "Travel Vaccines",
+    "description": "Tailored consultations and immunizations required for international travel protection."
+  },
+  {
+    "id": "v4",
+    "category": "senior",
+    "title": "Senior Wellness Immunizations",
+    "description": "High-dose flu, pneumococcal, and RSV vaccines tailored for optimal senior immunity."
+  }
+]
