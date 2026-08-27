@@ -25,4 +25,4 @@ yarn-error.log*
 .idea/
 
 #patient data
-/public/excel
+/public/excel/*.xlsx

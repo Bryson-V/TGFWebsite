@@ -8,7 +8,7 @@ export default function ScreeningsModule() {
       <div className={styles.container}>
         <div className={styles.banner}>
           <p className={styles.bannerText}>
-            💡 <strong>Early detection saves lives</strong>—stay up to date with routine annual health screenings.
+             <strong>Early detection saves lives</strong>—stay up to date with routine annual health screenings.
           </p>
         </div>
 

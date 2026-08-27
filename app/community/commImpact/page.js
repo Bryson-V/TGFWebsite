@@ -7,8 +7,8 @@ export default function PatientsPage() {
   return (
     <>
         <ImpactHero />
-        <PatientDataVisualizer filePath="/excel/patient-data.xlsx" />
-        <Partner />
+      <PatientDataVisualizer filePath="/excel/patient-data.json" />       
+      <Partner />
     </>
   );
 }
