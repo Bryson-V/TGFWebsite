@@ -32,8 +32,7 @@
       "panelTitle": "COMMUNITY & IMPACT",
       "panelSubtitle": "See our volunteers in action and learn how you can join the mission.",
       "links": [
-        { "label": "Partnerships", "href": "community/partnerships" },
-        { "label": "Our Impact", "href": "community/commImpact" },
+        { "label": "Our Impact & Partners", "href": "community/commImpact" },
         { "label": "Mobile Care Clinic", "href": "community/mobileCareClinic" },
         { "label": "Outreach Gallery", "href": "community/allOutreaches" },
         { "label": "Healing For Women", "href": "community/healingForWomen" },
