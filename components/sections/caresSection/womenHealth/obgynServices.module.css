@@ -5,14 +5,13 @@
   justify-content: center;
 }
 
-/* Desktop Grid Layout */
 .layoutGrid {
-  max-width: 1120px;
+  max-width: 1500px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 440px;
+  grid-template-columns: 1fr 600px;
   grid-template-areas: "accordion image";
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -144,22 +143,21 @@
   margin: 0;
 }
 
-/* Image Column & Animation Styles */
 .imageColumn {
   grid-area: image;
   position: sticky;
-  top: 2rem;
-  height: 100%;
+  top: 5rem;
+  align-self: start;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 520px;
-  border-radius: 24px;
+  height: 700px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: none;
   background-color: #4c0519;
 }
 
