@@ -1,0 +1,110 @@
+.prepSection {
+  padding: 4rem 5%;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.prepTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #064e3b;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.iconCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #047857;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepText {
+  font-size: 1rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Footer CTA Banner */
+.ctaBanner {
+  padding: 4rem 5%;
+  background-color: #064e3b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaContainer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ctaSub {
+  font-size: 1.1rem;
+  color: #a7f3d0;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  padding: 0.875rem 1.75rem;
+  background-color: #34d399;
+  color: #064e3b;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.secondaryBtn {
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+}

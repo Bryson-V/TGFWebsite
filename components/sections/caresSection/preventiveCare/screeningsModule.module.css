@@ -1,0 +1,84 @@
+.section {
+  padding: 4rem 5%;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.banner {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 16px;
+  padding: 1.25rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.bannerText {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #064e3b;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #064e3b;
+  margin: 0;
+}
+
+.checklistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.checkCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkIcon {
+  color: #047857;
+}
+
+.ageBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #047857;
+  background-color: #ecfdf5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}

@@ -2,8 +2,7 @@
   "tagline": "We are a nonprofit Getting Guam Healthy, One Man, One Woman, and One Child at a time.",
   "address": "125 Tun Jesus Crisostomo Street, Tamuning, Guam",
   "phones": [
-    { "display": "671 - 649 - 8638", "href": "tel:6719890731" },
-    { "display": "671 - 797 - 5463", "href": "https://wa.me/16717975463" }
+    { "display": "671 - 649 - 8638", "href": "tel:6719890731" }
   ],
   "columns": [
     {
@@ -64,7 +63,6 @@
   "social": [
     { "label": "facebook", "href": "https://www.facebook.com/toduguamfoundation/" },
     { "label": "instagram", "href": "https://www.instagram.com/toduguam.foundation/" },
-    { "label": "tiktok", "href": "https://www.tiktok.com/@care_toduguam" },
     { "label": "Linkedin", "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd" }
   ],
   "legal": [
