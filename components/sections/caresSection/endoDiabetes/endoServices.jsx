@@ -39,10 +39,10 @@ export default function EndoServices() {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="endo-services">
       <div className={styles.layoutGrid}>
         
-        {/* Dynamic Image Container (Top on Mobile, Right Column on PC) */}
+        {/* Dynamic Image Container (Top on Mobile, Floating Sticky on PC) */}
         <div className={styles.imageColumn}>
           <div className={styles.imageWrapper}>
             <AnimatePresence mode="wait">

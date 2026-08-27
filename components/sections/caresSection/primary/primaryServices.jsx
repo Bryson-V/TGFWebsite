@@ -14,6 +14,9 @@ export default function PrimaryCareServices() {
 
   const activeService = servicesData.find((item) => item.id === activeId) || servicesData[0];
 
+  const activeIndex = servicesData.findIndex((item) => item.id === activeId);
+  const ActiveIcon = iconsMap[activeIndex >= 0 ? activeIndex % iconsMap.length : 0];
+
   return (
     <section className={styles.section} id="services">
       <div className={styles.layoutGrid}>
