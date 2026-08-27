@@ -1,0 +1,307 @@
+{
+  "all": {
+    "totalPatients": 19238,
+    "selfPayCount": 998,
+    "selfPayPercentage": 5,
+    "chartData": {
+      "age": [
+        {
+          "name": "18–34",
+          "value": 5172,
+          "percentage": 27
+        },
+        {
+          "name": "35–49",
+          "value": 4461,
+          "percentage": 23
+        },
+        {
+          "name": "65+",
+          "value": 4383,
+          "percentage": 23
+        },
+        {
+          "name": "50–64",
+          "value": 3767,
+          "percentage": 20
+        },
+        {
+          "name": "0–17",
+          "value": 1455,
+          "percentage": 8
+        }
+      ],
+      "race": [
+        {
+          "name": "NHPI",
+          "value": 7788,
+          "percentage": 40
+        },
+        {
+          "name": "Declined / Unspecified",
+          "value": 6126,
+          "percentage": 32
+        },
+        {
+          "name": "Asian",
+          "value": 3756,
+          "percentage": 20
+        },
+        {
+          "name": "Other",
+          "value": 1568,
+          "percentage": 8
+        }
+      ],
+      "gender": [
+        {
+          "name": "Female",
+          "value": 13272,
+          "percentage": 69
+        },
+        {
+          "name": "Male",
+          "value": 5932,
+          "percentage": 31
+        },
+        {
+          "name": "Other",
+          "value": 34,
+          "percentage": 1
+        }
+      ],
+      "insurance": [
+        {
+          "name": "Calvo's SelectCare",
+          "value": 5646,
+          "percentage": 29
+        },
+        {
+          "name": "Medicaid",
+          "value": 5480,
+          "percentage": 28
+        },
+        {
+          "name": "Medicare",
+          "value": 2094,
+          "percentage": 11
+        },
+        {
+          "name": "Other",
+          "value": 2046,
+          "percentage": 11
+        },
+        {
+          "name": "TriCare / TriWest",
+          "value": 1508,
+          "percentage": 8
+        },
+        {
+          "name": "TakeCare",
+          "value": 1466,
+          "percentage": 8
+        },
+        {
+          "name": "Self-Pay",
+          "value": 998,
+          "percentage": 5
+        }
+      ]
+    }
+  },
+  "center": {
+    "totalPatients": 18731,
+    "selfPayCount": 643,
+    "selfPayPercentage": 3,
+    "chartData": {
+      "age": [
+        {
+          "name": "18–34",
+          "value": 5096,
+          "percentage": 27
+        },
+        {
+          "name": "35–49",
+          "value": 4418,
+          "percentage": 24
+        },
+        {
+          "name": "65+",
+          "value": 4358,
+          "percentage": 23
+        },
+        {
+          "name": "50–64",
+          "value": 3718,
+          "percentage": 20
+        },
+        {
+          "name": "0–17",
+          "value": 1141,
+          "percentage": 6
+        }
+      ],
+      "race": [
+        {
+          "name": "NHPI",
+          "value": 7534,
+          "percentage": 40
+        },
+        {
+          "name": "Declined / Unspecified",
+          "value": 5989,
+          "percentage": 32
+        },
+        {
+          "name": "Asian",
+          "value": 3653,
+          "percentage": 20
+        },
+        {
+          "name": "Other",
+          "value": 1555,
+          "percentage": 8
+        }
+      ],
+      "gender": [
+        {
+          "name": "Female",
+          "value": 13013,
+          "percentage": 69
+        },
+        {
+          "name": "Male",
+          "value": 5690,
+          "percentage": 30
+        },
+        {
+          "name": "Other",
+          "value": 28,
+          "percentage": 1
+        }
+      ],
+      "insurance": [
+        {
+          "name": "Calvo's SelectCare",
+          "value": 5631,
+          "percentage": 30
+        },
+        {
+          "name": "Medicaid",
+          "value": 5373,
+          "percentage": 29
+        },
+        {
+          "name": "Other",
+          "value": 2667,
+          "percentage": 14
+        },
+        {
+          "name": "Medicare",
+          "value": 2092,
+          "percentage": 11
+        },
+        {
+          "name": "TriCare / TriWest",
+          "value": 1506,
+          "percentage": 8
+        },
+        {
+          "name": "TakeCare",
+          "value": 1462,
+          "percentage": 8
+        }
+      ]
+    }
+  },
+  "mobile": {
+    "totalPatients": 507,
+    "selfPayCount": 355,
+    "selfPayPercentage": 70,
+    "chartData": {
+      "age": [
+        {
+          "name": "0–17",
+          "value": 314,
+          "percentage": 62
+        },
+        {
+          "name": "18–34",
+          "value": 76,
+          "percentage": 15
+        },
+        {
+          "name": "50–64",
+          "value": 49,
+          "percentage": 10
+        },
+        {
+          "name": "35–49",
+          "value": 43,
+          "percentage": 8
+        },
+        {
+          "name": "Other",
+          "value": 25,
+          "percentage": 5
+        }
+      ],
+      "race": [
+        {
+          "name": "NHPI",
+          "value": 254,
+          "percentage": 50
+        },
+        {
+          "name": "Declined / Unspecified",
+          "value": 137,
+          "percentage": 27
+        },
+        {
+          "name": "Asian",
+          "value": 103,
+          "percentage": 20
+        },
+        {
+          "name": "Other",
+          "value": 13,
+          "percentage": 3
+        }
+      ],
+      "gender": [
+        {
+          "name": "Female",
+          "value": 259,
+          "percentage": 51
+        },
+        {
+          "name": "Male",
+          "value": 242,
+          "percentage": 48
+        },
+        {
+          "name": "Other",
+          "value": 6,
+          "percentage": 1
+        }
+      ],
+      "insurance": [
+        {
+          "name": "Self-Pay",
+          "value": 355,
+          "percentage": 70
+        },
+        {
+          "name": "Medicaid",
+          "value": 107,
+          "percentage": 21
+        },
+        {
+          "name": "Other",
+          "value": 45,
+          "percentage": 9
+        }
+      ]
+    }
+  }
+}
