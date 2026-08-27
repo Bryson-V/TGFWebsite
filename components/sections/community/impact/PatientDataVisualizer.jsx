@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { getPatientData } from "@/lib/getPatientData";
 import { Users, Loader2, MapPin, HeartHandshake } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 // Dynamic import for your 3D PatientPieChart component
 const PatientPieChart = dynamic(() => import("./patientPieChart"), {
@@ -15,7 +16,7 @@ const PatientPieChart = dynamic(() => import("./patientPieChart"), {
   ),
 });
 
-export default function PatientDataVisualizer({ filePath = "/excel/patient-data.json" }) {
+export default function PatientDataVisualizer({ filePath = getAssetPath("/excel/patient-data.json" )}) {
   const [loading, setLoading] = useState(true);
   const [fullData, setFullData] = useState(null);
   
