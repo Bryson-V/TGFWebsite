@@ -12,23 +12,17 @@
         { "label": "Endocrinology & Diabetes", "href": "Cares&Services/endoDiabetes" },
         { "label": "Women's Health & OB-GYN", "href": "Cares&Services/womenHealth" },
         { "label": "Preventive Care & Screenings", "href": "Cares&Services/screening" },
-        { "label": "Upcoming Events", "href": "Cares&Services/upcoming" }
-      ]
-    },
-    {
-      "title": "Behavioral Health",
-      "links": [
-        { "label": "About", "href": "mindCare/mindAbout" },
-        { "label": "Psychiatry", "href": "mindCare/psychiatry" },
-        { "label": "Psychology", "href": "mindCare/psychology" },
-        { "label": "TMS", "href": "mindCare/tms" }
+        { "label": "Upcoming Events", "href": "Cares&Services/upcoming" },
+        { "label": "About", "href": "Cares&Services/mindAbout" },
+        { "label": "Psychiatry", "href": "Cares&Services/psychiatry" },
+        { "label": "Psychology", "href": "Cares&Services/psychology" },
+        { "label": "TMS", "href": "Cares&Services/tms" }
       ]
     },
     {
       "title": "Community & Impact",
       "links": [
-        { "label": "Partnerships", "href": "community/partnerships" },
-        { "label": "Our Impact", "href": "community/commImpact" },
+        { "label": "Our Impact & Partners", "href": "community/commImpact" },
         { "label": "Mobile Care Clinic", "href": "community/mobileCareClinic" },
         { "label": "Outreach Gallery", "href": "community/allOutreaches" },
         { "label": "Healing For Women", "href": "community/healingForWomen" },

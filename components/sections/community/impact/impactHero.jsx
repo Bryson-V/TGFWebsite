@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import Image from '@/components/ui/Image';
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./partnerHero.module.css";
+import styles from "./impactHero.module.css";
 
-export default function PartnerHero() {
+export default function ImpactHero() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -52,8 +52,8 @@ export default function PartnerHero() {
         <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · COMMUNITY & IMPACT</h5>
         
         <h1 className={styles.title}>
-          Partnership<br />
-          <span className={styles.brightText}>Programs</span>
+          Our<br />
+          <span className={styles.brightText}>Impact</span>
         </h1>
         
         <p className={styles.description}>
