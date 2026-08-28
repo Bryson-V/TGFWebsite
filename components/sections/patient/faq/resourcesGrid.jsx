@@ -6,9 +6,15 @@ import styles from "./resourcesGrid.module.css";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 /**
+<<<<<<< HEAD
  * Helper to ensure local PDF paths include the GitHub Pages repository base path
  */
 function getPdfPath(src) {
+=======
+ * Helper to ensure local paths include the GitHub Pages repository base path
+ */
+function getImagePath(src) {
+>>>>>>> 3d9418bc973540c8afdb6bb013aac80904b292fa
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
   return `${basePath}${src.startsWith("/") ? "" : "/"}${src}`;

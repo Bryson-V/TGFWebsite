@@ -6,7 +6,6 @@ import GetInvolved from "@/components/sections/homepage/GetInvolved";
 import NewsGrid from "@/components/sections/about/news/NewsGrid";
 import PressGrid from "@/components/sections/about/press/PressGrid";
 import SocialMedia from "@/components/sections/homepage/SocialMedia";
-import PhoneCanvas from "@/components/sections/homepage/Phonecanvas";
 /**
  * Homepage
  *
