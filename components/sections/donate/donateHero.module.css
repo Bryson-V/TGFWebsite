@@ -1,7 +1,7 @@
 .heroContainer {
   position: relative;
-  height: 65vh;
-  min-height: 500px;
+  height: 55vh;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center; /* Centers horizontally in the section */

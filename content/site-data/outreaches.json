@@ -28,12 +28,12 @@
   },
   {
     "id": "4",
-    "src": "/images/CommunityAndImpact/outreaches/2026O1.jpg",
-    "title": "Dededo Flea Market",
+    "src": "/images/CommunityAndImpact/outreaches/gym.jpeg",
+    "title": "Passport to Services Medical Outreach",
     "location": "Dededo, Guam",
-    "date": "Feburary 21, 2026",
-    "description": "Providing school physicals and basic checkups for students heading back to school.",
-    "residents": "###"
+    "date": "July 31, 2025",
+    "description": "Provided Health screenings, Health education and wellness resources, information about our healthcare and behavioral health services",
+    "residents": "111"
   },
   {
     "id": "5",
@@ -61,5 +61,15 @@
     "date": "March 1, 2025",
     "description": "TEST",
     "residents": "111"
+  },
+    {
+    "id": "8",
+    "src": "/images/CommunityAndImpact/outreaches/2026O1.jpg",
+    "title": "Dededo Flea Market",
+    "location": "Dededo, Guam",
+    "date": "Feburary 21, 2026",
+    "description": "Providing school physicals and basic checkups for students heading back to school.",
+    "residents": "###"
   }
+
 ]

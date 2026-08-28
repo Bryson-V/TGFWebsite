@@ -26,7 +26,7 @@ export default function PrimaryCareHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/primarycare/primarycare-banner.jpg" 
+          src="/images/CaresAndServices/PrimaryCare/Hero.jpeg" 
           alt="Primary Care Background" 
           fill
           className={styles.bgImage}
@@ -46,7 +46,7 @@ export default function PrimaryCareHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>FAMILY & ADULT MEDICINE</span>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · Cares and Services</h5>
           
           <h1 className={styles.title}>
             Primary Care<br />

@@ -46,7 +46,7 @@ export default function EndoHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>SPECIALIZED CLINICAL CARE</span>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · Cares and Services</h5>
           
           <h1 className={styles.title}>
             Endocrinology<br />

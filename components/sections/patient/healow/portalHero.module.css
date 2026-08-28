@@ -1,6 +1,7 @@
 .heroContainer {
   position: relative;
-  min-height: 75vh; 
+  height: 55vh;
+  min-height: 420px;
   display: flex;
   align-items: center; 
   padding: 6rem 5%;         
