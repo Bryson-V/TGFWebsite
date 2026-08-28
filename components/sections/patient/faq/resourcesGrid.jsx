@@ -5,14 +5,6 @@ import styles from "./resourcesGrid.module.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-/**
- * Helper to ensure local paths include the GitHub Pages repository base path
- */
-function getImagePath(src) {
-  if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `${basePath}${src.startsWith("/") ? "" : "/"}${src}`;
-}
 
 export default function ResourcesGrid() {
   return (
