@@ -26,7 +26,7 @@ export default function PreventiveHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/preventive/preventive-banner.jpg" 
+          src="/images/CaresAndServices/preventive/Hero.jpeg" 
           alt="Preventive Health Background" 
           fill
           className={styles.bgImage}

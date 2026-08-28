@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const StandaloneMap = dynamic(
-  () => import("@/components/sections/about/upcoming/map"),
+  () => import("@/components/sections/caresSection/upcoming/map"),
   { ssr: false, loading: () => <p style={{ textAlign: 'center', padding: '2rem' }}>Loading...</p> }
 );
 
