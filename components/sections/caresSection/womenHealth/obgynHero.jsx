@@ -26,7 +26,7 @@ export default function ObgynHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/obgyn/obgyn-banner.jpg" 
+          src="/images/CaresAndServices/Obgyn/Hero.jpeg" 
           alt="OB/GYN Care Background" 
           fill
           className={styles.bgImage}
@@ -46,7 +46,7 @@ export default function ObgynHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>WOMEN'S HEALTH SERVICES</span>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · Cares and Services</h5>
           
           <h1 className={styles.title}>
             Obstetrics &amp;<br />

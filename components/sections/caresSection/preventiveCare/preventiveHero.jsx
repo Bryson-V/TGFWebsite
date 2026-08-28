@@ -26,7 +26,7 @@ export default function PreventiveHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/preventive/preventive-banner.jpg" 
+          src="/images/CaresAndServices/preventive/Hero.jpeg" 
           alt="Preventive Health Background" 
           fill
           className={styles.bgImage}
@@ -46,7 +46,7 @@ export default function PreventiveHero() {
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className={styles.textBlock}>
-          <span className={styles.subtitle}>SPECIALIZED CLINICAL CARE</span>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · Cares and Services</h5>
           
           <h1 className={styles.title}>
             Preventive Care<br />

@@ -6,9 +6,9 @@ import styles from "./resourcesGrid.module.css";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 /**
- * Helper to ensure local paths include the GitHub Pages repository base path
+ * Helper to ensure local PDF paths include the GitHub Pages repository base path
  */
-function getImagePath(src) {
+function getPdfPath(src) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
   return `${basePath}${src.startsWith("/") ? "" : "/"}${src}`;
@@ -21,8 +21,7 @@ export default function ResourcesGrid() {
         <h2 className={styles.heading}>RESOURCES</h2>
         <div className={styles.grid}>
           {resourcesData.map((item) => {
-            const imageSrc = getImagePath(item.image);
-            const pdfSrc = getImagePath(item.pdf);
+            const pdfSrc = getPdfPath(item.pdf);
 
             return (
               <div key={item.id} className={styles.card}>
@@ -36,7 +35,7 @@ export default function ResourcesGrid() {
                 >
                   <div className={styles.imageWrapper}>
                     <Image
-                      src={imageSrc}
+                      src={item.image}
                       alt={item.title}
                       width={400}
                       height={520}

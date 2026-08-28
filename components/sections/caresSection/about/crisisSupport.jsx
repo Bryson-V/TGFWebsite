@@ -8,7 +8,7 @@ export default function CrisisSupportBanner() {
       <div className={styles.contentWrapper}>
         <div className={styles.bannerContainer}>
           <div className={styles.headerGroup}>
-            <span className={styles.alertIcon}>⚠️</span>
+            <span className={styles.alertIcon}></span>
             <div>
               <h3 className={styles.title}>Immediate & Crisis Support Notice</h3>
               <p className={styles.disclaimerText}>

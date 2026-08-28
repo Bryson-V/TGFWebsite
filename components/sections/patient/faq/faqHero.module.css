@@ -2,6 +2,8 @@
   background-color: var(--color-primary-dark, #0d4a57);
   background: linear-gradient(rgba(13, 74, 87, 0.95), rgba(13, 74, 87, 0.95));
   padding: 80px 0 96px;
+  height: 55vh;
+  min-height: 420px;
   color: #ffffff;
 }
 

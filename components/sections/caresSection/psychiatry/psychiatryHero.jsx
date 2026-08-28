@@ -29,7 +29,7 @@ export default function PsychiatryHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/BehavioralHealth/mindCare/MindCare.jpg"
+          src="/images/CaresAndServices/Psychiatry/Hero.jpeg"
           alt="Mind Care Background" 
           fill
           className={styles.bgImage}
@@ -48,7 +48,7 @@ export default function PsychiatryHero() {
         className={styles.content} 
         style={{ y: textY, opacity: textOpacity }} 
       >
-        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · OUR WORK</h5>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · Cares and Services</h5>
         
         <h1 className={styles.title}>
           Psychiatry
