@@ -18,7 +18,7 @@ export default function VaccinationsModule({ imageSrc }) {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.subTag}>SECTION 1</span>
+          <span className={styles.subTag}>VACCINATION CARE</span>
           <h2 className={styles.title}>Essential Vaccinations</h2>
           <p className={styles.description}>
             Vaccines are essential to protecting both individual health and the surrounding community against preventable illness.
@@ -39,42 +39,39 @@ export default function VaccinationsModule({ imageSrc }) {
           ))}
         </div>
 
-        {/* Layout Grid */}
-        <div className={styles.grid}>
-          <div className={styles.cardsColumn}>
-            <AnimatePresence mode="popLayout">
+        {/* Smooth Grid Container */}
+        <div className={styles.cardsGridWrapper}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={filter}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className={styles.cardsGrid}
+            >
               {filteredItems.map((vac) => (
-                <motion.div
-                  key={vac.id}
-                  className={styles.card}
-                  layout
-                  initial={{ opacity: 0, scale: 0.96 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.96 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div key={vac.id} className={styles.card}>
                   <h3 className={styles.cardTitle}>{vac.title}</h3>
                   <p className={styles.cardDesc}>{vac.description}</p>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
-          </div>
-
-          {/* Hidden on Mobile via CSS */}
-          {imageSrc && (
-            <div className={styles.imageColumn}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={imageSrc}
-                  alt="Vaccination Care"
-                  fill
-                  className={styles.img}
-                  sizes="(max-width: 900px) 100vw, 440px"
-                />
-              </div>
-            </div>
-          )}
+            </motion.div>
+          </AnimatePresence>
         </div>
+
+        {/* Optional Banner Image */}
+        {imageSrc && (
+          <div className={styles.bannerImageWrapper}>
+            <Image
+              src={imageSrc}
+              alt="Vaccination Care"
+              fill
+              className={styles.img}
+              sizes="100vw"
+            />
+          </div>
+        )}
       </div>
     </section>
   );
