@@ -1,5 +1,5 @@
 .section {
-  padding: 5rem 6%;
+  padding: 2.5rem 6% 0 6%;
   background-color: #ffffff;
   max-width: 1150px;
   margin: 0 auto;
@@ -26,10 +26,6 @@
   margin: 0 auto;
 }
 
-/* ==========================================================================
-   DESKTOP STYLES (min-width: 851px)
-   ========================================================================== */
-
 @media (min-width: 851px) {
   .mobileList {
     display: none;
@@ -55,21 +51,18 @@
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  /* Unselected Card Hover: Light teal tint instead of gray */
   .featureCard:hover {
     background-color: #f0fdfa;
     border-color: #99f6e4;
     transform: translateY(-2px);
   }
 
-  /* Selected / Active Card */
   .activeCard {
     background: #0d4a57;
     border-color: #0d4a57;
     box-shadow: 0 4px 14px rgba(13, 74, 87, 0.25);
   }
 
-  /* Active Card Hover: Stays brand teal with a rich highlight tint and slight lift */
   .activeCard:hover {
     background: #0f5463;
     border-color: #0f5463;
@@ -114,7 +107,6 @@
     color: #94a3b8;
   }
 
-  /* Desktop Feature Detail Panel */
   .desktopDetailBox {
     background: #f8fafc;
     border-radius: 10px;
@@ -147,10 +139,6 @@
     margin: 0;
   }
 }
-
-/* ==========================================================================
-   MOBILE STYLES (max-width: 850px)
-   ========================================================================== */
 
 @media (max-width: 850px) {
   .featuresGrid,

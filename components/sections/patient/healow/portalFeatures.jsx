@@ -7,7 +7,6 @@ import {
   FiMessageSquare, 
   FiClipboard
 } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
 import styles from "./portalFeatures.module.css";
 
 const features = [
