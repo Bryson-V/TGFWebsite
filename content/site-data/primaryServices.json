@@ -7,24 +7,17 @@
     "image": "/images/CaresAndServices/PrimaryCare/Physical.webp"
   },
   {
-    "id": "routine-diagnostics",
-    "title": "Routine Lab Diagnostics",
-    "subtitle": "On-site testing & evaluations",
-    "description": "Comprehensive blood work, lipid panels, metabolic panels, and diagnostic referrals handled conveniently in-office.",
-    "image": "/images/CaresAndServices/PrimaryCare/imaging.jpeg"
-  },
-  {
     "id": "chronic-management",
     "title": "Chronic Disease Management",
     "subtitle": "Long-term health monitoring",
     "description": "Continuous monitoring and medication management for hypertension, high cholesterol, asthma, and ongoing metabolic health.",
-    "image": "/images/CaresAndServices/PrimaryCare/chronic-management.jpg"
+    "image": "/images/CaresAndServices/PrimaryCare/imaging.jpeg"
   },
   {
-    "id": "immunizations",
-    "title": "Vaccinations & Immunizations",
-    "subtitle": "Routine preventive protection",
-    "description": "Recommended adult immunization schedules, booster shots, travel vaccines, and seasonal flu prevention.",
-    "image": "/images/CaresAndServices/PrimaryCare/immunizations.jpg"
+  "id": "general-physicals",
+  "title": "General Physicals & Checkups",
+  "subtitle": "Comprehensive health evaluations",
+  "description": "Annual wellness exams, preventive screenings, vital signs monitoring, and personalized health assessments.",
+  "image": "/images/CaresAndServices/PrimaryCare/Physical.jpeg"
   }
 ]

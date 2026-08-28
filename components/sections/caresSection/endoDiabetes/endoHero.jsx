@@ -26,7 +26,7 @@ export default function EndoHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/Services/endo/endo-banner.jpg" 
+          src="/images/CaresAndServices/Endocrinology/Hero.jpeg" 
           alt="Endocrinology Care Background" 
           fill
           className={styles.bgImage}
