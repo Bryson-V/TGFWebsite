@@ -1,18 +1,16 @@
 .heroContainer {
   position: relative;
-  height: 55vh;
   min-height: 420px;
   display: flex;
   align-items: center; 
-  padding: 6rem 5%;         
+  padding: 5rem 6%;        
   overflow: hidden;
-  background-color: #083344;
+  background-color: #0d4a57;
 }
-
 
 .backgroundImageWrapper {
   position: absolute;
-  top: -30%; 
+  top: -20%; 
   left: 0;
   width: 100%;
   height: 140%;
@@ -24,10 +22,15 @@
   object-position: center;
 }
 
+/* Smooth top-to-bottom tint that stays within the exact Todu Guam teal color palette */
 .cyanOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #0891b2, #0e7490);
+  background: linear-gradient(
+    180deg,
+    rgba(13, 74, 87, 0.92) 0%,
+    rgba(9, 52, 61, 0.88) 100%
+  );
   z-index: 2;
 }
 
@@ -35,11 +38,11 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3.5rem;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -48,30 +51,46 @@
   flex-direction: column; 
 }
 
+/* Subtitle matching the teal accent of the other hero components */
 .subtitle {
-  color: #a5f3fc; 
+  color: #38bdf8; 
   letter-spacing: 0.1em;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
+.logoWrapper {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.partnerLogo {
+  width: auto;
+  height: 70px;
+  max-width: 260px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .title {
   color: #ffffff;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  line-height: 1.05; 
-  margin-bottom: 1.5rem;
+  line-height: 1.1; 
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.6;
-  opacity: 0.95;
-  font-weight: 500;
+  color: #e2e8f0;
+  font-weight: 400;
   margin-bottom: 2rem;
+  max-width: 580px;
 }
 
 .heroActions {
@@ -82,40 +101,41 @@
 .primaryCta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   background-color: #ffffff;
-  color: #083344;
-  font-size: 1.1rem;
+  color: #0d4a57;
+  font-size: 1rem;
   font-weight: 700;
-  padding: 0.9rem 1.75rem;
-  border-radius: 12px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .primaryCta:hover {
-  background-color: #f0f9ff;
+  background-color: #f8fafc;
   transform: translateY(-2px);
 }
 
+/* Card seamlessly integrated with a subtle border and brand dark tone */
 .appDownloadCard {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 2.25rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background-color: rgba(6, 38, 45, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .appHeader {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .appHeader h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -126,8 +146,8 @@
 }
 
 .appDownloadCard p {
-  font-size: 0.95rem;
-  color: #e2e8f0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -142,17 +162,17 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  background-color: #0f172a;
+  background-color: rgba(4, 25, 30, 0.85);
   color: #ffffff;
   padding: 0.65rem 1.25rem;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .storeBtn:hover {
-  opacity: 0.9;
+  border-color: #38bdf8;
   transform: translateY(-1px);
 }
 
@@ -162,15 +182,16 @@
 }
 
 .storeSub {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  opacity: 0.8;
+  color: #94a3b8;
 }
 
 .storeMain {
   font-size: 0.95rem;
   font-weight: 700;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -183,12 +204,9 @@
 @media (max-width: 768px) {
   .heroContainer {
     min-height: auto;
-    padding: 5rem 5%;
+    padding: 4rem 1.25rem;
   }
   .title {
-    font-size: 3rem;
-  }
-  .description {
-    font-size: 1.1rem;
+    font-size: 2.75rem;
   }
 }

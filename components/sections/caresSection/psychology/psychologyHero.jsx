@@ -29,7 +29,7 @@ export default function PsychologyHero() {
         style={{ y: backgroundY }}
       >
         <Image 
-          src="/images/BehavioralHealth/mindCare/MindCare.jpg"
+          src="/images/CaresAndServices/Psychology/Hero.jpeg"
           alt="Mind Care Background" 
           fill
           className={styles.bgImage}

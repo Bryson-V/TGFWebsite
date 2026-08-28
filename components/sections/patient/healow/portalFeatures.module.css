@@ -1,7 +1,7 @@
 .section {
-  padding: 5rem 5%;
-  background-color: #f8fafc;
-  max-width: 1200px;
+  padding: 5rem 6%;
+  background-color: #ffffff;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -11,278 +11,201 @@
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  color: #083344;
-  margin-bottom: 0.75rem;
+  color: #0d4a57;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 .sectionSubtitle {
-  font-size: 1.15rem;
-  color: #0e7490;
-  font-weight: 500;
+  font-size: 1.05rem;
+  color: #64748b;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
-   DESKTOP STYLES (min-width: 901px)
+   DESKTOP STYLES (min-width: 851px)
    ========================================================================== */
 
-@media (min-width: 901px) {
+@media (min-width: 851px) {
+  .mobileList {
+    display: none;
+  }
+
   .featuresGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
   }
 
   .featureCard {
-    background: linear-gradient(135deg, #0e7490, #083344);
-    border-radius: 20px;
-    border: 3px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-shadow: 0 10px 25px rgba(8, 51, 68, 0.15);
-  }
-
-  .featureCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(8, 51, 68, 0.25);
-  }
-
-  .activeCard {
-    background: linear-gradient(135deg, #06b6d4, #0e7490);
-    border-color: #38bdf8;
-  }
-
-  .cardHeader {
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 2.25rem 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     cursor: pointer;
-    color: #ffffff;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .cardHeaderTop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+  /* Unselected Card Hover: Light teal tint instead of gray */
+  .featureCard:hover {
+    background-color: #f0fdfa;
+    border-color: #99f6e4;
+    transform: translateY(-2px);
+  }
+
+  /* Selected / Active Card */
+  .activeCard {
+    background: #0d4a57;
+    border-color: #0d4a57;
+    box-shadow: 0 4px 14px rgba(13, 74, 87, 0.25);
+  }
+
+  /* Active Card Hover: Stays brand teal with a rich highlight tint and slight lift */
+  .activeCard:hover {
+    background: #0f5463;
+    border-color: #0f5463;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(13, 74, 87, 0.3);
   }
 
   .iconWrapper {
-    color: #a5f3fc;
+    color: #0d4a57;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
   }
 
-  .badge {
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    padding: 0.35rem 0.85rem;
-    border-radius: 9999px;
-    backdrop-filter: blur(4px);
-  }
-
-  .mobileBadgeText {
-    display: none;
+  .activeCard .iconWrapper {
+    color: #38bdf8;
   }
 
   .cardTitle {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
     margin-bottom: 0.25rem;
+    transition: color 0.2s ease;
+  }
+
+  .activeCard .cardTitle {
+    color: #ffffff;
   }
 
   .cardSummary {
-    display: none;
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.3;
+    display: block;
+    transition: color 0.2s ease;
   }
 
-  .chevron {
-    display: none;
+  .activeCard .cardSummary {
+    color: #94a3b8;
   }
 
-  .mobileExpandableWrapper {
-    display: none;
-  }
-
-  /* Shared Bottom Display Box */
+  /* Desktop Feature Detail Panel */
   .desktopDetailBox {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 2.5rem;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 2.25rem;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    display: flex;
-    gap: 1.75rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .accentLine {
-    width: 5px;
-    background-color: #0e7490;
-    border-radius: 999px;
-    flex-shrink: 0;
+    border-left: 4px solid #0d4a57;
   }
 
   .detailTag {
     font-size: 0.8rem;
-    font-weight: 800;
-    color: #0e7490;
+    font-weight: 700;
+    color: #0d4a57;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
   }
 
   .detailTitle {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: #083344;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
     margin-bottom: 0.75rem;
   }
 
   .detailText {
-    font-size: 1.15rem;
-    color: #334155;
+    font-size: 1.05rem;
+    color: #475569;
     line-height: 1.6;
     margin: 0;
   }
 }
 
 /* ==========================================================================
-   MOBILE & TABLET STYLES (max-width: 900px)
+   MOBILE STYLES (max-width: 850px)
    ========================================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
+  .featuresGrid,
   .desktopDetailBox {
     display: none;
   }
 
-  .featuresGrid {
-    display: grid;
-    grid-template-columns: 1fr;
+  .mobileList {
+    display: flex;
+    flex-direction: column;
     gap: 1.25rem;
   }
 
-  .featureCard {
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  }
-
-  .activeCard {
-    border-color: #0e7490;
-    box-shadow: 0 10px 30px rgba(14, 116, 144, 0.15);
-  }
-
-  .cardHeader {
-    width: 100%;
-    background: transparent;
-    border: none;
+  .mobileCard {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
     padding: 1.5rem;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    position: relative;
   }
 
-  .cardHeaderTop {
+  .mobileCardHeader {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 1.25rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .iconWrapper {
-    color: #0e7490;
+  .mobileIconWrapper {
+    color: #0d4a57;
     background: #e0f2fe;
     padding: 0.75rem;
-    border-radius: 14px;
-    display: inline-flex;
+    border-radius: 8px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
-  .badge {
-    margin-left: auto;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    background: #f1f5f9;
-    color: #64748b;
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
+  .mobileCardTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem 0;
   }
 
-  .activeCard .badge {
-    background: #0e7490;
-    color: #ffffff;
-  }
-
-  .desktopBadgeText {
-    display: none;
-  }
-
-  .cardTitle {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #083344;
-    margin-bottom: 0.35rem;
-  }
-
-  .cardSummary {
-    font-size: 0.95rem;
+  .mobileCardSummary {
+    font-size: 0.85rem;
+    color: #0d4a57;
     font-weight: 600;
-    color: #0e7490;
-  }
-
-  .chevron {
-    position: absolute;
-    bottom: 1.25rem;
-    right: 1.5rem;
-    color: #94a3b8;
-    transition: transform 0.25s ease, color 0.2s ease;
-  }
-
-  .activeCard .chevron {
-    color: #0e7490;
-  }
-
-  .chevronRotated {
-    transform: rotate(180deg);
-  }
-
-  .mobileExpandableWrapper {
-    overflow: hidden;
-  }
-
-  .mobileCardBody {
-    padding: 0 1.5rem 1.5rem 1.5rem;
-  }
-
-  .mobileDivider {
-    height: 1px;
-    background-color: #f1f5f9;
-    margin-bottom: 1.25rem;
   }
 
   .mobileDetailsText {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #475569;
     margin: 0;
   }
 }

@@ -14,13 +14,6 @@
     "image": "images/HomePage/social/Facebook.webp"
   },
   {
-    "id": "tiktok",
-    "name": "TikTok",
-    "href": "https://www.tiktok.com/@care_toduguam",
-    "gradient": "linear-gradient(135deg, #121212 0%, #303030 100%)",
-    "image": "images/HomePage/social/TikTok.webp"
-  },
-  {
     "id": "linkedin",
     "name": "LinkedIn",
     "href": "https://gu.linkedin.com/company/todu-guam-foundation-ltd",
