@@ -1,12 +1,12 @@
 [
   {
     "id": "1",
-    "src": "/images/CommunityAndImpact/outreaches/Cathedral.jpg",
-    "title": "Guam Cancer Care",
+    "src": "/images/CommunityAndImpact/outreaches/Funny.jpg",
+    "title": "Dulce Nombre de Maria Cathedral",
     "location": "Hagåtña, Guam",
-    "date": "May 28, 2026",
-    "description": "DESCRIPTION",
-    "residents": "###"
+    "date": "August 27, 2026",
+    "description": "Providing immunizations and school physical checkups",
+    "residents": "26"
   },
   {
     "id": "2",
@@ -55,9 +55,9 @@
   },
   {
     "id": "7",
-    "src": "/images/AboutUs/volunteer/volunteer.jpg",
-    "title": "TEST",
-    "location": "TEST",
+    "src": "/images/CommunityAndImpact/outreaches/Sinajana.jpg",
+    "title": "Sinajana Major's Offie",
+    "location": "117A Chalan Guma Yu'us, Sinajana, 96910, Guam",
     "date": "March 1, 2025",
     "description": "TEST",
     "residents": "111"

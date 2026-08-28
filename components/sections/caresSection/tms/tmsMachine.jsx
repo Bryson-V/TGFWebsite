@@ -9,7 +9,7 @@ export default function TmsMachine() {
       <div className={styles.contentWrapper}>
         <div className={styles.imageWrapper}>
           <Image 
-            src="/images/BehavioralHealth/tms/tmsMachine.jpeg" 
+            src="/images/CaresAndServices/tms/TMS2.jpg" 
             alt="BrainsWay Deep TMS Technology" 
             fill
             className={styles.image}

@@ -10,14 +10,14 @@ export default function AboutMindCareHolisticCare() {
       tier: "",
       title: "Psychiatry",
       desc: "Biological and medical evaluations providing psychiatric care and medication management tailored to individual needs.",
-      image: "/images/mindCare/psychiatry.jpg",
+      image: "/images/CaresAndServices/Psychiatry/Hero.jpeg",
       href: "psychiatry"
     },
     {
       tier: "",
       title: "Psychology",
       desc: "Comprehensive psychological testing, clinical diagnostic assessments, and evidence-based therapeutic modalities.",
-      image: "/images/mindCare/psychology.jpg",
+      image: "/images/CaresAndServices/Psychology/Hero.jpeg",
       href: "psychology"
     }
   ];
@@ -61,7 +61,7 @@ export default function AboutMindCareHolisticCare() {
           </div>
           <div className={styles.overlayImageWrapper}>
             <Image 
-              src="/images/mindCare/whole-person.jpg" 
+              src="/images/CaresAndServices/mindCare/groupPic.jpg" 
               alt="Honoring the Whole Person" 
               fill 
               className={styles.cardImage} 

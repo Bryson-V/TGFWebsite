@@ -49,7 +49,9 @@
   overflow: hidden;
   box-shadow: 0 10px 25px -5px rgba(8, 51, 68, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
 }
 
 .pillarCard:hover {
@@ -60,7 +62,12 @@
 .cardImageWrapper {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 240px;
+}
+
+.cardContent {
+  padding: 2rem;
+  flex-grow: 1;
 }
 
 .cardImage {
@@ -88,11 +95,10 @@
 .pillarDesc {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #64748b;
+  color: #394250;
   margin: 0;
 }
 
-/* Overlapping Offset Overlay Block (Inspired by Mobile Clinic screenshot) */
 .overlapContainer {
   position: relative;
   display: grid;
@@ -102,12 +108,14 @@
 }
 
 .overlayCard {
-  background: #67e8f9; /* Vibrant cyan tint similar to screenshot overlay */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: 0px 10px 10px 0px;
+  border-left: 6px solid #0891b2;
   z-index: 2;
-  box-shadow: 0 15px 30px rgba(8, 51, 68, 0.12);
-  margin-right: -40px; /* Overlaps onto image */
+  box-shadow: 0 20px 40px rgba(8, 51, 68, 0.08);
+  margin-right: -40px;
 }
 
 .overlayTitle {
@@ -131,6 +139,13 @@
   overflow: hidden;
   z-index: 1;
   box-shadow: 0 15px 30px rgba(8, 51, 68, 0.1);
+}
+
+.overlayImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%; 
 }
 
 @media (max-width: 900px) {

@@ -68,12 +68,12 @@
   height: 420px;
   border-radius: 24px;
   overflow: hidden;
-  /* Soft spread shadow like the screenshots */
   box-shadow: 0 20px 40px -15px rgba(8, 51, 68, 0.18);
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
+  padding: 20px;
 }
 
 @media (max-width: 900px) {
