@@ -5,7 +5,6 @@
   justify-content: center;
 }
 
-/* Desktop Grid Layout */
 .layoutGrid {
   max-width: 1500px;
   width: 100%;
@@ -197,6 +196,7 @@
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0;
+  color: #ffffff;
 }
 
 /* Mobile Responsive */
