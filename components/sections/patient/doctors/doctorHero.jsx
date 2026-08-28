@@ -46,7 +46,7 @@ export default function DoctorHero() {
         className={styles.content} 
         style={{ y: textY, opacity: textOpacity }} 
       >
-        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · ABOUT US</h5>
+        <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · PATIENT RESOURCES</h5>
         
         <h1 className={styles.title}>
           Meet Our Renowned<br />

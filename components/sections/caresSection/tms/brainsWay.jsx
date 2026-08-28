@@ -11,11 +11,11 @@ export default function BrainsWayCard() {
       <Container>
         <motion.div
           className={styles.card}
-          whileHover={{ y: -3 }}
+          whileHover={{ y: -2 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
         >
           <div className={styles.content}>
-            <div className={styles.badge}>DEEP TMS TECHNOLOGY</div>
+            <span className={styles.badge}>DEEP TMS TECHNOLOGY</span>
             <h3 className={styles.title}>Want to learn more about BrainsWay?</h3>
             <p className={styles.description}>
               Explore the advanced technology, clinical research, and scientific evidence behind the BrainsWay Deep TMS system.
@@ -29,7 +29,7 @@ export default function BrainsWayCard() {
             className={styles.button}
           >
             <span>Visit BrainsWay</span>
-            <FiExternalLink className={styles.icon} size={18} />
+            <FiExternalLink className={styles.icon} size={16} />
           </a>
         </motion.div>
       </Container>

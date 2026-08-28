@@ -18,13 +18,11 @@ export default function PortalHero() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]); 
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.45, 0.85]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.85, 0.95]);
 
   return (
     <section ref={containerRef} className={styles.heroContainer}>
       
-      <div className={styles.topAccentBar} />
-
       {/* Background Image Container */}
       <motion.div
         className={styles.backgroundImageWrapper}
@@ -39,7 +37,7 @@ export default function PortalHero() {
         />
       </motion.div>
 
-      {/* Cyan Overlay */}
+      {/* Unified Brand Color Overlay */}
       <motion.div
         className={styles.cyanOverlay}
         style={{ opacity: overlayOpacity }}
@@ -53,6 +51,17 @@ export default function PortalHero() {
         <div className={styles.textContent}>
           <h5 className={styles.subtitle}>TODU GUAM FOUNDATION · PATIENT PORTAL</h5>
           
+          {/* Logo Slot */}
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/images/PatientResources/healow/healow.png" 
+              alt="healow Logo" 
+              width={220}
+              height={70}
+              className={styles.partnerLogo}
+            />
+          </div>
+
           <h1 className={styles.title}>
             Patient Portal
           </h1>
@@ -76,10 +85,11 @@ export default function PortalHero() {
         {/* Mobile App Download Card */}
         <div className={styles.appDownloadCard}>
           <div className={styles.appHeader}>
-            <FiSmartphone size={28} className={styles.appIcon} />
+            <FiSmartphone size={24} className={styles.appIcon} />
             <h3>Take healow on the Go</h3>
           </div>
           <p>Download the free healow app on your mobile device for quick and easy access on the go.</p>
+          
           <div className={styles.storeButtons}>
             <a 
               href="https://apps.apple.com/us/app/healow/id595012291" 
@@ -87,19 +97,20 @@ export default function PortalHero() {
               rel="noopener noreferrer"
               className={styles.storeBtn}
             >
-              <FaApple size={20} />
+              <FaApple size={22} />
               <div className={styles.storeBtnText}>
                 <span className={styles.storeSub}>Download on the</span>
                 <span className={styles.storeMain}>App Store</span>
               </div>
             </a>
+            
             <a 
               href="https://play.google.com/store/apps/details?id=com.ecw.healow" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.storeBtn}
             >
-              <FaGooglePlay size={18} />
+              <FaGooglePlay size={20} />
               <div className={styles.storeBtnText}>
                 <span className={styles.storeSub}>GET IT ON</span>
                 <span className={styles.storeMain}>Google Play</span>
