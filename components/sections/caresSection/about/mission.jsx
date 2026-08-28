@@ -29,7 +29,7 @@ export default function AboutMindCareMission() {
         {/* Right Column: Floating Image with Soft Shadow */}
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/BehavioralHealth/mindCare/"
+            src="/images/CaresAndServices/mindCare/mindcareLogo.png"
             alt="Mind Care Clinic"
             fill
             className={styles.image}

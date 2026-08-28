@@ -30,11 +30,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
-  /* Ensures grid cells stretch to match the tallest card in the row */
   align-items: stretch;
 }
 
-/* Card Container */
 .card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -44,7 +42,7 @@
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
-  height: 100%; /* Spans full height of grid cell */
+  height: 100%;
 }
 
 .card:hover {
@@ -52,17 +50,14 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-/* Top Myth Section */
 .mythBox {
-    background-color: #f0f9ff; /* Ice Blue */
-
+  background-color: #f0f9ff;
   border-bottom: 1px solid #e2e8f0;
   padding: 1.75rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  /* Fixed proportional height ensures dividers align horizontally across cards */
   flex: 0 0 42%;
   box-sizing: border-box;
 }
@@ -87,15 +82,13 @@
   line-height: 1.5;
 }
 
-/* Bottom Fact Section */
 .factBox {
-  background-color: #eef3fa; /* Slate Light Gray */
+  background-color: #ffffff;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  /* Grows seamlessly to fill the bottom 58% with zero white gap */
   flex: 1 1 58%;
   box-sizing: border-box;
 }
