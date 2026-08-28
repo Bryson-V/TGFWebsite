@@ -2,25 +2,25 @@
   {
     "id": "typhoon",
     "title": "Disease Prevention After the Typhoon",
-    "image": "resources/typhoon-thumb.webp",
+    "image": "/resources/typhoon-thumb.webp",
     "pdf": "/resources/disease-prevention-typhoon.pdf"
   },
   {
     "id": "breathing",
     "title": "A Breathing Technique to Help You De-Stress and Focus",
-    "image": "resources/breathing-thumb.webp",
+    "image": "/resources/breathing-thumb.webp",
     "pdf": "/resources/breathing-technique.pdf"
   },
   {
     "id": "expenditures",
     "title": "Schedule of Expenditures of Federal Awards",
-    "image": "resources/expenditures-thumb.webp",
+    "image": "/resources/expenditures-thumb.webp",
     "pdf": "/resources/schedule-of-expenditures.pdf"
   },
   {
     "id": "slidingFee",
     "title": "Sliding Discount Fee Schedule Information & Application",
-    "image": "resources/slidingFeePic.png",
+    "image": "/resources/slidingFeePic.png",
     "pdf": "/resources/slidingFee.pdf"
   }
 ]
