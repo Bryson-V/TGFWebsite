@@ -1,0 +1,156 @@
+.sectionWrapper {
+  padding: 4rem 1.5rem;
+  background-color: #f4f8f5;
+  color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: #1a472a;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.interactiveContainer {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(26, 71, 42, 0.08);
+}
+
+.selectorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.selectorLabel {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a472a;
+  margin-bottom: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sizeButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.activeButton {
+  border-color: #1a472a;
+  background: #1a472a;
+  color: white;
+  box-shadow: 0 4px 12px rgba(26, 71, 42, 0.2);
+}
+
+.tiersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tierCard {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+  background: white;
+}
+
+.tierHeader {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.tierName {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.tierPay {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.tierBody {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tierAnnualLabel {
+  font-size: 0.9rem;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.tierLimit {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #131313;
+  margin-bottom: 0.5rem;
+}
+
+.tierDesc {
+  font-size: 0.95rem;
+  color: #1b1b1b;
+}
+
+.disclaimer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #0e0d0d;
+}
+
+@media (max-width: 768px) {
+  .interactiveContainer {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .tierHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

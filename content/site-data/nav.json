@@ -50,7 +50,8 @@
         { "label": "Patient Portal", "href": "patient/healow" },
         { "label": "Insurance", "href": "patient/insurance" },
         { "label": "Financial Assistance", "href": "patient/financialAssistance" },
-        { "label": "FAQs", "href": "patient/faq" }
+        { "label": "FAQs", "href": "patient/faq" },
+        { "label": "Sliding Fee Program", "href": "patient/slidingFee" }
       ]
     },
     {

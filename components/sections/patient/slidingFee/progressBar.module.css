@@ -1,0 +1,301 @@
+.sectionWrapper {
+  background-color: transparent;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stepsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  gap: 1rem;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 280px;
+  z-index: 2;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* New Blue PDF Link */
+.pdfLink {
+  margin-top: 0.75rem;
+  color: #0066cc; /* Classic distinct hyperlink blue */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.pdfLink:hover {
+  color: #004c99; /* Darker blue on hover */
+}
+
+/* Floating Icon Styles */
+.iconWrapper {
+  background-color: #ffffff;
+  border: 2px solid #e5ece7;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover .iconWrapper {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(26, 71, 42, 0.15);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #1a472a;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a472a;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555555;
+  margin: 0;
+}
+
+.connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px; 
+}
+
+.line {
+  height: 2.8px;
+  flex-grow: 1;
+  background-color: #c1d5c9;
+  margin-right: -4px;
+}
+
+.arrowIcon {
+  font-size: 1rem;
+  color: #c1d5c9;
+  transform: translateY(-0.5px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .stepsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+
+  .connector {
+    padding-top: 0;
+    transform: rotate(90deg);
+    width: 40px; 
+    flex: none;
+  }
+  
+  .line {
+    width: 40px;
+  }
+}
+
+/* Update standard link and add button styles */
+.pdfLink, .actionButton {
+  margin-top: 0.75rem;
+  color: #0066cc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.pdfLink:hover, .actionButton:hover {
+  color: #004c99;
+}
+
+/* Modal Overlay (Background Dimmer) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(3px);
+}
+
+/* Modal Content Box */
+.modalContent {
+  background: #ffffff;
+  border-radius: 0;
+  border: 2px solid #c1d5c9;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #f0f5f2;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1a472a;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.closeButton:hover {
+  background: #e1ebe5;
+  transform: scale(1.05);
+}
+
+.modalTitle {
+  font-size: 1.75rem;
+  color: #1a472a;
+  margin: 0 0 0.25rem 0;
+}
+
+.modalSubtitle {
+  color: #555;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  border-bottom: 2px solid #e5ece7;
+  padding-bottom: 1rem;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modalSection {
+  background: #f9fdfa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5ece7;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #1a472a;
+  margin: 0 0 1rem 0;
+}
+
+.sectionIcon {
+  color: #25633b;
+}
+
+.formStepsList {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.formStepsList li {
+  margin-bottom: 0.5rem;
+}
+
+.docNote {
+  margin: 0 0 1rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #25633b;
+  font-size: 1.1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Mobile Adjustments for Modal */
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 1.5rem;
+  }
+  
+  .modalTitle {
+    font-size: 1.5rem;
+    padding-right: 2rem;
+  }
+}

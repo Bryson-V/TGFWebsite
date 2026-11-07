@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "iconName": "FaFileDownload",
+        "title": "1. Download App",
+        "description": "Get the Sliding Discount Scale Fee Application.",
+        "link": "/BU-002 Sliding Fee Discount Program Application 2026.02.03_2.pdf",
+        "linkLabel": "View PDF"
+    },
+    {
+        "id": 2,
+        "iconName": "FaClipboardList",
+        "title": "2. Complete Info",
+        "description": "Fill out your household and income details.",
+        "action": "openModal",
+        "linkLabel": "View Checklist"
+    },
+    {
+        "id": 3,
+        "iconName": "FaInbox",
+        "title": "3. Submit",
+        "description": "Turn it in to a TGF Representative in person at our Tamuning clinic, by mail, or via email.",
+        "link": "/about/contacts",
+        "linkLabel": "Contact Us"
+    }
+]

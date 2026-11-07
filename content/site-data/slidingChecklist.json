@@ -1,0 +1,29 @@
+{
+    "incomeTypes": [
+        "Help from relatives and non-relatives",
+        "Business Profits",
+        "Veteran\u2019s Benefits",
+        "Sick Pay",
+        "Social Security Income",
+        "Worker\u2019s Compensation Income",
+        "Pension/Retirement Income",
+        "Alimony Received",
+        "Child Support Received",
+        "Unemployment Compensation",
+        "Disability or Supplemental Security Income (SSI)",
+        "Rents Received (Net)",
+        "Royalties Received",
+        "Investment Income (including rent, interest, dividends, or annuity payments)",
+        "TANF or SNAP Eligibility Letter",
+        "Common Deductions (Federal/state taxes, Social Security, savings bonds, union dues)"
+    ],
+    "acceptableProof": [
+        "1099 Statements for the prior year",
+        "Last 30 days of Paycheck stubs",
+        "Income Tax Return for the most recent year (IMPORTANT: Must include the ENTIRE return with ALL worksheets attached)",
+        "Unemployment Verification (Benefit Statement)",
+        "Court Documents (Alimony and/or Child Support)",
+        "Agency Letter Stating Benefit Level (for TANF or SNAP recipients)",
+        "Benefit Letter (SSI and Social Security recipients)"
+    ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "iconName": "FaHandHoldingUsd",
+    "title": "What it is",
+    "description": "A program offering discounted charges for primary care medical visits at the TGF Health & Wellness Center based on your household size and gross income."
+  },
+  {
+    "id": 2,
+    "iconName": "FaShieldAlt",
+    "title": "Insurance Coverage",
+    "description": "This program is available to ALL eligible patients, whether you are insured or uninsured. If you have insurance, we will bill your provider first, and your sliding fee discount can be applied to your remaining co-pay or patient responsibility."
+  },
+  {
+    "id": 3,
+    "iconName": "FaInfoCircle",
+    "title": "Renewal Requirements",
+    "description": "Information must be updated if your household size or household income changes. A new application must be completed every 6 months to continue receiving the Discounted Fee."
+  }
+]

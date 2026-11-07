@@ -31,8 +31,8 @@
     "id": "mind-care",
     "title": "Mind Care",
     "description": "Behavioral health services aimed at expanding access to mental health care across Guam.",
-    "image": "images/BehavioralHealth/mindCare/MindCare.webp",
-    "href": "mindCare/mindAbout"
+    "image": "images/CaresAndServices/mindCare/MindCare.webp",
+    "href": "Cares&Services/mindAbout"
   },
   {
     "id": "womens-health",
