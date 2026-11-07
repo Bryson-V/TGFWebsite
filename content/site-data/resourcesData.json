@@ -22,5 +22,11 @@
     "title": "Sliding Discount Fee Schedule Information & Application",
     "image": "resources/slidingFeePic.png",
     "pdf": "/resources/slidingFee.pdf"
+  },
+  {
+    "id": "signage",
+    "title": "TGF Office Signage",
+    "image": "resources/TGFOffice.png",
+    "pdf": "/resources/TGF-Office-Signage.pdf"
   }
 ]
