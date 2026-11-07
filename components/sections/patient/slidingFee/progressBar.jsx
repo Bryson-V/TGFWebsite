@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFileDownload, FaClipboardList, FaInbox, FaArrowRight, FaTimes, FaCheckCircle, FaFileAlt } from 'react-icons/fa';
 import styles from './progressBar.module.css';
@@ -48,6 +49,7 @@ export default function ProgressBar() {
         >
           {progressData.map((step, index) => {
             const Icon = iconMap[step.iconName];
+            const isPdf = step.link?.endsWith('.pdf') || step.link?.includes('.pdf');
 
             return (
               <React.Fragment key={step.id}>
@@ -68,14 +70,14 @@ export default function ProgressBar() {
                         {step.linkLabel}
                       </button>
                     ) : step.link ? (
-                      <a 
+                      <Link 
                         href={step.link} 
-                        target={step.link.includes('.pdf') ? "_blank" : "_self"} 
-                        rel={step.link.includes('.pdf') ? "noopener noreferrer" : ""} 
+                        target={isPdf ? "_blank" : "_self"} 
+                        rel={isPdf ? "noopener noreferrer" : undefined} 
                         className={styles.pdfLink}
                       >
                         {step.linkLabel}
-                      </a>
+                      </Link>
                     ) : null}
                   </div>
                 </motion.div>

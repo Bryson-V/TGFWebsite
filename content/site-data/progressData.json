@@ -2,9 +2,9 @@
     {
         "id": 1,
         "iconName": "FaFileDownload",
-        "title": "1. Download App",
+        "title": "1. Download Application",
         "description": "Get the Sliding Discount Scale Fee Application.",
-        "link": "/BU-002 Sliding Fee Discount Program Application 2026.02.03_2.pdf",
+        "link": "/resources/slidingFee.pdf",
         "linkLabel": "View PDF"
     },
     {
