@@ -49,37 +49,60 @@ export default function ProgressBar() {
         >
           {progressData.map((step, index) => {
             const Icon = iconMap[step.iconName];
-            const isPdf = step.link?.endsWith('.pdf') || step.link?.includes('.pdf');
+            const isModalAction = step.action === 'openModal';
+
+            // Helper wrapper to render either a Link, a Button, or plain content for the top part
+            const StepWrapper = ({ children }) => {
+              if (isModalAction) {
+                return (
+                  <div 
+                    onClick={() => setIsModalOpen(true)} 
+                    style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}
+                  >
+                    {children}
+                  </div>
+                );
+              }
+              if (step.link) {
+                return (
+                  <Link 
+                    href={step.link} 
+                    className={styles.stepClickableWrapper}
+                  >
+                    {children}
+                  </Link>
+                );
+              }
+              return <div className={styles.stepContent}>{children}</div>;
+            };
 
             return (
               <React.Fragment key={step.id}>
                 <motion.div className={styles.step} variants={itemVariants}>
-                  <div className={styles.stepContent}>
+                  <StepWrapper>
                     <div className={styles.iconWrapper}>
                       {Icon && <Icon className={styles.icon} />}
                     </div>
                     <h3 className={styles.title}>{step.title}</h3>
                     <p className={styles.description}>{step.description}</p>
-                    
-                    {/* Handles standard links OR the modal trigger button */}
-                    {step.action === 'openModal' ? (
-                      <button 
-                        onClick={() => setIsModalOpen(true)} 
-                        className={styles.actionButton}
-                      >
-                        {step.linkLabel}
-                      </button>
-                    ) : step.link ? (
-                      <Link 
-                        href={step.link} 
-                        target={isPdf ? "_blank" : "_self"} 
-                        rel={isPdf ? "noopener noreferrer" : undefined} 
-                        className={styles.pdfLink}
-                      >
-                        {step.linkLabel}
-                      </Link>
-                    ) : null}
-                  </div>
+                  </StepWrapper>
+                  
+                  {/* Keep the bottom text link/button visible for clarity */}
+                  {isModalAction ? (
+                    <button 
+                      onClick={() => setIsModalOpen(true)} 
+                      className={styles.actionButton}
+                    >
+                      {step.linkLabel}
+                    </button>
+                  ) : step.link ? (
+                    <Link 
+                      href={step.link} 
+                      className={styles.pdfLink}
+                    >
+                      {step.linkLabel}
+                    </Link>
+                  ) : null}
                 </motion.div>
 
                 {index < progressData.length - 1 && (

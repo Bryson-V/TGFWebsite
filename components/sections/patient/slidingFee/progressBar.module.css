@@ -299,3 +299,11 @@
     padding-right: 2rem;
   }
 }
+.stepClickableWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}

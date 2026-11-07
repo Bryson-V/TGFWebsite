@@ -47,10 +47,6 @@
   align-items: center;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(26, 71, 42, 0.08);
-}
 
 .iconWrapper {
   width: 70px;
